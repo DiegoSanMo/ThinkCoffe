@@ -1,8 +1,6 @@
 ﻿Public Class frmPrincipal
-    Private Sub ProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem.Click
-        btnRegistro.Visible = True
-        btnModificaciones.Visible = True
-        lblMensajeProv.Visible = True
+    Private Sub ProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub btnRegistro_Click(sender As Object, e As EventArgs) Handles btnRegistro.Click
@@ -24,5 +22,11 @@
         btnModificaciones.Visible = False
         lblMensajeProv.Visible = False
         frmCatalogoCategoria.Show()
+    End Sub
+
+    Private Sub ProveedoresToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem1.Click
+        btnRegistro.Visible = True
+        btnModificaciones.Visible = True
+        lblMensajeProv.Visible = True
     End Sub
 End Class
