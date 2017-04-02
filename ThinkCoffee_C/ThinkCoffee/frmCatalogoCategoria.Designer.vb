@@ -189,6 +189,7 @@ Partial Class frmCatalogoCategoria
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(561, 469)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.TextBox3)
