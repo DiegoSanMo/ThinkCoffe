@@ -27,11 +27,11 @@ Partial Class frmPrincipal
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.HolaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CategoriaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RecordatoriosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsumosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CategoriaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblMensajeProv = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -100,6 +100,16 @@ Partial Class frmPrincipal
         Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(187, 52)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
+        'CategoriaToolStripMenuItem
+        '
+        Me.CategoriaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.CategoriaToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Tree_Structure_50
+        Me.CategoriaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.CategoriaToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 5, 0, 10)
+        Me.CategoriaToolStripMenuItem.Name = "CategoriaToolStripMenuItem"
+        Me.CategoriaToolStripMenuItem.Size = New System.Drawing.Size(187, 54)
+        Me.CategoriaToolStripMenuItem.Text = "Categoria"
+        '
         'ProductosToolStripMenuItem
         '
         Me.ProductosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
@@ -144,16 +154,6 @@ Partial Class frmPrincipal
         Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(179, 52)
         Me.InsumosToolStripMenuItem.Text = "Insumos"
         Me.InsumosToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'CategoriaToolStripMenuItem
-        '
-        Me.CategoriaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.CategoriaToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Tree_Structure_50
-        Me.CategoriaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.CategoriaToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 5, 0, 10)
-        Me.CategoriaToolStripMenuItem.Name = "CategoriaToolStripMenuItem"
-        Me.CategoriaToolStripMenuItem.Size = New System.Drawing.Size(187, 54)
-        Me.CategoriaToolStripMenuItem.Text = "Categoria"
         '
         'lblMensajeProv
         '

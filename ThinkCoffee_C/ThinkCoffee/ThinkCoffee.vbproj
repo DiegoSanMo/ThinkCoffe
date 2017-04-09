@@ -78,11 +78,10 @@
     <Compile Include="frmCatalogoCategoria.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCatalogoProveedores.vb">
-      <SubType>Form</SubType>
+    <Compile Include="frmCatalogoProducto.Designer.vb">
+      <DependentUpon>frmCatalogoProducto.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmCatalogoProveedores.Designer.vb">
-      <DependentUpon>frmCatalogoProveedores.vb</DependentUpon>
+    <Compile Include="frmCatalogoProducto.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipal.Designer.vb">
@@ -112,8 +111,8 @@
     <EmbeddedResource Include="frmCatalogoCategoria.resx">
       <DependentUpon>frmCatalogoCategoria.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCatalogoProveedores.resx">
-      <DependentUpon>frmCatalogoProveedores.vb</DependentUpon>
+    <EmbeddedResource Include="frmCatalogoProducto.resx">
+      <DependentUpon>frmCatalogoProducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
