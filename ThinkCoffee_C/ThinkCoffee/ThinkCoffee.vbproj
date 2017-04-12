@@ -78,11 +78,23 @@
     <Compile Include="frmCatalogoCategoria.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmCatalogoProductos.Designer.vb">
+      <DependentUpon>frmCatalogoProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCatalogoProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCatalogoProveedores.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCatalogoProveedores.Designer.vb">
       <DependentUpon>frmCatalogoProveedores.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCatalogoRecetas.Designer.vb">
+      <DependentUpon>frmCatalogoRecetas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCatalogoRecetas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCatalogoRecordatorios.Designer.vb">
@@ -118,8 +130,14 @@
     <EmbeddedResource Include="frmCatalogoCategoria.resx">
       <DependentUpon>frmCatalogoCategoria.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCatalogoProductos.resx">
+      <DependentUpon>frmCatalogoProductos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCatalogoProveedores.resx">
       <DependentUpon>frmCatalogoProveedores.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCatalogoRecetas.resx">
+      <DependentUpon>frmCatalogoRecetas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCatalogoRecordatorios.resx">
       <DependentUpon>frmCatalogoRecordatorios.vb</DependentUpon>
@@ -229,6 +247,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vegetarian Food-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Discount-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deliver Food-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manager-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ruler-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo del principal 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barraFinal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barraFinal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo del principal 2W.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo formularios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo formulario 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo formulario 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo formulario 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo del principal 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo formulario 4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -3,30 +3,53 @@
 
     End Sub
 
-    Private Sub btnRegistro_Click(sender As Object, e As EventArgs) Handles btnRegistro.Click
+    Private Sub btnRegistro_Click(sender As Object, e As EventArgs)
         frmCatalogoProveedores.Show()
     End Sub
 
     Private Sub RecordatoriosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecordatoriosToolStripMenuItem.Click
-        btnRegistro.Visible = False
-        btnModificaciones.Visible = False
-        lblMensajeProv.Visible = False
         frmCatalogoRecordatorios.Show()
     End Sub
 
     Private Sub InsumosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InsumosToolStripMenuItem.Click
+
+
+    End Sub
+
+
+
+    Private Sub ProveedoresToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem1.Click
+        frmCatalogoProveedores.Show()
+    End Sub
+
+    Private Sub RegistroToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistroToolStripMenuItem.Click
+    End Sub
+
+    Private Sub CatálogosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CatálogosToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub frmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        menuBar.Width = 80
+    End Sub
+
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        Me.Dispose()
     End Sub
 
     Private Sub CategoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CategoriaToolStripMenuItem.Click
-        btnRegistro.Visible = False
-        btnModificaciones.Visible = False
-        lblMensajeProv.Visible = False
         frmCatalogoCategoria.Show()
     End Sub
 
-    Private Sub ProveedoresToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem1.Click
-        btnRegistro.Visible = True
-        btnModificaciones.Visible = True
-        lblMensajeProv.Visible = True
+    Private Sub PromocionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PromocionesToolStripMenuItem.Click
+        frmCatalogoRecetas.Show()
+    End Sub
+
+    Private Sub ProductosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem1.Click
+        frmCatalogoProductos.show()
+    End Sub
+
+    Private Sub ProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem.Click
+
     End Sub
 End Class
