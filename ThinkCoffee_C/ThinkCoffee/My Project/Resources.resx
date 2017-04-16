@@ -136,6 +136,9 @@
   <data name="barraFinal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barraFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="fondo formulario 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo formulario 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="barraMenuB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barraMenuB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -183,6 +186,9 @@
   </data>
   <data name="thinkCoffeMiniLuz" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thinkCoffeMiniLuz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sort By Modified Date-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sort By Modified Date-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="barraFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barraFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,7 +253,7 @@
   <data name="BarraSuperior" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BarraSuperior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fondo formulario 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo formulario 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Exit-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Exit-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -296,6 +296,12 @@
   <ItemGroup>
     <None Include="Resources\fondo formulario 4.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sort By Modified Date-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit-48.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

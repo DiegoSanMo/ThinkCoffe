@@ -263,6 +263,16 @@ Namespace My.Resources
         '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Exit_48() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Exit-48", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Exit_Sign_Filled_30() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Exit Sign Filled-30", resourceCulture)
@@ -426,6 +436,16 @@ Namespace My.Resources
         Friend ReadOnly Property Shopping_Cart_50() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Shopping Cart-50", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Sort_By_Modified_Date_30() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Sort By Modified Date-30", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

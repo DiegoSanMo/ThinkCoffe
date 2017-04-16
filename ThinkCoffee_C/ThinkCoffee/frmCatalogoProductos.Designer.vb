@@ -23,6 +23,18 @@ Partial Class frmCatalogoProductos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -32,32 +44,20 @@ Partial Class frmCatalogoProductos
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.btnSalir = New System.Windows.Forms.Button()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.btnGrabar = New System.Windows.Forms.Button()
-        Me.btnNuevo = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnGrabar = New System.Windows.Forms.Button()
+        Me.btnNuevo = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -84,6 +84,130 @@ Partial Class frmCatalogoProductos
         Me.GroupBox1.Size = New System.Drawing.Size(681, 242)
         Me.GroupBox1.TabIndex = 63
         Me.GroupBox1.TabStop = False
+        '
+        'Button5
+        '
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.ForeColor = System.Drawing.Color.Black
+        Me.Button5.Location = New System.Drawing.Point(524, 176)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(118, 33)
+        Me.Button5.TabIndex = 64
+        Me.Button5.Text = "Buscar Imagen"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.TextBox10.Location = New System.Drawing.Point(114, 186)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(99, 27)
+        Me.TextBox10.TabIndex = 61
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label14.Location = New System.Drawing.Point(46, 189)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(56, 20)
+        Me.Label14.TabIndex = 60
+        Me.Label14.Text = "Precio"
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.TextBox9.Location = New System.Drawing.Point(382, 144)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(77, 27)
+        Me.TextBox9.TabIndex = 59
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label12.Location = New System.Drawing.Point(278, 147)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(98, 20)
+        Me.Label12.TabIndex = 58
+        Me.Label12.Text = "idCategoria"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label13.Location = New System.Drawing.Point(20, 147)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(83, 20)
+        Me.Label13.TabIndex = 57
+        Me.Label13.Text = "Categoria"
+        '
+        'ComboBox3
+        '
+        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(114, 144)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(128, 28)
+        Me.ComboBox3.TabIndex = 56
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox2.Location = New System.Drawing.Point(497, 19)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(164, 148)
+        Me.PictureBox2.TabIndex = 55
+        Me.PictureBox2.TabStop = False
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.TextBox8.Location = New System.Drawing.Point(359, 101)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(100, 27)
+        Me.TextBox8.TabIndex = 54
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label11.Location = New System.Drawing.Point(278, 104)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(75, 20)
+        Me.Label11.TabIndex = 53
+        Me.Label11.Text = "idReceta"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label9.Location = New System.Drawing.Point(42, 104)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(60, 20)
+        Me.Label9.TabIndex = 52
+        Me.Label9.Text = "Receta"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(113, 101)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(128, 28)
+        Me.ComboBox2.TabIndex = 51
         '
         'TextBox1
         '
@@ -178,6 +302,43 @@ Partial Class frmCatalogoProductos
         Me.DataGridView1.Size = New System.Drawing.Size(681, 150)
         Me.DataGridView1.TabIndex = 54
         '
+        'Column3
+        '
+        Me.Column3.HeaderText = "idProducto"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Producto"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 130
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Categoria"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "idReceta"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Receta"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.HeaderText = "Precio"
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        '
         'Label10
         '
         Me.Label10.AutoSize = True
@@ -247,166 +408,6 @@ Partial Class frmCatalogoProductos
         Me.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
-        'ComboBox2
-        '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(113, 101)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(128, 28)
-        Me.ComboBox2.TabIndex = 51
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label9.Location = New System.Drawing.Point(42, 104)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(60, 20)
-        Me.Label9.TabIndex = 52
-        Me.Label9.Text = "Receta"
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.TextBox8.Location = New System.Drawing.Point(359, 101)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 27)
-        Me.TextBox8.TabIndex = 54
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label11.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label11.Location = New System.Drawing.Point(278, 104)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(75, 20)
-        Me.Label11.TabIndex = 53
-        Me.Label11.Text = "idReceta"
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Location = New System.Drawing.Point(497, 31)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(164, 136)
-        Me.PictureBox2.TabIndex = 55
-        Me.PictureBox2.TabStop = False
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.TextBox9.Location = New System.Drawing.Point(382, 144)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(77, 27)
-        Me.TextBox9.TabIndex = 59
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label12.Location = New System.Drawing.Point(278, 147)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(98, 20)
-        Me.Label12.TabIndex = 58
-        Me.Label12.Text = "idCategoria"
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label13.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label13.Location = New System.Drawing.Point(20, 147)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(83, 20)
-        Me.Label13.TabIndex = 57
-        Me.Label13.Text = "Categoria"
-        '
-        'ComboBox3
-        '
-        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(114, 144)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(128, 28)
-        Me.ComboBox3.TabIndex = 56
-        '
-        'TextBox10
-        '
-        Me.TextBox10.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.TextBox10.Location = New System.Drawing.Point(114, 186)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(99, 27)
-        Me.TextBox10.TabIndex = 61
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label14.Location = New System.Drawing.Point(46, 189)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(56, 20)
-        Me.Label14.TabIndex = 60
-        Me.Label14.Text = "Precio"
-        '
-        'Button5
-        '
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.ForeColor = System.Drawing.Color.Black
-        Me.Button5.Location = New System.Drawing.Point(514, 180)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(118, 33)
-        Me.Button5.TabIndex = 64
-        Me.Button5.Text = "Buscar Imagen"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "idProducto"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Producto"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Width = 130
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Categoria"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "idReceta"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Receta"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "Precio"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        '
         'frmCatalogoProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -431,8 +432,8 @@ Partial Class frmCatalogoProductos
         Me.Text = "frmCatalogoProductos"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
