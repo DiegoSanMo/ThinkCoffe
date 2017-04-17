@@ -23,12 +23,11 @@ Partial Class frmCatalogoProveedores
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtIdProveedor = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.dgProveedores = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -48,6 +47,7 @@ Partial Class frmCatalogoProveedores
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.mskTelefono = New System.Windows.Forms.MaskedTextBox()
         Me.btnAceptar = New System.Windows.Forms.Button()
         CType(Me.dgProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,21 +65,23 @@ Partial Class frmCatalogoProveedores
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Clave Prov."
         '
-        'TextBox1
+        'txtIdProveedor
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(115, 15)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(101, 27)
-        Me.TextBox1.TabIndex = 2
+        Me.txtIdProveedor.Enabled = False
+        Me.txtIdProveedor.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtIdProveedor.Location = New System.Drawing.Point(115, 15)
+        Me.txtIdProveedor.Name = "txtIdProveedor"
+        Me.txtIdProveedor.Size = New System.Drawing.Size(101, 27)
+        Me.txtIdProveedor.TabIndex = 1
         '
-        'TextBox2
+        'txtNombre
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(114, 55)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(317, 27)
-        Me.TextBox2.TabIndex = 1
+        Me.txtNombre.Enabled = False
+        Me.txtNombre.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.Location = New System.Drawing.Point(114, 55)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(324, 27)
+        Me.txtNombre.TabIndex = 2
         '
         'Label2
         '
@@ -92,13 +94,14 @@ Partial Class frmCatalogoProveedores
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Nombre"
         '
-        'TextBox3
+        'txtDireccion
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(114, 95)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(324, 27)
-        Me.TextBox3.TabIndex = 2
+        Me.txtDireccion.Enabled = False
+        Me.txtDireccion.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDireccion.Location = New System.Drawing.Point(114, 95)
+        Me.txtDireccion.Name = "txtDireccion"
+        Me.txtDireccion.Size = New System.Drawing.Size(324, 27)
+        Me.txtDireccion.TabIndex = 4
         '
         'Label3
         '
@@ -110,14 +113,6 @@ Partial Class frmCatalogoProveedores
         Me.Label3.Size = New System.Drawing.Size(81, 20)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Dirección"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(527, 55)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(153, 27)
-        Me.TextBox4.TabIndex = 7
         '
         'Label10
         '
@@ -136,6 +131,7 @@ Partial Class frmCatalogoProveedores
         '
         Me.dgProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgProveedores.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column8})
+        Me.dgProveedores.GridColor = System.Drawing.SystemColors.ControlDarkDark
         Me.dgProveedores.Location = New System.Drawing.Point(15, 310)
         Me.dgProveedores.Name = "dgProveedores"
         Me.dgProveedores.Size = New System.Drawing.Size(665, 184)
@@ -184,6 +180,7 @@ Partial Class frmCatalogoProveedores
         '
         'btnCancelar
         '
+        Me.btnCancelar.Enabled = False
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
@@ -198,6 +195,7 @@ Partial Class frmCatalogoProveedores
         '
         'btnGrabar
         '
+        Me.btnGrabar.Enabled = False
         Me.btnGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGrabar.ForeColor = System.Drawing.Color.Black
         Me.btnGrabar.Image = Global.ThinkCoffee.My.Resources.Resources.Burn_CD_30
@@ -331,29 +329,41 @@ Partial Class frmCatalogoProveedores
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Controls.Add(Me.mskTelefono)
         Me.GroupBox1.Controls.Add(Me.btnAceptar)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.txtDireccion)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtIdProveedor)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
         Me.GroupBox1.Location = New System.Drawing.Point(15, 94)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(686, 149)
         Me.GroupBox1.TabIndex = 31
         Me.GroupBox1.TabStop = False
         '
+        'mskTelefono
+        '
+        Me.mskTelefono.Enabled = False
+        Me.mskTelefono.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.mskTelefono.Location = New System.Drawing.Point(527, 55)
+        Me.mskTelefono.Mask = "(999)000-0000"
+        Me.mskTelefono.Name = "mskTelefono"
+        Me.mskTelefono.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
+        Me.mskTelefono.Size = New System.Drawing.Size(153, 27)
+        Me.mskTelefono.TabIndex = 3
+        '
         'btnAceptar
         '
+        Me.btnAceptar.Enabled = False
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAceptar.ForeColor = System.Drawing.Color.Black
-        Me.btnAceptar.Location = New System.Drawing.Point(560, 116)
+        Me.btnAceptar.Location = New System.Drawing.Point(543, 95)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(78, 27)
-        Me.btnAceptar.TabIndex = 32
+        Me.btnAceptar.Size = New System.Drawing.Size(92, 32)
+        Me.btnAceptar.TabIndex = 5
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
@@ -379,7 +389,7 @@ Partial Class frmCatalogoProveedores
         Me.Controls.Add(Me.btnMinimizar)
         Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.ptbBarra)
-        Me.ForeColor = System.Drawing.SystemColors.ActiveBorder
+        Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmCatalogoProveedores"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -395,12 +405,11 @@ Partial Class frmCatalogoProveedores
 
     Friend WithEvents ptbBarra As PictureBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtIdProveedor As TextBox
+    Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtDireccion As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox4 As TextBox
     Friend WithEvents btnCerrar As Button
     Friend WithEvents btnMinimizar As Button
     Friend WithEvents Label10 As Label
@@ -420,4 +429,5 @@ Partial Class frmCatalogoProveedores
     Friend WithEvents Label4 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnAceptar As Button
+    Friend WithEvents mskTelefono As MaskedTextBox
 End Class

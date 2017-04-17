@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmCatalogoCategoria
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmCatalogoCategoria
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.ptbBarra = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -31,8 +31,6 @@ Partial Class frmCatalogoCategoria
         Me.txtIdCategoria = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgCategoria = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnUltimo = New System.Windows.Forms.Button()
         Me.btnAnterior = New System.Windows.Forms.Button()
         Me.btnSiguiente = New System.Windows.Forms.Button()
@@ -43,7 +41,8 @@ Partial Class frmCatalogoCategoria
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnAceptar = New System.Windows.Forms.Button()
-        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -157,24 +156,11 @@ Partial Class frmCatalogoCategoria
         '
         Me.dgCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgCategoria.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2})
-        Me.dgCategoria.Location = New System.Drawing.Point(67, 254)
+        Me.dgCategoria.Location = New System.Drawing.Point(42, 254)
         Me.dgCategoria.Name = "dgCategoria"
         Me.dgCategoria.ReadOnly = True
-        Me.dgCategoria.Size = New System.Drawing.Size(457, 150)
+        Me.dgCategoria.Size = New System.Drawing.Size(487, 150)
         Me.dgCategoria.TabIndex = 31
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Clave"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Nombre"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 300
         '
         'btnUltimo
         '
@@ -304,15 +290,19 @@ Partial Class frmCatalogoCategoria
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
-        'btnModificar
+        'Column1
         '
-        Me.btnModificar.Image = Global.ThinkCoffee.My.Resources.Resources.Sort_By_Modified_Date_30
-        Me.btnModificar.Location = New System.Drawing.Point(23, 270)
-        Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(38, 31)
-        Me.btnModificar.TabIndex = 41
-        Me.btnModificar.UseVisualStyleBackColor = True
-        Me.btnModificar.Visible = False
+        Me.Column1.HeaderText = "Clave"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 125
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nombre"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 315
         '
         'frmCatalogoCategoria
         '
@@ -322,7 +312,6 @@ Partial Class frmCatalogoCategoria
         Me.BackgroundImage = Global.ThinkCoffee.My.Resources.Resources.fondo_formulario_1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(561, 476)
-        Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnCancelar)
@@ -371,5 +360,4 @@ Partial Class frmCatalogoCategoria
     Friend WithEvents btnAceptar As Button
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents btnModificar As Button
 End Class

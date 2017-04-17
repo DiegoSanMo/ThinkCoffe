@@ -4,11 +4,11 @@
     End Sub
 
     Private Sub btnRegistro_Click(sender As Object, e As EventArgs)
-        frmCatalogoProveedores.Show()
+        frmCatalogoProveedores.ShowDialog()
     End Sub
 
     Private Sub RecordatoriosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecordatoriosToolStripMenuItem.Click
-        frmCatalogoRecordatorios.Show()
+        frmCatalogoRecordatorios.ShowDialog()
     End Sub
 
     Private Sub InsumosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InsumosToolStripMenuItem.Click
@@ -19,10 +19,11 @@
 
 
     Private Sub ProveedoresToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem1.Click
-        frmCatalogoProveedores.Show()
+        frmCatalogoProveedores.ShowDialog()
+
     End Sub
 
-    Private Sub RegistroToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistroToolStripMenuItem.Click
+    Private Sub RegistroToolStripMenuItem_Click(sender As Object, e As EventArgs)
     End Sub
 
     Private Sub CatálogosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CatálogosToolStripMenuItem.Click
@@ -37,19 +38,23 @@
         Me.Dispose()
     End Sub
 
-    Private Sub CategoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CategoriaToolStripMenuItem.Click
-        frmCatalogoCategoria.Show()
+    Private Sub CategoriaToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub PromocionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PromocionesToolStripMenuItem.Click
-        frmCatalogoRecetas.Show()
+        frmCatalogoRecetas.ShowDialog()
     End Sub
 
     Private Sub ProductosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem1.Click
-        frmCatalogoProductos.show()
+        frmCatalogoProductos.ShowDialog()
     End Sub
 
     Private Sub ProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem.Click
 
+    End Sub
+
+    Private Sub CategoriasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CategoriasToolStripMenuItem.Click
+        frmCatalogoCategoria.ShowDialog()
     End Sub
 End Class

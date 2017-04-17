@@ -43,7 +43,7 @@ Partial Class frmCatalogoProductos
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgProductos = New System.Windows.Forms.DataGridView()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -55,9 +55,11 @@ Partial Class frmCatalogoProductos
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGrabar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -89,7 +91,7 @@ Partial Class frmCatalogoProductos
         '
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.Black
-        Me.Button5.Location = New System.Drawing.Point(524, 176)
+        Me.Button5.Location = New System.Drawing.Point(525, 203)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(118, 33)
         Me.Button5.TabIndex = 64
@@ -163,7 +165,7 @@ Partial Class frmCatalogoProductos
         Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PictureBox2.Location = New System.Drawing.Point(497, 19)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(164, 148)
+        Me.PictureBox2.Size = New System.Drawing.Size(164, 178)
         Me.PictureBox2.TabIndex = 55
         Me.PictureBox2.TabStop = False
         '
@@ -293,14 +295,14 @@ Partial Class frmCatalogoProductos
         Me.Button1.Text = "Inicio"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgProductos
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column4, Me.Column2, Me.Column1, Me.Column5, Me.Column6})
-        Me.DataGridView1.Location = New System.Drawing.Point(29, 353)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(681, 150)
-        Me.DataGridView1.TabIndex = 54
+        Me.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column4, Me.Column2, Me.Column1, Me.Column5, Me.Column6})
+        Me.dgProductos.Location = New System.Drawing.Point(29, 353)
+        Me.dgProductos.Name = "dgProductos"
+        Me.dgProductos.Size = New System.Drawing.Size(681, 150)
+        Me.dgProductos.TabIndex = 54
         '
         'Column3
         '
@@ -344,8 +346,8 @@ Partial Class frmCatalogoProductos
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Adobe Gothic Std B", 24.0!, System.Drawing.FontStyle.Bold)
-        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label10.Location = New System.Drawing.Point(251, 9)
+        Me.Label10.ForeColor = System.Drawing.Color.Black
+        Me.Label10.Location = New System.Drawing.Point(255, 9)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(202, 40)
         Me.Label10.TabIndex = 53
@@ -408,6 +410,16 @@ Partial Class frmCatalogoProductos
         Me.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackColor = System.Drawing.Color.LightSlateGray
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(722, 50)
+        Me.PictureBox1.TabIndex = 64
+        Me.PictureBox1.TabStop = False
+        '
         'frmCatalogoProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -415,6 +427,7 @@ Partial Class frmCatalogoProductos
         Me.BackgroundImage = Global.ThinkCoffee.My.Resources.Resources.fondo_formulario_1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(722, 564)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnCancelar)
@@ -424,8 +437,8 @@ Partial Class frmCatalogoProductos
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.dgProductos)
+        Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmCatalogoProductos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -433,7 +446,8 @@ Partial Class frmCatalogoProductos
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -451,7 +465,7 @@ Partial Class frmCatalogoProductos
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgProductos As DataGridView
     Friend WithEvents Label10 As Label
     Friend WithEvents TextBox9 As TextBox
     Friend WithEvents Label12 As Label
@@ -471,4 +485,5 @@ Partial Class frmCatalogoProductos
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -23,10 +23,10 @@ Partial Class frmCatalogoRecetas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtIdReceta = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -50,13 +50,13 @@ Partial Class frmCatalogoRecetas
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cboInsumo = New System.Windows.Forms.ComboBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.cboMedidas = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,23 +66,23 @@ Partial Class frmCatalogoRecetas
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.txtIdReceta)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Location = New System.Drawing.Point(22, 88)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(629, 107)
         Me.GroupBox1.TabIndex = 51
         Me.GroupBox1.TabStop = False
         '
-        'TextBox1
+        'txtIdReceta
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.TextBox1.Location = New System.Drawing.Point(96, 18)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 27)
-        Me.TextBox1.TabIndex = 27
+        Me.txtIdReceta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtIdReceta.Location = New System.Drawing.Point(96, 18)
+        Me.txtIdReceta.Name = "txtIdReceta"
+        Me.txtIdReceta.Size = New System.Drawing.Size(100, 27)
+        Me.txtIdReceta.TabIndex = 1
         '
         'Label1
         '
@@ -108,13 +108,13 @@ Partial Class frmCatalogoRecetas
         Me.Label2.TabIndex = 28
         Me.Label2.Text = "Nombre"
         '
-        'TextBox2
+        'txtNombre
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.TextBox2.Location = New System.Drawing.Point(96, 62)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(340, 27)
-        Me.TextBox2.TabIndex = 25
+        Me.txtNombre.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtNombre.Location = New System.Drawing.Point(96, 62)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(473, 27)
+        Me.txtNombre.TabIndex = 2
         '
         'Button4
         '
@@ -310,15 +310,15 @@ Partial Class frmCatalogoRecetas
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox2.Controls.Add(Me.cboMedidas)
         Me.GroupBox2.Controls.Add(Me.TextBox7)
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.TextBox6)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.TextBox5)
         Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
         Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.ComboBox1)
+        Me.GroupBox2.Controls.Add(Me.cboInsumo)
         Me.GroupBox2.Controls.Add(Me.Button5)
         Me.GroupBox2.Controls.Add(Me.TextBox3)
         Me.GroupBox2.Controls.Add(Me.Label3)
@@ -335,7 +335,7 @@ Partial Class frmCatalogoRecetas
         Me.TextBox7.Location = New System.Drawing.Point(336, 87)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(100, 27)
-        Me.TextBox7.TabIndex = 50
+        Me.TextBox7.TabIndex = 8
         '
         'Label8
         '
@@ -355,7 +355,7 @@ Partial Class frmCatalogoRecetas
         Me.TextBox6.Location = New System.Drawing.Point(103, 84)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(139, 27)
-        Me.TextBox6.TabIndex = 48
+        Me.TextBox6.TabIndex = 5
         '
         'Label7
         '
@@ -375,7 +375,7 @@ Partial Class frmCatalogoRecetas
         Me.TextBox5.Location = New System.Drawing.Point(102, 50)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(139, 27)
-        Me.TextBox5.TabIndex = 46
+        Me.TextBox5.TabIndex = 3
         '
         'Label6
         '
@@ -389,14 +389,6 @@ Partial Class frmCatalogoRecetas
         Me.Label6.TabIndex = 45
         Me.Label6.Text = "Cantidad"
         '
-        'TextBox4
-        '
-        Me.TextBox4.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.TextBox4.Location = New System.Drawing.Point(336, 51)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 27)
-        Me.TextBox4.TabIndex = 44
-        '
         'Label5
         '
         Me.Label5.AutoSize = True
@@ -409,15 +401,15 @@ Partial Class frmCatalogoRecetas
         Me.Label5.TabIndex = 43
         Me.Label5.Text = "Medida"
         '
-        'ComboBox1
+        'cboInsumo
         '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(102, 16)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(139, 28)
-        Me.ComboBox1.TabIndex = 42
+        Me.cboInsumo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboInsumo.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.cboInsumo.FormattingEnabled = True
+        Me.cboInsumo.Location = New System.Drawing.Point(102, 16)
+        Me.cboInsumo.Name = "cboInsumo"
+        Me.cboInsumo.Size = New System.Drawing.Size(139, 28)
+        Me.cboInsumo.TabIndex = 3
         '
         'Button5
         '
@@ -426,7 +418,7 @@ Partial Class frmCatalogoRecetas
         Me.Button5.Location = New System.Drawing.Point(473, 45)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(96, 62)
-        Me.Button5.TabIndex = 41
+        Me.Button5.TabIndex = 9
         Me.Button5.Text = "Aceptar"
         Me.Button5.UseVisualStyleBackColor = True
         '
@@ -436,7 +428,7 @@ Partial Class frmCatalogoRecetas
         Me.TextBox3.Location = New System.Drawing.Point(336, 16)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(100, 27)
-        Me.TextBox3.TabIndex = 27
+        Me.TextBox3.TabIndex = 6
         '
         'Label3
         '
@@ -461,6 +453,16 @@ Partial Class frmCatalogoRecetas
         Me.Label4.Size = New System.Drawing.Size(63, 20)
         Me.Label4.TabIndex = 28
         Me.Label4.Text = "Insumo"
+        '
+        'cboMedidas
+        '
+        Me.cboMedidas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboMedidas.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.cboMedidas.FormattingEnabled = True
+        Me.cboMedidas.Location = New System.Drawing.Point(336, 49)
+        Me.cboMedidas.Name = "cboMedidas"
+        Me.cboMedidas.Size = New System.Drawing.Size(100, 28)
+        Me.cboMedidas.TabIndex = 7
         '
         'frmCatalogoRecetas
         '
@@ -500,10 +502,10 @@ Partial Class frmCatalogoRecetas
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtIdReceta As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtNombre As TextBox
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnGrabar As Button
@@ -520,9 +522,8 @@ Partial Class frmCatalogoRecetas
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cboInsumo As ComboBox
     Friend WithEvents Button5 As Button
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label3 As Label
@@ -534,4 +535,5 @@ Partial Class frmCatalogoRecetas
     Friend WithEvents Label8 As Label
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents cboMedidas As ComboBox
 End Class

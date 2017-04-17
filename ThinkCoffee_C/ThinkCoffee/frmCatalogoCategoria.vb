@@ -10,6 +10,9 @@ Public Class frmCatalogoCategoria
 
     Private Sub frmCatalogoCategoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexionSql.Open()
+
+        dgCategoria.Rows.Clear()
+
         Dim n As Integer
         comando.CommandText = String.Format("Select count(*) from tlb_categoria")
         n = comando.ExecuteScalar + 1
@@ -58,7 +61,7 @@ Public Class frmCatalogoCategoria
         btnUltimo.Enabled = False
         btnInicio.Enabled = False
 
-        btnGrabar.Enabled = True
+
         btnCancelar.Enabled = True
         btnNuevo.Enabled = False
         btnSalir.Enabled = False
@@ -67,17 +70,40 @@ Public Class frmCatalogoCategoria
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
-        comando.CommandText = String.Format("Insert into tlb_categoria(idCategoria, nombre) values ({0}, '{1}')", Val(txtIdCategoria.Text), txtNombre.Text)
-        comando.ExecuteNonQuery()
+        Dim ultimo As Integer
+
+        For x = 0 To dgCategoria.RowCount - 2
+            If IsNothing(dgCategoria.Item(0, x).Value) Then
+            Else
+                ultimo = x
+            End If
+
+
+        Next
+
+        For i = ultimo To dgCategoria.RowCount - 2
+            comando.CommandText = String.Format("Insert into tlb_categoria(idCategoria, nombre) values ({0}, '{1}')", dgCategoria.Item(0, i).Value, dgCategoria.Item(1, i).Value)
+            comando.ExecuteNonQuery()
+        Next
+
 
         'acciones de los botones
         btnNuevo.Enabled = True
         btnSalir.Enabled = True
+        btnGrabar.Enabled = False
+        btnCancelar.Enabled = False
 
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
         dgCategoria.Rows.Add(txtIdCategoria.Text, txtNombre.Text)
+        txtIdCategoria.Text = ""
+        txtNombre.Text = ""
+
+        btnAceptar.Enabled = False
+        txtNombre.Enabled = False
+        btnGrabar.Enabled = True
+
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
@@ -87,17 +113,10 @@ Public Class frmCatalogoCategoria
     End Sub
 
     Private Sub dgCategoria_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgCategoria.CellClick
-        btnModificar.Visible = True
-        celda = e.RowIndex
+
     End Sub
 
-    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-        'permite la edición de la celda seleccionada
-        dgCategoria.ReadOnly = False
-        dgCategoria(0, celda).ReadOnly = True
-        dgCategoria(1, celda).ReadOnly = False
-        dgCategoria.BeginEdit(True)
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+
     End Sub
-
-
 End Class
