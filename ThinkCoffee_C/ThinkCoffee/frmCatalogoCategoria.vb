@@ -62,7 +62,6 @@ Public Class frmCatalogoCategoria
         btnInicio.Enabled = False
 
 
-        btnCancelar.Enabled = True
         btnNuevo.Enabled = False
         btnSalir.Enabled = False
         txtNombre.Focus()
@@ -79,11 +78,8 @@ Public Class frmCatalogoCategoria
             End If
         Next
 
-        For i = ultimo To dgCategoria.RowCount - 2
-            comando.CommandText = String.Format("Insert into tlb_categoria(idCategoria, nombre) values ({0}, '{1}')", dgCategoria.Item(0, i).Value, dgCategoria.Item(1, i).Value)
-            comando.ExecuteNonQuery()
-        Next
-
+        comando.CommandText = String.Format("Insert into tlb_categoria(idCategoria, nombre) values ({0}, '{1}')", Val(dgCategoria.Item(0, ultimo).Value), dgCategoria.Item(1, ultimo).Value)
+        comando.ExecuteNonQuery()
 
         'acciones de los botones
         btnNuevo.Enabled = True
@@ -101,6 +97,7 @@ Public Class frmCatalogoCategoria
         btnAceptar.Enabled = False
         txtNombre.Enabled = False
         btnGrabar.Enabled = True
+        btnCancelar.Enabled = True
 
     End Sub
 

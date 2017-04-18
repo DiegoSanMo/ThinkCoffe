@@ -78,7 +78,6 @@
         btnNuevo.Enabled = False
         btnSalir.Enabled = False
 
-        btnCancelar.Enabled = True
 
     End Sub
 
@@ -100,14 +99,10 @@
             Else
                 ultimo = x
             End If
-
-
         Next
-
-        For i = ultimo To dgProveedores.RowCount - 2
-            comando.CommandText = String.Format("Insert into tlb_proveedor(idProveedor, nombre, telefono, direccion) values ({0}, '{1}', '{2}', '{3}' )", Val(dgProveedores.Item(0, i).Value), dgProveedores.Item(1, i).Value, dgProveedores.Item(2, i).Value, dgProveedores.Item(3, i).Value)
-            comando.ExecuteNonQuery()
-        Next
+        MsgBox(ultimo)
+        comando.CommandText = String.Format("Insert into tlb_proveedor(idProveedor, nombre, direccion,  telefono) values ({0}, '{1}', '{2}', '{3}' )", Val(dgProveedores.Item(0, ultimo).Value), dgProveedores.Item(1, ultimo).Value, dgProveedores.Item(2, ultimo).Value, dgProveedores.Item(3, ultimo).Value)
+        comando.ExecuteNonQuery()
 
         btnGrabar.Enabled = False
         btnCancelar.Enabled = False
@@ -130,6 +125,7 @@
         txtDireccion.Enabled = False
         mskTelefono.Enabled = False
         btnGrabar.Enabled = True
+        btnCancelar.Enabled = True
 
     End Sub
 
@@ -139,6 +135,18 @@
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Dim ultimo As Integer
+        For x = 0 To dgProveedores.RowCount - 2
+            If IsNothing(dgProveedores.Item(0, x).Value) Then
+            Else
+                ultimo = x
+            End If
+        Next
+        dgProveedores.Rows.RemoveAt(ultimo)
 
+        btnNuevo.Enabled = True
+        btnSalir.Enabled = True
+        btnGrabar.Enabled = False
+        btnCancelar.Enabled = False
     End Sub
 End Class
