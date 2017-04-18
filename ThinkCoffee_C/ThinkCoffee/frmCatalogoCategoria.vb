@@ -77,8 +77,6 @@ Public Class frmCatalogoCategoria
             Else
                 ultimo = x
             End If
-
-
         Next
 
         For i = ultimo To dgCategoria.RowCount - 2
@@ -117,6 +115,18 @@ Public Class frmCatalogoCategoria
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Dim ultimo As Integer
+        For x = 0 To dgCategoria.RowCount - 2
+            If IsNothing(dgCategoria.Item(0, x).Value) Then
+            Else
+                ultimo = x
+            End If
+        Next
+        dgCategoria.Rows.RemoveAt(ultimo)
 
+        btnNuevo.Enabled = True
+        btnSalir.Enabled = True
+        btnGrabar.Enabled = False
+        btnCancelar.Enabled = False
     End Sub
 End Class
