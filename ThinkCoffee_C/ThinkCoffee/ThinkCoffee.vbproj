@@ -78,6 +78,12 @@
     <Compile Include="frmCatalogoCategoria.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmCatalogoInsumos.Designer.vb">
+      <DependentUpon>frmCatalogoInsumos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCatalogoInsumos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmCatalogoProductos.Designer.vb">
       <DependentUpon>frmCatalogoProductos.vb</DependentUpon>
     </Compile>
@@ -129,6 +135,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmCatalogoCategoria.resx">
       <DependentUpon>frmCatalogoCategoria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCatalogoInsumos.resx">
+      <DependentUpon>frmCatalogoInsumos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCatalogoProductos.resx">
       <DependentUpon>frmCatalogoProductos.vb</DependentUpon>
@@ -301,6 +310,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Exit-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

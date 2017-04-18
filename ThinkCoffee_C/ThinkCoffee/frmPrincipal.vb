@@ -16,17 +16,8 @@
 
     End Sub
 
-
-
     Private Sub ProveedoresToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProveedoresToolStripMenuItem1.Click
         frmCatalogoProveedores.ShowDialog()
-
-    End Sub
-
-    Private Sub RegistroToolStripMenuItem_Click(sender As Object, e As EventArgs)
-    End Sub
-
-    Private Sub CatálogosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CatálogosToolStripMenuItem.Click
 
     End Sub
 
@@ -38,10 +29,6 @@
         Me.Dispose()
     End Sub
 
-    Private Sub CategoriaToolStripMenuItem_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub PromocionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PromocionesToolStripMenuItem.Click
         frmCatalogoRecetas.ShowDialog()
     End Sub
@@ -50,11 +37,11 @@
         frmCatalogoProductos.ShowDialog()
     End Sub
 
-    Private Sub ProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem.Click
-
-    End Sub
-
     Private Sub CategoriasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CategoriasToolStripMenuItem.Click
         frmCatalogoCategoria.ShowDialog()
+    End Sub
+
+    Private Sub IngredientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngredientesToolStripMenuItem.Click
+        frmCatalogoInsumos.ShowDialog()
     End Sub
 End Class

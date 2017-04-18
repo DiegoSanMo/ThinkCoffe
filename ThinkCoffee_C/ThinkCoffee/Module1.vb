@@ -11,8 +11,27 @@ Module Module1
     Public comando As SqlCommand = conexionSql.CreateCommand
     Public lector As SqlDataReader
 
+    '***********************************************************************************************************************************************
+    '****************************************************   ACCIONES PARA EL FORMULARIO DE PRODUCTOS   '********************************************
 
+    Public Sub limpiarCajaProductos()
+        frmCatalogoProductos.txtIdProducto.Text = ""
+        frmCatalogoProductos.txtIdCategoria.Text = ""
+        frmCatalogoProductos.txtNombre.Text = ""
+        frmCatalogoProductos.txtIdReceta.Text = ""
+        frmCatalogoProductos.txtPrecio.Text = ""
+        frmCatalogoProductos.ptbImagen.Image = Nothing
+    End Sub
 
+    Public Sub bloquearCajaProductos()
+
+        frmCatalogoProductos.txtNombre.Enabled = False
+        frmCatalogoProductos.txtPrecio.Enabled = False
+        frmCatalogoProductos.cboCategoria.Enabled = False
+        frmCatalogoProductos.cboReceta.Enabled = False
+        frmCatalogoProductos.btnAceptar.Enabled = False
+        frmCatalogoProductos.btnBuscar.Enabled = False
+    End Sub
 
 
 End Module
