@@ -109,6 +109,18 @@
     <Compile Include="frmCatalogoRecordatorios.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmMovimientoVentas.Designer.vb">
+      <DependentUpon>frmMovimientoVentas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientoVentas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimientoVentasPizzas.Designer.vb">
+      <DependentUpon>frmMovimientoVentasPizzas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovimientoVentasPizzas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPrincipal.Designer.vb">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </Compile>
@@ -150,6 +162,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCatalogoRecordatorios.resx">
       <DependentUpon>frmCatalogoRecordatorios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientoVentas.resx">
+      <DependentUpon>frmMovimientoVentas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimientoVentasPizzas.resx">
+      <DependentUpon>frmMovimientoVentasPizzas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>

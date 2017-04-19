@@ -44,4 +44,16 @@
     Private Sub IngredientesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IngredientesToolStripMenuItem.Click
         frmCatalogoInsumos.ShowDialog()
     End Sub
+
+    Private Sub VentaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentaToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub PiizaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PiizaToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub OtrosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OtrosToolStripMenuItem.Click
+        frmMovimientoVentas.ShowDialog()
+    End Sub
 End Class
