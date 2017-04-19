@@ -69,14 +69,7 @@ Public Class frmCatalogoCategoria
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
-        Dim ultimo As Integer
-
-        For x = 0 To dgCategoria.RowCount - 2
-            If IsNothing(dgCategoria.Item(0, x).Value) Then
-            Else
-                ultimo = x
-            End If
-        Next
+        Dim ultimo As Integer = dgCategoria.RowCount - 2
 
         comando.CommandText = String.Format("Insert into tlb_categoria(idCategoria, nombre) values ({0}, '{1}')", Val(dgCategoria.Item(0, ultimo).Value), dgCategoria.Item(1, ultimo).Value)
         comando.ExecuteNonQuery()
@@ -107,18 +100,9 @@ Public Class frmCatalogoCategoria
 
     End Sub
 
-    Private Sub dgCategoria_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgCategoria.CellClick
-
-    End Sub
-
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        Dim ultimo As Integer
-        For x = 0 To dgCategoria.RowCount - 2
-            If IsNothing(dgCategoria.Item(0, x).Value) Then
-            Else
-                ultimo = x
-            End If
-        Next
+        Dim ultimo As Integer = dgCategoria.RowCount - 2
+
         dgCategoria.Rows.RemoveAt(ultimo)
 
         btnNuevo.Enabled = True
