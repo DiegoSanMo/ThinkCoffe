@@ -30,7 +30,6 @@ Partial Class frmPrincipal
         Me.PromocionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RecordatoriosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.InsumosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBar = New System.Windows.Forms.MenuStrip()
         Me.HolaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -113,24 +112,12 @@ Partial Class frmPrincipal
         Me.RecordatoriosToolStripMenuItem.Size = New System.Drawing.Size(187, 52)
         Me.RecordatoriosToolStripMenuItem.Text = "Recordatorios"
         '
-        'InsumosToolStripMenuItem
-        '
-        Me.InsumosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.InsumosToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Food_And_Wine_48
-        Me.InsumosToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.InsumosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.InsumosToolStripMenuItem.Margin = New System.Windows.Forms.Padding(8, 5, 0, 10)
-        Me.InsumosToolStripMenuItem.Name = "InsumosToolStripMenuItem"
-        Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(179, 52)
-        Me.InsumosToolStripMenuItem.Text = "Insumos"
-        Me.InsumosToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
         'menuBar
         '
         Me.menuBar.BackgroundImage = Global.ThinkCoffee.My.Resources.Resources.barraFinal1
         Me.menuBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.menuBar.Dock = System.Windows.Forms.DockStyle.Left
-        Me.menuBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HolaToolStripMenuItem, Me.CatálogosToolStripMenuItem, Me.VentaToolStripMenuItem, Me.RecordatoriosToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.menuBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HolaToolStripMenuItem, Me.CatálogosToolStripMenuItem, Me.VentaToolStripMenuItem, Me.RecordatoriosToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.menuBar.Location = New System.Drawing.Point(0, 0)
         Me.menuBar.Name = "menuBar"
         Me.menuBar.Size = New System.Drawing.Size(200, 741)
@@ -215,7 +202,6 @@ Partial Class frmPrincipal
     Friend WithEvents PromocionesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VentaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RecordatoriosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents InsumosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents menuBar As MenuStrip
     Friend WithEvents Button1 As Button
     Friend WithEvents btnMin As Button

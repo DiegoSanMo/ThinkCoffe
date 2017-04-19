@@ -34,4 +34,37 @@ Module Module1
     End Sub
 
 
+    '***********************************************************************************************************************************************
+    '****************************************************   ACCIONES PARA EL FORMULARIO DE INSUMOS   '********************************************
+    Public Sub activarCajasInsumo()
+        frmCatalogoInsumos.dtpFecha.Enabled = True
+        frmCatalogoInsumos.txtNombre.Enabled = True
+        frmCatalogoInsumos.cboUnidadM.Enabled = True
+        frmCatalogoInsumos.txtMax.Enabled = True
+        frmCatalogoInsumos.txtMin.Enabled = True
+        frmCatalogoInsumos.txtExist.Enabled = True
+        frmCatalogoInsumos.txtCosto.Enabled = True
+        frmCatalogoInsumos.btnAceptar.Enabled = True
+    End Sub
+
+    Public Sub bloquearCajasInsumo()
+        frmCatalogoInsumos.dtpFecha.Enabled = False
+        frmCatalogoInsumos.txtNombre.Enabled = False
+        frmCatalogoInsumos.cboUnidadM.Enabled = False
+        frmCatalogoInsumos.txtMax.Enabled = False
+        frmCatalogoInsumos.txtMin.Enabled = False
+        frmCatalogoInsumos.txtExist.Enabled = False
+        frmCatalogoInsumos.txtCosto.Enabled = False
+        frmCatalogoInsumos.btnAceptar.Enabled = False
+
+    End Sub
+
+    Public Sub limpiarCajaInsumos()
+        frmCatalogoInsumos.txtNombre.Text = ""
+        frmCatalogoInsumos.txtMax.Text = ""
+        frmCatalogoInsumos.txtMin.Text = ""
+        frmCatalogoInsumos.txtExist.Text = ""
+        frmCatalogoInsumos.txtCosto.Text = ""
+
+    End Sub
 End Module

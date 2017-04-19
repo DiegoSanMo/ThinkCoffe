@@ -11,7 +11,7 @@
         frmCatalogoRecordatorios.ShowDialog()
     End Sub
 
-    Private Sub InsumosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles InsumosToolStripMenuItem.Click
+    Private Sub InsumosToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
 
     End Sub
