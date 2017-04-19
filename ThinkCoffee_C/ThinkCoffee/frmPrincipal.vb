@@ -49,11 +49,12 @@
 
     End Sub
 
-    Private Sub PiizaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PiizaToolStripMenuItem.Click
-
-    End Sub
 
     Private Sub OtrosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OtrosToolStripMenuItem.Click
         frmMovimientoVentas.ShowDialog()
+    End Sub
+
+    Private Sub PiizaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PiizaToolStripMenuItem.Click
+        frmMovimientoVentasPizzas.ShowDialog()
     End Sub
 End Class

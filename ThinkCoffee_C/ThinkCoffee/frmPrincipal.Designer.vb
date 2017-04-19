@@ -29,14 +29,14 @@ Partial Class frmPrincipal
         Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PromocionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PiizaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OtrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RecordatoriosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBar = New System.Windows.Forms.MenuStrip()
         Me.HolaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnMin = New System.Windows.Forms.Button()
-        Me.PiizaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OtrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBar.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -104,6 +104,18 @@ Partial Class frmPrincipal
         Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(177, 54)
         Me.VentaToolStripMenuItem.Text = "Venta"
         Me.VentaToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'PiizaToolStripMenuItem
+        '
+        Me.PiizaToolStripMenuItem.Name = "PiizaToolStripMenuItem"
+        Me.PiizaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PiizaToolStripMenuItem.Text = "Pizza"
+        '
+        'OtrosToolStripMenuItem
+        '
+        Me.OtrosToolStripMenuItem.Name = "OtrosToolStripMenuItem"
+        Me.OtrosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OtrosToolStripMenuItem.Text = "Otros"
         '
         'RecordatoriosToolStripMenuItem
         '
@@ -175,18 +187,6 @@ Partial Class frmPrincipal
         Me.btnMin.Text = ">>"
         Me.btnMin.UseVisualStyleBackColor = False
         Me.btnMin.Visible = False
-        '
-        'PiizaToolStripMenuItem
-        '
-        Me.PiizaToolStripMenuItem.Name = "PiizaToolStripMenuItem"
-        Me.PiizaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.PiizaToolStripMenuItem.Text = "Piiza"
-        '
-        'OtrosToolStripMenuItem
-        '
-        Me.OtrosToolStripMenuItem.Name = "OtrosToolStripMenuItem"
-        Me.OtrosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.OtrosToolStripMenuItem.Text = "Otros"
         '
         'frmPrincipal
         '
