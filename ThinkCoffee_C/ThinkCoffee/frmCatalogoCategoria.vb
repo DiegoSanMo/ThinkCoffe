@@ -146,7 +146,6 @@ Public Class frmCatalogoCategoria
                     dgCategoria(1, x).Value = nombre
                 End If
             Next
-            'dgCategoria(0, x).Value = nombre
             lector.Close()
 
             btnNuevo.Enabled = True
