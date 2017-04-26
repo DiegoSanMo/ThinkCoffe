@@ -56,12 +56,6 @@ Public Class frmCatalogoCategoria
         txtIdCategoria.Text = n
         txtNombre.Enabled = True
 
-        btnAnterior.Enabled = False
-        btnSiguiente.Enabled = False
-        btnUltimo.Enabled = False
-        btnInicio.Enabled = False
-
-
         btnNuevo.Enabled = False
         btnSalir.Enabled = False
         txtNombre.Focus()
@@ -153,6 +147,8 @@ Public Class frmCatalogoCategoria
             btnGrabar.Enabled = False
             btnCancelar.Enabled = False
             btnModificar.Enabled = True
+            txtNombre.Text = nombre
+
 
         Else
             Dim ultimo As Integer = dgCategoria.RowCount - 2

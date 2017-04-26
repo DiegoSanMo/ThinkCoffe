@@ -40,15 +40,10 @@ Partial Class frmCatalogoProductos
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.dgProductos = New System.Windows.Forms.DataGridView()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -58,6 +53,7 @@ Partial Class frmCatalogoProductos
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.btnModificar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ptbImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgProductos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,7 +90,7 @@ Partial Class frmCatalogoProductos
         '
         Me.btnAceptar.Enabled = False
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.btnAceptar.Location = New System.Drawing.Point(359, 184)
+        Me.btnAceptar.Location = New System.Drawing.Point(383, 184)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(97, 29)
         Me.btnAceptar.TabIndex = 7
@@ -117,10 +113,12 @@ Partial Class frmCatalogoProductos
         '
         Me.txtPrecio.Enabled = False
         Me.txtPrecio.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtPrecio.Location = New System.Drawing.Point(114, 186)
+        Me.txtPrecio.Location = New System.Drawing.Point(103, 186)
+        Me.txtPrecio.MaxLength = 7
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(99, 27)
         Me.txtPrecio.TabIndex = 5
+        Me.txtPrecio.Text = "0.00"
         '
         'Label14
         '
@@ -128,17 +126,17 @@ Partial Class frmCatalogoProductos
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label14.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label14.Location = New System.Drawing.Point(46, 189)
+        Me.Label14.Location = New System.Drawing.Point(26, 189)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(56, 20)
+        Me.Label14.Size = New System.Drawing.Size(70, 20)
         Me.Label14.TabIndex = 60
-        Me.Label14.Text = "Precio"
+        Me.Label14.Text = "Precio $"
         '
         'txtIdCategoria
         '
         Me.txtIdCategoria.Enabled = False
         Me.txtIdCategoria.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtIdCategoria.Location = New System.Drawing.Point(358, 100)
+        Me.txtIdCategoria.Location = New System.Drawing.Point(382, 100)
         Me.txtIdCategoria.Name = "txtIdCategoria"
         Me.txtIdCategoria.Size = New System.Drawing.Size(100, 27)
         Me.txtIdCategoria.TabIndex = 59
@@ -150,7 +148,7 @@ Partial Class frmCatalogoProductos
         Me.Label12.Enabled = False
         Me.Label12.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label12.Location = New System.Drawing.Point(254, 103)
+        Me.Label12.Location = New System.Drawing.Point(278, 103)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(98, 20)
         Me.Label12.TabIndex = 58
@@ -162,7 +160,7 @@ Partial Class frmCatalogoProductos
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label13.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label13.Location = New System.Drawing.Point(19, 103)
+        Me.Label13.Location = New System.Drawing.Point(13, 103)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(83, 20)
         Me.Label13.TabIndex = 57
@@ -174,9 +172,9 @@ Partial Class frmCatalogoProductos
         Me.cboCategoria.Enabled = False
         Me.cboCategoria.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.cboCategoria.FormattingEnabled = True
-        Me.cboCategoria.Location = New System.Drawing.Point(113, 100)
+        Me.cboCategoria.Location = New System.Drawing.Point(102, 100)
         Me.cboCategoria.Name = "cboCategoria"
-        Me.cboCategoria.Size = New System.Drawing.Size(128, 28)
+        Me.cboCategoria.Size = New System.Drawing.Size(146, 28)
         Me.cboCategoria.TabIndex = 3
         '
         'ptbImagen
@@ -193,7 +191,7 @@ Partial Class frmCatalogoProductos
         '
         Me.txtIdReceta.Enabled = False
         Me.txtIdReceta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtIdReceta.Location = New System.Drawing.Point(359, 141)
+        Me.txtIdReceta.Location = New System.Drawing.Point(383, 141)
         Me.txtIdReceta.Name = "txtIdReceta"
         Me.txtIdReceta.Size = New System.Drawing.Size(100, 27)
         Me.txtIdReceta.TabIndex = 54
@@ -205,7 +203,7 @@ Partial Class frmCatalogoProductos
         Me.Label11.Enabled = False
         Me.Label11.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label11.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label11.Location = New System.Drawing.Point(278, 144)
+        Me.Label11.Location = New System.Drawing.Point(302, 144)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(75, 20)
         Me.Label11.TabIndex = 53
@@ -217,7 +215,7 @@ Partial Class frmCatalogoProductos
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label9.Location = New System.Drawing.Point(42, 144)
+        Me.Label9.Location = New System.Drawing.Point(36, 144)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(60, 20)
         Me.Label9.TabIndex = 52
@@ -229,16 +227,16 @@ Partial Class frmCatalogoProductos
         Me.cboReceta.Enabled = False
         Me.cboReceta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.cboReceta.FormattingEnabled = True
-        Me.cboReceta.Location = New System.Drawing.Point(113, 141)
+        Me.cboReceta.Location = New System.Drawing.Point(102, 141)
         Me.cboReceta.Name = "cboReceta"
-        Me.cboReceta.Size = New System.Drawing.Size(128, 28)
+        Me.cboReceta.Size = New System.Drawing.Size(146, 28)
         Me.cboReceta.TabIndex = 4
         '
         'txtIdProducto
         '
         Me.txtIdProducto.Enabled = False
         Me.txtIdProducto.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtIdProducto.Location = New System.Drawing.Point(113, 18)
+        Me.txtIdProducto.Location = New System.Drawing.Point(102, 18)
         Me.txtIdProducto.Name = "txtIdProducto"
         Me.txtIdProducto.Size = New System.Drawing.Size(100, 27)
         Me.txtIdProducto.TabIndex = 1
@@ -249,7 +247,7 @@ Partial Class frmCatalogoProductos
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label1.Location = New System.Drawing.Point(15, 18)
+        Me.Label1.Location = New System.Drawing.Point(4, 18)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(92, 20)
         Me.Label1.TabIndex = 26
@@ -261,7 +259,7 @@ Partial Class frmCatalogoProductos
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(32, 62)
+        Me.Label2.Location = New System.Drawing.Point(26, 62)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 20)
         Me.Label2.TabIndex = 28
@@ -271,62 +269,18 @@ Partial Class frmCatalogoProductos
         '
         Me.txtNombre.Enabled = False
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtNombre.Location = New System.Drawing.Point(113, 59)
+        Me.txtNombre.Location = New System.Drawing.Point(102, 59)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(346, 27)
+        Me.txtNombre.Size = New System.Drawing.Size(381, 27)
         Me.txtNombre.TabIndex = 2
-        '
-        'Button4
-        '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.Black
-        Me.Button4.Location = New System.Drawing.Point(485, 322)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(92, 32)
-        Me.Button4.TabIndex = 58
-        Me.Button4.Text = "Último"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(365, 322)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(92, 32)
-        Me.Button3.TabIndex = 57
-        Me.Button3.Text = "Anterior"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(226, 322)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(92, 32)
-        Me.Button2.TabIndex = 56
-        Me.Button2.Text = "Siguiente"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(79, 322)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(92, 32)
-        Me.Button1.TabIndex = 55
-        Me.Button1.Text = "Inicio"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'dgProductos
         '
         Me.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column4, Me.Column2, Me.Column1, Me.Column5, Me.Column6})
-        Me.dgProductos.Location = New System.Drawing.Point(29, 371)
+        Me.dgProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column4, Me.Column2, Me.Column5, Me.Column6})
+        Me.dgProductos.Location = New System.Drawing.Point(12, 335)
         Me.dgProductos.Name = "dgProductos"
-        Me.dgProductos.Size = New System.Drawing.Size(681, 150)
+        Me.dgProductos.Size = New System.Drawing.Size(698, 150)
         Me.dgProductos.TabIndex = 54
         '
         'Column3
@@ -340,25 +294,21 @@ Partial Class frmCatalogoProductos
         Me.Column4.HeaderText = "Producto"
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
-        Me.Column4.Width = 130
+        Me.Column4.Width = 150
         '
         'Column2
         '
         Me.Column2.HeaderText = "Categoria"
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "idReceta"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
+        Me.Column2.Width = 150
         '
         'Column5
         '
         Me.Column5.HeaderText = "Receta"
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
+        Me.Column5.Width = 150
         '
         'Column6
         '
@@ -385,7 +335,7 @@ Partial Class frmCatalogoProductos
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(540, 531)
+        Me.btnSalir.Location = New System.Drawing.Point(569, 491)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(87, 39)
         Me.btnSalir.TabIndex = 62
@@ -400,7 +350,7 @@ Partial Class frmCatalogoProductos
         Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(384, 531)
+        Me.btnCancelar.Location = New System.Drawing.Point(435, 491)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(101, 39)
         Me.btnCancelar.TabIndex = 61
@@ -415,7 +365,7 @@ Partial Class frmCatalogoProductos
         Me.btnGrabar.ForeColor = System.Drawing.Color.Black
         Me.btnGrabar.Image = Global.ThinkCoffee.My.Resources.Resources.Burn_CD_30
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGrabar.Location = New System.Drawing.Point(243, 531)
+        Me.btnGrabar.Location = New System.Drawing.Point(315, 491)
         Me.btnGrabar.Name = "btnGrabar"
         Me.btnGrabar.Size = New System.Drawing.Size(87, 39)
         Me.btnGrabar.TabIndex = 60
@@ -429,7 +379,7 @@ Partial Class frmCatalogoProductos
         Me.btnNuevo.ForeColor = System.Drawing.Color.Black
         Me.btnNuevo.Image = Global.ThinkCoffee.My.Resources.Resources.Add_List_30
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(97, 531)
+        Me.btnNuevo.Location = New System.Drawing.Point(59, 491)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(87, 39)
         Me.btnNuevo.TabIndex = 59
@@ -453,6 +403,20 @@ Partial Class frmCatalogoProductos
         Me.OpenFileDialog1.Filter = "Archivos de imagen(*.BMP;*.JPG;)|*.BMP;*.JPG;*.PNG;*.GIF|Todos los archivos (*.*)" &
     "|*.*"";"
         '
+        'btnModificar
+        '
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar.ForeColor = System.Drawing.Color.Black
+        Me.btnModificar.Image = Global.ThinkCoffee.My.Resources.Resources.Sort_By_Modified_Date_30
+        Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnModificar.Location = New System.Drawing.Point(179, 491)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(103, 39)
+        Me.btnModificar.TabIndex = 61
+        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnModificar.UseVisualStyleBackColor = True
+        '
         'frmCatalogoProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -460,17 +424,14 @@ Partial Class frmCatalogoProductos
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BackgroundImage = Global.ThinkCoffee.My.Resources.Resources.fondo_formulario_1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(722, 584)
+        Me.ClientSize = New System.Drawing.Size(722, 547)
+        Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnGrabar)
         Me.Controls.Add(Me.btnNuevo)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dgProductos)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -495,10 +456,6 @@ Partial Class frmCatalogoProductos
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnGrabar As Button
     Friend WithEvents btnNuevo As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents dgProductos As DataGridView
     Friend WithEvents Label10 As Label
     Friend WithEvents txtIdCategoria As TextBox
@@ -513,13 +470,13 @@ Partial Class frmCatalogoProductos
     Friend WithEvents btnBuscar As Button
     Friend WithEvents txtPrecio As TextBox
     Friend WithEvents Label14 As Label
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents btnAceptar As Button
+    Friend WithEvents btnModificar As Button
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
 End Class

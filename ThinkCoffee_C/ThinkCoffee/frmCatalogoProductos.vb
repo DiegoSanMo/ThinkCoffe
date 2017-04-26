@@ -8,6 +8,15 @@ Public Class frmCatalogoProductos
         comando.CommandText = String.Format("Select count(*) from tlb_producto	")
         n = comando.ExecuteScalar + 1
 
+        'Sube las categorías al combo
+        comando.CommandText = "Select * from tlb_categoria"
+        lector = comando.ExecuteReader
+
+        While lector.Read
+            cboCategoria.Items.Add(lector(1))
+        End While
+        lector.Close()
+
         If n > 1 Then
             comando.CommandText = String.Format("Select * from tlb_producto")
             lector = comando.ExecuteReader()
@@ -37,6 +46,7 @@ Public Class frmCatalogoProductos
         btnGrabar.Enabled = True
         btnCancelar.Enabled = True
         btnAceptar.Enabled = True
+        btnModificar.Enabled = False
 
         txtNombre.Enabled = True
         cboReceta.Enabled = True
@@ -84,7 +94,7 @@ Public Class frmCatalogoProductos
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
-        dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, cboCategoria.SelectedItem, txtIdCategoria.Text, cboReceta.SelectedItem, txtIdReceta.Text, txtPrecio.Text)
+        dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, cboCategoria.SelectedItem, cboReceta.SelectedItem, txtPrecio.Text)
 
 
         limpiarCajaProductos()
@@ -98,5 +108,67 @@ Public Class frmCatalogoProductos
             MessageBoxButtons.OK, MessageBoxIcon.Error)
             txtNombre.Focus()
         End If
+    End Sub
+
+    Private Sub cboCategoria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCategoria.SelectedIndexChanged
+        comando.CommandText = "Select * from tlb_categoria where nombre = '" & cboCategoria.Text & "'"
+        lector = comando.ExecuteReader
+
+        lector.Read()
+        txtIdCategoria.Text = lector(0)
+        lector.Close()
+    End Sub
+
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+        'Bloqueo de botones principales
+        btnModificar.Enabled = False
+        btnSalir.Enabled = False
+        btnNuevo.Enabled = False
+        btnGrabar.Enabled = True
+        btnCancelar.Enabled = True
+
+        'limpieza de la caja de productos
+        activarCajaProductos()
+
+
+
+    End Sub
+
+    Private Sub txtNombre_KeyDown(sender As Object, e As KeyEventArgs) Handles txtNombre.KeyDown
+
+    End Sub
+
+    Private Sub txtPrecio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecio.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(CadenaNumeros, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
+
+    Private Sub txtPrecio_TextChanged(sender As Object, e As EventArgs) Handles txtPrecio.TextChanged
+        'If (txtPrecio.Text <> String.Empty) Then
+
+        '    ' Convertimos a Decimal el valor del control TextBox. Si
+        '    ' el valor no se puede convertir a Decimal, se mostrará
+        '    ' un 0 en lugar de producirse un error.
+        '    '
+        '    Dim importe As Decimal
+        '    Decimal.TryParse(txtPrecio.Text, importe)
+
+        '    ' Formateamos a entero, sin decimales, el valor decimal obtenido.
+        '    '
+        '    txtPrecio.Text = String.Format("{0:C0}", importe)
+
+        '    ' Establecemos el punto de inserción al final del valor del control TextBox.
+        '    '
+        '    txtPrecio.SelectionStart = txtPrecio.TextLength
+
+        'End If
+        Dim value As Decimal = (txtPrecio.Text)
+
+        txtPrecio.Text = String.Format("{0:N0}", 2, 5)
+
     End Sub
 End Class
