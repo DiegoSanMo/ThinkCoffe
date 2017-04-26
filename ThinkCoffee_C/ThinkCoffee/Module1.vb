@@ -2,9 +2,9 @@
 Module Module1
     Public ex, ey As Integer
     Public mover As Boolean
-    Public CadenaValida As String = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ "
-    Public CadenaNumeros As String = "0123456789- "
-    Public CadenaDirecciones As String = "0123456789.ABCDEFGHIJKLMNÑOPQRSTUVWXYZÁÉÍÓÚ "
+    Public CadenaValida As String = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
+    Public CadenaNumeros As String = "0123456789-., "
+    Public CadenaDirecciones As String = "0123456789.ABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
 
 
     Public conexionSql As New SqlConnection("Data Source = 'PRO'; Initial Catalog = 'thinkCoffee'; integrated security = true")
@@ -31,6 +31,16 @@ Module Module1
         frmCatalogoProductos.cboReceta.Enabled = False
         frmCatalogoProductos.btnAceptar.Enabled = False
         frmCatalogoProductos.btnBuscar.Enabled = False
+    End Sub
+
+
+  Public Sub activarCajaProductos()
+        frmCatalogoProductos.txtNombre.Enabled = True
+        frmCatalogoProductos.txtPrecio.Enabled = True
+        frmCatalogoProductos.cboCategoria.Enabled = True
+        frmCatalogoProductos.cboReceta.Enabled = True
+        frmCatalogoProductos.btnAceptar.Enabled = True
+        frmCatalogoProductos.btnBuscar.Enabled = True
     End Sub
 
 
