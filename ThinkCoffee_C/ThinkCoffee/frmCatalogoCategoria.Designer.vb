@@ -24,25 +24,23 @@ Partial Class frmCatalogoCategoria
     Private Sub InitializeComponent()
         Me.ptbBarra = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.btnMinimizar = New System.Windows.Forms.Button()
-        Me.btnCerrar = New System.Windows.Forms.Button()
+
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtIdCategoria = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgCategoria = New System.Windows.Forms.DataGridView()
-        Me.btnUltimo = New System.Windows.Forms.Button()
-        Me.btnAnterior = New System.Windows.Forms.Button()
-        Me.btnSiguiente = New System.Windows.Forms.Button()
-        Me.btnInicio = New System.Windows.Forms.Button()
+
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGrabar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnAceptar = New System.Windows.Forms.Button()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnModificar = New System.Windows.Forms.Button()
+    
         CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -54,7 +52,7 @@ Partial Class frmCatalogoCategoria
         Me.ptbBarra.Image = Global.ThinkCoffee.My.Resources.Resources.BarraSuperior
         Me.ptbBarra.Location = New System.Drawing.Point(0, 0)
         Me.ptbBarra.Name = "ptbBarra"
-        Me.ptbBarra.Size = New System.Drawing.Size(561, 33)
+        Me.ptbBarra.Size = New System.Drawing.Size(547, 33)
         Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.ptbBarra.TabIndex = 0
         Me.ptbBarra.TabStop = False
@@ -72,44 +70,7 @@ Partial Class frmCatalogoCategoria
         Me.Label10.Text = "CATEGORIAS"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'btnMinimizar
-        '
-        Me.btnMinimizar.AllowDrop = True
-        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMinimizar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnMinimizar.FlatAppearance.BorderSize = 0
-        Me.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMinimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnMinimizar.Image = Global.ThinkCoffee.My.Resources.Resources.Minimize_Window_30
-        Me.btnMinimizar.Location = New System.Drawing.Point(493, 0)
-        Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(36, 33)
-        Me.btnMinimizar.TabIndex = 23
-        Me.btnMinimizar.TextAlign = System.Drawing.ContentAlignment.TopRight
-        Me.btnMinimizar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.btnMinimizar.UseVisualStyleBackColor = False
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.AllowDrop = True
-        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnCerrar.FlatAppearance.BorderSize = 0
-        Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnCerrar.Image = Global.ThinkCoffee.My.Resources.Resources.Close_Window_30
-        Me.btnCerrar.Location = New System.Drawing.Point(525, 0)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(36, 33)
-        Me.btnCerrar.TabIndex = 22
-        Me.btnCerrar.TextAlign = System.Drawing.ContentAlignment.TopRight
-        Me.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.btnCerrar.UseVisualStyleBackColor = False
-        '
+
         'txtNombre
         '
         Me.txtNombre.Enabled = False
@@ -151,60 +112,33 @@ Partial Class frmCatalogoCategoria
         Me.Label1.Size = New System.Drawing.Size(98, 20)
         Me.Label1.TabIndex = 26
         Me.Label1.Text = "idCategoria"
+
         '
         'dgCategoria
         '
         Me.dgCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgCategoria.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2})
-        Me.dgCategoria.Location = New System.Drawing.Point(42, 254)
+        Me.dgCategoria.Location = New System.Drawing.Point(42, 217)
         Me.dgCategoria.Name = "dgCategoria"
         Me.dgCategoria.ReadOnly = True
         Me.dgCategoria.Size = New System.Drawing.Size(487, 150)
         Me.dgCategoria.TabIndex = 31
+
         '
-        'btnUltimo
+        'Column1
         '
-        Me.btnUltimo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUltimo.ForeColor = System.Drawing.Color.Black
-        Me.btnUltimo.Location = New System.Drawing.Point(432, 216)
-        Me.btnUltimo.Name = "btnUltimo"
-        Me.btnUltimo.Size = New System.Drawing.Size(92, 32)
-        Me.btnUltimo.TabIndex = 35
-        Me.btnUltimo.Text = "Último"
-        Me.btnUltimo.UseVisualStyleBackColor = True
+        Me.Column1.HeaderText = "Clave"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 125
         '
-        'btnAnterior
+        'Column2
         '
-        Me.btnAnterior.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAnterior.ForeColor = System.Drawing.Color.Black
-        Me.btnAnterior.Location = New System.Drawing.Point(307, 216)
-        Me.btnAnterior.Name = "btnAnterior"
-        Me.btnAnterior.Size = New System.Drawing.Size(92, 32)
-        Me.btnAnterior.TabIndex = 34
-        Me.btnAnterior.Text = "Anterior"
-        Me.btnAnterior.UseVisualStyleBackColor = True
-        '
-        'btnSiguiente
-        '
-        Me.btnSiguiente.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSiguiente.ForeColor = System.Drawing.Color.Black
-        Me.btnSiguiente.Location = New System.Drawing.Point(166, 216)
-        Me.btnSiguiente.Name = "btnSiguiente"
-        Me.btnSiguiente.Size = New System.Drawing.Size(92, 32)
-        Me.btnSiguiente.TabIndex = 33
-        Me.btnSiguiente.Text = "Siguiente"
-        Me.btnSiguiente.UseVisualStyleBackColor = True
-        '
-        'btnInicio
-        '
-        Me.btnInicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInicio.ForeColor = System.Drawing.Color.Black
-        Me.btnInicio.Location = New System.Drawing.Point(42, 216)
-        Me.btnInicio.Name = "btnInicio"
-        Me.btnInicio.Size = New System.Drawing.Size(92, 32)
-        Me.btnInicio.TabIndex = 32
-        Me.btnInicio.Text = "Inicio"
-        Me.btnInicio.UseVisualStyleBackColor = True
+        Me.Column2.HeaderText = "Nombre"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 315
+
         '
         'btnSalir
         '
@@ -212,7 +146,7 @@ Partial Class frmCatalogoCategoria
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(437, 423)
+        Me.btnSalir.Location = New System.Drawing.Point(440, 388)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(87, 39)
         Me.btnSalir.TabIndex = 39
@@ -227,7 +161,7 @@ Partial Class frmCatalogoCategoria
         Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(298, 423)
+        Me.btnCancelar.Location = New System.Drawing.Point(334, 388)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(101, 39)
         Me.btnCancelar.TabIndex = 38
@@ -242,7 +176,7 @@ Partial Class frmCatalogoCategoria
         Me.btnGrabar.ForeColor = System.Drawing.Color.Black
         Me.btnGrabar.Image = Global.ThinkCoffee.My.Resources.Resources.Burn_CD_30
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGrabar.Location = New System.Drawing.Point(171, 423)
+        Me.btnGrabar.Location = New System.Drawing.Point(242, 388)
         Me.btnGrabar.Name = "btnGrabar"
         Me.btnGrabar.Size = New System.Drawing.Size(87, 39)
         Me.btnGrabar.TabIndex = 37
@@ -256,7 +190,7 @@ Partial Class frmCatalogoCategoria
         Me.btnNuevo.ForeColor = System.Drawing.Color.Black
         Me.btnNuevo.Image = Global.ThinkCoffee.My.Resources.Resources.Add_List_30
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(42, 423)
+        Me.btnNuevo.Location = New System.Drawing.Point(42, 388)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(87, 39)
         Me.btnNuevo.TabIndex = 36
@@ -290,19 +224,20 @@ Partial Class frmCatalogoCategoria
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
-        'Column1
+        'btnModificar
         '
-        Me.Column1.HeaderText = "Clave"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        Me.Column1.Width = 125
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Nombre"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 315
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar.ForeColor = System.Drawing.Color.Black
+        Me.btnModificar.Image = Global.ThinkCoffee.My.Resources.Resources.Sort_By_Modified_Date_30
+        Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnModificar.Location = New System.Drawing.Point(134, 388)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(103, 39)
+        Me.btnModificar.TabIndex = 41
+        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnModificar.UseVisualStyleBackColor = True
+
         '
         'frmCatalogoCategoria
         '
@@ -311,20 +246,18 @@ Partial Class frmCatalogoCategoria
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.BackgroundImage = Global.ThinkCoffee.My.Resources.Resources.fondo_formulario_1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(561, 476)
+
+        Me.ClientSize = New System.Drawing.Size(547, 445)
+        Me.Controls.Add(Me.btnModificar)
+        
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnGrabar)
         Me.Controls.Add(Me.btnNuevo)
-        Me.Controls.Add(Me.btnUltimo)
-        Me.Controls.Add(Me.btnAnterior)
-        Me.Controls.Add(Me.btnSiguiente)
-        Me.Controls.Add(Me.btnInicio)
+
         Me.Controls.Add(Me.dgCategoria)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.btnMinimizar)
-        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.ptbBarra)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmCatalogoCategoria"
@@ -341,17 +274,13 @@ Partial Class frmCatalogoCategoria
 
     Friend WithEvents ptbBarra As PictureBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents btnMinimizar As Button
-    Friend WithEvents btnCerrar As Button
+
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents txtIdCategoria As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents dgCategoria As DataGridView
-    Friend WithEvents btnUltimo As Button
-    Friend WithEvents btnAnterior As Button
-    Friend WithEvents btnSiguiente As Button
-    Friend WithEvents btnInicio As Button
+
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnGrabar As Button
@@ -360,4 +289,6 @@ Partial Class frmCatalogoCategoria
     Friend WithEvents btnAceptar As Button
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
+
+    Friend WithEvents btnModificar As Button
 End Class

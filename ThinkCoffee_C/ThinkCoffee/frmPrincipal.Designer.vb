@@ -29,6 +29,8 @@ Partial Class frmPrincipal
         Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PromocionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PiizaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OtrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RecordatoriosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBar = New System.Windows.Forms.MenuStrip()
         Me.HolaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -55,7 +57,8 @@ Partial Class frmPrincipal
         Me.CategoriasToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Tree_Structure_50
         Me.CategoriasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CategoriasToolStripMenuItem.Name = "CategoriasToolStripMenuItem"
-        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
+
+        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
         Me.CategoriasToolStripMenuItem.Text = "Categorias"
         '
         'IngredientesToolStripMenuItem
@@ -63,7 +66,8 @@ Partial Class frmPrincipal
         Me.IngredientesToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Vegetarian_Food_50
         Me.IngredientesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.IngredientesToolStripMenuItem.Name = "IngredientesToolStripMenuItem"
-        Me.IngredientesToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
+        
+        Me.IngredientesToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
         Me.IngredientesToolStripMenuItem.Text = "Insumos"
         '
         'ProductosToolStripMenuItem1
@@ -71,7 +75,7 @@ Partial Class frmPrincipal
         Me.ProductosToolStripMenuItem1.Image = Global.ThinkCoffee.My.Resources.Resources.Coffee_to_Go_50
         Me.ProductosToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ProductosToolStripMenuItem1.Name = "ProductosToolStripMenuItem1"
-        Me.ProductosToolStripMenuItem1.Size = New System.Drawing.Size(186, 56)
+        Me.ProductosToolStripMenuItem1.Size = New System.Drawing.Size(173, 56)
         Me.ProductosToolStripMenuItem1.Text = "Productos"
         '
         'ProveedoresToolStripMenuItem1
@@ -79,7 +83,7 @@ Partial Class frmPrincipal
         Me.ProveedoresToolStripMenuItem1.Image = Global.ThinkCoffee.My.Resources.Resources.Conference_48
         Me.ProveedoresToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ProveedoresToolStripMenuItem1.Name = "ProveedoresToolStripMenuItem1"
-        Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(186, 56)
+        Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(173, 56)
         Me.ProveedoresToolStripMenuItem1.Text = "Proveedores"
         '
         'PromocionesToolStripMenuItem
@@ -87,11 +91,13 @@ Partial Class frmPrincipal
         Me.PromocionesToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Book_48
         Me.PromocionesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PromocionesToolStripMenuItem.Name = "PromocionesToolStripMenuItem"
-        Me.PromocionesToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
+        Me.PromocionesToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
+        
         Me.PromocionesToolStripMenuItem.Text = "Recetas"
         '
         'VentaToolStripMenuItem
         '
+        Me.VentaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PiizaToolStripMenuItem, Me.OtrosToolStripMenuItem})
         Me.VentaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.VentaToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Cash_Register_50
         Me.VentaToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -101,6 +107,18 @@ Partial Class frmPrincipal
         Me.VentaToolStripMenuItem.Size = New System.Drawing.Size(177, 54)
         Me.VentaToolStripMenuItem.Text = "Venta"
         Me.VentaToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'PiizaToolStripMenuItem
+        '
+        Me.PiizaToolStripMenuItem.Name = "PiizaToolStripMenuItem"
+        Me.PiizaToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PiizaToolStripMenuItem.Text = "Pizza"
+        '
+        'OtrosToolStripMenuItem
+        '
+        Me.OtrosToolStripMenuItem.Name = "OtrosToolStripMenuItem"
+        Me.OtrosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OtrosToolStripMenuItem.Text = "Otros"
         '
         'RecordatoriosToolStripMenuItem
         '
@@ -208,4 +226,7 @@ Partial Class frmPrincipal
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HolaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CategoriasToolStripMenuItem As ToolStripMenuItem
+    
+    Friend WithEvents PiizaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OtrosToolStripMenuItem As ToolStripMenuItem
 End Class
