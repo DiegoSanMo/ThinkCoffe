@@ -1,11 +1,13 @@
-﻿Imports System.ComponentModel
+﻿
+Imports System.ComponentModel
 Imports System.Data.SqlClient
 
 Public Class frmCatalogoCategoria
     Dim banModi As Boolean = False
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
-        Me.Close()
+
+      Me.Close()
     End Sub
 
     Private Sub frmCatalogoCategoria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -56,6 +58,7 @@ Public Class frmCatalogoCategoria
         txtIdCategoria.Text = n
         txtNombre.Enabled = True
 
+
         btnNuevo.Enabled = False
         btnSalir.Enabled = False
         txtNombre.Focus()
@@ -63,6 +66,7 @@ Public Class frmCatalogoCategoria
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
+
         If banModi Then
             For x = 0 To dgCategoria.RowCount - 2
                 If dgCategoria(0, x).Value = Val(txtIdCategoria.Text) Then
@@ -93,9 +97,11 @@ Public Class frmCatalogoCategoria
         End If
 
 
+
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+
         If banModi Then
             Dim fila As Integer = Val(dgCategoria.Item(0, dgCategoria.CurrentRow.Index).Value) - 1
             dgCategoria.Item(1, fila).Value = txtNombre.Text
@@ -116,8 +122,6 @@ Public Class frmCatalogoCategoria
             btnAceptar.Enabled = False
         End If
 
-
-
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
@@ -127,6 +131,7 @@ Public Class frmCatalogoCategoria
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+
         If banModi Then
             Dim nombre As String
 

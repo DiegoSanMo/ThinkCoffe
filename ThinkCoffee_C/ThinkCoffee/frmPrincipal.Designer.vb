@@ -57,6 +57,7 @@ Partial Class frmPrincipal
         Me.CategoriasToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Tree_Structure_50
         Me.CategoriasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CategoriasToolStripMenuItem.Name = "CategoriasToolStripMenuItem"
+
         Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
         Me.CategoriasToolStripMenuItem.Text = "Categorias"
         '
@@ -65,6 +66,7 @@ Partial Class frmPrincipal
         Me.IngredientesToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Vegetarian_Food_50
         Me.IngredientesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.IngredientesToolStripMenuItem.Name = "IngredientesToolStripMenuItem"
+        
         Me.IngredientesToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
         Me.IngredientesToolStripMenuItem.Text = "Insumos"
         '
@@ -90,6 +92,7 @@ Partial Class frmPrincipal
         Me.PromocionesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PromocionesToolStripMenuItem.Name = "PromocionesToolStripMenuItem"
         Me.PromocionesToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
+        
         Me.PromocionesToolStripMenuItem.Text = "Recetas"
         '
         'VentaToolStripMenuItem
@@ -223,6 +226,7 @@ Partial Class frmPrincipal
     Friend WithEvents SalirToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HolaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CategoriasToolStripMenuItem As ToolStripMenuItem
+    
     Friend WithEvents PiizaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OtrosToolStripMenuItem As ToolStripMenuItem
 End Class

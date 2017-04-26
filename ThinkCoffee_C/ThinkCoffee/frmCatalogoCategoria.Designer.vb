@@ -24,11 +24,13 @@ Partial Class frmCatalogoCategoria
     Private Sub InitializeComponent()
         Me.ptbBarra = New System.Windows.Forms.PictureBox()
         Me.Label10 = New System.Windows.Forms.Label()
+
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtIdCategoria = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgCategoria = New System.Windows.Forms.DataGridView()
+
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnSalir = New System.Windows.Forms.Button()
@@ -38,6 +40,7 @@ Partial Class frmCatalogoCategoria
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
+    
         CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -67,6 +70,7 @@ Partial Class frmCatalogoCategoria
         Me.Label10.Text = "CATEGORIAS"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+
         'txtNombre
         '
         Me.txtNombre.Enabled = False
@@ -108,6 +112,7 @@ Partial Class frmCatalogoCategoria
         Me.Label1.Size = New System.Drawing.Size(98, 20)
         Me.Label1.TabIndex = 26
         Me.Label1.Text = "idCategoria"
+
         '
         'dgCategoria
         '
@@ -118,6 +123,7 @@ Partial Class frmCatalogoCategoria
         Me.dgCategoria.ReadOnly = True
         Me.dgCategoria.Size = New System.Drawing.Size(487, 150)
         Me.dgCategoria.TabIndex = 31
+
         '
         'Column1
         '
@@ -132,6 +138,7 @@ Partial Class frmCatalogoCategoria
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
         Me.Column2.Width = 315
+
         '
         'btnSalir
         '
@@ -230,6 +237,7 @@ Partial Class frmCatalogoCategoria
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnModificar.UseVisualStyleBackColor = True
+
         '
         'frmCatalogoCategoria
         '
@@ -238,13 +246,16 @@ Partial Class frmCatalogoCategoria
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.BackgroundImage = Global.ThinkCoffee.My.Resources.Resources.fondo_formulario_1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+
         Me.ClientSize = New System.Drawing.Size(547, 445)
         Me.Controls.Add(Me.btnModificar)
+        
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnGrabar)
         Me.Controls.Add(Me.btnNuevo)
+
         Me.Controls.Add(Me.dgCategoria)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.ptbBarra)
@@ -263,11 +274,13 @@ Partial Class frmCatalogoCategoria
 
     Friend WithEvents ptbBarra As PictureBox
     Friend WithEvents Label10 As Label
+
     Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents txtIdCategoria As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents dgCategoria As DataGridView
+
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnGrabar As Button
@@ -276,5 +289,6 @@ Partial Class frmCatalogoCategoria
     Friend WithEvents btnAceptar As Button
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
+
     Friend WithEvents btnModificar As Button
 End Class

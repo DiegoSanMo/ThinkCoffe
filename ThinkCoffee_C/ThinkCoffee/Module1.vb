@@ -33,7 +33,8 @@ Module Module1
         frmCatalogoProductos.btnBuscar.Enabled = False
     End Sub
 
-    Public Sub activarCajaProductos()
+
+  Public Sub activarCajaProductos()
         frmCatalogoProductos.txtNombre.Enabled = True
         frmCatalogoProductos.txtPrecio.Enabled = True
         frmCatalogoProductos.cboCategoria.Enabled = True

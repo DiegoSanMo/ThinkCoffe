@@ -16,7 +16,6 @@ Public Class frmCatalogoProductos
             cboCategoria.Items.Add(lector(1))
         End While
         lector.Close()
-
         If n > 1 Then
             comando.CommandText = String.Format("Select * from tlb_producto")
             lector = comando.ExecuteReader()
@@ -46,6 +45,7 @@ Public Class frmCatalogoProductos
         btnGrabar.Enabled = True
         btnCancelar.Enabled = True
         btnAceptar.Enabled = True
+
         btnModificar.Enabled = False
 
         txtNombre.Enabled = True
@@ -94,7 +94,8 @@ Public Class frmCatalogoProductos
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
-        dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, cboCategoria.SelectedItem, cboReceta.SelectedItem, txtPrecio.Text)
+
+    dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, cboCategoria.SelectedItem, cboReceta.SelectedItem, txtPrecio.Text)
 
 
         limpiarCajaProductos()
@@ -110,7 +111,7 @@ Public Class frmCatalogoProductos
         End If
     End Sub
 
-    Private Sub cboCategoria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCategoria.SelectedIndexChanged
+  Private Sub cboCategoria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCategoria.SelectedIndexChanged
         comando.CommandText = "Select * from tlb_categoria where nombre = '" & cboCategoria.Text & "'"
         lector = comando.ExecuteReader
 
