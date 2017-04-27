@@ -9,11 +9,11 @@ Public Class frmCatalogoProductos
         n = comando.ExecuteScalar + 1
 
         'Sube las categorías al combo
-        comando.CommandText = "Select * from tlb_categoria"
+        comando.CommandText = "Select tlb_categoria.nombre from tlb_categoria"
         lector = comando.ExecuteReader
 
         While lector.Read
-            cboCategoria.Items.Add(lector(1))
+            cboCategoria.Items.Add(lector(0))
         End While
         lector.Close()
         If n > 1 Then
@@ -112,7 +112,7 @@ Public Class frmCatalogoProductos
     End Sub
 
   Private Sub cboCategoria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCategoria.SelectedIndexChanged
-        comando.CommandText = "Select * from tlb_categoria where nombre = '" & cboCategoria.Text & "'"
+        comando.CommandText = "Select tlb_categoria.nombre from tlb_categoria where nombre = '" & cboCategoria.Text & "'"
         lector = comando.ExecuteReader
 
         lector.Read()
