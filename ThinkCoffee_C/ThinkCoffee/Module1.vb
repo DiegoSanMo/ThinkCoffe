@@ -71,10 +71,10 @@ Module Module1
 
     Public Sub limpiarCajaInsumos()
         frmCatalogoInsumos.txtNombre.Text = ""
-        frmCatalogoInsumos.txtMax.Text = ""
-        frmCatalogoInsumos.txtMin.Text = ""
-        frmCatalogoInsumos.txtExist.Text = ""
-        frmCatalogoInsumos.txtCosto.Text = ""
+        frmCatalogoInsumos.txtMax.Text = vbEmpty
+        frmCatalogoInsumos.txtMin.Text = vbEmpty
+        frmCatalogoInsumos.txtExist.Text = vbEmpty
+        frmCatalogoInsumos.txtCosto.Text = vbEmpty
 
     End Sub
 End Module

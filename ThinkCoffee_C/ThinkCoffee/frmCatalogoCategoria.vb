@@ -4,6 +4,7 @@ Imports System.Data.SqlClient
 
 Public Class frmCatalogoCategoria
     Dim banModi As Boolean = False
+    Dim filaSel As Integer
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
 
@@ -53,20 +54,25 @@ Public Class frmCatalogoCategoria
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         Dim n As Integer
+
         comando.CommandText = String.Format("Select count(*) from tlb_categoria")
         n = comando.ExecuteScalar + 1
         txtIdCategoria.Text = n
         txtNombre.Enabled = True
+        txtNombre.Text = ""
+        dgCategoria.Enabled = False
 
 
         btnNuevo.Enabled = False
         btnSalir.Enabled = False
+        btnModificar.Enabled = False
+
         txtNombre.Focus()
 
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
-
+        dgCategoria.Enabled = False
         If banModi Then
             For x = 0 To dgCategoria.RowCount - 2
                 If dgCategoria(0, x).Value = Val(txtIdCategoria.Text) Then
@@ -103,8 +109,8 @@ Public Class frmCatalogoCategoria
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
 
         If banModi Then
-            Dim fila As Integer = Val(dgCategoria.Item(0, dgCategoria.CurrentRow.Index).Value) - 1
-            dgCategoria.Item(1, fila).Value = txtNombre.Text
+
+            dgCategoria.Item(1, filaSel).Value = txtNombre.Text
 
             txtNombre.Enabled = False
             btnGrabar.Enabled = True
@@ -135,17 +141,19 @@ Public Class frmCatalogoCategoria
         If banModi Then
             Dim nombre As String
 
-            comando.CommandText = "Select * from tlb_categoria where idCategoria = " & Val(txtIdCategoria.Text) & ""
+            comando.CommandText = "Select  tlb_categoria.idCategoria, tlb_categoria.nombre  from tlb_categoria where idCategoria = " & Val(txtIdCategoria.Text) & ""
             lector = comando.ExecuteReader
             lector.Read()
             nombre = lector(1)
+            lector.Close()
 
             For x = 0 To dgCategoria.RowCount - 2
                 If Val(txtIdCategoria.Text) = dgCategoria.Item(0, x).Value Then
                     dgCategoria(1, x).Value = nombre
                 End If
             Next
-            lector.Close()
+
+
 
             btnNuevo.Enabled = True
             btnSalir.Enabled = True
@@ -164,6 +172,7 @@ Public Class frmCatalogoCategoria
             btnSalir.Enabled = True
             btnGrabar.Enabled = False
             btnCancelar.Enabled = False
+            btnModificar.Enabled = True
         End If
 
 
@@ -181,10 +190,12 @@ Public Class frmCatalogoCategoria
     End Sub
 
     Private Sub dgCategoria_SelectionChanged(sender As Object, e As EventArgs) Handles dgCategoria.SelectionChanged
-        Dim fila As Integer = dgCategoria.Item(0, dgCategoria.CurrentRow.Index).Value - 1
+        filaSel = dgCategoria.Item(0, dgCategoria.CurrentRow.Index).Value - 1
 
-        txtIdCategoria.Text = dgCategoria(0, fila).Value
-        txtNombre.Text = dgCategoria(1, fila).Value
+
+        txtIdCategoria.Text = dgCategoria(0, filaSel).Value
+        txtNombre.Text = dgCategoria(1, filaSel).Value
+
 
     End Sub
 End Class

@@ -342,6 +342,7 @@ Partial Class frmCatalogoInsumos
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1011, 498)
+        Me.ControlBox = False
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.dtpFecha)
         Me.Controls.Add(Me.dgInsumo)
