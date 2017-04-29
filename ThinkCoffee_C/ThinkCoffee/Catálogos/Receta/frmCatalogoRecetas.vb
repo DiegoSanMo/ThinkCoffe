@@ -41,4 +41,5 @@
         btnCancelar.Enabled = True
 
     End Sub
+
 End Class

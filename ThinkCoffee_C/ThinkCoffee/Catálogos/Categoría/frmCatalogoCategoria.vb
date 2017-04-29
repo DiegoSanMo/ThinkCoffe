@@ -1,5 +1,4 @@
-﻿
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 Imports System.Data.SqlClient
 
 Public Class frmCatalogoCategoria

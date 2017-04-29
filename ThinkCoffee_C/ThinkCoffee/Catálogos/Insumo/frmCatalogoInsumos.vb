@@ -1,9 +1,9 @@
 ﻿Imports System.ComponentModel
 
 Public Class frmCatalogoInsumos
-
     Dim banModi As Boolean = False
     Dim filaSel As Integer
+    Dim idtari As Integer
 
     Private Sub frmCatalogoInsumos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexionSql.Open()
@@ -198,5 +198,9 @@ Public Class frmCatalogoInsumos
         txtExist.Text = dgInsumo(5, filaSel).Value
         txtCosto.Text = dgInsumo(6, filaSel).Value
         dtpFecha.Value = dgInsumo(7, filaSel).Value
+    End Sub
+
+    Private Sub cboUnidadM_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboUnidadM.SelectedIndexChanged
+
     End Sub
 End Class
