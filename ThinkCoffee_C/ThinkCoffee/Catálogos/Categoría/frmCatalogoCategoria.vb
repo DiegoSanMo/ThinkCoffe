@@ -88,6 +88,7 @@ Public Class frmCatalogoCategoria
             btnCancelar.Enabled = False
             dgCategoria.Enabled = True
             btnModificar.Enabled = True
+            dgCategoria.Enabled = True
 
         Else
             Dim ultimo As Integer = dgCategoria.RowCount - 2
@@ -100,6 +101,7 @@ Public Class frmCatalogoCategoria
             btnSalir.Enabled = True
             btnGrabar.Enabled = False
             btnCancelar.Enabled = False
+            dgCategoria.Enabled = True
         End If
 
 
@@ -162,7 +164,7 @@ Public Class frmCatalogoCategoria
             btnModificar.Enabled = True
             txtNombre.Text = nombre
 
-
+            dgCategoria.Enabled = True
         Else
             Dim ultimo As Integer = dgCategoria.RowCount - 2
 
@@ -173,6 +175,7 @@ Public Class frmCatalogoCategoria
             btnGrabar.Enabled = False
             btnCancelar.Enabled = False
             btnModificar.Enabled = True
+            dgCategoria.Enabled = True
         End If
 
 
@@ -192,9 +195,13 @@ Public Class frmCatalogoCategoria
     Private Sub dgCategoria_SelectionChanged(sender As Object, e As EventArgs) Handles dgCategoria.SelectionChanged
         filaSel = dgCategoria.Item(0, dgCategoria.CurrentRow.Index).Value - 1
 
+        If filaSel = -1 Then
+        Else
+            MsgBox(filaSel)
+            txtIdCategoria.Text = dgCategoria(0, filaSel).Value
+            txtNombre.Text = dgCategoria(1, filaSel).Value
+        End If
 
-        txtIdCategoria.Text = dgCategoria(0, filaSel).Value
-        txtNombre.Text = dgCategoria(1, filaSel).Value
 
 
     End Sub

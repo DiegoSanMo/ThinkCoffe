@@ -27,14 +27,9 @@ Partial Class frmCatalogoRecetas
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgReceta = New System.Windows.Forms.DataGridView()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
@@ -44,6 +39,7 @@ Partial Class frmCatalogoRecetas
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.ptbBarra = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.cboMedidas = New System.Windows.Forms.ComboBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -56,9 +52,8 @@ Partial Class frmCatalogoRecetas
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.cboMedidas = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgReceta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -78,6 +73,7 @@ Partial Class frmCatalogoRecetas
         '
         'txtIdReceta
         '
+        Me.txtIdReceta.Enabled = False
         Me.txtIdReceta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtIdReceta.Location = New System.Drawing.Point(96, 18)
         Me.txtIdReceta.Name = "txtIdReceta"
@@ -116,78 +112,27 @@ Partial Class frmCatalogoRecetas
         Me.txtNombre.Size = New System.Drawing.Size(473, 27)
         Me.txtNombre.TabIndex = 2
         '
-        'Button4
+        'dgReceta
         '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.Black
-        Me.Button4.Location = New System.Drawing.Point(478, 355)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(92, 32)
-        Me.Button4.TabIndex = 46
-        Me.Button4.Text = "Último"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(358, 355)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(92, 32)
-        Me.Button3.TabIndex = 45
-        Me.Button3.Text = "Anterior"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(219, 355)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(92, 32)
-        Me.Button2.TabIndex = 44
-        Me.Button2.Text = "Siguiente"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(72, 355)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(92, 32)
-        Me.Button1.TabIndex = 43
-        Me.Button1.Text = "Inicio"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column4, Me.Column5})
-        Me.DataGridView1.Location = New System.Drawing.Point(48, 393)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(603, 150)
-        Me.DataGridView1.TabIndex = 42
+        Me.dgReceta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgReceta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column4})
+        Me.dgReceta.Location = New System.Drawing.Point(124, 344)
+        Me.dgReceta.Name = "dgReceta"
+        Me.dgReceta.Size = New System.Drawing.Size(421, 150)
+        Me.dgReceta.TabIndex = 42
         '
         'Column3
         '
-        Me.Column3.HeaderText = "idInsumo"
+        Me.Column3.HeaderText = "idReceta"
         Me.Column3.Name = "Column3"
         Me.Column3.ReadOnly = True
         '
         'Column4
         '
-        Me.Column4.HeaderText = "Insumo"
+        Me.Column4.HeaderText = "Nombre"
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
         Me.Column4.Width = 270
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Cantidad"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        Me.Column5.Width = 170
         '
         'Label10
         '
@@ -329,6 +274,16 @@ Partial Class frmCatalogoRecetas
         Me.GroupBox2.TabIndex = 52
         Me.GroupBox2.TabStop = False
         '
+        'cboMedidas
+        '
+        Me.cboMedidas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboMedidas.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.cboMedidas.FormattingEnabled = True
+        Me.cboMedidas.Location = New System.Drawing.Point(336, 49)
+        Me.cboMedidas.Name = "cboMedidas"
+        Me.cboMedidas.Size = New System.Drawing.Size(100, 28)
+        Me.cboMedidas.TabIndex = 7
+        '
         'TextBox7
         '
         Me.TextBox7.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
@@ -454,16 +409,6 @@ Partial Class frmCatalogoRecetas
         Me.Label4.TabIndex = 28
         Me.Label4.Text = "Insumo"
         '
-        'cboMedidas
-        '
-        Me.cboMedidas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboMedidas.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.cboMedidas.FormattingEnabled = True
-        Me.cboMedidas.Location = New System.Drawing.Point(336, 49)
-        Me.cboMedidas.Name = "cboMedidas"
-        Me.cboMedidas.Size = New System.Drawing.Size(100, 28)
-        Me.cboMedidas.TabIndex = 7
-        '
         'frmCatalogoRecetas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -479,11 +424,7 @@ Partial Class frmCatalogoRecetas
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnGrabar)
         Me.Controls.Add(Me.btnNuevo)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.dgReceta)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.ptbBarra)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -492,7 +433,7 @@ Partial Class frmCatalogoRecetas
         Me.Text = "frmCatalogoRecetas"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgReceta, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -510,11 +451,7 @@ Partial Class frmCatalogoRecetas
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnGrabar As Button
     Friend WithEvents btnNuevo As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgReceta As DataGridView
     Friend WithEvents Label10 As Label
     Friend WithEvents btnMinimizar As Button
     Friend WithEvents btnCerrar As Button
@@ -528,12 +465,11 @@ Partial Class frmCatalogoRecetas
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents cboMedidas As ComboBox
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
 End Class

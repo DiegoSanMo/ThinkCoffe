@@ -26,6 +26,8 @@ Partial Class frmPrincipal
         Me.CategoriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IngredientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PromocionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -37,8 +39,6 @@ Partial Class frmPrincipal
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnMin = New System.Windows.Forms.Button()
-        Me.RegistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBar.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -78,6 +78,18 @@ Partial Class frmPrincipal
         Me.ProductosToolStripMenuItem1.Name = "ProductosToolStripMenuItem1"
         Me.ProductosToolStripMenuItem1.Size = New System.Drawing.Size(186, 56)
         Me.ProductosToolStripMenuItem1.Text = "Productos"
+        '
+        'RegistroToolStripMenuItem
+        '
+        Me.RegistroToolStripMenuItem.Name = "RegistroToolStripMenuItem"
+        Me.RegistroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RegistroToolStripMenuItem.Text = "Registro"
+        '
+        'ModificaciónToolStripMenuItem
+        '
+        Me.ModificaciónToolStripMenuItem.Name = "ModificaciónToolStripMenuItem"
+        Me.ModificaciónToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ModificaciónToolStripMenuItem.Text = "Modificación"
         '
         'ProveedoresToolStripMenuItem1
         '
@@ -190,18 +202,6 @@ Partial Class frmPrincipal
         Me.btnMin.Text = ">>"
         Me.btnMin.UseVisualStyleBackColor = False
         Me.btnMin.Visible = False
-        '
-        'RegistroToolStripMenuItem
-        '
-        Me.RegistroToolStripMenuItem.Name = "RegistroToolStripMenuItem"
-        Me.RegistroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.RegistroToolStripMenuItem.Text = "Registro"
-        '
-        'ModificaciónToolStripMenuItem
-        '
-        Me.ModificaciónToolStripMenuItem.Name = "ModificaciónToolStripMenuItem"
-        Me.ModificaciónToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ModificaciónToolStripMenuItem.Text = "Modificación"
         '
         'frmPrincipal
         '

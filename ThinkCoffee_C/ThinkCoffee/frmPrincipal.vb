@@ -60,4 +60,8 @@
     Private Sub RegistroToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistroToolStripMenuItem.Click
         frmCatalogoProductos.ShowDialog()
     End Sub
+
+    Private Sub ModificaciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificaciónToolStripMenuItem.Click
+        frmModificacionProducto.ShowDialog()
+    End Sub
 End Class
