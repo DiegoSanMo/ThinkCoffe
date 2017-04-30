@@ -9,13 +9,7 @@
         Dim ban As Boolean = False
 
 
-        comando.CommandText = "Select tlb_insumo.idInsumo, tlb_insumo.nombre, tlb_insumo.unidadM, tlb_insumo.existencia  from tlb_insumo "
-        lector = comando.ExecuteReader()
 
-        While lector.Read
-            insumos.dgInsumos.Rows.Add(lector(0), lector(1), lector(2), lector(3))
-        End While
-        lector.Close()
         insumos.ShowDialog()
 
         Dim fila As Integer = insumos.dgInsumos.CurrentRow.Index

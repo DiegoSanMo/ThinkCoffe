@@ -29,8 +29,6 @@ Public Class frmCatalogoCategoria
         End If
 
 
-
-
     End Sub
 
     Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress
@@ -72,7 +70,7 @@ Public Class frmCatalogoCategoria
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
         dgCategoria.Enabled = False
         If banModi Then
-            For x = 0 To dgCategoria.RowCount - 2
+            For x = 0 To dgCategoria.RowCount - 1
                 If dgCategoria(0, x).Value = Val(txtIdCategoria.Text) Then
 
                 End If
@@ -164,7 +162,7 @@ Public Class frmCatalogoCategoria
 
             dgCategoria.Enabled = True
         Else
-            Dim ultimo As Integer = dgCategoria.RowCount - 2
+            Dim ultimo As Integer = dgCategoria.RowCount - 1
 
             dgCategoria.Rows.RemoveAt(ultimo)
 
@@ -193,12 +191,9 @@ Public Class frmCatalogoCategoria
     Private Sub dgCategoria_SelectionChanged(sender As Object, e As EventArgs) Handles dgCategoria.SelectionChanged
         filaSel = dgCategoria.Item(0, dgCategoria.CurrentRow.Index).Value - 1
 
-        If filaSel = -1 Then
-        Else
-            MsgBox(filaSel)
-            txtIdCategoria.Text = dgCategoria(0, filaSel).Value
-            txtNombre.Text = dgCategoria(1, filaSel).Value
-        End If
+
+        txtIdCategoria.Text = dgCategoria(0, filaSel).Value
+        txtNombre.Text = dgCategoria(1, filaSel).Value
 
 
 

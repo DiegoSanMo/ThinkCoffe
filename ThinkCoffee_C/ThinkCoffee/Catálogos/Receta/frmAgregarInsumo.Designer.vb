@@ -35,7 +35,6 @@ Partial Class frmAgregarInsumo
         '
         'dgInsumos
         '
-        Me.dgInsumos.AllowUserToAddRows = False
         Me.dgInsumos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgInsumos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.Column1, Me.DataGridViewTextBoxColumn3})
         Me.dgInsumos.Location = New System.Drawing.Point(12, 77)
