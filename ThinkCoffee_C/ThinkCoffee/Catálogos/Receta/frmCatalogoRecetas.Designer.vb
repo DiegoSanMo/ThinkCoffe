@@ -28,6 +28,9 @@ Partial Class frmCatalogoRecetas
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.dgReceta = New System.Windows.Forms.DataGridView()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
@@ -37,6 +40,11 @@ Partial Class frmCatalogoRecetas
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.ptbBarra = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtExistencia = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtIdInsumo = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtMedida = New System.Windows.Forms.TextBox()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.txtInsumo = New System.Windows.Forms.TextBox()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
@@ -44,14 +52,6 @@ Partial Class frmCatalogoRecetas
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.txtMedida = New System.Windows.Forms.TextBox()
-        Me.txtIdInsumo = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtExistencia = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgReceta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -122,6 +122,25 @@ Partial Class frmCatalogoRecetas
         Me.dgReceta.Name = "dgReceta"
         Me.dgReceta.Size = New System.Drawing.Size(632, 150)
         Me.dgReceta.TabIndex = 42
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "idInsumo"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Nombre"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 270
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Cantidad"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
         '
         'Label10
         '
@@ -264,6 +283,57 @@ Partial Class frmCatalogoRecetas
         Me.GroupBox2.TabIndex = 52
         Me.GroupBox2.TabStop = False
         '
+        'txtExistencia
+        '
+        Me.txtExistencia.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtExistencia.Location = New System.Drawing.Point(103, 105)
+        Me.txtExistencia.Name = "txtExistencia"
+        Me.txtExistencia.ReadOnly = True
+        Me.txtExistencia.Size = New System.Drawing.Size(139, 27)
+        Me.txtExistencia.TabIndex = 56
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label7.Location = New System.Drawing.Point(13, 105)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(84, 20)
+        Me.Label7.TabIndex = 55
+        Me.Label7.Text = "Existencia"
+        '
+        'txtIdInsumo
+        '
+        Me.txtIdInsumo.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtIdInsumo.Location = New System.Drawing.Point(103, 58)
+        Me.txtIdInsumo.Name = "txtIdInsumo"
+        Me.txtIdInsumo.ReadOnly = True
+        Me.txtIdInsumo.Size = New System.Drawing.Size(139, 27)
+        Me.txtIdInsumo.TabIndex = 53
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label3.Location = New System.Drawing.Point(20, 62)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(78, 20)
+        Me.Label3.TabIndex = 54
+        Me.Label3.Text = "idInsumo"
+        '
+        'txtMedida
+        '
+        Me.txtMedida.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtMedida.Location = New System.Drawing.Point(344, 59)
+        Me.txtMedida.Name = "txtMedida"
+        Me.txtMedida.ReadOnly = True
+        Me.txtMedida.Size = New System.Drawing.Size(100, 27)
+        Me.txtMedida.TabIndex = 52
+        '
         'btnAgregar
         '
         Me.btnAgregar.Enabled = False
@@ -287,11 +357,13 @@ Partial Class frmCatalogoRecetas
         '
         'txtCantidad
         '
+        Me.txtCantidad.Enabled = False
         Me.txtCantidad.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtCantidad.Location = New System.Drawing.Point(344, 98)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(139, 27)
         Me.txtCantidad.TabIndex = 3
+        Me.txtCantidad.Text = "0"
         '
         'Label6
         '
@@ -340,76 +412,6 @@ Partial Class frmCatalogoRecetas
         Me.Label4.Size = New System.Drawing.Size(63, 20)
         Me.Label4.TabIndex = 28
         Me.Label4.Text = "Insumo"
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "idInsumo"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Nombre"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Width = 270
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Cantidad"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'txtMedida
-        '
-        Me.txtMedida.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtMedida.Location = New System.Drawing.Point(344, 59)
-        Me.txtMedida.Name = "txtMedida"
-        Me.txtMedida.ReadOnly = True
-        Me.txtMedida.Size = New System.Drawing.Size(100, 27)
-        Me.txtMedida.TabIndex = 52
-        '
-        'txtIdInsumo
-        '
-        Me.txtIdInsumo.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtIdInsumo.Location = New System.Drawing.Point(103, 58)
-        Me.txtIdInsumo.Name = "txtIdInsumo"
-        Me.txtIdInsumo.ReadOnly = True
-        Me.txtIdInsumo.Size = New System.Drawing.Size(139, 27)
-        Me.txtIdInsumo.TabIndex = 53
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(20, 62)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(78, 20)
-        Me.Label3.TabIndex = 54
-        Me.Label3.Text = "idInsumo"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(13, 105)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(84, 20)
-        Me.Label7.TabIndex = 55
-        Me.Label7.Text = "Existencia"
-        '
-        'txtExistencia
-        '
-        Me.txtExistencia.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtExistencia.Location = New System.Drawing.Point(103, 105)
-        Me.txtExistencia.Name = "txtExistencia"
-        Me.txtExistencia.ReadOnly = True
-        Me.txtExistencia.Size = New System.Drawing.Size(139, 27)
-        Me.txtExistencia.TabIndex = 56
         '
         'frmCatalogoRecetas
         '

@@ -92,7 +92,7 @@
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
-        Dim ultimo As Integer = dgProveedores.RowCount - 2
+        Dim ultimo As Integer = dgProveedores.RowCount - 1
 
         comando.CommandText = String.Format("Insert into tlb_proveedor(idProveedor, nombre, direccion,  telefono) values ({0}, '{1}', '{2}', '{3}' )", Val(dgProveedores.Item(0, ultimo).Value), dgProveedores.Item(1, ultimo).Value, dgProveedores.Item(2, ultimo).Value, dgProveedores.Item(3, ultimo).Value)
         comando.ExecuteNonQuery()
@@ -127,7 +127,7 @@
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        Dim ultimo As Integer = dgProveedores.RowCount - 2
+        Dim ultimo As Integer = dgProveedores.RowCount - 1
 
         dgProveedores.Rows.RemoveAt(ultimo)
 

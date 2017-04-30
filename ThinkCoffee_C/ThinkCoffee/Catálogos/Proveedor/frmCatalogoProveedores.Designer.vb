@@ -129,6 +129,7 @@ Partial Class frmCatalogoProveedores
         '
         'dgProveedores
         '
+        Me.dgProveedores.AllowUserToAddRows = False
         Me.dgProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgProveedores.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column8})
         Me.dgProveedores.GridColor = System.Drawing.SystemColors.ControlDarkDark

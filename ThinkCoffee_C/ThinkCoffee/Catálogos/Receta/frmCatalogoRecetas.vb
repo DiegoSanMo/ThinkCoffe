@@ -25,6 +25,7 @@
         txtExistencia.Text = insumos.dgInsumos(3, fila).Value
 
         btnAgregar.Enabled = True
+        txtCantidad.Focus()
 
     End Sub
 
@@ -48,6 +49,7 @@
         btnBuscar.Enabled = True
 
         txtNombre.Focus()
+        txtCantidad.Enabled = True
 
 
     End Sub
@@ -62,5 +64,72 @@
 
         btnAgregar.Enabled = False
         btnBuscar.Focus()
+    End Sub
+
+    Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
+        comando.CommandText = "Insert into tlb_receta (idReceta, nombre) values(" & Val(txtIdReceta.Text) & ",'" & txtNombre.Text & "')"
+        comando.ExecuteNonQuery()
+
+
+        For x = 0 To dgReceta.RowCount - 1
+            comando.CommandText = "Insert into tlb_detReceta (idReceta, idInsumo, cantidad) values(" & Val(txtIdReceta.Text) & ", " & Val(dgReceta(0, x).Value) & ", " & CDec(dgReceta(2, x).Value) & ")"
+            comando.ExecuteNonQuery()
+        Next
+
+        txtIdReceta.Text = ""
+        txtNombre.Text = ""
+        dgReceta.Rows.Clear()
+
+
+        btnNuevo.Enabled = True
+        btnSalir.Enabled = True
+        btnGrabar.Enabled = False
+        btnCancelar.Enabled = True
+        btnAgregar.Enabled = False
+        txtCantidad.Enabled = False
+        btnBuscar.Enabled = False
+        txtNombre.Enabled = False
+
+    End Sub
+
+    Private Sub txtCantidad_TextChanged(sender As Object, e As EventArgs) Handles txtCantidad.TextChanged
+        Dim suma As Decimal
+
+        suma = 0.00
+        txtCantidad.Text = suma + Val(txtCantidad.Text)
+
+    End Sub
+
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        btnNuevo.Enabled = True
+        btnSalir.Enabled = True
+        btnGrabar.Enabled = False
+        btnCancelar.Enabled = True
+        btnAgregar.Enabled = False
+        txtCantidad.Enabled = False
+        btnBuscar.Enabled = False
+        txtNombre.Enabled = False
+        btnCancelar.Enabled = False
+
+        txtIdReceta.Text = ""
+        txtNombre.Text = ""
+
+        txtIdInsumo.Text = ""
+        txtExistencia.Text = ""
+        txtInsumo.Text = ""
+        txtMedida.Text = ""
+        txtCantidad.Text = ""
+
+        dgReceta.Rows.Clear()
+
+    End Sub
+
+    Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(CadenaValida, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
     End Sub
 End Class

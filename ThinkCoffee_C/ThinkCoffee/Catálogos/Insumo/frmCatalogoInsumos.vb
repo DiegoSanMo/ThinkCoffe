@@ -110,7 +110,7 @@ Public Class frmCatalogoInsumos
             banModi = False
 
         Else
-            Dim ultimo As Integer = dgInsumo.RowCount - 2
+            Dim ultimo As Integer = dgInsumo.RowCount - 1
             comando.CommandText = "Insert into tlb_insumo(idInsumo, nombre, unidadM, maximo, minimo, existencia, costo, fecha) values(" & Val(dgInsumo.Item(0, ultimo).Value) & ",'" & CStr(dgInsumo.Item(1, ultimo).Value) & "', '" & CStr(dgInsumo.Item(2, ultimo).Value) & "', " & CDec(dgInsumo.Item(3, ultimo).Value) & ", " & CDec(dgInsumo.Item(4, ultimo).Value) & ", " & CDec(dgInsumo.Item(5, ultimo).Value) & "," & CDec(dgInsumo.Item(6, ultimo).Value) & ",'" & dgInsumo.Item(7, ultimo).Value & "')"
             comando.ExecuteNonQuery()
 
@@ -164,7 +164,7 @@ Public Class frmCatalogoInsumos
 
             banModi = False
         Else
-            Dim ultimo As Integer = dgInsumo.RowCount - 2
+            Dim ultimo As Integer = dgInsumo.RowCount - 1
             dgInsumo.Rows.RemoveAt(ultimo)
             dgInsumo.Refresh()
 

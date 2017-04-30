@@ -303,6 +303,7 @@ Partial Class frmModificacionProducto
         '
         'dgModificacion
         '
+        Me.dgModificacion.AllowUserToAddRows = False
         Me.dgModificacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgModificacion.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2})
         Me.dgModificacion.Location = New System.Drawing.Point(10, 112)

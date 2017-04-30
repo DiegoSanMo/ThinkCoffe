@@ -20,4 +20,13 @@
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Me.Close()
     End Sub
+
+    Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(CadenaValida, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
 End Class

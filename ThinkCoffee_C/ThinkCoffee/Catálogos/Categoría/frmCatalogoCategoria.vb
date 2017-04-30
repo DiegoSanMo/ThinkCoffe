@@ -59,7 +59,6 @@ Public Class frmCatalogoCategoria
         txtIdCategoria.Text = n
         txtNombre.Enabled = True
         txtNombre.Text = ""
-        dgCategoria.Enabled = False
 
 
         btnNuevo.Enabled = False
@@ -90,7 +89,7 @@ Public Class frmCatalogoCategoria
             dgCategoria.Enabled = True
 
         Else
-            Dim ultimo As Integer = dgCategoria.RowCount - 2
+            Dim ultimo As Integer = dgCategoria.RowCount - 1
 
             comando.CommandText = String.Format("Insert into tlb_categoria(idCategoria, nombre) values ({0}, '{1}')", Val(dgCategoria.Item(0, ultimo).Value), dgCategoria.Item(1, ultimo).Value)
             comando.ExecuteNonQuery()
@@ -148,7 +147,7 @@ Public Class frmCatalogoCategoria
             nombre = lector(1)
             lector.Close()
 
-            For x = 0 To dgCategoria.RowCount - 2
+            For x = 0 To dgCategoria.RowCount - 1
                 If Val(txtIdCategoria.Text) = dgCategoria.Item(0, x).Value Then
                     dgCategoria(1, x).Value = nombre
                 End If
