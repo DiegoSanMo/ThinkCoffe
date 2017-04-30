@@ -109,12 +109,6 @@
     <Compile Include="Catálogos\Receta\frmCatalogoRecetas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Catálogos\Receta\frmInsumosAagregar.Designer.vb">
-      <DependentUpon>frmInsumosAagregar.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Catálogos\Receta\frmInsumosAagregar.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmCatalogoRecordatorios.Designer.vb">
       <DependentUpon>frmCatalogoRecordatorios.vb</DependentUpon>
     </Compile>
@@ -180,9 +174,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catálogos\Receta\frmCatalogoRecetas.resx">
       <DependentUpon>frmCatalogoRecetas.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Catálogos\Receta\frmInsumosAagregar.resx">
-      <DependentUpon>frmInsumosAagregar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCatalogoRecordatorios.resx">
       <DependentUpon>frmCatalogoRecordatorios.vb</DependentUpon>

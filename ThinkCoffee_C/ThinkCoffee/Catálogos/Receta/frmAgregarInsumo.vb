@@ -1,15 +1,23 @@
 ﻿Public Class frmAgregarInsumo
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim agregas As New frmInsumosAagregar
 
-        agregas.dgInsumos.Rows.Clear()
 
-        comando.CommandText = "Select * from tlb_insumo"
-        lector = comando.ExecuteReader
+    Private Sub frmAgregarInsumo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
+        dgInsumos.Rows.Clear()
+
+        comando.CommandText = "Select tlb_insumo.idInsumo, tlb_insumo.nombre, tlb_insumo.unidadM, tlb_insumo.existencia  from tlb_insumo where tlb_insumo.nombre like '" & txtNombre.Text & "'"
+        lector = comando.ExecuteReader()
+
         While lector.Read
-            agregas.dgInsumos.Rows.Add(lector(0), lector(1), lector(5), lector(3), lector(4))
+            dgInsumos.Rows.Add(lector(0), lector(1), lector(2), lector(3))
         End While
         lector.Close()
-        agregas.ShowDialog()
+    End Sub
+
+    Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+        Me.Close()
     End Sub
 End Class

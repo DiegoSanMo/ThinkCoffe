@@ -39,6 +39,8 @@ Partial Class frmPrincipal
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnMin = New System.Windows.Forms.Button()
+        Me.RegistrarRecetaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultarRecetaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBar.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -82,13 +84,13 @@ Partial Class frmPrincipal
         'RegistroToolStripMenuItem
         '
         Me.RegistroToolStripMenuItem.Name = "RegistroToolStripMenuItem"
-        Me.RegistroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RegistroToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.RegistroToolStripMenuItem.Text = "Registro"
         '
         'ModificaciónToolStripMenuItem
         '
         Me.ModificaciónToolStripMenuItem.Name = "ModificaciónToolStripMenuItem"
-        Me.ModificaciónToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ModificaciónToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
         Me.ModificaciónToolStripMenuItem.Text = "Modificación"
         '
         'ProveedoresToolStripMenuItem1
@@ -101,6 +103,7 @@ Partial Class frmPrincipal
         '
         'PromocionesToolStripMenuItem
         '
+        Me.PromocionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarRecetaToolStripMenuItem, Me.ConsultarRecetaToolStripMenuItem})
         Me.PromocionesToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Book_48
         Me.PromocionesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PromocionesToolStripMenuItem.Name = "PromocionesToolStripMenuItem"
@@ -203,6 +206,18 @@ Partial Class frmPrincipal
         Me.btnMin.UseVisualStyleBackColor = False
         Me.btnMin.Visible = False
         '
+        'RegistrarRecetaToolStripMenuItem
+        '
+        Me.RegistrarRecetaToolStripMenuItem.Name = "RegistrarRecetaToolStripMenuItem"
+        Me.RegistrarRecetaToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.RegistrarRecetaToolStripMenuItem.Text = "Registrar receta"
+        '
+        'ConsultarRecetaToolStripMenuItem
+        '
+        Me.ConsultarRecetaToolStripMenuItem.Name = "ConsultarRecetaToolStripMenuItem"
+        Me.ConsultarRecetaToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.ConsultarRecetaToolStripMenuItem.Text = "Consultar receta"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -243,4 +258,6 @@ Partial Class frmPrincipal
     Friend WithEvents OtrosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistroToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ModificaciónToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistrarRecetaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConsultarRecetaToolStripMenuItem As ToolStripMenuItem
 End Class
