@@ -136,4 +136,5 @@
         btnGrabar.Enabled = False
         btnCancelar.Enabled = False
     End Sub
+
 End Class

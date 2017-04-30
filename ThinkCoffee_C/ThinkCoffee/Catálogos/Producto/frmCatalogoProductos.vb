@@ -16,6 +16,17 @@ Public Class frmCatalogoProductos
             cboCategoria.Items.Add(lector(0))
         End While
         lector.Close()
+
+        comando.CommandText = "Select tlb_receta.nombre from tlb_receta"
+        lector = comando.ExecuteReader
+
+        While lector.Read
+            cboReceta.Items.Add(lector(0))
+        End While
+        lector.Close()
+
+
+
         If n > 1 Then
             comando.CommandText = String.Format("Select * from tlb_producto")
             lector = comando.ExecuteReader()

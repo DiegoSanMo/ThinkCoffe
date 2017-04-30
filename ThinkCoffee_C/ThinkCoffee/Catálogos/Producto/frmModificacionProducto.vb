@@ -57,6 +57,26 @@
     End Sub
 
     Private Sub dgModificacion_SelectionChanged(sender As Object, e As EventArgs) Handles dgModificacion.SelectionChanged
+        filaSel = dgModificacion.CurrentRow.Index
 
+
+        'comando.CommandText = "select tlb_producto.idProducto, tlb_producto.idReceta, tlb_producto.idCategoria, tlb_producto.nombre, tlb_producto.precio, tlb_producto.imagen from tlb_producto where tlb_producto.idProducto = " & dgModificacion(0, filaSel).Value & ""
+        'lector = comando.ExecuteReader
+        'lector.Read()
+        'txtIdProducto.Text = lector(0)
+        'lector.Close()
+    End Sub
+
+    Private Sub dgModificacion_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgModificacion.CellClick
+        comando.CommandText = "select tlb_producto.idProducto, tlb_producto.idReceta, tlb_producto.idCategoria, tlb_producto.nombre, tlb_producto.precio, tlb_producto.imagen from tlb_producto where tlb_producto.idProducto = " & dgModificacion(0, filaSel).Value & ""
+        lector = comando.ExecuteReader
+        lector.Read()
+        txtIdProducto.Text = lector(0)
+        txtIdReceta.Text = lector(1)
+        txtIdCategoria.Text = lector(2)
+        txtNombre.Text = lector(3)
+        txtPrecio.Text = lector(4)
+        ptbImagen.Image = lector(5)
+        lector.Close()
     End Sub
 End Class
