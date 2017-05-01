@@ -2,19 +2,25 @@
 
 
     Private Sub frmAgregarInsumo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        comando.CommandText = "Select tlb_insumo.idInsumo, tlb_insumo.nombre, tlb_insumo.unidadM, tlb_insumo.existencia  from tlb_insumo "
-        lector = comando.ExecuteReader()
+        comando.CommandText = "Select count(*) from tlb_insumo"
+        Dim n As Integer = comando.ExecuteScalar + 1
 
-        While lector.Read
-            dgInsumos.Rows.Add(lector(0), lector(1), lector(2), lector(3))
-        End While
-        lector.Close()
+        If n > 1 Then
+            comando.CommandText = "Select tlb_insumo.idInsumo, tlb_insumo.nombre, tlb_insumo.unidadM, tlb_insumo.existencia  from tlb_insumo "
+            lector = comando.ExecuteReader()
+
+            While lector.Read
+                dgInsumos.Rows.Add(lector(0), lector(1), lector(2), lector(3))
+            End While
+            lector.Close()
+        End If
+
     End Sub
 
     Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
         dgInsumos.Rows.Clear()
 
-        comando.CommandText = "Select tlb_insumo.idInsumo, tlb_insumo.nombre, tlb_insumo.unidadM, tlb_insumo.existencia  from tlb_insumo where tlb_insumo.nombre like '" & txtNombre.Text & "'"
+        comando.CommandText = "Select tlb_insumo.idInsumo, tlb_insumo.nombre, tlb_insumo.unidadM, tlb_insumo.existencia  from tlb_insumo where tlb_insumo.nombre like '%" & txtNombre.Text & "%'"
         lector = comando.ExecuteReader()
 
         While lector.Read
