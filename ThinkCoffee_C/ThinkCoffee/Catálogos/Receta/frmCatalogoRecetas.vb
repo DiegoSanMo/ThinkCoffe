@@ -186,7 +186,7 @@
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
-        comando.CommandText = "Insert into tlb_receta (idReceta, nombre, unidadM) values(" & Val(txtIdReceta.Text) & ",'" & txtNombre.Text & "','" & cmbUnidadM.Text & "')"
+        comando.CommandText = "Insert into tlb_receta (idReceta, nombre) values(" & Val(txtIdReceta.Text) & ",'" & txtNombre.Text & "'" & ")"
         comando.ExecuteNonQuery()
 
 
