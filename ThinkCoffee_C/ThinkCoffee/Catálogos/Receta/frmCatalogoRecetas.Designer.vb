@@ -28,9 +28,6 @@ Partial Class frmCatalogoRecetas
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.dgReceta = New System.Windows.Forms.DataGridView()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
@@ -40,11 +37,11 @@ Partial Class frmCatalogoRecetas
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.ptbBarra = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtUnidadM = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cmbUnidadM = New System.Windows.Forms.ComboBox()
         Me.txtExistencia = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtIdInsumo = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtMedida = New System.Windows.Forms.TextBox()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.txtInsumo = New System.Windows.Forms.TextBox()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
@@ -52,6 +49,12 @@ Partial Class frmCatalogoRecetas
         Me.Label5 = New System.Windows.Forms.Label()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.txtIdInsumo = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgReceta, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,30 +120,11 @@ Partial Class frmCatalogoRecetas
         '
         Me.dgReceta.AllowUserToAddRows = False
         Me.dgReceta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgReceta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column4, Me.Column1})
+        Me.dgReceta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column4, Me.Column1, Me.Column2})
         Me.dgReceta.Location = New System.Drawing.Point(19, 345)
         Me.dgReceta.Name = "dgReceta"
         Me.dgReceta.Size = New System.Drawing.Size(632, 150)
         Me.dgReceta.TabIndex = 42
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "idInsumo"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Nombre"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        Me.Column4.Width = 270
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Cantidad"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
         '
         'Label10
         '
@@ -265,11 +249,13 @@ Partial Class frmCatalogoRecetas
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox2.Controls.Add(Me.txtIdInsumo)
+        Me.GroupBox2.Controls.Add(Me.txtUnidadM)
+        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.cmbUnidadM)
         Me.GroupBox2.Controls.Add(Me.txtExistencia)
         Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.txtIdInsumo)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.txtMedida)
         Me.GroupBox2.Controls.Add(Me.btnAgregar)
         Me.GroupBox2.Controls.Add(Me.txtInsumo)
         Me.GroupBox2.Controls.Add(Me.txtCantidad)
@@ -283,10 +269,41 @@ Partial Class frmCatalogoRecetas
         Me.GroupBox2.TabIndex = 52
         Me.GroupBox2.TabStop = False
         '
+        'txtUnidadM
+        '
+        Me.txtUnidadM.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtUnidadM.Location = New System.Drawing.Point(347, 58)
+        Me.txtUnidadM.Name = "txtUnidadM"
+        Me.txtUnidadM.ReadOnly = True
+        Me.txtUnidadM.Size = New System.Drawing.Size(133, 27)
+        Me.txtUnidadM.TabIndex = 59
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label3.Location = New System.Drawing.Point(275, 61)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(66, 20)
+        Me.Label3.TabIndex = 58
+        Me.Label3.Text = "Medida"
+        '
+        'cmbUnidadM
+        '
+        Me.cmbUnidadM.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.cmbUnidadM.FormattingEnabled = True
+        Me.cmbUnidadM.Items.AddRange(New Object() {"OZ", "CDAS", "TAZAS", "VASOS", "PIEZA", "GRS", "PIZCA"})
+        Me.cmbUnidadM.Location = New System.Drawing.Point(347, 94)
+        Me.cmbUnidadM.Name = "cmbUnidadM"
+        Me.cmbUnidadM.Size = New System.Drawing.Size(133, 28)
+        Me.cmbUnidadM.TabIndex = 57
+        '
         'txtExistencia
         '
         Me.txtExistencia.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtExistencia.Location = New System.Drawing.Point(103, 105)
+        Me.txtExistencia.Location = New System.Drawing.Point(104, 59)
         Me.txtExistencia.Name = "txtExistencia"
         Me.txtExistencia.ReadOnly = True
         Me.txtExistencia.Size = New System.Drawing.Size(139, 27)
@@ -298,48 +315,18 @@ Partial Class frmCatalogoRecetas
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(13, 105)
+        Me.Label7.Location = New System.Drawing.Point(14, 59)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(84, 20)
         Me.Label7.TabIndex = 55
         Me.Label7.Text = "Existencia"
-        '
-        'txtIdInsumo
-        '
-        Me.txtIdInsumo.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtIdInsumo.Location = New System.Drawing.Point(103, 58)
-        Me.txtIdInsumo.Name = "txtIdInsumo"
-        Me.txtIdInsumo.ReadOnly = True
-        Me.txtIdInsumo.Size = New System.Drawing.Size(139, 27)
-        Me.txtIdInsumo.TabIndex = 53
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(20, 62)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(78, 20)
-        Me.Label3.TabIndex = 54
-        Me.Label3.Text = "idInsumo"
-        '
-        'txtMedida
-        '
-        Me.txtMedida.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtMedida.Location = New System.Drawing.Point(344, 59)
-        Me.txtMedida.Name = "txtMedida"
-        Me.txtMedida.ReadOnly = True
-        Me.txtMedida.Size = New System.Drawing.Size(100, 27)
-        Me.txtMedida.TabIndex = 52
         '
         'btnAgregar
         '
         Me.btnAgregar.Enabled = False
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregar.ForeColor = System.Drawing.Color.Black
-        Me.btnAgregar.Location = New System.Drawing.Point(522, 42)
+        Me.btnAgregar.Location = New System.Drawing.Point(510, 66)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(96, 60)
         Me.btnAgregar.TabIndex = 51
@@ -349,17 +336,17 @@ Partial Class frmCatalogoRecetas
         'txtInsumo
         '
         Me.txtInsumo.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtInsumo.Location = New System.Drawing.Point(104, 20)
+        Me.txtInsumo.Location = New System.Drawing.Point(347, 22)
         Me.txtInsumo.Name = "txtInsumo"
         Me.txtInsumo.ReadOnly = True
-        Me.txtInsumo.Size = New System.Drawing.Size(138, 27)
+        Me.txtInsumo.Size = New System.Drawing.Size(133, 27)
         Me.txtInsumo.TabIndex = 50
         '
         'txtCantidad
         '
         Me.txtCantidad.Enabled = False
         Me.txtCantidad.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtCantidad.Location = New System.Drawing.Point(344, 98)
+        Me.txtCantidad.Location = New System.Drawing.Point(104, 99)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(139, 27)
         Me.txtCantidad.TabIndex = 3
@@ -371,7 +358,7 @@ Partial Class frmCatalogoRecetas
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(261, 102)
+        Me.Label6.Location = New System.Drawing.Point(21, 103)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(77, 20)
         Me.Label6.TabIndex = 45
@@ -383,7 +370,7 @@ Partial Class frmCatalogoRecetas
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label5.Location = New System.Drawing.Point(272, 62)
+        Me.Label5.Location = New System.Drawing.Point(275, 99)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(66, 20)
         Me.Label5.TabIndex = 43
@@ -394,7 +381,7 @@ Partial Class frmCatalogoRecetas
         Me.btnBuscar.Enabled = False
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.Black
-        Me.btnBuscar.Location = New System.Drawing.Point(261, 20)
+        Me.btnBuscar.Location = New System.Drawing.Point(492, 22)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(77, 27)
         Me.btnBuscar.TabIndex = 9
@@ -407,11 +394,57 @@ Partial Class frmCatalogoRecetas
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(27, 23)
+        Me.Label4.Location = New System.Drawing.Point(265, 25)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(63, 20)
         Me.Label4.TabIndex = 28
         Me.Label4.Text = "Insumo"
+        '
+        'txtIdInsumo
+        '
+        Me.txtIdInsumo.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtIdInsumo.Location = New System.Drawing.Point(104, 21)
+        Me.txtIdInsumo.Name = "txtIdInsumo"
+        Me.txtIdInsumo.ReadOnly = True
+        Me.txtIdInsumo.Size = New System.Drawing.Size(139, 27)
+        Me.txtIdInsumo.TabIndex = 61
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label8.Location = New System.Drawing.Point(20, 25)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(78, 20)
+        Me.Label8.TabIndex = 60
+        Me.Label8.Text = "IdInsumo"
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "IdInsumo"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Nombre"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 270
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Cantidad"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Unidad de Medida"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
         '
         'frmCatalogoRecetas
         '
@@ -468,12 +501,15 @@ Partial Class frmCatalogoRecetas
     Friend WithEvents Label4 As Label
     Friend WithEvents txtInsumo As TextBox
     Friend WithEvents btnAgregar As Button
+    Friend WithEvents txtExistencia As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents cmbUnidadM As ComboBox
+    Friend WithEvents txtUnidadM As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtIdInsumo As TextBox
+    Friend WithEvents Label8 As Label
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents txtMedida As TextBox
-    Friend WithEvents txtIdInsumo As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents txtExistencia As TextBox
-    Friend WithEvents Label7 As Label
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
 End Class
