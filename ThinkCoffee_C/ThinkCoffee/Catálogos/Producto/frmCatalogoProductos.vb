@@ -17,6 +17,7 @@ Public Class frmCatalogoProductos
         End While
         lector.Close()
 
+        'Sube las recetas a la combito :v
         comando.CommandText = "Select tlb_receta.nombre from tlb_receta"
         lector = comando.ExecuteReader
 
@@ -25,8 +26,7 @@ Public Class frmCatalogoProductos
         End While
         lector.Close()
 
-
-
+        'Añade los productos a la rejilla si es que existen
         If n > 1 Then
             comando.CommandText = String.Format("Select * from tlb_producto")
             lector = comando.ExecuteReader()
@@ -86,13 +86,37 @@ Public Class frmCatalogoProductos
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
+        Dim idProducto As Integer
+        Dim idReceta As Integer
+        Dim idCategoria As Integer
+        Dim nombre As String
+        Dim precio As Double
+        Dim precioFin As String
+        Dim imagen As String
+
+        idProducto = CInt(txtIdProducto.Text)
+        idReceta = CInt(txtIdReceta.Text)
+        idCategoria = CInt(txtIdCategoria.Text)
+        nombre = txtNombre.Text
+        precio = CDbl(txtPrecio.Text)
+        'Yo estoy usando la variable "precioFin" porque por el lenguaje de la base de datos
+        'y de Visual, si guardo los decimales con una coma, me lo toma como otra columna,
+        'y si lo guardo con punto, el programa no me muestra los precios como los guardé.
+        'Si ustedes no tienen ese problema, solamente comenten la variable "precioFin", y
+        'en la sentencia de SQL reemplacen la variable "precioFin" por "precio".
+        precioFin = Replace(precio, ",", ".")
+        imagen = OpenFileDialog1.FileName
+
+        comando.CommandText = "Insert Into tlb_producto(idProducto, idReceta, idCategoria, nombre, precio, imagen) values(" & idProducto & "," & idReceta & "," & idCategoria & ",'" & nombre & "'," & precioFin & ",'" & imagen & "')"
+        comando.ExecuteNonQuery()
+
         btnGrabar.Enabled = False
         btnCancelar.Enabled = False
         btnSalir.Enabled = True
         btnNuevo.Enabled = True
 
         bloquearCajaProductos()
-
+        limpiarCajaProductos()
     End Sub
 
     Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress
@@ -106,10 +130,10 @@ Public Class frmCatalogoProductos
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
 
-    dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, cboCategoria.SelectedItem, cboReceta.SelectedItem, txtPrecio.Text)
+        dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, txtIdCategoria.Text, txtIdReceta.Text, txtPrecio.Text)
 
 
-        limpiarCajaProductos()
+        'limpiarCajaProductos()
         bloquearCajaProductos()
 
     End Sub
@@ -123,7 +147,7 @@ Public Class frmCatalogoProductos
     End Sub
 
   Private Sub cboCategoria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCategoria.SelectedIndexChanged
-        comando.CommandText = "Select tlb_categoria.nombre from tlb_categoria where nombre = '" & cboCategoria.Text & "'"
+        comando.CommandText = "Select tlb_categoria.idCategoria from tlb_categoria where tlb_categoria.nombre = '" & cboCategoria.Text & "'"
         lector = comando.ExecuteReader
 
         lector.Read()
@@ -178,9 +202,21 @@ Public Class frmCatalogoProductos
         '    txtPrecio.SelectionStart = txtPrecio.TextLength
 
         'End If
-        Dim value As Decimal = (txtPrecio.Text)
+        'Dim value As Decimal = (txtPrecio.Text)
 
-        txtPrecio.Text = String.Format("{0:N0}", 2, 5)
+        'txtPrecio.Text = String.Format("{0:N0}", 2, 5)
 
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    Private Sub cboReceta_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboReceta.SelectedIndexChanged
+        comando.CommandText = "Select tlb_receta.idReceta From tlb_receta Where tlb_receta.nombre='" & cboReceta.Text & "'"
+        lector = comando.ExecuteReader
+        lector.Read()
+        txtIdReceta.Text = lector(0)
+        lector.Close()
     End Sub
 End Class

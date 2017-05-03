@@ -7,7 +7,7 @@ Module Module1
     Public CadenaDirecciones As String = "0123456789.ABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
 
 
-    Public conexionSql As New SqlConnection("Data Source = 'PRO'; Initial Catalog = 'thinkCoffee'; Integrated security = true")
+    Public conexionSql As New SqlConnection("Data Source = 'DESKTOP-B3IP6AD\MANI'; Initial Catalog = 'thinkCoffee'; Integrated security = true")
     Public comando As SqlCommand = conexionSql.CreateCommand
     Public lector As SqlDataReader
 
@@ -20,6 +20,8 @@ Module Module1
         frmCatalogoProductos.txtNombre.Text = ""
         frmCatalogoProductos.txtIdReceta.Text = ""
         frmCatalogoProductos.txtPrecio.Text = ""
+        frmCatalogoProductos.cboCategoria.Text = ""
+        frmCatalogoProductos.cboReceta.Text = ""
         frmCatalogoProductos.ptbImagen.Image = Nothing
     End Sub
 
