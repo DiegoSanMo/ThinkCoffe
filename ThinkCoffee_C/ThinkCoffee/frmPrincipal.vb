@@ -30,11 +30,9 @@
     End Sub
 
     Private Sub PromocionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PromocionesToolStripMenuItem.Click
-        frmCatalogoRecetas.ShowDialog()
     End Sub
 
     Private Sub ProductosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem1.Click
-        frmCatalogoProductos.ShowDialog()
     End Sub
 
     Private Sub CategoriasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CategoriasToolStripMenuItem.Click
@@ -56,5 +54,17 @@
 
     Private Sub PiizaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PiizaToolStripMenuItem.Click
         frmMovimientoVentasPizzas.ShowDialog()
+    End Sub
+
+    Private Sub RegistroToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistroToolStripMenuItem.Click
+        frmCatalogoProductos.ShowDialog()
+    End Sub
+
+    Private Sub ModificaciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ModificaciónToolStripMenuItem.Click
+        frmModificacionProducto.ShowDialog()
+    End Sub
+
+    Private Sub RegistrarRecetaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarRecetaToolStripMenuItem.Click
+        frmCatalogoRecetas.ShowDialog()
     End Sub
 End Class

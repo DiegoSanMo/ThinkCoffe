@@ -72,35 +72,41 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmCatalogoCategoria.Designer.vb">
+    <Compile Include="Catálogos\Categoría\frmCatalogoCategoria.Designer.vb">
       <DependentUpon>frmCatalogoCategoria.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmCatalogoCategoria.vb">
+    <Compile Include="Catálogos\Categoría\frmCatalogoCategoria.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCatalogoInsumos.Designer.vb">
+    <Compile Include="Catálogos\Insumo\frmCatalogoInsumos.Designer.vb">
       <DependentUpon>frmCatalogoInsumos.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmCatalogoInsumos.vb">
+    <Compile Include="Catálogos\Insumo\frmCatalogoInsumos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCatalogoProductos.Designer.vb">
+    <Compile Include="Catálogos\Producto\frmCatalogoProductos.Designer.vb">
       <DependentUpon>frmCatalogoProductos.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmCatalogoProductos.vb">
+    <Compile Include="Catálogos\Producto\frmCatalogoProductos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCatalogoProveedores.vb">
+    <Compile Include="Catálogos\Proveedor\frmCatalogoProveedores.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCatalogoProveedores.Designer.vb">
+    <Compile Include="Catálogos\Proveedor\frmCatalogoProveedores.Designer.vb">
       <DependentUpon>frmCatalogoProveedores.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCatalogoRecetas.Designer.vb">
+    <Compile Include="Catálogos\Receta\frmAgregarInsumo.Designer.vb">
+      <DependentUpon>frmAgregarInsumo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catálogos\Receta\frmAgregarInsumo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catálogos\Receta\frmCatalogoRecetas.Designer.vb">
       <DependentUpon>frmCatalogoRecetas.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmCatalogoRecetas.vb">
+    <Compile Include="Catálogos\Receta\frmCatalogoRecetas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCatalogoRecordatorios.Designer.vb">
@@ -109,20 +115,24 @@
     <Compile Include="frmCatalogoRecordatorios.vb">
       <SubType>Form</SubType>
     </Compile>
-    
-    <Compile Include="frmMovimientoVentas.Designer.vb">
+    <Compile Include="Catálogos\Producto\frmModificacionProducto.Designer.vb">
+      <DependentUpon>frmModificacionProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catálogos\Producto\frmModificacionProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimientos\Venta\Otras\frmMovimientoVentas.Designer.vb">
       <DependentUpon>frmMovimientoVentas.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmMovimientoVentas.vb">
+    <Compile Include="Movimientos\Venta\Otras\frmMovimientoVentas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMovimientoVentasPizzas.Designer.vb">
+    <Compile Include="Movimientos\Venta\Pizzas\frmMovimientoVentasPizzas.Designer.vb">
       <DependentUpon>frmMovimientoVentasPizzas.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmMovimientoVentasPizzas.vb">
+    <Compile Include="Movimientos\Venta\Pizzas\frmMovimientoVentasPizzas.vb">
       <SubType>Form</SubType>
     </Compile>
-
     <Compile Include="frmPrincipal.Designer.vb">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </Compile>
@@ -147,32 +157,36 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmCatalogoCategoria.resx">
+    <EmbeddedResource Include="Catálogos\Categoría\frmCatalogoCategoria.resx">
       <DependentUpon>frmCatalogoCategoria.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCatalogoInsumos.resx">
+    <EmbeddedResource Include="Catálogos\Insumo\frmCatalogoInsumos.resx">
       <DependentUpon>frmCatalogoInsumos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCatalogoProductos.resx">
+    <EmbeddedResource Include="Catálogos\Producto\frmCatalogoProductos.resx">
       <DependentUpon>frmCatalogoProductos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCatalogoProveedores.resx">
+    <EmbeddedResource Include="Catálogos\Proveedor\frmCatalogoProveedores.resx">
       <DependentUpon>frmCatalogoProveedores.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCatalogoRecetas.resx">
+    <EmbeddedResource Include="Catálogos\Receta\frmAgregarInsumo.resx">
+      <DependentUpon>frmAgregarInsumo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catálogos\Receta\frmCatalogoRecetas.resx">
       <DependentUpon>frmCatalogoRecetas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCatalogoRecordatorios.resx">
       <DependentUpon>frmCatalogoRecordatorios.vb</DependentUpon>
     </EmbeddedResource>
-
-    <EmbeddedResource Include="frmMovimientoVentas.resx">
+    <EmbeddedResource Include="Catálogos\Producto\frmModificacionProducto.resx">
+      <DependentUpon>frmModificacionProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Venta\Otras\frmMovimientoVentas.resx">
       <DependentUpon>frmMovimientoVentas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMovimientoVentasPizzas.resx">
+    <EmbeddedResource Include="Movimientos\Venta\Pizzas\frmMovimientoVentasPizzas.resx">
       <DependentUpon>frmMovimientoVentasPizzas.vb</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
@@ -336,6 +350,7 @@
   <ItemGroup>
     <None Include="Resources\Book-48.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

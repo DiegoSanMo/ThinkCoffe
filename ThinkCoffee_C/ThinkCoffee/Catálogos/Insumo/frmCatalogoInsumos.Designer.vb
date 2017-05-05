@@ -52,6 +52,7 @@ Partial Class frmCatalogoInsumos
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
+        Me.btnModificar = New System.Windows.Forms.Button()
         CType(Me.dgInsumo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -207,7 +208,7 @@ Partial Class frmCatalogoInsumos
         Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(637, 438)
+        Me.btnCancelar.Location = New System.Drawing.Point(618, 428)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(101, 39)
         Me.btnCancelar.TabIndex = 65
@@ -222,7 +223,7 @@ Partial Class frmCatalogoInsumos
         Me.btnGrabar.ForeColor = System.Drawing.Color.Black
         Me.btnGrabar.Image = Global.ThinkCoffee.My.Resources.Resources.Burn_CD_30
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGrabar.Location = New System.Drawing.Point(335, 438)
+        Me.btnGrabar.Location = New System.Drawing.Point(407, 428)
         Me.btnGrabar.Name = "btnGrabar"
         Me.btnGrabar.Size = New System.Drawing.Size(87, 39)
         Me.btnGrabar.TabIndex = 64
@@ -257,6 +258,7 @@ Partial Class frmCatalogoInsumos
         '
         'dgInsumo
         '
+        Me.dgInsumo.AllowUserToAddRows = False
         Me.dgInsumo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgInsumo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
         Me.dgInsumo.Location = New System.Drawing.Point(22, 208)
@@ -320,12 +322,29 @@ Partial Class frmCatalogoInsumos
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(97, 20)
         Me.dtpFecha.TabIndex = 69
+        Me.dtpFecha.Value = New Date(2017, 4, 27, 0, 0, 0, 0)
+        '
+        'btnModificar
+        '
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar.ForeColor = System.Drawing.Color.Black
+        Me.btnModificar.Image = Global.ThinkCoffee.My.Resources.Resources.Sort_By_Modified_Date_30
+        Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnModificar.Location = New System.Drawing.Point(162, 428)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(103, 39)
+        Me.btnModificar.TabIndex = 70
+        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnModificar.UseVisualStyleBackColor = True
         '
         'frmCatalogoInsumos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1011, 498)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.dtpFecha)
         Me.Controls.Add(Me.dgInsumo)
         Me.Controls.Add(Me.btnAceptar)
@@ -348,6 +367,7 @@ Partial Class frmCatalogoInsumos
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.txtIdInsumo)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmCatalogoInsumos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmCatalogoInsumos"
@@ -387,4 +407,5 @@ Partial Class frmCatalogoInsumos
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents dtpFecha As DateTimePicker
+    Friend WithEvents btnModificar As Button
 End Class
