@@ -121,6 +121,12 @@
     <Compile Include="Catálogos\Producto\frmModificacionProducto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Movimientos\CompraDeInsumos\frmCompraDeInsumos.Designer.vb">
+      <DependentUpon>frmCompraDeInsumos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\CompraDeInsumos\frmCompraDeInsumos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Movimientos\Venta\Otras\frmMovimientoVentas.Designer.vb">
       <DependentUpon>frmMovimientoVentas.vb</DependentUpon>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catálogos\Producto\frmModificacionProducto.resx">
       <DependentUpon>frmModificacionProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\CompraDeInsumos\frmCompraDeInsumos.resx">
+      <DependentUpon>frmCompraDeInsumos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Movimientos\Venta\Otras\frmMovimientoVentas.resx">
       <DependentUpon>frmMovimientoVentas.vb</DependentUpon>
