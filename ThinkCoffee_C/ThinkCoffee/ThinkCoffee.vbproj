@@ -133,6 +133,12 @@
     <Compile Include="Movimientos\CompraDeInsumos\frmCompraDeInsumos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Movimientos\Venta\Otras\buscarProducto.Designer.vb">
+      <DependentUpon>buscarProducto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\Venta\Otras\buscarProducto.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Movimientos\Venta\Otras\frmMovimientoVentas.Designer.vb">
       <DependentUpon>frmMovimientoVentas.vb</DependentUpon>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Movimientos\CompraDeInsumos\frmCompraDeInsumos.resx">
       <DependentUpon>frmCompraDeInsumos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimientos\Venta\Otras\buscarProducto.resx">
+      <DependentUpon>buscarProducto.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Movimientos\Venta\Otras\frmMovimientoVentas.resx">
       <DependentUpon>frmMovimientoVentas.vb</DependentUpon>
@@ -376,6 +385,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Search-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banknotes-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

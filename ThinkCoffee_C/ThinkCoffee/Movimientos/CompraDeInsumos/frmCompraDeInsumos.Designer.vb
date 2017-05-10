@@ -36,6 +36,11 @@ Partial Class frmCompraDeInsumos
         Me.cboProveedor = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.gbInsumos = New System.Windows.Forms.GroupBox()
+        Me.txtCantidad = New System.Windows.Forms.TextBox()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.btnAgregarI = New System.Windows.Forms.Button()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.txtNuevoC = New System.Windows.Forms.TextBox()
         Me.btnBuscarIn = New System.Windows.Forms.Button()
         Me.txtNombreInsumo = New System.Windows.Forms.TextBox()
         Me.txtFechaInsumo = New System.Windows.Forms.TextBox()
@@ -54,26 +59,17 @@ Partial Class frmCompraDeInsumos
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.dgInsumosC = New System.Windows.Forms.DataGridView()
-        Me.txtSubtotal = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.txtIVA = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.txtTotal = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.btnNuevo = New System.Windows.Forms.Button()
-        Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.btnSalir = New System.Windows.Forms.Button()
-        Me.txtNuevoC = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.btnAgregarI = New System.Windows.Forms.Button()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.txtCantidad = New System.Windows.Forms.TextBox()
+        Me.txtSubtotal = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.btnNuevo = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
         Me.gbProveedores.SuspendLayout()
         Me.gbInsumos.SuspendLayout()
         CType(Me.dgInsumosC, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -237,6 +233,53 @@ Partial Class frmCompraDeInsumos
         Me.gbInsumos.TabIndex = 5
         Me.gbInsumos.TabStop = False
         Me.gbInsumos.Text = "Insumos:"
+        '
+        'txtCantidad
+        '
+        Me.txtCantidad.Location = New System.Drawing.Point(364, 142)
+        Me.txtCantidad.Name = "txtCantidad"
+        Me.txtCantidad.ReadOnly = True
+        Me.txtCantidad.Size = New System.Drawing.Size(117, 20)
+        Me.txtCantidad.TabIndex = 24
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(375, 115)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(84, 24)
+        Me.Label19.TabIndex = 23
+        Me.Label19.Text = "Cantidad"
+        '
+        'btnAgregarI
+        '
+        Me.btnAgregarI.Enabled = False
+        Me.btnAgregarI.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregarI.Location = New System.Drawing.Point(615, 106)
+        Me.btnAgregarI.Name = "btnAgregarI"
+        Me.btnAgregarI.Size = New System.Drawing.Size(100, 56)
+        Me.btnAgregarI.TabIndex = 22
+        Me.btnAgregarI.Text = "Agregar"
+        Me.btnAgregarI.UseVisualStyleBackColor = True
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(211, 115)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(121, 24)
+        Me.Label18.TabIndex = 21
+        Me.Label18.Text = "Nuevo costo:"
+        '
+        'txtNuevoC
+        '
+        Me.txtNuevoC.Location = New System.Drawing.Point(215, 142)
+        Me.txtNuevoC.Name = "txtNuevoC"
+        Me.txtNuevoC.ReadOnly = True
+        Me.txtNuevoC.Size = New System.Drawing.Size(117, 20)
+        Me.txtNuevoC.TabIndex = 20
         '
         'btnBuscarIn
         '
@@ -402,6 +445,37 @@ Partial Class frmCompraDeInsumos
         Me.dgInsumosC.Size = New System.Drawing.Size(725, 150)
         Me.dgInsumosC.TabIndex = 6
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "ID insumo"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Insumo"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 275
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Cantidad"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Costo"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Importe"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
         'txtSubtotal
         '
         Me.txtSubtotal.Enabled = False
@@ -419,42 +493,6 @@ Partial Class frmCompraDeInsumos
         Me.Label15.Size = New System.Drawing.Size(82, 24)
         Me.Label15.TabIndex = 7
         Me.Label15.Text = "Subtotal:"
-        '
-        'txtIVA
-        '
-        Me.txtIVA.Enabled = False
-        Me.txtIVA.Location = New System.Drawing.Point(639, 497)
-        Me.txtIVA.Name = "txtIVA"
-        Me.txtIVA.Size = New System.Drawing.Size(100, 20)
-        Me.txtIVA.TabIndex = 10
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(588, 500)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(45, 24)
-        Me.Label16.TabIndex = 9
-        Me.Label16.Text = "IVA:"
-        '
-        'txtTotal
-        '
-        Me.txtTotal.Enabled = False
-        Me.txtTotal.Location = New System.Drawing.Point(640, 524)
-        Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.Size = New System.Drawing.Size(100, 20)
-        Me.txtTotal.TabIndex = 12
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(577, 524)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(56, 24)
-        Me.Label17.TabIndex = 11
-        Me.Label17.Text = "Total:"
         '
         'btnNuevo
         '
@@ -509,84 +547,6 @@ Partial Class frmCompraDeInsumos
         Me.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnSalir.UseVisualStyleBackColor = True
         '
-        'txtNuevoC
-        '
-        Me.txtNuevoC.Location = New System.Drawing.Point(215, 142)
-        Me.txtNuevoC.Name = "txtNuevoC"
-        Me.txtNuevoC.ReadOnly = True
-        Me.txtNuevoC.Size = New System.Drawing.Size(117, 20)
-        Me.txtNuevoC.TabIndex = 20
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(211, 115)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(121, 24)
-        Me.Label18.TabIndex = 21
-        Me.Label18.Text = "Nuevo costo:"
-        '
-        'btnAgregarI
-        '
-        Me.btnAgregarI.Enabled = False
-        Me.btnAgregarI.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregarI.Location = New System.Drawing.Point(615, 106)
-        Me.btnAgregarI.Name = "btnAgregarI"
-        Me.btnAgregarI.Size = New System.Drawing.Size(100, 56)
-        Me.btnAgregarI.TabIndex = 22
-        Me.btnAgregarI.Text = "Agregar"
-        Me.btnAgregarI.UseVisualStyleBackColor = True
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "ID insumo"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Insumo"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 275
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Cantidad"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Costo"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Importe"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(375, 115)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(84, 24)
-        Me.Label19.TabIndex = 23
-        Me.Label19.Text = "Cantidad"
-        '
-        'txtCantidad
-        '
-        Me.txtCantidad.Location = New System.Drawing.Point(364, 142)
-        Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.ReadOnly = True
-        Me.txtCantidad.Size = New System.Drawing.Size(117, 20)
-        Me.txtCantidad.TabIndex = 24
-        '
         'frmCompraDeInsumos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -596,10 +556,6 @@ Partial Class frmCompraDeInsumos
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.btnNuevo)
-        Me.Controls.Add(Me.txtTotal)
-        Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.txtIVA)
-        Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.txtSubtotal)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.dgInsumosC)
@@ -654,10 +610,6 @@ Partial Class frmCompraDeInsumos
     Friend WithEvents dgInsumosC As DataGridView
     Friend WithEvents txtSubtotal As TextBox
     Friend WithEvents Label15 As Label
-    Friend WithEvents txtIVA As TextBox
-    Friend WithEvents Label16 As Label
-    Friend WithEvents txtTotal As TextBox
-    Friend WithEvents Label17 As Label
     Friend WithEvents btnNuevo As Button
     Friend WithEvents btnGuardar As Button
     Friend WithEvents btnCancelar As Button

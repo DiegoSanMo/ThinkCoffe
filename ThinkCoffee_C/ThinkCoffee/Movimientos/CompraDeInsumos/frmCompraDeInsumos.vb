@@ -12,7 +12,11 @@
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        Dim n As Integer
+        comando.CommandText = "Select count(*) from tlb_compra"
+        n = comando.ExecuteScalar + 1
 
+        txtIdCompra.Text = n
         cboProveedor.Enabled = True
         btnBuscarIn.Enabled = True
         btnAgregarI.Enabled = True
@@ -70,6 +74,8 @@
     Private Sub btnAgregarI_Click(sender As Object, e As EventArgs) Handles btnAgregarI.Click
         Dim ban As Boolean = False
         Dim pos As Integer
+        Dim suma As Decimal
+
         If String.IsNullOrWhiteSpace(txtNombreInsumo.Text) Then
             MsgBox("No se ha ingresado insumo")
             btnBuscarIn.Focus()
@@ -108,6 +114,11 @@
                 End If
             End If
         End If
+
+        For x = 0 To dgInsumosC.RowCount - 1
+            suma = suma + CDec(dgInsumosC(4, x).Value)
+            txtSubtotal.Text = suma
+        Next
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
@@ -118,8 +129,21 @@
             If dgInsumosC.RowCount = 0 Then
                 MsgBox("No se han ingresado insumos")
                 btnAgregarI.Focus()
+            Else
+                comando.CommandText = "Insert into tlb_compra(idCompra, idProveedor, fecha, total) values(" & Val(txtIdCompra.Text) & ", " & Val(txtIdProveedor.Text) & ", '" & dtpFecha.Value.Date & "', " & CDec(txtSubtotal.Text) & ")"
+                comando.ExecuteNonQuery()
+                For x = 0 To dgInsumosC.RowCount - 1
+                    comando.CommandText = "Insert into tlb_detCompra(idCompra, idInsumo, cantidad, costo) values(" & Val(txtIdCompra.Text) & "," & Val(dgInsumosC(0, x).Value) & ", " & CDec(dgInsumosC(2, x).Value) & ", " & CDec(dgInsumosC(3, x).Value) & ")"
+                    comando.ExecuteNonQuery()
+                Next
 
             End If
         End If
+    End Sub
+
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Me.Close()
+        conexionSql.Close()
+
     End Sub
 End Class

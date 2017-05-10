@@ -30,13 +30,9 @@ Partial Class frmCatalogoInsumos
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.cboUnidadM = New System.Windows.Forms.ComboBox()
-        Me.txtMax = New System.Windows.Forms.TextBox()
         Me.txtCosto = New System.Windows.Forms.TextBox()
         Me.txtExist = New System.Windows.Forms.TextBox()
-        Me.txtMin = New System.Windows.Forms.TextBox()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGrabar = New System.Windows.Forms.Button()
@@ -53,6 +49,10 @@ Partial Class frmCatalogoInsumos
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.btnModificar = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtMax = New System.Windows.Forms.TextBox()
+        Me.txtMin = New System.Windows.Forms.TextBox()
         CType(Me.dgInsumo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -126,24 +126,6 @@ Partial Class frmCatalogoInsumos
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Existencia"
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(274, 106)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(43, 13)
-        Me.Label7.TabIndex = 9
-        Me.Label7.Text = "Máximo"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(439, 111)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(42, 13)
-        Me.Label8.TabIndex = 10
-        Me.Label8.Text = "Minímo"
-        '
         'cboUnidadM
         '
         Me.cboUnidadM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -154,14 +136,6 @@ Partial Class frmCatalogoInsumos
         Me.cboUnidadM.Name = "cboUnidadM"
         Me.cboUnidadM.Size = New System.Drawing.Size(100, 21)
         Me.cboUnidadM.TabIndex = 11
-        '
-        'txtMax
-        '
-        Me.txtMax.Enabled = False
-        Me.txtMax.Location = New System.Drawing.Point(323, 104)
-        Me.txtMax.Name = "txtMax"
-        Me.txtMax.Size = New System.Drawing.Size(73, 20)
-        Me.txtMax.TabIndex = 13
         '
         'txtCosto
         '
@@ -178,14 +152,6 @@ Partial Class frmCatalogoInsumos
         Me.txtExist.Name = "txtExist"
         Me.txtExist.Size = New System.Drawing.Size(100, 20)
         Me.txtExist.TabIndex = 15
-        '
-        'txtMin
-        '
-        Me.txtMin.Enabled = False
-        Me.txtMin.Location = New System.Drawing.Point(483, 107)
-        Me.txtMin.Name = "txtMin"
-        Me.txtMin.Size = New System.Drawing.Size(73, 20)
-        Me.txtMin.TabIndex = 16
         '
         'btnSalir
         '
@@ -338,6 +304,40 @@ Partial Class frmCatalogoInsumos
         Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnModificar.UseVisualStyleBackColor = True
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(274, 106)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(43, 13)
+        Me.Label7.TabIndex = 9
+        Me.Label7.Text = "Máximo"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(439, 111)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(42, 13)
+        Me.Label8.TabIndex = 10
+        Me.Label8.Text = "Minímo"
+        '
+        'txtMax
+        '
+        Me.txtMax.Enabled = False
+        Me.txtMax.Location = New System.Drawing.Point(323, 104)
+        Me.txtMax.Name = "txtMax"
+        Me.txtMax.Size = New System.Drawing.Size(73, 20)
+        Me.txtMax.TabIndex = 13
+        '
+        'txtMin
+        '
+        Me.txtMin.Enabled = False
+        Me.txtMin.Location = New System.Drawing.Point(483, 107)
+        Me.txtMin.Name = "txtMin"
+        Me.txtMin.Size = New System.Drawing.Size(73, 20)
+        Me.txtMin.TabIndex = 16
+        '
         'frmCatalogoInsumos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -385,13 +385,9 @@ Partial Class frmCatalogoInsumos
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents cboUnidadM As ComboBox
-    Friend WithEvents txtMax As TextBox
     Friend WithEvents txtCosto As TextBox
     Friend WithEvents txtExist As TextBox
-    Friend WithEvents txtMin As TextBox
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnGrabar As Button
@@ -408,4 +404,8 @@ Partial Class frmCatalogoInsumos
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
     Friend WithEvents dtpFecha As DateTimePicker
     Friend WithEvents btnModificar As Button
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents txtMax As TextBox
+    Friend WithEvents txtMin As TextBox
 End Class
