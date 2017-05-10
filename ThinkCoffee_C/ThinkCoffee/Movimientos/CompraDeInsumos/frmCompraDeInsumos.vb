@@ -88,10 +88,25 @@
                 dgInsumosC(2, pos).Value = CDec(dgInsumosC(2, pos).Value) + CDec(txtCantidad.Text)
                 dgInsumosC(4, pos).Value = CDec(dgInsumosC(2, pos).Value) * CDec(dgInsumosC(3, pos).Value)
             Else
-                dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, txtNuevoC.Text, txtCantidad.Text * txtNuevoC.Text)
-                dgInsumosC.CurrentCell = dgInsumosC.Rows(dgInsumosC.RowCount - 1).Cells(0)
-            End If
+                If String.IsNullOrWhiteSpace(txtCantidad.Text) Or String.IsNullOrWhiteSpace(txtNuevoC.Text) Then
+                    MsgBox("Hay datos en blanco")
+                    txtNuevoC.Focus()
+                Else
+                    dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, txtNuevoC.Text, txtCantidad.Text * txtNuevoC.Text)
+                    dgInsumosC.CurrentCell = dgInsumosC.Rows(dgInsumosC.RowCount - 1).Cells(0)
 
+                    txtIdInsumo.Text = ""
+                    txtNombreInsumo.Text = ""
+                    txtExistencias.Text = ""
+                    txtMaximo.Text = ""
+                    txtMinimo.Text = ""
+                    txtUnidadM.Text = ""
+                    txtFechaInsumo.Text = ""
+                    txtCosto.Text = ""
+                    txtNuevoC.Text = ""
+                    txtCantidad.Text = ""
+                End If
+            End If
         End If
     End Sub
 
