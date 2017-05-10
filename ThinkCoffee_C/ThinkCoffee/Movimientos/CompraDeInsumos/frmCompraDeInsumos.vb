@@ -8,18 +8,28 @@
             cboProveedor.Items.Add(lector(0))
         End While
         lector.Close()
-
+        dgInsumosC.SelectionMode = DataGridViewSelectionMode.FullRowSelect
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+
         cboProveedor.Enabled = True
+        btnBuscarIn.Enabled = True
+        btnAgregarI.Enabled = True
+        txtNuevoC.ReadOnly = False
+        txtCantidad.ReadOnly = False
+
+        btnNuevo.Enabled = False
+        btnGuardar.Enabled = True
+
 
     End Sub
 
     Private Sub btnBuscarIn_Click(sender As Object, e As EventArgs) Handles btnBuscarIn.Click
         Dim fila As Integer
-
+        frmAgregarInsumo.dgInsumos.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         frmAgregarInsumo.ShowDialog()
+
         fila = frmAgregarInsumo.dgInsumos.CurrentRow.Index
         Dim idInsumo As Integer = frmAgregarInsumo.dgInsumos.Item(0, fila).Value
 
@@ -38,5 +48,63 @@
         lector.Close()
 
 
+    End Sub
+
+    Private Sub cboProveedor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboProveedor.SelectedIndexChanged
+        comando.CommandText = "select tlb_proveedor.idProveedor, tlb_proveedor.direccion, tlb_proveedor.telefono from tlb_proveedor where tlb_proveedor.nombre = '" & cboProveedor.Text & "'"
+        lector = comando.ExecuteReader
+        lector.Read()
+        txtIdProveedor.Text = lector(0)
+        txtDireccion.Text = lector(1)
+        txtTelefono.Text = lector(2)
+        lector.Close()
+
+    End Sub
+
+
+
+    Private Sub txtFechaInsumo_TextChanged(sender As Object, e As EventArgs) Handles txtFechaInsumo.TextChanged
+
+    End Sub
+
+    Private Sub btnAgregarI_Click(sender As Object, e As EventArgs) Handles btnAgregarI.Click
+        Dim ban As Boolean = False
+        Dim pos As Integer
+        If String.IsNullOrWhiteSpace(txtNombreInsumo.Text) Then
+            MsgBox("No se ha ingresado insumo")
+            btnBuscarIn.Focus()
+        Else
+            For x = 0 To dgInsumosC.RowCount - 1
+                If dgInsumosC(0, x).Value = txtIdInsumo.Text Then
+                    ban = True
+                    pos = x
+                    Exit For
+                Else
+                    ban = False
+                End If
+            Next
+
+            If ban Then
+                dgInsumosC(2, pos).Value = CDec(dgInsumosC(2, pos).Value) + CDec(txtCantidad.Text)
+                dgInsumosC(4, pos).Value = CDec(dgInsumosC(2, pos).Value) * CDec(dgInsumosC(3, pos).Value)
+            Else
+                dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, txtNuevoC.Text, txtCantidad.Text * txtNuevoC.Text)
+                dgInsumosC.CurrentCell = dgInsumosC.Rows(dgInsumosC.RowCount - 1).Cells(0)
+            End If
+
+        End If
+    End Sub
+
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        If String.IsNullOrWhiteSpace(txtIdProveedor.Text) Then
+            MsgBox("No se ha ingresado proveedor")
+            cboProveedor.Focus()
+        Else
+            If dgInsumosC.RowCount = 0 Then
+                MsgBox("No se han ingresado insumos")
+                btnAgregarI.Focus()
+
+            End If
+        End If
     End Sub
 End Class
