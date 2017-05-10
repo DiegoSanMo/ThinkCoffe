@@ -191,7 +191,7 @@
 
 
         For x = 0 To dgReceta.RowCount - 1
-            comando.CommandText = "Insert into tlb_detReceta (idReceta, idInsumo, cantidad,unidadM) values(" & Val(txtIdReceta.Text) & ", " & Val(dgReceta(0, x).Value) & ", " & CDec(dgReceta(2, x).Value) & ",'" & dgReceta(3, x).Value & "')"
+            comando.CommandText = "Insert into tlb_detReceta (idReceta, idInsumo, cantidad, unidadM) values(" & Val(txtIdReceta.Text) & ", " & CInt(dgReceta(0, x).Value) & ", '" & CDec(dgReceta(2, x).Value) & "','" & dgReceta(3, x).Value & "')"
             comando.ExecuteNonQuery()
         Next
 

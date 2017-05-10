@@ -67,4 +67,8 @@
     Private Sub RegistrarRecetaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarRecetaToolStripMenuItem.Click
         frmCatalogoRecetas.ShowDialog()
     End Sub
+
+    Private Sub CompraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CompraToolStripMenuItem.Click
+        frmCompraDeInsumos.ShowDialog()
+    End Sub
 End Class

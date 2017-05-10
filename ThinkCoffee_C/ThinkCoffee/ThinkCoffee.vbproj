@@ -84,6 +84,12 @@
     <Compile Include="Catálogos\Insumo\frmCatalogoInsumos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Catálogos\Producto\frmBusquedaProductos.Designer.vb">
+      <DependentUpon>frmBusquedaProductos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Catálogos\Producto\frmBusquedaProductos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Catálogos\Producto\frmCatalogoProductos.Designer.vb">
       <DependentUpon>frmCatalogoProductos.vb</DependentUpon>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catálogos\Insumo\frmCatalogoInsumos.resx">
       <DependentUpon>frmCatalogoInsumos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catálogos\Producto\frmBusquedaProductos.resx">
+      <DependentUpon>frmBusquedaProductos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catálogos\Producto\frmCatalogoProductos.resx">
       <DependentUpon>frmCatalogoProductos.vb</DependentUpon>
@@ -359,7 +368,15 @@
   <ItemGroup>
     <None Include="Resources\Book-48.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Search-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-20.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

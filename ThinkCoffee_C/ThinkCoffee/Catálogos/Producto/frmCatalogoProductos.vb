@@ -17,14 +17,6 @@ Public Class frmCatalogoProductos
         End While
         lector.Close()
 
-        'Sube las recetas a la combito :v
-        comando.CommandText = "Select tlb_receta.nombre from tlb_receta"
-        lector = comando.ExecuteReader
-
-        While lector.Read
-            cboReceta.Items.Add(lector(0))
-        End While
-        lector.Close()
 
         'Añade los productos a la rejilla si es que existen
         If n > 1 Then
@@ -60,7 +52,7 @@ Public Class frmCatalogoProductos
         btnModificar.Enabled = False
 
         txtNombre.Enabled = True
-        cboReceta.Enabled = True
+        btnBuscarR.Enabled = True
         cboCategoria.Enabled = True
         txtPrecio.Enabled = True
         btnBuscar.Enabled = True
@@ -138,15 +130,7 @@ Public Class frmCatalogoProductos
 
     End Sub
 
-    Private Sub txtNombre_Validating(sender As Object, e As CancelEventArgs) Handles txtNombre.Validating
-        If Len(txtNombre.Text) < 5 Then
-            MessageBox.Show("DEBES INTRODUCIR AL MENOS 10 CARACTERES", "FALTA INFORMACION",
-            MessageBoxButtons.OK, MessageBoxIcon.Error)
-            txtNombre.Focus()
-        End If
-    End Sub
-
-  Private Sub cboCategoria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCategoria.SelectedIndexChanged
+    Private Sub cboCategoria_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboCategoria.SelectedIndexChanged
         comando.CommandText = "Select tlb_categoria.idCategoria from tlb_categoria where tlb_categoria.nombre = '" & cboCategoria.Text & "'"
         lector = comando.ExecuteReader
 
@@ -208,15 +192,16 @@ Public Class frmCatalogoProductos
 
     End Sub
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
-    End Sub
+    Private Sub btnBuscarR_Click(sender As Object, e As EventArgs) Handles btnBuscarR.Click
+        Dim id As Integer
+        Dim buscar As New frmBusquedaProductos
+        buscar.ShowDialog()
 
-    Private Sub cboReceta_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboReceta.SelectedIndexChanged
-        comando.CommandText = "Select tlb_receta.idReceta From tlb_receta Where tlb_receta.nombre='" & cboReceta.Text & "'"
-        lector = comando.ExecuteReader
-        lector.Read()
-        txtIdReceta.Text = lector(0)
-        lector.Close()
+        id = dgProductos(0, buscar.dgBusquedaRecetas.CurrentRow.Index).Value
+        MsgBox(id)
+        txtIdReceta.Text = id
+
+
     End Sub
 End Class

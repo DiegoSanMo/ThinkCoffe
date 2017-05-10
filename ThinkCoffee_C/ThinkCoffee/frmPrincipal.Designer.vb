@@ -30,6 +30,8 @@ Partial Class frmPrincipal
         Me.ModificaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PromocionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarRecetaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultarRecetaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PiizaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OtrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -39,8 +41,7 @@ Partial Class frmPrincipal
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnMin = New System.Windows.Forms.Button()
-        Me.RegistrarRecetaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultarRecetaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CompraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBar.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -66,6 +67,7 @@ Partial Class frmPrincipal
         '
         'IngredientesToolStripMenuItem
         '
+        Me.IngredientesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CompraToolStripMenuItem})
         Me.IngredientesToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Vegetarian_Food_50
         Me.IngredientesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.IngredientesToolStripMenuItem.Name = "IngredientesToolStripMenuItem"
@@ -84,13 +86,13 @@ Partial Class frmPrincipal
         'RegistroToolStripMenuItem
         '
         Me.RegistroToolStripMenuItem.Name = "RegistroToolStripMenuItem"
-        Me.RegistroToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.RegistroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.RegistroToolStripMenuItem.Text = "Registro"
         '
         'ModificaciónToolStripMenuItem
         '
         Me.ModificaciónToolStripMenuItem.Name = "ModificaciónToolStripMenuItem"
-        Me.ModificaciónToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.ModificaciónToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ModificaciónToolStripMenuItem.Text = "Modificación"
         '
         'ProveedoresToolStripMenuItem1
@@ -109,6 +111,18 @@ Partial Class frmPrincipal
         Me.PromocionesToolStripMenuItem.Name = "PromocionesToolStripMenuItem"
         Me.PromocionesToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
         Me.PromocionesToolStripMenuItem.Text = "Recetas"
+        '
+        'RegistrarRecetaToolStripMenuItem
+        '
+        Me.RegistrarRecetaToolStripMenuItem.Name = "RegistrarRecetaToolStripMenuItem"
+        Me.RegistrarRecetaToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.RegistrarRecetaToolStripMenuItem.Text = "Registrar receta"
+        '
+        'ConsultarRecetaToolStripMenuItem
+        '
+        Me.ConsultarRecetaToolStripMenuItem.Name = "ConsultarRecetaToolStripMenuItem"
+        Me.ConsultarRecetaToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.ConsultarRecetaToolStripMenuItem.Text = "Consultar receta"
         '
         'VentaToolStripMenuItem
         '
@@ -206,17 +220,11 @@ Partial Class frmPrincipal
         Me.btnMin.UseVisualStyleBackColor = False
         Me.btnMin.Visible = False
         '
-        'RegistrarRecetaToolStripMenuItem
+        'CompraToolStripMenuItem
         '
-        Me.RegistrarRecetaToolStripMenuItem.Name = "RegistrarRecetaToolStripMenuItem"
-        Me.RegistrarRecetaToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
-        Me.RegistrarRecetaToolStripMenuItem.Text = "Registrar receta"
-        '
-        'ConsultarRecetaToolStripMenuItem
-        '
-        Me.ConsultarRecetaToolStripMenuItem.Name = "ConsultarRecetaToolStripMenuItem"
-        Me.ConsultarRecetaToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
-        Me.ConsultarRecetaToolStripMenuItem.Text = "Consultar receta"
+        Me.CompraToolStripMenuItem.Name = "CompraToolStripMenuItem"
+        Me.CompraToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CompraToolStripMenuItem.Text = "Compra"
         '
         'frmPrincipal
         '
@@ -260,4 +268,5 @@ Partial Class frmPrincipal
     Friend WithEvents ModificaciónToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrarRecetaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConsultarRecetaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CompraToolStripMenuItem As ToolStripMenuItem
 End Class

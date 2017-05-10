@@ -36,22 +36,21 @@ Partial Class frmCompraDeInsumos
         Me.cboProveedor = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.gbInsumos = New System.Windows.Forms.GroupBox()
-        Me.cboInsumo = New System.Windows.Forms.ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtIdInsumo = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtUnidadM = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtMaximo = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.txtMinimo = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.txtExistencias = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtCosto = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.txtFechaInsumo = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtCosto = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtExistencias = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.txtMinimo = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtMaximo = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.txtUnidadM = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtIdInsumo = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.txtSubtotal = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -63,6 +62,8 @@ Partial Class frmCompraDeInsumos
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
+        Me.txtNombreInsumo = New System.Windows.Forms.TextBox()
+        Me.btnBuscarIn = New System.Windows.Forms.Button()
         Me.gbProveedores.SuspendLayout()
         Me.gbInsumos.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,7 +118,7 @@ Partial Class frmCompraDeInsumos
         Me.gbProveedores.Controls.Add(Me.Label3)
         Me.gbProveedores.Location = New System.Drawing.Point(12, 80)
         Me.gbProveedores.Name = "gbProveedores"
-        Me.gbProveedores.Size = New System.Drawing.Size(587, 109)
+        Me.gbProveedores.Size = New System.Drawing.Size(726, 109)
         Me.gbProveedores.TabIndex = 4
         Me.gbProveedores.TabStop = False
         Me.gbProveedores.Text = "Proveedores:"
@@ -125,16 +126,16 @@ Partial Class frmCompraDeInsumos
         'txtTelefono
         '
         Me.txtTelefono.Enabled = False
-        Me.txtTelefono.Location = New System.Drawing.Point(445, 58)
+        Me.txtTelefono.Location = New System.Drawing.Point(582, 58)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(136, 20)
+        Me.txtTelefono.Size = New System.Drawing.Size(100, 20)
         Me.txtTelefono.TabIndex = 8
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(349, 57)
+        Me.Label6.Location = New System.Drawing.Point(486, 57)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(90, 24)
         Me.Label6.TabIndex = 7
@@ -145,7 +146,7 @@ Partial Class frmCompraDeInsumos
         Me.txtDireccion.Enabled = False
         Me.txtDireccion.Location = New System.Drawing.Point(107, 58)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(224, 20)
+        Me.txtDireccion.Size = New System.Drawing.Size(310, 20)
         Me.txtDireccion.TabIndex = 6
         '
         'Label5
@@ -161,7 +162,7 @@ Partial Class frmCompraDeInsumos
         'txtIdProveedor
         '
         Me.txtIdProveedor.Enabled = False
-        Me.txtIdProveedor.Location = New System.Drawing.Point(384, 21)
+        Me.txtIdProveedor.Location = New System.Drawing.Point(582, 21)
         Me.txtIdProveedor.Name = "txtIdProveedor"
         Me.txtIdProveedor.Size = New System.Drawing.Size(100, 20)
         Me.txtIdProveedor.TabIndex = 4
@@ -170,7 +171,7 @@ Partial Class frmCompraDeInsumos
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(260, 20)
+        Me.Label4.Location = New System.Drawing.Point(458, 20)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(118, 24)
         Me.Label4.TabIndex = 3
@@ -178,11 +179,12 @@ Partial Class frmCompraDeInsumos
         '
         'cboProveedor
         '
+        Me.cboProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboProveedor.Enabled = False
         Me.cboProveedor.FormattingEnabled = True
         Me.cboProveedor.Location = New System.Drawing.Point(116, 20)
         Me.cboProveedor.Name = "cboProveedor"
-        Me.cboProveedor.Size = New System.Drawing.Size(121, 21)
+        Me.cboProveedor.Size = New System.Drawing.Size(301, 21)
         Me.cboProveedor.TabIndex = 2
         '
         'Label3
@@ -197,6 +199,8 @@ Partial Class frmCompraDeInsumos
         '
         'gbInsumos
         '
+        Me.gbInsumos.Controls.Add(Me.btnBuscarIn)
+        Me.gbInsumos.Controls.Add(Me.txtNombreInsumo)
         Me.gbInsumos.Controls.Add(Me.txtFechaInsumo)
         Me.gbInsumos.Controls.Add(Me.Label14)
         Me.gbInsumos.Controls.Add(Me.txtCosto)
@@ -211,7 +215,6 @@ Partial Class frmCompraDeInsumos
         Me.gbInsumos.Controls.Add(Me.Label9)
         Me.gbInsumos.Controls.Add(Me.txtIdInsumo)
         Me.gbInsumos.Controls.Add(Me.Label8)
-        Me.gbInsumos.Controls.Add(Me.cboInsumo)
         Me.gbInsumos.Controls.Add(Me.Label7)
         Me.gbInsumos.Location = New System.Drawing.Point(13, 195)
         Me.gbInsumos.Name = "gbInsumos"
@@ -220,60 +223,76 @@ Partial Class frmCompraDeInsumos
         Me.gbInsumos.TabStop = False
         Me.gbInsumos.Text = "Insumos:"
         '
-        'cboInsumo
+        'txtFechaInsumo
         '
-        Me.cboInsumo.Enabled = False
-        Me.cboInsumo.FormattingEnabled = True
-        Me.cboInsumo.Location = New System.Drawing.Point(89, 16)
-        Me.cboInsumo.Name = "cboInsumo"
-        Me.cboInsumo.Size = New System.Drawing.Size(121, 21)
-        Me.cboInsumo.TabIndex = 4
+        Me.txtFechaInsumo.Enabled = False
+        Me.txtFechaInsumo.Location = New System.Drawing.Point(609, 91)
+        Me.txtFechaInsumo.Name = "txtFechaInsumo"
+        Me.txtFechaInsumo.Size = New System.Drawing.Size(100, 20)
+        Me.txtFechaInsumo.TabIndex = 18
         '
-        'Label7
+        'Label14
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(6, 16)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(77, 24)
-        Me.Label7.TabIndex = 3
-        Me.Label7.Text = "Insumo:"
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(479, 85)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(130, 24)
+        Me.Label14.TabIndex = 17
+        Me.Label14.Text = "Última compra"
         '
-        'txtIdInsumo
+        'txtCosto
         '
-        Me.txtIdInsumo.Enabled = False
-        Me.txtIdInsumo.Location = New System.Drawing.Point(328, 17)
-        Me.txtIdInsumo.Name = "txtIdInsumo"
-        Me.txtIdInsumo.Size = New System.Drawing.Size(100, 20)
-        Me.txtIdInsumo.TabIndex = 6
+        Me.txtCosto.Location = New System.Drawing.Point(161, 91)
+        Me.txtCosto.Name = "txtCosto"
+        Me.txtCosto.Size = New System.Drawing.Size(100, 20)
+        Me.txtCosto.TabIndex = 16
         '
-        'Label8
+        'Label13
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(230, 16)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(92, 24)
-        Me.Label8.TabIndex = 5
-        Me.Label8.Text = "IdInsumo:"
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(24, 86)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(131, 24)
+        Me.Label13.TabIndex = 15
+        Me.Label13.Text = "Costo anterior:"
         '
-        'txtUnidadM
+        'txtExistencias
         '
-        Me.txtUnidadM.Enabled = False
-        Me.txtUnidadM.Location = New System.Drawing.Point(615, 19)
-        Me.txtUnidadM.Name = "txtUnidadM"
-        Me.txtUnidadM.Size = New System.Drawing.Size(100, 20)
-        Me.txtUnidadM.TabIndex = 8
+        Me.txtExistencias.Enabled = False
+        Me.txtExistencias.Location = New System.Drawing.Point(615, 17)
+        Me.txtExistencias.Name = "txtExistencias"
+        Me.txtExistencias.Size = New System.Drawing.Size(100, 20)
+        Me.txtExistencias.TabIndex = 14
         '
-        'Label9
+        'Label12
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(439, 17)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(170, 24)
-        Me.Label9.TabIndex = 7
-        Me.Label9.Text = "Unidad de medida:"
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(499, 17)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(110, 24)
+        Me.Label12.TabIndex = 13
+        Me.Label12.Text = "Existencias:"
+        '
+        'txtMinimo
+        '
+        Me.txtMinimo.Enabled = False
+        Me.txtMinimo.Location = New System.Drawing.Point(328, 53)
+        Me.txtMinimo.Name = "txtMinimo"
+        Me.txtMinimo.Size = New System.Drawing.Size(100, 20)
+        Me.txtMinimo.TabIndex = 12
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(245, 49)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(77, 24)
+        Me.Label11.TabIndex = 11
+        Me.Label11.Text = "Mínimo:"
         '
         'txtMaximo
         '
@@ -293,76 +312,51 @@ Partial Class frmCompraDeInsumos
         Me.Label10.TabIndex = 9
         Me.Label10.Text = "Máximo:"
         '
-        'txtMinimo
+        'txtUnidadM
         '
-        Me.txtMinimo.Enabled = False
-        Me.txtMinimo.Location = New System.Drawing.Point(295, 54)
-        Me.txtMinimo.Name = "txtMinimo"
-        Me.txtMinimo.Size = New System.Drawing.Size(100, 20)
-        Me.txtMinimo.TabIndex = 12
+        Me.txtUnidadM.Enabled = False
+        Me.txtUnidadM.Location = New System.Drawing.Point(615, 55)
+        Me.txtUnidadM.Name = "txtUnidadM"
+        Me.txtUnidadM.Size = New System.Drawing.Size(100, 20)
+        Me.txtUnidadM.TabIndex = 8
         '
-        'Label11
+        'Label9
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(212, 49)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(77, 24)
-        Me.Label11.TabIndex = 11
-        Me.Label11.Text = "Mínimo:"
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(439, 53)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(170, 24)
+        Me.Label9.TabIndex = 7
+        Me.Label9.Text = "Unidad de medida:"
         '
-        'txtExistencias
+        'txtIdInsumo
         '
-        Me.txtExistencias.Enabled = False
-        Me.txtExistencias.Location = New System.Drawing.Point(534, 50)
-        Me.txtExistencias.Name = "txtExistencias"
-        Me.txtExistencias.Size = New System.Drawing.Size(100, 20)
-        Me.txtExistencias.TabIndex = 14
+        Me.txtIdInsumo.Enabled = False
+        Me.txtIdInsumo.Location = New System.Drawing.Point(375, 18)
+        Me.txtIdInsumo.Name = "txtIdInsumo"
+        Me.txtIdInsumo.Size = New System.Drawing.Size(100, 20)
+        Me.txtIdInsumo.TabIndex = 6
         '
-        'Label12
+        'Label8
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(418, 50)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(110, 24)
-        Me.Label12.TabIndex = 13
-        Me.Label12.Text = "Existencias:"
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(277, 17)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(92, 24)
+        Me.Label8.TabIndex = 5
+        Me.Label8.Text = "IdInsumo:"
         '
-        'txtCosto
+        'Label7
         '
-        Me.txtCosto.Location = New System.Drawing.Point(75, 90)
-        Me.txtCosto.Name = "txtCosto"
-        Me.txtCosto.Size = New System.Drawing.Size(100, 20)
-        Me.txtCosto.TabIndex = 16
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(6, 86)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(63, 24)
-        Me.Label13.TabIndex = 15
-        Me.Label13.Text = "Costo:"
-        '
-        'txtFechaInsumo
-        '
-        Me.txtFechaInsumo.Enabled = False
-        Me.txtFechaInsumo.Location = New System.Drawing.Point(279, 91)
-        Me.txtFechaInsumo.Name = "txtFechaInsumo"
-        Me.txtFechaInsumo.Size = New System.Drawing.Size(100, 20)
-        Me.txtFechaInsumo.TabIndex = 18
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(204, 90)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(69, 24)
-        Me.Label14.TabIndex = 17
-        Me.Label14.Text = "Fecha:"
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(6, 16)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(77, 24)
+        Me.Label7.TabIndex = 3
+        Me.Label7.Text = "Insumo:"
         '
         'DataGridView1
         '
@@ -428,40 +422,61 @@ Partial Class frmCompraDeInsumos
         '
         'btnNuevo
         '
-        Me.btnNuevo.Location = New System.Drawing.Point(13, 506)
+        Me.btnNuevo.Location = New System.Drawing.Point(33, 533)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(75, 23)
+        Me.btnNuevo.Size = New System.Drawing.Size(75, 53)
         Me.btnNuevo.TabIndex = 13
         Me.btnNuevo.Text = "Nuevo"
+        Me.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
         'btnGuardar
         '
         Me.btnGuardar.Enabled = False
-        Me.btnGuardar.Location = New System.Drawing.Point(128, 506)
+        Me.btnGuardar.Location = New System.Drawing.Point(148, 533)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
+        Me.btnGuardar.Size = New System.Drawing.Size(75, 53)
         Me.btnGuardar.TabIndex = 14
         Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(247, 507)
+        Me.btnCancelar.Location = New System.Drawing.Point(267, 534)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancelar.Size = New System.Drawing.Size(75, 53)
         Me.btnCancelar.TabIndex = 15
         Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCancelar.UseVisualStyleBackColor = True
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(376, 509)
+        Me.btnSalir.Location = New System.Drawing.Point(396, 536)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
+        Me.btnSalir.Size = New System.Drawing.Size(75, 53)
         Me.btnSalir.TabIndex = 16
         Me.btnSalir.Text = "Salir"
+        Me.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnSalir.UseVisualStyleBackColor = True
+        '
+        'txtNombreInsumo
+        '
+        Me.txtNombreInsumo.Enabled = False
+        Me.txtNombreInsumo.Location = New System.Drawing.Point(93, 16)
+        Me.txtNombreInsumo.Name = "txtNombreInsumo"
+        Me.txtNombreInsumo.Size = New System.Drawing.Size(100, 20)
+        Me.txtNombreInsumo.TabIndex = 19
+        '
+        'btnBuscarIn
+        '
+        Me.btnBuscarIn.Image = Global.ThinkCoffee.My.Resources.Resources.Search_20
+        Me.btnBuscarIn.Location = New System.Drawing.Point(199, 12)
+        Me.btnBuscarIn.Name = "btnBuscarIn"
+        Me.btnBuscarIn.Size = New System.Drawing.Size(42, 30)
+        Me.btnBuscarIn.TabIndex = 9
+        Me.btnBuscarIn.UseVisualStyleBackColor = True
         '
         'frmCompraDeInsumos
         '
@@ -522,7 +537,6 @@ Partial Class frmCompraDeInsumos
     Friend WithEvents Label9 As Label
     Friend WithEvents txtIdInsumo As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents cboInsumo As ComboBox
     Friend WithEvents Label7 As Label
     Friend WithEvents txtFechaInsumo As TextBox
     Friend WithEvents Label14 As Label
@@ -539,4 +553,6 @@ Partial Class frmCompraDeInsumos
     Friend WithEvents btnGuardar As Button
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnSalir As Button
+    Friend WithEvents btnBuscarIn As Button
+    Friend WithEvents txtNombreInsumo As TextBox
 End Class

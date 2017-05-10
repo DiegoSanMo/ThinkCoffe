@@ -35,7 +35,6 @@ Partial Class frmCatalogoProductos
         Me.txtIdReceta = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.cboReceta = New System.Windows.Forms.ComboBox()
         Me.txtIdProducto = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -54,6 +53,7 @@ Partial Class frmCatalogoProductos
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.btnModificar = New System.Windows.Forms.Button()
+        Me.btnBuscarR = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ptbImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgProductos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,6 +63,7 @@ Partial Class frmCatalogoProductos
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Controls.Add(Me.btnBuscarR)
         Me.GroupBox1.Controls.Add(Me.btnAceptar)
         Me.GroupBox1.Controls.Add(Me.btnBuscar)
         Me.GroupBox1.Controls.Add(Me.txtPrecio)
@@ -75,7 +76,6 @@ Partial Class frmCatalogoProductos
         Me.GroupBox1.Controls.Add(Me.txtIdReceta)
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.cboReceta)
         Me.GroupBox1.Controls.Add(Me.txtIdProducto)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
@@ -220,17 +220,6 @@ Partial Class frmCatalogoProductos
         Me.Label9.Size = New System.Drawing.Size(60, 20)
         Me.Label9.TabIndex = 52
         Me.Label9.Text = "Receta"
-        '
-        'cboReceta
-        '
-        Me.cboReceta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboReceta.Enabled = False
-        Me.cboReceta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.cboReceta.FormattingEnabled = True
-        Me.cboReceta.Location = New System.Drawing.Point(102, 141)
-        Me.cboReceta.Name = "cboReceta"
-        Me.cboReceta.Size = New System.Drawing.Size(146, 28)
-        Me.cboReceta.TabIndex = 4
         '
         'txtIdProducto
         '
@@ -418,6 +407,17 @@ Partial Class frmCatalogoProductos
         Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnModificar.UseVisualStyleBackColor = True
         '
+        'btnBuscarR
+        '
+        Me.btnBuscarR.Enabled = False
+        Me.btnBuscarR.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnBuscarR.Location = New System.Drawing.Point(102, 139)
+        Me.btnBuscarR.Name = "btnBuscarR"
+        Me.btnBuscarR.Size = New System.Drawing.Size(97, 29)
+        Me.btnBuscarR.TabIndex = 61
+        Me.btnBuscarR.Text = "Buscar receta"
+        Me.btnBuscarR.UseVisualStyleBackColor = True
+        '
         'frmCatalogoProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -468,7 +468,6 @@ Partial Class frmCatalogoProductos
     Friend WithEvents txtIdReceta As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents cboReceta As ComboBox
     Friend WithEvents btnBuscar As Button
     Friend WithEvents txtPrecio As TextBox
     Friend WithEvents Label14 As Label
@@ -482,4 +481,5 @@ Partial Class frmCatalogoProductos
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents btnBuscarR As Button
 End Class
