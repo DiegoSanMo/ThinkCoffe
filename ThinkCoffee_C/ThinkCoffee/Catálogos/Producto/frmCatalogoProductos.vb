@@ -195,12 +195,17 @@ Public Class frmCatalogoProductos
 
     Private Sub btnBuscarR_Click(sender As Object, e As EventArgs) Handles btnBuscarR.Click
         Dim id As Integer
-        Dim buscar As New frmBusquedaProductos
+        Dim buscar As New frmBusquedaRecetas
         buscar.ShowDialog()
 
-        id = dgProductos(0, buscar.dgBusquedaRecetas.CurrentRow.Index).Value
-        MsgBox(id)
-        txtIdReceta.Text = id
+        If buscar.dgBusquedaRecetas.CurrentRow Is Nothing Then
+            MessageBox.Show("NO SE HA SELECCIONADO RECETA", "FALTA DE DATOS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            id = dgProductos(0, buscar.dgBusquedaRecetas.CurrentRow.Index).Value
+            MsgBox(id)
+            txtIdReceta.Text = id
+        End If
+
 
 
     End Sub

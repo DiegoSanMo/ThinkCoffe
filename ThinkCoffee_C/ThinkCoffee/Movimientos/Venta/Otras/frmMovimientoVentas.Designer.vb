@@ -26,7 +26,6 @@ Partial Class frmMovimientoVentas
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
-        Me.cboCategoria = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
@@ -40,16 +39,20 @@ Partial Class frmMovimientoVentas
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtCategoria = New System.Windows.Forms.TextBox()
+        Me.txtNombreP = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtIdProducto = New System.Windows.Forms.TextBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGrabar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.ptbImagen = New System.Windows.Forms.PictureBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         CType(Me.dgVenta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -91,23 +94,14 @@ Partial Class frmMovimientoVentas
         '
         'dtpFecha
         '
+        Me.dtpFecha.Enabled = False
         Me.dtpFecha.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFecha.Location = New System.Drawing.Point(302, 16)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(130, 27)
         Me.dtpFecha.TabIndex = 31
-        '
-        'cboCategoria
-        '
-        Me.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboCategoria.Enabled = False
-        Me.cboCategoria.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.cboCategoria.FormattingEnabled = True
-        Me.cboCategoria.Location = New System.Drawing.Point(107, 24)
-        Me.cboCategoria.Name = "cboCategoria"
-        Me.cboCategoria.Size = New System.Drawing.Size(128, 28)
-        Me.cboCategoria.TabIndex = 32
+        Me.dtpFecha.Value = New Date(2017, 5, 10, 0, 0, 0, 0)
         '
         'Label3
         '
@@ -115,7 +109,7 @@ Partial Class frmMovimientoVentas
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(18, 27)
+        Me.Label3.Location = New System.Drawing.Point(199, 57)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(83, 20)
         Me.Label3.TabIndex = 33
@@ -127,7 +121,7 @@ Partial Class frmMovimientoVentas
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(258, 27)
+        Me.Label4.Location = New System.Drawing.Point(10, 24)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(77, 20)
         Me.Label4.TabIndex = 35
@@ -137,7 +131,7 @@ Partial Class frmMovimientoVentas
         '
         Me.txtCantidad.Enabled = False
         Me.txtCantidad.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtCantidad.Location = New System.Drawing.Point(281, 82)
+        Me.txtCantidad.Location = New System.Drawing.Point(319, 98)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(103, 27)
         Me.txtCantidad.TabIndex = 58
@@ -148,7 +142,7 @@ Partial Class frmMovimientoVentas
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label5.Location = New System.Drawing.Point(201, 85)
+        Me.Label5.Location = New System.Drawing.Point(239, 101)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(77, 20)
         Me.Label5.TabIndex = 57
@@ -158,7 +152,7 @@ Partial Class frmMovimientoVentas
         '
         Me.btnAceptar.Enabled = False
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.btnAceptar.Location = New System.Drawing.Point(412, 81)
+        Me.btnAceptar.Location = New System.Drawing.Point(450, 97)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(72, 29)
         Me.btnAceptar.TabIndex = 59
@@ -169,7 +163,7 @@ Partial Class frmMovimientoVentas
         '
         Me.txtPrecio.Enabled = False
         Me.txtPrecio.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtPrecio.Location = New System.Drawing.Point(80, 82)
+        Me.txtPrecio.Location = New System.Drawing.Point(93, 98)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(100, 27)
         Me.txtPrecio.TabIndex = 61
@@ -180,7 +174,7 @@ Partial Class frmMovimientoVentas
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(18, 86)
+        Me.Label6.Location = New System.Drawing.Point(31, 101)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(56, 20)
         Me.Label6.TabIndex = 60
@@ -188,9 +182,10 @@ Partial Class frmMovimientoVentas
         '
         'dgVenta
         '
+        Me.dgVenta.AllowUserToAddRows = False
         Me.dgVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgVenta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
-        Me.dgVenta.Location = New System.Drawing.Point(12, 273)
+        Me.dgVenta.Location = New System.Drawing.Point(12, 222)
         Me.dgVenta.Name = "dgVenta"
         Me.dgVenta.Size = New System.Drawing.Size(710, 150)
         Me.dgVenta.TabIndex = 62
@@ -206,7 +201,7 @@ Partial Class frmMovimientoVentas
         Me.Column2.HeaderText = "Producto"
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
-        Me.Column2.Width = 220
+        Me.Column2.Width = 265
         '
         'Column3
         '
@@ -226,14 +221,14 @@ Partial Class frmMovimientoVentas
         Me.Column5.Name = "Column5"
         Me.Column5.ReadOnly = True
         '
-        'TextBox3
+        'txtTotal
         '
-        Me.TextBox3.Enabled = False
-        Me.TextBox3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.TextBox3.Location = New System.Drawing.Point(608, 446)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(103, 27)
-        Me.TextBox3.TabIndex = 64
+        Me.txtTotal.Enabled = False
+        Me.txtTotal.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtTotal.Location = New System.Drawing.Point(608, 383)
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.Size = New System.Drawing.Size(114, 27)
+        Me.txtTotal.TabIndex = 64
         '
         'Label7
         '
@@ -241,7 +236,7 @@ Partial Class frmMovimientoVentas
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(554, 449)
+        Me.Label7.Location = New System.Drawing.Point(554, 386)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(48, 20)
         Me.Label7.TabIndex = 63
@@ -261,20 +256,72 @@ Partial Class frmMovimientoVentas
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.txtIdProducto)
+        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.txtCategoria)
+        Me.GroupBox2.Controls.Add(Me.txtNombreP)
         Me.GroupBox2.Controls.Add(Me.btnBuscar)
         Me.GroupBox2.Controls.Add(Me.txtCantidad)
-        Me.GroupBox2.Controls.Add(Me.cboCategoria)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.Label4)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.txtPrecio)
         Me.GroupBox2.Controls.Add(Me.btnAceptar)
-        Me.GroupBox2.Location = New System.Drawing.Point(43, 71)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 71)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(500, 131)
+        Me.GroupBox2.Size = New System.Drawing.Size(531, 131)
         Me.GroupBox2.TabIndex = 70
         Me.GroupBox2.TabStop = False
+        '
+        'txtCategoria
+        '
+        Me.txtCategoria.Enabled = False
+        Me.txtCategoria.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtCategoria.Location = New System.Drawing.Point(288, 54)
+        Me.txtCategoria.Name = "txtCategoria"
+        Me.txtCategoria.Size = New System.Drawing.Size(234, 27)
+        Me.txtCategoria.TabIndex = 64
+        '
+        'txtNombreP
+        '
+        Me.txtNombreP.Enabled = False
+        Me.txtNombreP.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtNombreP.Location = New System.Drawing.Point(93, 21)
+        Me.txtNombreP.Name = "txtNombreP"
+        Me.txtNombreP.Size = New System.Drawing.Size(370, 27)
+        Me.txtNombreP.TabIndex = 63
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label8.Location = New System.Drawing.Point(0, 61)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(92, 20)
+        Me.Label8.TabIndex = 65
+        Me.Label8.Text = "IdProducto"
+        '
+        'txtIdProducto
+        '
+        Me.txtIdProducto.Enabled = False
+        Me.txtIdProducto.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtIdProducto.Location = New System.Drawing.Point(93, 54)
+        Me.txtIdProducto.Name = "txtIdProducto"
+        Me.txtIdProducto.Size = New System.Drawing.Size(100, 27)
+        Me.txtIdProducto.TabIndex = 66
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Enabled = False
+        Me.btnBuscar.Image = Global.ThinkCoffee.My.Resources.Resources.Search_20
+        Me.btnBuscar.Location = New System.Drawing.Point(476, 21)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(46, 28)
+        Me.btnBuscar.TabIndex = 62
+        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'btnSalir
         '
@@ -282,7 +329,7 @@ Partial Class frmMovimientoVentas
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(455, 441)
+        Me.btnSalir.Location = New System.Drawing.Point(455, 378)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(87, 39)
         Me.btnSalir.TabIndex = 68
@@ -297,7 +344,7 @@ Partial Class frmMovimientoVentas
         Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(299, 441)
+        Me.btnCancelar.Location = New System.Drawing.Point(299, 378)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(101, 39)
         Me.btnCancelar.TabIndex = 67
@@ -312,7 +359,7 @@ Partial Class frmMovimientoVentas
         Me.btnGrabar.ForeColor = System.Drawing.Color.Black
         Me.btnGrabar.Image = Global.ThinkCoffee.My.Resources.Resources.Burn_CD_30
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGrabar.Location = New System.Drawing.Point(158, 441)
+        Me.btnGrabar.Location = New System.Drawing.Point(158, 378)
         Me.btnGrabar.Name = "btnGrabar"
         Me.btnGrabar.Size = New System.Drawing.Size(87, 39)
         Me.btnGrabar.TabIndex = 66
@@ -326,7 +373,7 @@ Partial Class frmMovimientoVentas
         Me.btnNuevo.ForeColor = System.Drawing.Color.Black
         Me.btnNuevo.Image = Global.ThinkCoffee.My.Resources.Resources.Add_List_30
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(12, 441)
+        Me.btnNuevo.Location = New System.Drawing.Point(12, 378)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(87, 39)
         Me.btnNuevo.TabIndex = 65
@@ -344,31 +391,23 @@ Partial Class frmMovimientoVentas
         Me.ptbImagen.TabIndex = 56
         Me.ptbImagen.TabStop = False
         '
-        'btnBuscar
-        '
-        Me.btnBuscar.Location = New System.Drawing.Point(341, 24)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(106, 28)
-        Me.btnBuscar.TabIndex = 62
-        Me.btnBuscar.Text = "Button1"
-        Me.btnBuscar.UseVisualStyleBackColor = True
-        '
         'frmMovimientoVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(762, 506)
+        Me.ClientSize = New System.Drawing.Size(762, 425)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnGrabar)
         Me.Controls.Add(Me.btnNuevo)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.dgVenta)
         Me.Controls.Add(Me.ptbImagen)
         Me.Name = "frmMovimientoVentas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Venta"
         CType(Me.dgVenta, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
@@ -385,7 +424,6 @@ Partial Class frmMovimientoVentas
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents dtpFecha As DateTimePicker
-    Friend WithEvents cboCategoria As ComboBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents ptbImagen As PictureBox
@@ -395,7 +433,7 @@ Partial Class frmMovimientoVentas
     Friend WithEvents txtPrecio As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents dgVenta As DataGridView
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtTotal As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents btnSalir As Button
     Friend WithEvents btnCancelar As Button
@@ -403,10 +441,14 @@ Partial Class frmMovimientoVentas
     Friend WithEvents btnNuevo As Button
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents btnBuscar As Button
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents btnBuscar As Button
+    Friend WithEvents txtCategoria As TextBox
+    Friend WithEvents txtNombreP As TextBox
+    Friend WithEvents txtIdProducto As TextBox
+    Friend WithEvents Label8 As Label
 End Class

@@ -2,6 +2,7 @@
 
 
     Private Sub frmAgregarInsumo_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        dgInsumos.Rows.Clear()
         comando.CommandText = "Select count(*) from tlb_insumo"
         Dim n As Integer = comando.ExecuteScalar + 1
 

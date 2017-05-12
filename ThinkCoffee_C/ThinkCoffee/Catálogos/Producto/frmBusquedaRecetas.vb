@@ -1,6 +1,5 @@
-﻿Public Class frmBusquedaProductos
+﻿Public Class frmBusquedaRecetas
     Private Sub frmBusquedaProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        conexionSql.Open()
 
         comando.CommandText = "Select * from tlb_receta"
         lector = comando.ExecuteReader

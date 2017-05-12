@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmBusquedaProductos
+Partial Class frmBusquedaRecetas
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -79,7 +79,7 @@ Partial Class frmBusquedaProductos
         Me.DataGridViewTextBoxColumn2.ReadOnly = True
         Me.DataGridViewTextBoxColumn2.Width = 400
         '
-        'frmBusquedaProductos
+        'frmBusquedaRecetas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -88,7 +88,7 @@ Partial Class frmBusquedaProductos
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgBusquedaRecetas)
-        Me.Name = "frmBusquedaProductos"
+        Me.Name = "frmBusquedaRecetas"
         Me.Text = "frmBusquedaProductos"
         CType(Me.dgBusquedaRecetas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

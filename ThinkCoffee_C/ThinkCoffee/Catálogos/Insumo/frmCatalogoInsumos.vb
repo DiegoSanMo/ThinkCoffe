@@ -9,9 +9,10 @@ Public Class frmCatalogoInsumos
         conexionSql.Open()
         dgInsumo.Rows.Clear()
         Dim n As Integer
-        comando.CommandText = String.Format("Select count(*) from tlb_insumo")
+        comando.CommandText = String.Format("Select count(tlb_insumo.idInsumo) from tlb_insumo")
         n = comando.ExecuteScalar + 1
         If n > 1 Then
+            dgInsumo.SelectionMode = DataGridViewSelectionMode.FullRowSelect
             comando.CommandText = String.Format("Select * from tlb_insumo")
             lector = comando.ExecuteReader
 

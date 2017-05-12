@@ -30,27 +30,35 @@
     End Sub
 
     Private Sub btnBuscarIn_Click(sender As Object, e As EventArgs) Handles btnBuscarIn.Click
-        Dim fila As Integer
-        frmAgregarInsumo.dgInsumos.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        frmAgregarInsumo.ShowDialog()
+        Dim n As Integer
+        comando.CommandText = "Select count(*) from tlb_insumo"
+        n = comando.ExecuteScalar + 1
+        If n > 1 Then
+            Dim fila As Integer
+            frmAgregarInsumo.dgInsumos.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+            frmAgregarInsumo.ShowDialog()
+            If frmAgregarInsumo.dgInsumos.CurrentRow IsNot Nothing Then
+                fila = frmAgregarInsumo.dgInsumos.CurrentRow.Index
+                Dim idInsumo As Integer = frmAgregarInsumo.dgInsumos.Item(0, fila).Value
 
-        fila = frmAgregarInsumo.dgInsumos.CurrentRow.Index
-        Dim idInsumo As Integer = frmAgregarInsumo.dgInsumos.Item(0, fila).Value
+                comando.CommandText = "select tlb_insumo.nombre, tlb_insumo.existencia, tlb_insumo.maximo, tlb_insumo.minimo, tlb_insumo.unidadM, tlb_insumo.fecha, tlb_insumo.costo from tlb_insumo where tlb_insumo.idInsumo = " & idInsumo & ""
+                lector = comando.ExecuteReader
+                lector.Read()
 
-        comando.CommandText = "select tlb_insumo.nombre, tlb_insumo.existencia, tlb_insumo.maximo, tlb_insumo.minimo, tlb_insumo.unidadM, tlb_insumo.fecha, tlb_insumo.costo from tlb_insumo where tlb_insumo.idInsumo = " & idInsumo & ""
-        lector = comando.ExecuteReader
-        lector.Read()
+                txtIdInsumo.Text = idInsumo
+                txtNombreInsumo.Text = lector(0)
+                txtExistencias.Text = lector(1)
+                txtMaximo.Text = lector(2)
+                txtMinimo.Text = lector(3)
+                txtUnidadM.Text = lector(4)
+                txtFechaInsumo.Text = lector(5)
+                txtCosto.Text = lector(6)
+                lector.Close()
+            End If
 
-        txtIdInsumo.Text = idInsumo
-        txtNombreInsumo.Text = lector(0)
-        txtExistencias.Text = lector(1)
-        txtMaximo.Text = lector(2)
-        txtMinimo.Text = lector(3)
-        txtUnidadM.Text = lector(4)
-        txtFechaInsumo.Text = lector(5)
-        txtCosto.Text = lector(6)
-        lector.Close()
-
+        Else
+            MessageBox.Show("No se han registrado insumos", "FALTA DE INSUMOS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
 
     End Sub
 

@@ -23,15 +23,16 @@ Partial Class buscarProducto
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgProductosBuscados = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.cboCategoria = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnRegresar = New System.Windows.Forms.Button()
         CType(Me.dgProductosBuscados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,12 +46,32 @@ Partial Class buscarProducto
         Me.dgProductosBuscados.Size = New System.Drawing.Size(651, 221)
         Me.dgProductosBuscados.TabIndex = 1
         '
-        'TextBox1
+        'Column1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 73)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(291, 20)
-        Me.TextBox1.TabIndex = 2
+        Me.Column1.HeaderText = "ID Producto"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Nombre"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 300
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Categoria"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 200
+        '
+        'txtNombre
+        '
+        Me.txtNombre.Location = New System.Drawing.Point(12, 73)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(291, 20)
+        Me.txtNombre.TabIndex = 2
         '
         'cboCategoria
         '
@@ -89,26 +110,6 @@ Partial Class buscarProducto
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Categoria"
         '
-        'Column1
-        '
-        Me.Column1.HeaderText = "ID Producto"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Nombre"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 300
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Categoria"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        Me.Column3.Width = 200
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(564, 66)
@@ -118,20 +119,31 @@ Partial Class buscarProducto
         Me.Button1.Text = "Agregar producto"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'btnRegresar
+        '
+        Me.btnRegresar.Location = New System.Drawing.Point(564, 29)
+        Me.btnRegresar.Name = "btnRegresar"
+        Me.btnRegresar.Size = New System.Drawing.Size(99, 31)
+        Me.btnRegresar.TabIndex = 8
+        Me.btnRegresar.Text = "Regresar"
+        Me.btnRegresar.UseVisualStyleBackColor = True
+        '
         'buscarProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(679, 343)
         Me.ControlBox = False
+        Me.Controls.Add(Me.btnRegresar)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cboCategoria)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.dgProductosBuscados)
         Me.Name = "buscarProducto"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "buscarProducto"
         CType(Me.dgProductosBuscados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -143,10 +155,11 @@ Partial Class buscarProducto
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtNombre As TextBox
     Friend WithEvents cboCategoria As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents btnRegresar As Button
 End Class

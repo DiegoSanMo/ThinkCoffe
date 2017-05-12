@@ -121,6 +121,9 @@
   <data name="fondo formulario 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo formulario 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Tea-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tea-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="thinkCoffe1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\thinkCoffe1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,8 +145,8 @@
   <data name="barraMenuB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barraMenuB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Conference-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Conference-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pizza-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pizza-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Minimize Window-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Minimize Window-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,6 +214,9 @@
   <data name="Manager-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Manager-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Conference-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Conference-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Dossier-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dossier-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -244,6 +250,12 @@
   <data name="Search-10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search-10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Paid-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Paid-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Banknotes-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banknotes-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Exit Sign Filled-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Exit Sign Filled-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -268,7 +280,7 @@
   <data name="BarraSuperior" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BarraSuperior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Banknotes-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Banknotes-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Paid-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Paid-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

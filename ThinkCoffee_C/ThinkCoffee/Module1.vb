@@ -78,4 +78,32 @@ Module Module1
         frmCatalogoInsumos.txtCosto.Text = vbEmpty
 
     End Sub
+    '-*****************************************ventas otros*-----------------------------------
+    Public Function calcularPorcion(idProducto As Integer)
+        Dim id, idReceta As Integer
+        id = frmMovimientoVentas.txtIdProducto.Text
+
+        comando.CommandText = "select tlb_producto.idReceta from tlb_producto where tlb_producto.idProducto = " & id & ""
+        lector = comando.ExecuteReader
+        lector.Read()
+        idReceta = lector(0)
+        lector.Close()
+
+
+        'Saber las porciones correspondientes a los insumos dependiendo de la receta y descontar insumos
+        comando.CommandText = "select count(tlb_detReceta.idInsumo) from tlb_detReceta where tlb_detReceta.idReceta = " & idReceta & ""
+        Dim n As Integer = comando.ExecuteScalar
+        MsgBox(n)
+        'arreglo para almacenar la cantida de insumos que tiene nuestra receta
+        Dim insumos(n, 3)
+
+        'comando.CommandText = "select tlb_detReceta.idInsumo, tlb_detReceta.cantidad, tlb_detReceta.unidadM from tlb_detReceta where tlb_detReceta.idReceta = " & idReceta & ""
+        'lector = comando.ExecuteReader()
+
+
+
+        Return MsgBox(idReceta)
+    End Function
+
+
 End Module

@@ -68,7 +68,7 @@
         frmCatalogoRecetas.ShowDialog()
     End Sub
 
-    Private Sub CompraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CompraToolStripMenuItem.Click
+    Private Sub CompraToolStripMenuItem_Click(sender As Object, e As EventArgs) 
 
     End Sub
 

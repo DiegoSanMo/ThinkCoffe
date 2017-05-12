@@ -133,17 +133,24 @@
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         Dim insumos As New frmAgregarInsumo
+        insumos.dgInsumos.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+
         Dim ban As Boolean = False
         insumos.ShowDialog()
 
-        Dim fila As Integer = insumos.dgInsumos.CurrentRow.Index
-        txtIdInsumo.Text = insumos.dgInsumos(0, fila).Value
-        txtInsumo.Text = insumos.dgInsumos(1, fila).Value
-        txtUnidadM.Text = insumos.dgInsumos(2, fila).Value
-        txtExistencia.Text = insumos.dgInsumos(3, fila).Value
+        If insumos.dgInsumos.CurrentRow IsNot Nothing Then
+            Dim fila As Integer = insumos.dgInsumos.CurrentRow.Index
+            txtIdInsumo.Text = insumos.dgInsumos(0, fila).Value
+            txtInsumo.Text = insumos.dgInsumos(1, fila).Value
+            txtUnidadM.Text = insumos.dgInsumos(2, fila).Value
+            txtExistencia.Text = insumos.dgInsumos(3, fila).Value
 
-        btnAgregar.Enabled = True
-        txtCantidad.Focus()
+            btnAgregar.Enabled = True
+            txtCantidad.Focus()
+        Else
+            MessageBox.Show("NO SE HA SELECCIONADO INSUMO", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
 
     End Sub
 

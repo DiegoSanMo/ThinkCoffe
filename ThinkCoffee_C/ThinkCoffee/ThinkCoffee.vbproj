@@ -84,10 +84,10 @@
     <Compile Include="Catálogos\Insumo\frmCatalogoInsumos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Catálogos\Producto\frmBusquedaProductos.Designer.vb">
-      <DependentUpon>frmBusquedaProductos.vb</DependentUpon>
+    <Compile Include="Catálogos\Producto\frmBusquedaRecetas.Designer.vb">
+      <DependentUpon>frmBusquedaRecetas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Catálogos\Producto\frmBusquedaProductos.vb">
+    <Compile Include="Catálogos\Producto\frmBusquedaRecetas.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catálogos\Producto\frmCatalogoProductos.Designer.vb">
@@ -181,8 +181,8 @@
     <EmbeddedResource Include="Catálogos\Insumo\frmCatalogoInsumos.resx">
       <DependentUpon>frmCatalogoInsumos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Catálogos\Producto\frmBusquedaProductos.resx">
-      <DependentUpon>frmBusquedaProductos.vb</DependentUpon>
+    <EmbeddedResource Include="Catálogos\Producto\frmBusquedaRecetas.resx">
+      <DependentUpon>frmBusquedaRecetas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catálogos\Producto\frmCatalogoProductos.resx">
       <DependentUpon>frmCatalogoProductos.vb</DependentUpon>
@@ -388,6 +388,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Banknotes-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pizza-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paid-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tea-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paid-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
