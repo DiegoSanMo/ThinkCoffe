@@ -14,6 +14,7 @@
     Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
         dgBusquedaRecetas.Rows.Clear()
 
+
         comando.CommandText = "Select tlb_receta.idReceta, tlb_receta.nombre  from tlb_receta where tlb_receta.nombre like '%" & txtNombre.Text & "%'"
         lector = comando.ExecuteReader
 

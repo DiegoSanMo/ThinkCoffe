@@ -196,14 +196,19 @@ Public Class frmCatalogoProductos
     Private Sub btnBuscarR_Click(sender As Object, e As EventArgs) Handles btnBuscarR.Click
         Dim id As Integer
         Dim buscar As New frmBusquedaRecetas
+        buscar.dgBusquedaRecetas.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         buscar.ShowDialog()
+
 
         If buscar.dgBusquedaRecetas.CurrentRow Is Nothing Then
             MessageBox.Show("NO SE HA SELECCIONADO RECETA", "FALTA DE DATOS", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            id = dgProductos(0, buscar.dgBusquedaRecetas.CurrentRow.Index).Value
+
+            Dim i As Integer = buscar.dgBusquedaRecetas.CurrentRow.Index
+            id = buscar.dgBusquedaRecetas(0, i).Value
             MsgBox(id)
             txtIdReceta.Text = id
+
         End If
 
 

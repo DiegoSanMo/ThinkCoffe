@@ -79,9 +79,9 @@ Module Module1
 
     End Sub
     '-*****************************************ventas otros*-----------------------------------
-    Public Function calcularPorcion(idProducto As Integer)
+    Public Sub calcularPorcion(idProducto As Integer)
         Dim id, idReceta As Integer
-        id = frmMovimientoVentas.txtIdProducto.Text
+        id = idProducto
 
         comando.CommandText = "select tlb_producto.idReceta from tlb_producto where tlb_producto.idProducto = " & id & ""
         lector = comando.ExecuteReader
@@ -93,17 +93,102 @@ Module Module1
         'Saber las porciones correspondientes a los insumos dependiendo de la receta y descontar insumos
         comando.CommandText = "select count(tlb_detReceta.idInsumo) from tlb_detReceta where tlb_detReceta.idReceta = " & idReceta & ""
         Dim n As Integer = comando.ExecuteScalar
-        MsgBox(n)
+
         'arreglo para almacenar la cantida de insumos que tiene nuestra receta
-        Dim insumos(n, 3)
+        Dim insumos(n, 3) As String
 
-        'comando.CommandText = "select tlb_detReceta.idInsumo, tlb_detReceta.cantidad, tlb_detReceta.unidadM from tlb_detReceta where tlb_detReceta.idReceta = " & idReceta & ""
-        'lector = comando.ExecuteReader()
+        'Se almacena en el arreglo loss datos del insumo que serán utilizados para la venta del producto(id del insumo, cantidad y la unidad de medida) 
+        comando.CommandText = "select tlb_detReceta.idInsumo, tlb_detReceta.cantidad, tlb_detReceta.unidadM from tlb_detReceta where tlb_detReceta.idReceta = " & idReceta & ""
+        lector = comando.ExecuteReader()
+        Dim cont As Integer = 0
+        While lector.Read
+
+            insumos(cont, 0) = lector(0)
+            insumos(cont, 1) = lector(1)
+            insumos(cont, 2) = lector(2)
+            'cont += 1
+            cont += 1
+        End While
+        lector.Close()
+
+        'guardar todos los insumos en un arreglo
+        comando.CommandText = "Select count(tlb_insumo.idInsumo) from tlb_insumo"
+        Dim cantInsumos As Integer = comando.ExecuteScalar
+        Dim todosInsumos(cantInsumos, 3) As String
+
+        comando.CommandText = "Select tlb_insumo.idInsumo, tlb_insumo.unidadM, tlb_insumo.existencia from tlb_insumo"
+        lector = comando.ExecuteReader
+
+        Dim p As Integer = 0
+        While lector.Read
+            todosInsumos(p, 0) = lector(0)
+            todosInsumos(p, 1) = lector(1)
+            todosInsumos(p, 2) = lector(2)
+
+            p += 1
+        End While
+        lector.Close()
+
+
+        For t = 0 To n - 1
+            For x = 0 To cantInsumos - 1
+                If insumos(t, 0) = todosInsumos(x, 0) Then
+                    'obtener la unidad de medida del insumo
+                    Dim unidad As String
+                    unidad = todosInsumos(x, 1)
+                    Dim unidadBase As Decimal = todosInsumos(x, 2)
+
+                    If unidad = "LTS" Then
+                        Dim cantidadInsumo As Decimal
+                        cantidadInsumo = insumos(t, 1) * 0.0295735
+                        MsgBox("onzas a litros")
+                        MsgBox(cantidadInsumo)
+
+
+                        MsgBox(unidadBase - cantidadInsumo)
+
+
+                    ElseIf unidad = "KG" Then
+                        MsgBox("Son kilos")
+
+                        Dim cantidadInsumo As Decimal
+                        cantidadInsumo = insumos(t, 1) * 0.0283495
+                        MsgBox("onzas a kilogramo")
+                        MsgBox(cantidadInsumo)
+
+                        MsgBox(unidadBase - cantidadInsumo)
+
+                    ElseIf unidad = "GR" Then
+                        MsgBox("Son gramos")
+
+
+                        Dim cantidadInsumo As Decimal
+                        cantidadInsumo = insumos(t, 1) * 28.3495
+                        MsgBox("onzas a gramos")
+                        MsgBox(cantidadInsumo)
+
+                        MsgBox(unidadBase - cantidadInsumo)
 
 
 
-        Return MsgBox(idReceta)
-    End Function
+
+                    ElseIf unidad = "MLT" Then
+                        MsgBox("Son mililitros")
+
+                    ElseIf unidad = "PZA" Then
+                        MsgBox("son piezas")
+
+                    ElseIf unidad = "OZ" Then
+                        MsgBox("son Onzas")
+
+                    End If
+
+                End If
+            Next
+        Next
+
+
+    End Sub
 
 
 End Module

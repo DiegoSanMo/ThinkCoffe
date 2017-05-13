@@ -131,7 +131,7 @@ Partial Class frmCatalogoInsumos
         Me.cboUnidadM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboUnidadM.Enabled = False
         Me.cboUnidadM.FormattingEnabled = True
-        Me.cboUnidadM.Items.AddRange(New Object() {"LTS", "OZ", "KG", "GR" & Global.Microsoft.VisualBasic.ChrW(9), "MLT"})
+        Me.cboUnidadM.Items.AddRange(New Object() {"LTS", "KG", "GR" & Global.Microsoft.VisualBasic.ChrW(9), "MLT", "PZA"})
         Me.cboUnidadM.Location = New System.Drawing.Point(144, 99)
         Me.cboUnidadM.Name = "cboUnidadM"
         Me.cboUnidadM.Size = New System.Drawing.Size(100, 21)

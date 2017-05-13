@@ -53,7 +53,7 @@
     End Sub
 
     Private Sub PiizaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PiizaToolStripMenuItem.Click
-        frmMovimientoVentasPizzas.ShowDialog()
+        VentaPizza.ShowDialog()
     End Sub
 
     Private Sub RegistroToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistroToolStripMenuItem.Click

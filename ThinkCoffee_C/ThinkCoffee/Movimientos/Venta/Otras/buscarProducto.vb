@@ -35,10 +35,6 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
-    End Sub
-
     Private Sub txtNombre_TextChanged(sender As Object, e As EventArgs) Handles txtNombre.TextChanged
         dgProductosBuscados.Rows.Clear()
         comando.CommandText = "Select tlb_producto.idProducto, tlb_producto.nombre, tlb_categoria.nombre from tlb_producto inner join tlb_categoria on tlb_categoria.idCategoria = tlb_producto.idCategoria where tlb_producto.nombre like '%" & txtNombre.Text & "%'"
@@ -49,7 +45,7 @@
         lector.Close()
     End Sub
 
-    Private Sub btnRegresar_Click(sender As Object, e As EventArgs) Handles btnRegresar.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Close()
     End Sub
 End Class

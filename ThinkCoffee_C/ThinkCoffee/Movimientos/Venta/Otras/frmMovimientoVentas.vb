@@ -27,6 +27,7 @@
         txtCantidad.Enabled = True
         btnBuscar.Enabled = True
         btnAceptar.Enabled = True
+        btnGrabar.Enabled = True
 
     End Sub
 
@@ -54,17 +55,23 @@
         Else
             dgVenta.Rows.Add(txtIdProducto.Text, txtNombreP.Text, txtCantidad.Text, txtPrecio.Text, txtCantidad.Text * txtPrecio.Text)
         End If
+
+
         For x = 0 To dgVenta.RowCount - 1
             total = total + CDec(dgVenta(4, x).Value)
         Next
         txtTotal.Text = total
-
-        calcularPorcion(CInt(dgVenta(0, 0).Value))
 
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
         conexionSql.Close()
+    End Sub
+
+    Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
+        For x = 0 To dgVenta.RowCount - 1
+            calcularPorcion(CInt(dgVenta(0, x).Value))
+        Next
     End Sub
 End Class
