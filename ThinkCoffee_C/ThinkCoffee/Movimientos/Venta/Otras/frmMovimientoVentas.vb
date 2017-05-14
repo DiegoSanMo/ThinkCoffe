@@ -20,7 +20,6 @@
 
     Private Sub frmMovimientoVentas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexionSql.Open()
-
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
@@ -71,7 +70,7 @@
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
         For x = 0 To dgVenta.RowCount - 1
-            calcularPorcion(CInt(dgVenta(0, x).Value))
+            calcularPorcion(CInt(dgVenta(0, x).Value), CInt(dgVenta(2, x).Value))
         Next
     End Sub
 End Class

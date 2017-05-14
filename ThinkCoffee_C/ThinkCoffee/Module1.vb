@@ -79,10 +79,12 @@ Module Module1
 
     End Sub
     '-*****************************************ventas otros*-----------------------------------
-    Public Sub calcularPorcion(idProducto As Integer)
+    Public Sub calcularPorcion(idProducto As Integer, cantidadP As Integer)
+        Dim cantidadProductos As Integer = cantidadP
         Dim id, idReceta As Integer
         id = idProducto
 
+        MsgBox(cantidadProductos)
         comando.CommandText = "select tlb_producto.idReceta from tlb_producto where tlb_producto.idProducto = " & id & ""
         lector = comando.ExecuteReader
         lector.Read()
@@ -136,58 +138,56 @@ Module Module1
                     'obtener la unidad de medida del insumo
                     Dim unidad As String
                     unidad = todosInsumos(x, 1)
+                    'Variable que nos guarda saber la existencia del insumo que se busca
                     Dim unidadBase As Decimal = todosInsumos(x, 2)
 
+                    Dim cantidadInsumo As Decimal
+
+                    Dim insumoRestante As Decimal
+
                     If unidad = "LTS" Then
-                        Dim cantidadInsumo As Decimal
+
+
                         cantidadInsumo = insumos(t, 1) * 0.0295735
-                        MsgBox("onzas a litros")
-                        MsgBox(cantidadInsumo)
-
-
-                        MsgBox(unidadBase - cantidadInsumo)
+                        cantidadInsumo = cantidadInsumo * cantidadProductos
+                        insumoRestante = unidadBase - cantidadInsumo
 
 
                     ElseIf unidad = "KG" Then
                         MsgBox("Son kilos")
 
-                        Dim cantidadInsumo As Decimal
                         cantidadInsumo = insumos(t, 1) * 0.0283495
-                        MsgBox("onzas a kilogramo")
-                        MsgBox(cantidadInsumo)
+                        cantidadInsumo = cantidadInsumo * cantidadProductos
+                        insumoRestante = unidadBase - cantidadInsumo
 
-                        MsgBox(unidadBase - cantidadInsumo)
 
                     ElseIf unidad = "GR" Then
                         MsgBox("Son gramos")
 
-
-                        Dim cantidadInsumo As Decimal
                         cantidadInsumo = insumos(t, 1) * 28.3495
-                        MsgBox("onzas a gramos")
-                        MsgBox(cantidadInsumo)
-
-                        MsgBox(unidadBase - cantidadInsumo)
-
-
+                        cantidadInsumo = cantidadInsumo * cantidadProductos
+                        insumoRestante = unidadBase - cantidadInsumo
 
 
                     ElseIf unidad = "MLT" Then
                         MsgBox("Son mililitros")
+                        cantidadInsumo = insumos(t, 1) * 28.4131
+                        cantidadInsumo = cantidadInsumo * cantidadProductos
+                        insumoRestante = unidadBase - cantidadInsumo
+
 
                     ElseIf unidad = "PZA" Then
                         MsgBox("son piezas")
-
-                    ElseIf unidad = "OZ" Then
-                        MsgBox("son Onzas")
+                        cantidadInsumo = insumos(t, 1) * cantidadProductos
+                        insumoRestante = unidadBase - cantidadInsumo
 
                     End If
-
+                    'actualizar las existencias del insumo
+                    comando.CommandText = "Update tlb_insumo set existencia = " & insumoRestante & " where idInsumo = " & todosInsumos(x, 0) & ""
+                    comando.ExecuteNonQuery()
                 End If
             Next
         Next
-
-
     End Sub
 
 

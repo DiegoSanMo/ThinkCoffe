@@ -49,7 +49,7 @@ Partial Class frmCatalogoCategoria
         Me.ptbBarra.Image = Global.ThinkCoffee.My.Resources.Resources.BarraSuperior
         Me.ptbBarra.Location = New System.Drawing.Point(0, 0)
         Me.ptbBarra.Name = "ptbBarra"
-        Me.ptbBarra.Size = New System.Drawing.Size(547, 33)
+        Me.ptbBarra.Size = New System.Drawing.Size(534, 33)
         Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.ptbBarra.TabIndex = 0
         Me.ptbBarra.TabStop = False
@@ -60,7 +60,7 @@ Partial Class frmCatalogoCategoria
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Adobe Gothic Std B", 24.0!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label10.Location = New System.Drawing.Point(164, 45)
+        Me.Label10.Location = New System.Drawing.Point(153, 46)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(206, 40)
         Me.Label10.TabIndex = 24
@@ -114,10 +114,10 @@ Partial Class frmCatalogoCategoria
         Me.dgCategoria.AllowUserToAddRows = False
         Me.dgCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgCategoria.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2})
-        Me.dgCategoria.Location = New System.Drawing.Point(42, 217)
+        Me.dgCategoria.Location = New System.Drawing.Point(29, 202)
         Me.dgCategoria.Name = "dgCategoria"
         Me.dgCategoria.ReadOnly = True
-        Me.dgCategoria.Size = New System.Drawing.Size(487, 150)
+        Me.dgCategoria.Size = New System.Drawing.Size(487, 198)
         Me.dgCategoria.TabIndex = 31
         '
         'Column1
@@ -140,7 +140,7 @@ Partial Class frmCatalogoCategoria
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(440, 388)
+        Me.btnSalir.Location = New System.Drawing.Point(430, 406)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(87, 39)
         Me.btnSalir.TabIndex = 39
@@ -155,7 +155,7 @@ Partial Class frmCatalogoCategoria
         Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(334, 388)
+        Me.btnCancelar.Location = New System.Drawing.Point(324, 406)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(101, 39)
         Me.btnCancelar.TabIndex = 38
@@ -170,7 +170,7 @@ Partial Class frmCatalogoCategoria
         Me.btnGrabar.ForeColor = System.Drawing.Color.Black
         Me.btnGrabar.Image = Global.ThinkCoffee.My.Resources.Resources.Burn_CD_30
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGrabar.Location = New System.Drawing.Point(242, 388)
+        Me.btnGrabar.Location = New System.Drawing.Point(232, 406)
         Me.btnGrabar.Name = "btnGrabar"
         Me.btnGrabar.Size = New System.Drawing.Size(87, 39)
         Me.btnGrabar.TabIndex = 37
@@ -184,7 +184,7 @@ Partial Class frmCatalogoCategoria
         Me.btnNuevo.ForeColor = System.Drawing.Color.Black
         Me.btnNuevo.Image = Global.ThinkCoffee.My.Resources.Resources.Add_List_30
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(42, 388)
+        Me.btnNuevo.Location = New System.Drawing.Point(32, 406)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(87, 39)
         Me.btnNuevo.TabIndex = 36
@@ -200,7 +200,7 @@ Partial Class frmCatalogoCategoria
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtNombre)
-        Me.GroupBox1.Location = New System.Drawing.Point(23, 88)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 89)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(506, 107)
         Me.GroupBox1.TabIndex = 40
@@ -224,7 +224,7 @@ Partial Class frmCatalogoCategoria
         Me.btnModificar.ForeColor = System.Drawing.Color.Black
         Me.btnModificar.Image = Global.ThinkCoffee.My.Resources.Resources.Sort_By_Modified_Date_30
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnModificar.Location = New System.Drawing.Point(134, 388)
+        Me.btnModificar.Location = New System.Drawing.Point(124, 406)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(103, 39)
         Me.btnModificar.TabIndex = 41
@@ -239,7 +239,7 @@ Partial Class frmCatalogoCategoria
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.BackgroundImage = Global.ThinkCoffee.My.Resources.Resources.fondo_formulario_1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(547, 445)
+        Me.ClientSize = New System.Drawing.Size(534, 456)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnSalir)
