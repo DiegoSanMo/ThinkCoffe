@@ -204,6 +204,7 @@ Partial Class VentaPizza
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "VentaPizza"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "VentaPizza"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

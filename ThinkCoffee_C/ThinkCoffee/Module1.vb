@@ -190,5 +190,35 @@ Module Module1
         Next
     End Sub
 
+    '/*/*/*//*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/**Limpiar los checkbox de venta pizzas/*/*/*//*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+
+    Public limite As Integer
+
+    Public Sub limpiarLista()
+        For i = 0 To 20
+            frmMovimientoVentasPizzas.CheckedListBox1.SetItemChecked(i, False)
+        Next
+    End Sub
+
+    Public Function buscarCheck()
+        Dim con As Integer
+        For i = 0 To 20
+            If frmMovimientoVentasPizzas.CheckedListBox1.GetItemCheckState(i) = 1 Then
+                con += 1
+            End If
+        Next
+        Return con
+    End Function
+    Public Sub limpiarSeleccionado(seleccionado As String)
+
+        For i = 0 To 20
+            'MsgBox(frmMovimientoVentasPizzas.CheckedListBox1.Items(i))
+            If frmMovimientoVentasPizzas.CheckedListBox1.Items(i) = seleccionado Then
+                MsgBox("iguales")
+                frmMovimientoVentasPizzas.CheckedListBox1.SetItemChecked(i, False)
+                Exit For
+            End If
+        Next
+    End Sub
 
 End Module
