@@ -17,13 +17,22 @@
             limpiarLista()
             limite = 2
 
+            cboTipo.SelectedIndex = 0
+            cboTipo.Enabled = False
+            txtPrecio.Text = "35.00"
+
+            CheckedListBox1.Enabled = True
+
         ElseIf cboTamaño.Text = "CHICA" Then
             limpiarLista()
-            limite = 5
+            cboTipo.Enabled = True
+            txtPrecio.Text = ""
+
 
         ElseIf cboTamaño.Text = "GRANDE" Then
             limpiarLista()
-            limite = 9
+            cboTipo.Enabled = True
+            txtPrecio.Text = ""
 
         End If
     End Sub
@@ -41,7 +50,10 @@
         Dim n As Integer = comando.ExecuteScalar + 1
         txtIdVenta.Text = n
         btnGrabar.Enabled = True
-        txtPrecio.Enabled = True
+        txtCantidad.Enabled = True
+        cboTamaño.Enabled = True
+
+
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
@@ -63,5 +75,54 @@
 
 
 
+    End Sub
+
+    Private Sub cboTipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTipo.SelectedIndexChanged
+        If cboTamaño.Text = "CHICA" And cboTipo.Text = "NORMAL" Then
+            limpiarLista()
+            txtPrecio.Text = "100.00"
+            limite = 2
+
+        ElseIf cboTamaño.Text = "GRANDE" And cboTipo.Text = "NORMAL" Then
+            limpiarLista()
+            limite = 2
+            txtPrecio.Text = "180.00"
+
+        ElseIf cboTamaño.Text = "CHICA" And cboTipo.Text = "MIXTA" Then
+            limpiarLista()
+            limite = 5
+            txtPrecio.Text = "120.00"
+
+        ElseIf cboTamaño.Text = "GRANDE" And cboTipo.Text = "MIXTA" Then
+            limpiarLista()
+            limite = 9
+            txtPrecio.Text = "230.00"
+
+        End If
+    End Sub
+
+    Private Sub cboTamaño_SelectedValueChanged(sender As Object, e As EventArgs) Handles cboTamaño.SelectedValueChanged
+        If cboTamaño.Text = "REBANADA" Then
+            limpiarLista()
+            limite = 2
+
+            cboTipo.SelectedIndex = 0
+            cboTipo.Enabled = False
+            txtPrecio.Text = "35.00"
+
+            CheckedListBox1.Enabled = True
+
+        ElseIf cboTamaño.Text = "CHICA" Then
+            limpiarLista()
+            cboTipo.Enabled = True
+            txtPrecio.Text = ""
+
+
+        ElseIf cboTamaño.Text = "GRANDE" Then
+            limpiarLista()
+            cboTipo.Enabled = True
+            txtPrecio.Text = ""
+
+        End If
     End Sub
 End Class

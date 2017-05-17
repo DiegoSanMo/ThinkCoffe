@@ -30,13 +30,17 @@ Partial Class frmPrincipal
         Me.ModificaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PromocionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegistrarRecetaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultarRecetaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PiizaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OtrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBar = New System.Windows.Forms.MenuStrip()
         Me.HolaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CategoríaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.InsumosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RecetasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CompraDeInsumosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -55,22 +59,22 @@ Partial Class frmPrincipal
         Me.CatálogosToolStripMenuItem.Name = "CatálogosToolStripMenuItem"
         Me.CatálogosToolStripMenuItem.Padding = New System.Windows.Forms.Padding(2, 0, 4, 0)
         Me.CatálogosToolStripMenuItem.Size = New System.Drawing.Size(193, 54)
-        Me.CatálogosToolStripMenuItem.Text = "Catálogos"
+        Me.CatálogosToolStripMenuItem.Text = "Registro"
         '
         'CategoriasToolStripMenuItem
         '
         Me.CategoriasToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Tree_Structure_50
         Me.CategoriasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CategoriasToolStripMenuItem.Name = "CategoriasToolStripMenuItem"
-        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
-        Me.CategoriasToolStripMenuItem.Text = "Categorias"
+        Me.CategoriasToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
+        Me.CategoriasToolStripMenuItem.Text = "Categorías"
         '
         'IngredientesToolStripMenuItem
         '
         Me.IngredientesToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Vegetarian_Food_50
         Me.IngredientesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.IngredientesToolStripMenuItem.Name = "IngredientesToolStripMenuItem"
-        Me.IngredientesToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
+        Me.IngredientesToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
         Me.IngredientesToolStripMenuItem.Text = "Insumos"
         '
         'ProductosToolStripMenuItem1
@@ -79,7 +83,7 @@ Partial Class frmPrincipal
         Me.ProductosToolStripMenuItem1.Image = Global.ThinkCoffee.My.Resources.Resources.Coffee_to_Go_50
         Me.ProductosToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ProductosToolStripMenuItem1.Name = "ProductosToolStripMenuItem1"
-        Me.ProductosToolStripMenuItem1.Size = New System.Drawing.Size(173, 56)
+        Me.ProductosToolStripMenuItem1.Size = New System.Drawing.Size(186, 56)
         Me.ProductosToolStripMenuItem1.Text = "Productos"
         '
         'RegistroToolStripMenuItem
@@ -99,29 +103,16 @@ Partial Class frmPrincipal
         Me.ProveedoresToolStripMenuItem1.Image = Global.ThinkCoffee.My.Resources.Resources.Conference_48
         Me.ProveedoresToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ProveedoresToolStripMenuItem1.Name = "ProveedoresToolStripMenuItem1"
-        Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(173, 56)
+        Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(186, 56)
         Me.ProveedoresToolStripMenuItem1.Text = "Proveedores"
         '
         'PromocionesToolStripMenuItem
         '
-        Me.PromocionesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarRecetaToolStripMenuItem, Me.ConsultarRecetaToolStripMenuItem})
         Me.PromocionesToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Book_48
         Me.PromocionesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PromocionesToolStripMenuItem.Name = "PromocionesToolStripMenuItem"
-        Me.PromocionesToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
+        Me.PromocionesToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
         Me.PromocionesToolStripMenuItem.Text = "Recetas"
-        '
-        'RegistrarRecetaToolStripMenuItem
-        '
-        Me.RegistrarRecetaToolStripMenuItem.Name = "RegistrarRecetaToolStripMenuItem"
-        Me.RegistrarRecetaToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
-        Me.RegistrarRecetaToolStripMenuItem.Text = "Registrar receta"
-        '
-        'ConsultarRecetaToolStripMenuItem
-        '
-        Me.ConsultarRecetaToolStripMenuItem.Name = "ConsultarRecetaToolStripMenuItem"
-        Me.ConsultarRecetaToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
-        Me.ConsultarRecetaToolStripMenuItem.Text = "Consultar receta"
         '
         'VentaToolStripMenuItem
         '
@@ -157,7 +148,7 @@ Partial Class frmPrincipal
         Me.menuBar.BackgroundImage = Global.ThinkCoffee.My.Resources.Resources.barraFinal1
         Me.menuBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.menuBar.Dock = System.Windows.Forms.DockStyle.Left
-        Me.menuBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HolaToolStripMenuItem, Me.CatálogosToolStripMenuItem, Me.MovimientosToolStripMenuItem, Me.VentaToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.menuBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HolaToolStripMenuItem, Me.CatálogosToolStripMenuItem, Me.ConsultaToolStripMenuItem, Me.MovimientosToolStripMenuItem, Me.VentaToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.menuBar.Location = New System.Drawing.Point(0, 0)
         Me.menuBar.Name = "menuBar"
         Me.menuBar.Size = New System.Drawing.Size(200, 741)
@@ -173,6 +164,53 @@ Partial Class frmPrincipal
         Me.HolaToolStripMenuItem.Margin = New System.Windows.Forms.Padding(10, 10, 10, 50)
         Me.HolaToolStripMenuItem.Name = "HolaToolStripMenuItem"
         Me.HolaToolStripMenuItem.Size = New System.Drawing.Size(167, 37)
+        '
+        'ConsultaToolStripMenuItem
+        '
+        Me.ConsultaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CategoríaToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.RecetasToolStripMenuItem, Me.ProveedoresToolStripMenuItem})
+        Me.ConsultaToolStripMenuItem.Name = "ConsultaToolStripMenuItem"
+        Me.ConsultaToolStripMenuItem.Size = New System.Drawing.Size(187, 19)
+        Me.ConsultaToolStripMenuItem.Text = "Consulta"
+        '
+        'CategoríaToolStripMenuItem
+        '
+        Me.CategoríaToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Tree_Structure_50
+        Me.CategoríaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.CategoríaToolStripMenuItem.Name = "CategoríaToolStripMenuItem"
+        Me.CategoríaToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
+        Me.CategoríaToolStripMenuItem.Text = "Categoría"
+        '
+        'InsumosToolStripMenuItem
+        '
+        Me.InsumosToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Vegetarian_Food_50
+        Me.InsumosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.InsumosToolStripMenuItem.Name = "InsumosToolStripMenuItem"
+        Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
+        Me.InsumosToolStripMenuItem.Text = "Insumos"
+        '
+        'ProductosToolStripMenuItem
+        '
+        Me.ProductosToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Coffee_to_Go_50
+        Me.ProductosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
+        Me.ProductosToolStripMenuItem.Text = "Productos"
+        '
+        'RecetasToolStripMenuItem
+        '
+        Me.RecetasToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Book_48
+        Me.RecetasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.RecetasToolStripMenuItem.Name = "RecetasToolStripMenuItem"
+        Me.RecetasToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
+        Me.RecetasToolStripMenuItem.Text = "Recetas"
+        '
+        'ProveedoresToolStripMenuItem
+        '
+        Me.ProveedoresToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Conference_48
+        Me.ProveedoresToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
+        Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'MovimientosToolStripMenuItem
         '
@@ -270,8 +308,12 @@ Partial Class frmPrincipal
     Friend WithEvents OtrosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistroToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ModificaciónToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RegistrarRecetaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ConsultarRecetaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MovimientosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CompraDeInsumosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConsultaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CategoríaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents InsumosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProductosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RecetasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProveedoresToolStripMenuItem As ToolStripMenuItem
 End Class
