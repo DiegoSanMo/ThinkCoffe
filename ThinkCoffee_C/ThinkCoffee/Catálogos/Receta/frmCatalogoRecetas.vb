@@ -206,6 +206,7 @@
         txtNombre.Text = ""
         dgReceta.Rows.Clear()
 
+        mensajeGrabar()
 
         btnNuevo.Enabled = True
         btnSalir.Enabled = True

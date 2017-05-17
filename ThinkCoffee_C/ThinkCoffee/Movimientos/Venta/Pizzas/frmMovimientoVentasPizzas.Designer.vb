@@ -23,121 +23,36 @@ Partial Class frmMovimientoVentasPizzas
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.gbMixta = New System.Windows.Forms.GroupBox()
+        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.cboTamaño = New System.Windows.Forms.ComboBox()
-        Me.cboTipo = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnCrear = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.txtIdVenta = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
+        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnGrabar = New System.Windows.Forms.Button()
         Me.gbMixta.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'gbMixta
         '
         Me.gbMixta.Controls.Add(Me.CheckedListBox1)
         Me.gbMixta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.gbMixta.Location = New System.Drawing.Point(12, 132)
+        Me.gbMixta.Location = New System.Drawing.Point(22, 139)
         Me.gbMixta.Name = "gbMixta"
-        Me.gbMixta.Size = New System.Drawing.Size(701, 189)
+        Me.gbMixta.Size = New System.Drawing.Size(690, 184)
         Me.gbMixta.TabIndex = 71
         Me.gbMixta.TabStop = False
         Me.gbMixta.Text = "Toppings"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(8, 22)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 20)
-        Me.Label3.TabIndex = 32
-        Me.Label3.Text = "Tamaño"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(259, 22)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(43, 20)
-        Me.Label4.TabIndex = 72
-        Me.Label4.Text = "Tipo"
-        '
-        'cboTamaño
-        '
-        Me.cboTamaño.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboTamaño.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.cboTamaño.FormattingEnabled = True
-        Me.cboTamaño.Items.AddRange(New Object() {"REBANADA", "CHICA", "MEDIANA", "GRANDE"})
-        Me.cboTamaño.Location = New System.Drawing.Point(104, 18)
-        Me.cboTamaño.Name = "cboTamaño"
-        Me.cboTamaño.Size = New System.Drawing.Size(128, 28)
-        Me.cboTamaño.TabIndex = 74
-        '
-        'cboTipo
-        '
-        Me.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboTipo.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.cboTipo.FormattingEnabled = True
-        Me.cboTipo.Location = New System.Drawing.Point(329, 18)
-        Me.cboTipo.Name = "cboTipo"
-        Me.cboTipo.Size = New System.Drawing.Size(128, 28)
-        Me.cboTipo.TabIndex = 75
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.txtPrecio)
-        Me.GroupBox2.Controls.Add(Me.cboTipo)
-        Me.GroupBox2.Controls.Add(Me.Label3)
-        Me.GroupBox2.Controls.Add(Me.cboTamaño)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 44)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(701, 73)
-        Me.GroupBox2.TabIndex = 82
-        Me.GroupBox2.TabStop = False
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(484, 22)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(56, 20)
-        Me.Label6.TabIndex = 76
-        Me.Label6.Text = "Precio"
-        '
-        'txtPrecio
-        '
-        Me.txtPrecio.Enabled = False
-        Me.txtPrecio.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtPrecio.Location = New System.Drawing.Point(567, 19)
-        Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(100, 27)
-        Me.txtPrecio.TabIndex = 77
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Emoji", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label1.Location = New System.Drawing.Point(262, -9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(127, 50)
-        Me.Label1.TabIndex = 78
-        Me.Label1.Text = "Pizzas"
         '
         'CheckedListBox1
         '
@@ -156,12 +71,179 @@ Partial Class frmMovimientoVentasPizzas
         Me.CheckedListBox1.TabIndex = 78
         Me.CheckedListBox1.UseCompatibleTextRendering = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label3.Location = New System.Drawing.Point(8, 21)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(69, 20)
+        Me.Label3.TabIndex = 32
+        Me.Label3.Text = "Tamaño"
+        '
+        'cboTamaño
+        '
+        Me.cboTamaño.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboTamaño.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.cboTamaño.FormattingEnabled = True
+        Me.cboTamaño.Items.AddRange(New Object() {"REBANADA", "CHICA", "MEDIANA", "GRANDE"})
+        Me.cboTamaño.Location = New System.Drawing.Point(83, 16)
+        Me.cboTamaño.Name = "cboTamaño"
+        Me.cboTamaño.Size = New System.Drawing.Size(128, 28)
+        Me.cboTamaño.TabIndex = 74
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Label6)
+        Me.GroupBox2.Controls.Add(Me.txtPrecio)
+        Me.GroupBox2.Controls.Add(Me.Label3)
+        Me.GroupBox2.Controls.Add(Me.cboTamaño)
+        Me.GroupBox2.Location = New System.Drawing.Point(22, 71)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(690, 62)
+        Me.GroupBox2.TabIndex = 82
+        Me.GroupBox2.TabStop = False
+        '
+        'btnCrear
+        '
+        Me.btnCrear.Location = New System.Drawing.Point(718, 21)
+        Me.btnCrear.Name = "btnCrear"
+        Me.btnCrear.Size = New System.Drawing.Size(100, 36)
+        Me.btnCrear.TabIndex = 84
+        Me.btnCrear.Text = "Crear pizza"
+        Me.btnCrear.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label6.Location = New System.Drawing.Point(451, 24)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(56, 20)
+        Me.Label6.TabIndex = 76
+        Me.Label6.Text = "Precio"
+        '
+        'txtPrecio
+        '
+        Me.txtPrecio.Enabled = False
+        Me.txtPrecio.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtPrecio.Location = New System.Drawing.Point(537, 21)
+        Me.txtPrecio.Name = "txtPrecio"
+        Me.txtPrecio.Size = New System.Drawing.Size(100, 27)
+        Me.txtPrecio.TabIndex = 77
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.txtIdVenta)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.dtpFecha)
+        Me.GroupBox1.Location = New System.Drawing.Point(22, 12)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(690, 53)
+        Me.GroupBox1.TabIndex = 83
+        Me.GroupBox1.TabStop = False
+        '
+        'txtIdVenta
+        '
+        Me.txtIdVenta.Enabled = False
+        Me.txtIdVenta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtIdVenta.Location = New System.Drawing.Point(81, 16)
+        Me.txtIdVenta.Name = "txtIdVenta"
+        Me.txtIdVenta.Size = New System.Drawing.Size(100, 27)
+        Me.txtIdVenta.TabIndex = 29
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label2.Location = New System.Drawing.Point(8, 19)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(67, 20)
+        Me.Label2.TabIndex = 28
+        Me.Label2.Text = "idVenta"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label5.Location = New System.Drawing.Point(479, 16)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(52, 20)
+        Me.Label5.TabIndex = 30
+        Me.Label5.Text = "Fecha"
+        '
+        'dtpFecha
+        '
+        Me.dtpFecha.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFecha.Location = New System.Drawing.Point(537, 13)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(130, 27)
+        Me.dtpFecha.TabIndex = 31
+        '
+        'btnSalir
+        '
+        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
+        Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSalir.Location = New System.Drawing.Point(718, 248)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(100, 36)
+        Me.btnSalir.TabIndex = 88
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnSalir.UseVisualStyleBackColor = True
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.Enabled = False
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.ForeColor = System.Drawing.Color.Black
+        Me.btnCancelar.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
+        Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCancelar.Location = New System.Drawing.Point(718, 150)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(100, 36)
+        Me.btnCancelar.TabIndex = 87
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCancelar.UseVisualStyleBackColor = True
+        '
+        'btnGrabar
+        '
+        Me.btnGrabar.Enabled = False
+        Me.btnGrabar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGrabar.ForeColor = System.Drawing.Color.Black
+        Me.btnGrabar.Image = Global.ThinkCoffee.My.Resources.Resources.Burn_CD_30
+        Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGrabar.Location = New System.Drawing.Point(718, 88)
+        Me.btnGrabar.Name = "btnGrabar"
+        Me.btnGrabar.Size = New System.Drawing.Size(100, 36)
+        Me.btnGrabar.TabIndex = 86
+        Me.btnGrabar.Text = "Grabar"
+        Me.btnGrabar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnGrabar.UseVisualStyleBackColor = True
+        '
         'frmMovimientoVentasPizzas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(729, 382)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(830, 334)
+        Me.Controls.Add(Me.btnCrear)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.btnCancelar)
+        Me.Controls.Add(Me.btnGrabar)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.gbMixta)
         Me.Name = "frmMovimientoVentasPizzas"
@@ -170,18 +252,25 @@ Partial Class frmMovimientoVentasPizzas
         Me.gbMixta.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents gbMixta As GroupBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents cboTamaño As ComboBox
-    Friend WithEvents cboTipo As ComboBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label6 As Label
     Friend WithEvents txtPrecio As TextBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents CheckedListBox1 As CheckedListBox
+    Friend WithEvents btnCrear As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents txtIdVenta As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents dtpFecha As DateTimePicker
+    Friend WithEvents btnSalir As Button
+    Friend WithEvents btnCancelar As Button
+    Friend WithEvents btnGrabar As Button
 End Class

@@ -97,6 +97,7 @@
         comando.CommandText = String.Format("Insert into tlb_proveedor(idProveedor, nombre, direccion,  telefono) values ({0}, '{1}', '{2}', '{3}' )", Val(dgProveedores.Item(0, ultimo).Value), dgProveedores.Item(1, ultimo).Value, dgProveedores.Item(2, ultimo).Value, dgProveedores.Item(3, ultimo).Value)
         comando.ExecuteNonQuery()
 
+        mensajeGrabar()
         btnGrabar.Enabled = False
         btnCancelar.Enabled = False
         btnNuevo.Enabled = True

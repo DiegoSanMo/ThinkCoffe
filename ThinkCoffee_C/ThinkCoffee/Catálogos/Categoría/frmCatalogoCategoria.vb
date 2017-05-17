@@ -99,6 +99,7 @@ Public Class frmCatalogoCategoria
             btnGrabar.Enabled = False
             btnCancelar.Enabled = False
             dgCategoria.Enabled = True
+            mensajeGrabar()
         End If
 
 

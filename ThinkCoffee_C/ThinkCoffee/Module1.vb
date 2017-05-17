@@ -113,7 +113,9 @@ Module Module1
         End While
         lector.Close()
 
-        'guardar todos los insumos en un arreglo
+
+
+
         comando.CommandText = "Select count(tlb_insumo.idInsumo) from tlb_insumo"
         Dim cantInsumos As Integer = comando.ExecuteScalar
         Dim todosInsumos(cantInsumos, 3) As String
@@ -130,6 +132,7 @@ Module Module1
             p += 1
         End While
         lector.Close()
+
 
 
         For t = 0 To n - 1
@@ -189,6 +192,9 @@ Module Module1
             Next
         Next
     End Sub
+    '/****************************************Cargar insumos a arreglo*********************************/
+
+
 
     '/*/*/*//*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/**Limpiar los checkbox de venta pizzas/*/*/*//*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
 
@@ -221,4 +227,8 @@ Module Module1
         Next
     End Sub
 
+
+    Public Sub mensajeGrabar()
+        MessageBox.Show("SU INFORMACIÓN HA SIDO GUARDADA", "REGISTRO COMPLETO", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
 End Module

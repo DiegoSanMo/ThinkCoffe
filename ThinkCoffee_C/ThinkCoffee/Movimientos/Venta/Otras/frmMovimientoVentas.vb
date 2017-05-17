@@ -28,6 +28,10 @@
         btnAceptar.Enabled = True
         btnGrabar.Enabled = True
 
+        comando.CommandText = "select count(tlb_venta.idVenta) from tlb_venta;"
+        Dim n As Integer = comando.ExecuteScalar + 1
+        txtIdVenta.Text = n
+
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
@@ -69,8 +73,13 @@
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
+        comando.CommandText = "Insert into tlb_venta(idVenta, tipo, fecha, total) values(" & CInt(txtIdVenta.Text) & ", '" & "OTROS" & "', '" & dtpFecha.Value.Date & "', " & CDec(txtTotal.Text) & ")"
+        comando.ExecuteNonQuery()
+
         For x = 0 To dgVenta.RowCount - 1
             calcularPorcion(CInt(dgVenta(0, x).Value), CInt(dgVenta(2, x).Value))
+            comando.CommandText = "Insert into tlb_otro(idVenta, idProducto, cantidad, importe) values(" & CInt(txtIdVenta.Text) & ", " & CInt(dgVenta(0, x).Value) & ", '" & CInt(dgVenta(2, x).Value) & "', " & CDec(dgVenta(4, x).Value) & ")"
+            comando.ExecuteNonQuery()
         Next
     End Sub
 End Class

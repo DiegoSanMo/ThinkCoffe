@@ -101,7 +101,7 @@ Public Class frmCatalogoProductos
 
         comando.CommandText = "Insert Into tlb_producto(idProducto, idReceta, idCategoria, nombre, precio, imagen) values(" & idProducto & "," & idReceta & "," & idCategoria & ",'" & nombre & "'," & precioFin & ",'" & imagen & "')"
         comando.ExecuteNonQuery()
-
+        mensajeGrabar()
         btnGrabar.Enabled = False
         btnCancelar.Enabled = False
         btnSalir.Enabled = True

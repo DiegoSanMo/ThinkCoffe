@@ -120,6 +120,7 @@ Public Class frmCatalogoInsumos
             btnNuevo.Enabled = True
             btnModificar.Enabled = True
             btnSalir.Enabled = True
+            mensajeGrabar()
 
         End If
     End Sub
