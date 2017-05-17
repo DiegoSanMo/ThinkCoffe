@@ -27,9 +27,9 @@ Partial Class frmMovimientoVentasPizzas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cboTamaño = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.btnCrear = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
+        Me.btnCrear = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtIdVenta = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -106,15 +106,6 @@ Partial Class frmMovimientoVentasPizzas
         Me.GroupBox2.TabIndex = 82
         Me.GroupBox2.TabStop = False
         '
-        'btnCrear
-        '
-        Me.btnCrear.Location = New System.Drawing.Point(718, 21)
-        Me.btnCrear.Name = "btnCrear"
-        Me.btnCrear.Size = New System.Drawing.Size(100, 36)
-        Me.btnCrear.TabIndex = 84
-        Me.btnCrear.Text = "Crear pizza"
-        Me.btnCrear.UseVisualStyleBackColor = True
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -135,6 +126,15 @@ Partial Class frmMovimientoVentasPizzas
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(100, 27)
         Me.txtPrecio.TabIndex = 77
+        '
+        'btnCrear
+        '
+        Me.btnCrear.Location = New System.Drawing.Point(718, 21)
+        Me.btnCrear.Name = "btnCrear"
+        Me.btnCrear.Size = New System.Drawing.Size(100, 36)
+        Me.btnCrear.TabIndex = 84
+        Me.btnCrear.Text = "Crear pizza"
+        Me.btnCrear.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -183,6 +183,7 @@ Partial Class frmMovimientoVentasPizzas
         '
         'dtpFecha
         '
+        Me.dtpFecha.Enabled = False
         Me.dtpFecha.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFecha.Location = New System.Drawing.Point(537, 13)

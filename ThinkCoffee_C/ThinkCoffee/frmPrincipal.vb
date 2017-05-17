@@ -7,10 +7,6 @@
         frmCatalogoProveedores.ShowDialog()
     End Sub
 
-    Private Sub RecordatoriosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecordatoriosToolStripMenuItem.Click
-        frmCatalogoRecordatorios.ShowDialog()
-    End Sub
-
     Private Sub InsumosToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
 

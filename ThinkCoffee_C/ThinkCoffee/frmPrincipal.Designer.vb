@@ -35,7 +35,6 @@ Partial Class frmPrincipal
         Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PiizaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OtrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RecordatoriosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBar = New System.Windows.Forms.MenuStrip()
         Me.HolaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -142,7 +141,7 @@ Partial Class frmPrincipal
         Me.PiizaToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Pizza_48
         Me.PiizaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PiizaToolStripMenuItem.Name = "PiizaToolStripMenuItem"
-        Me.PiizaToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
+        Me.PiizaToolStripMenuItem.Size = New System.Drawing.Size(137, 56)
         Me.PiizaToolStripMenuItem.Text = "Pizza"
         '
         'OtrosToolStripMenuItem
@@ -150,25 +149,15 @@ Partial Class frmPrincipal
         Me.OtrosToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Tea_50
         Me.OtrosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.OtrosToolStripMenuItem.Name = "OtrosToolStripMenuItem"
-        Me.OtrosToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
+        Me.OtrosToolStripMenuItem.Size = New System.Drawing.Size(137, 56)
         Me.OtrosToolStripMenuItem.Text = "Otros"
-        '
-        'RecordatoriosToolStripMenuItem
-        '
-        Me.RecordatoriosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.RecordatoriosToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Alarm_Clock_48
-        Me.RecordatoriosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.RecordatoriosToolStripMenuItem.Margin = New System.Windows.Forms.Padding(0, 5, 0, 10)
-        Me.RecordatoriosToolStripMenuItem.Name = "RecordatoriosToolStripMenuItem"
-        Me.RecordatoriosToolStripMenuItem.Size = New System.Drawing.Size(187, 52)
-        Me.RecordatoriosToolStripMenuItem.Text = "Recordatorios"
         '
         'menuBar
         '
         Me.menuBar.BackgroundImage = Global.ThinkCoffee.My.Resources.Resources.barraFinal1
         Me.menuBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.menuBar.Dock = System.Windows.Forms.DockStyle.Left
-        Me.menuBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HolaToolStripMenuItem, Me.CatálogosToolStripMenuItem, Me.MovimientosToolStripMenuItem, Me.VentaToolStripMenuItem, Me.RecordatoriosToolStripMenuItem, Me.SalirToolStripMenuItem})
+        Me.menuBar.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HolaToolStripMenuItem, Me.CatálogosToolStripMenuItem, Me.MovimientosToolStripMenuItem, Me.VentaToolStripMenuItem, Me.SalirToolStripMenuItem})
         Me.menuBar.Location = New System.Drawing.Point(0, 0)
         Me.menuBar.Name = "menuBar"
         Me.menuBar.Size = New System.Drawing.Size(200, 741)
@@ -270,7 +259,6 @@ Partial Class frmPrincipal
     Friend WithEvents IngredientesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PromocionesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VentaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RecordatoriosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents menuBar As MenuStrip
     Friend WithEvents Button1 As Button
     Friend WithEvents btnMin As Button
