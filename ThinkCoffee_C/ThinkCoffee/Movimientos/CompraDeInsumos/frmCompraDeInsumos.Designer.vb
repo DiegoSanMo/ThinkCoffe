@@ -79,7 +79,7 @@ Partial Class frmCompraDeInsumos
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(536, 9)
+        Me.Label1.Location = New System.Drawing.Point(633, 9)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(97, 24)
         Me.Label1.TabIndex = 0
@@ -88,7 +88,7 @@ Partial Class frmCompraDeInsumos
         'txtIdCompra
         '
         Me.txtIdCompra.Enabled = False
-        Me.txtIdCompra.Location = New System.Drawing.Point(640, 11)
+        Me.txtIdCompra.Location = New System.Drawing.Point(737, 11)
         Me.txtIdCompra.Name = "txtIdCompra"
         Me.txtIdCompra.Size = New System.Drawing.Size(100, 20)
         Me.txtIdCompra.TabIndex = 1
@@ -97,7 +97,7 @@ Partial Class frmCompraDeInsumos
         '
         Me.dtpFecha.Enabled = False
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(79, 13)
+        Me.dtpFecha.Location = New System.Drawing.Point(191, 10)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(98, 20)
         Me.dtpFecha.TabIndex = 2
@@ -106,7 +106,7 @@ Partial Class frmCompraDeInsumos
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(4, 9)
+        Me.Label2.Location = New System.Drawing.Point(116, 6)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(69, 24)
         Me.Label2.TabIndex = 3
@@ -122,7 +122,7 @@ Partial Class frmCompraDeInsumos
         Me.gbProveedores.Controls.Add(Me.Label4)
         Me.gbProveedores.Controls.Add(Me.cboProveedor)
         Me.gbProveedores.Controls.Add(Me.Label3)
-        Me.gbProveedores.Location = New System.Drawing.Point(14, 39)
+        Me.gbProveedores.Location = New System.Drawing.Point(111, 39)
         Me.gbProveedores.Name = "gbProveedores"
         Me.gbProveedores.Size = New System.Drawing.Size(726, 89)
         Me.gbProveedores.TabIndex = 4
@@ -227,7 +227,7 @@ Partial Class frmCompraDeInsumos
         Me.gbInsumos.Controls.Add(Me.txtIdInsumo)
         Me.gbInsumos.Controls.Add(Me.Label8)
         Me.gbInsumos.Controls.Add(Me.Label7)
-        Me.gbInsumos.Location = New System.Drawing.Point(14, 134)
+        Me.gbInsumos.Location = New System.Drawing.Point(111, 134)
         Me.gbInsumos.Name = "gbInsumos"
         Me.gbInsumos.Size = New System.Drawing.Size(726, 174)
         Me.gbInsumos.TabIndex = 5
@@ -440,7 +440,7 @@ Partial Class frmCompraDeInsumos
         Me.dgInsumosC.AllowUserToAddRows = False
         Me.dgInsumosC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgInsumosC.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
-        Me.dgInsumosC.Location = New System.Drawing.Point(15, 314)
+        Me.dgInsumosC.Location = New System.Drawing.Point(112, 315)
         Me.dgInsumosC.Name = "dgInsumosC"
         Me.dgInsumosC.Size = New System.Drawing.Size(725, 150)
         Me.dgInsumosC.TabIndex = 6
@@ -479,7 +479,7 @@ Partial Class frmCompraDeInsumos
         'txtSubtotal
         '
         Me.txtSubtotal.Enabled = False
-        Me.txtSubtotal.Location = New System.Drawing.Point(640, 471)
+        Me.txtSubtotal.Location = New System.Drawing.Point(726, 471)
         Me.txtSubtotal.Name = "txtSubtotal"
         Me.txtSubtotal.Size = New System.Drawing.Size(100, 20)
         Me.txtSubtotal.TabIndex = 8
@@ -488,7 +488,7 @@ Partial Class frmCompraDeInsumos
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(552, 471)
+        Me.Label15.Location = New System.Drawing.Point(638, 471)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(82, 24)
         Me.Label15.TabIndex = 7
@@ -499,7 +499,7 @@ Partial Class frmCompraDeInsumos
         Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevo.Image = Global.ThinkCoffee.My.Resources.Resources.Add_List_30
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(24, 492)
+        Me.btnNuevo.Location = New System.Drawing.Point(5, 12)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(100, 42)
         Me.btnNuevo.TabIndex = 13
@@ -513,7 +513,7 @@ Partial Class frmCompraDeInsumos
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.Image = Global.ThinkCoffee.My.Resources.Resources.Burn_CD_30
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGuardar.Location = New System.Drawing.Point(157, 492)
+        Me.btnGuardar.Location = New System.Drawing.Point(371, 497)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(104, 42)
         Me.btnGuardar.TabIndex = 14
@@ -526,7 +526,7 @@ Partial Class frmCompraDeInsumos
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(294, 493)
+        Me.btnCancelar.Location = New System.Drawing.Point(530, 498)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(112, 41)
         Me.btnCancelar.TabIndex = 15
@@ -539,9 +539,9 @@ Partial Class frmCompraDeInsumos
         Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(439, 494)
+        Me.btnSalir.Location = New System.Drawing.Point(5, 69)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(87, 39)
+        Me.btnSalir.Size = New System.Drawing.Size(100, 39)
         Me.btnSalir.TabIndex = 16
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -551,7 +551,7 @@ Partial Class frmCompraDeInsumos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(752, 551)
+        Me.ClientSize = New System.Drawing.Size(849, 551)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnGuardar)

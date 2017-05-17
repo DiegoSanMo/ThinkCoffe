@@ -56,7 +56,7 @@ Public Class frmCatalogoInsumos
             dgInsumo.Item(3, filaSel).Value = txtMax.Text
             dgInsumo.Item(4, filaSel).Value = txtMin.Text
             dgInsumo.Item(5, filaSel).Value = txtExist.Text
-            dgInsumo.Item(6, filaSel).Value = txtCosto.Text
+            dgInsumo.Item(6, filaSel).Value = "0"
             dgInsumo.Item(7, filaSel).Value = dtpFecha.Value.Date
 
 
@@ -67,7 +67,7 @@ Public Class frmCatalogoInsumos
             bloquearCajasInsumo()
 
         Else
-            dgInsumo.Rows.Add(txtIdInsumo.Text, txtNombre.Text, cboUnidadM.Text, txtMax.Text, txtMin.Text, txtExist.Text, txtCosto.Text, dtpFecha.Value.Date)
+            dgInsumo.Rows.Add(txtIdInsumo.Text, txtNombre.Text, cboUnidadM.Text, txtMax.Text, txtMin.Text, txtExist.Text, "0", dtpFecha.Value.Date)
 
             btnGrabar.Enabled = True
             btnCancelar.Enabled = True
@@ -198,7 +198,6 @@ Public Class frmCatalogoInsumos
         txtMax.Text = dgInsumo(3, filaSel).Value
         txtMin.Text = dgInsumo(4, filaSel).Value
         txtExist.Text = dgInsumo(5, filaSel).Value
-        txtCosto.Text = dgInsumo(6, filaSel).Value
         dtpFecha.Value = dgInsumo(7, filaSel).Value
     End Sub
 

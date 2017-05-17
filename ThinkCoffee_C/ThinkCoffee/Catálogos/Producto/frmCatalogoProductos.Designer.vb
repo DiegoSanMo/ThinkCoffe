@@ -23,6 +23,7 @@ Partial Class frmCatalogoProductos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnBuscarR = New System.Windows.Forms.Button()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
@@ -53,7 +54,6 @@ Partial Class frmCatalogoProductos
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.btnModificar = New System.Windows.Forms.Button()
-        Me.btnBuscarR = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ptbImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgProductos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -80,11 +80,22 @@ Partial Class frmCatalogoProductos
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtNombre)
-        Me.GroupBox1.Location = New System.Drawing.Point(29, 52)
+        Me.GroupBox1.Location = New System.Drawing.Point(157, 68)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(681, 264)
+        Me.GroupBox1.Size = New System.Drawing.Size(681, 242)
         Me.GroupBox1.TabIndex = 63
         Me.GroupBox1.TabStop = False
+        '
+        'btnBuscarR
+        '
+        Me.btnBuscarR.Enabled = False
+        Me.btnBuscarR.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnBuscarR.Location = New System.Drawing.Point(102, 139)
+        Me.btnBuscarR.Name = "btnBuscarR"
+        Me.btnBuscarR.Size = New System.Drawing.Size(97, 29)
+        Me.btnBuscarR.TabIndex = 61
+        Me.btnBuscarR.Text = "Buscar receta"
+        Me.btnBuscarR.UseVisualStyleBackColor = True
         '
         'btnAceptar
         '
@@ -180,7 +191,7 @@ Partial Class frmCatalogoProductos
         'ptbImagen
         '
         Me.ptbImagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.ptbImagen.Location = New System.Drawing.Point(497, 19)
+        Me.ptbImagen.Location = New System.Drawing.Point(498, 18)
         Me.ptbImagen.Name = "ptbImagen"
         Me.ptbImagen.Size = New System.Drawing.Size(164, 178)
         Me.ptbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -268,9 +279,9 @@ Partial Class frmCatalogoProductos
         Me.dgProductos.AllowUserToAddRows = False
         Me.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column4, Me.Column2, Me.Column5, Me.Column6})
-        Me.dgProductos.Location = New System.Drawing.Point(12, 335)
+        Me.dgProductos.Location = New System.Drawing.Point(157, 316)
         Me.dgProductos.Name = "dgProductos"
-        Me.dgProductos.Size = New System.Drawing.Size(698, 150)
+        Me.dgProductos.Size = New System.Drawing.Size(681, 174)
         Me.dgProductos.TabIndex = 54
         '
         'Column3
@@ -325,9 +336,9 @@ Partial Class frmCatalogoProductos
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(569, 491)
+        Me.btnSalir.Location = New System.Drawing.Point(29, 175)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(87, 39)
+        Me.btnSalir.Size = New System.Drawing.Size(103, 39)
         Me.btnSalir.TabIndex = 62
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -340,7 +351,7 @@ Partial Class frmCatalogoProductos
         Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(435, 491)
+        Me.btnCancelar.Location = New System.Drawing.Point(587, 496)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(101, 39)
         Me.btnCancelar.TabIndex = 61
@@ -355,7 +366,7 @@ Partial Class frmCatalogoProductos
         Me.btnGrabar.ForeColor = System.Drawing.Color.Black
         Me.btnGrabar.Image = Global.ThinkCoffee.My.Resources.Resources.Burn_CD_30
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGrabar.Location = New System.Drawing.Point(315, 491)
+        Me.btnGrabar.Location = New System.Drawing.Point(318, 496)
         Me.btnGrabar.Name = "btnGrabar"
         Me.btnGrabar.Size = New System.Drawing.Size(87, 39)
         Me.btnGrabar.TabIndex = 60
@@ -369,9 +380,9 @@ Partial Class frmCatalogoProductos
         Me.btnNuevo.ForeColor = System.Drawing.Color.Black
         Me.btnNuevo.Image = Global.ThinkCoffee.My.Resources.Resources.Add_List_30
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(59, 491)
+        Me.btnNuevo.Location = New System.Drawing.Point(29, 81)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(87, 39)
+        Me.btnNuevo.Size = New System.Drawing.Size(103, 39)
         Me.btnNuevo.TabIndex = 59
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -383,7 +394,7 @@ Partial Class frmCatalogoProductos
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(722, 50)
+        Me.PictureBox1.Size = New System.Drawing.Size(872, 50)
         Me.PictureBox1.TabIndex = 64
         Me.PictureBox1.TabStop = False
         '
@@ -399,24 +410,13 @@ Partial Class frmCatalogoProductos
         Me.btnModificar.ForeColor = System.Drawing.Color.Black
         Me.btnModificar.Image = Global.ThinkCoffee.My.Resources.Resources.Sort_By_Modified_Date_30
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnModificar.Location = New System.Drawing.Point(179, 491)
+        Me.btnModificar.Location = New System.Drawing.Point(29, 130)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(103, 39)
         Me.btnModificar.TabIndex = 61
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnModificar.UseVisualStyleBackColor = True
-        '
-        'btnBuscarR
-        '
-        Me.btnBuscarR.Enabled = False
-        Me.btnBuscarR.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.btnBuscarR.Location = New System.Drawing.Point(102, 139)
-        Me.btnBuscarR.Name = "btnBuscarR"
-        Me.btnBuscarR.Size = New System.Drawing.Size(97, 29)
-        Me.btnBuscarR.TabIndex = 61
-        Me.btnBuscarR.Text = "Buscar receta"
-        Me.btnBuscarR.UseVisualStyleBackColor = True
         '
         'frmCatalogoProductos
         '
@@ -425,7 +425,7 @@ Partial Class frmCatalogoProductos
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BackgroundImage = Global.ThinkCoffee.My.Resources.Resources.fondo_formulario_1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(722, 547)
+        Me.ClientSize = New System.Drawing.Size(872, 547)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.GroupBox1)

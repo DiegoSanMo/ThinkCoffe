@@ -81,5 +81,6 @@
             comando.CommandText = "Insert into tlb_otro(idVenta, idProducto, cantidad, importe) values(" & CInt(txtIdVenta.Text) & ", " & CInt(dgVenta(0, x).Value) & ", '" & CInt(dgVenta(2, x).Value) & "', " & CDec(dgVenta(4, x).Value) & ")"
             comando.ExecuteNonQuery()
         Next
+        mensajeVenta()
     End Sub
 End Class

@@ -34,11 +34,6 @@ Partial Class frmMovimientoVentas
         Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.dgVenta = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -53,6 +48,11 @@ Partial Class frmMovimientoVentas
         Me.btnGrabar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.ptbImagen = New System.Windows.Forms.PictureBox()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgVenta, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -63,7 +63,7 @@ Partial Class frmMovimientoVentas
         '
         Me.txtIdVenta.Enabled = False
         Me.txtIdVenta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtIdVenta.Location = New System.Drawing.Point(96, 18)
+        Me.txtIdVenta.Location = New System.Drawing.Point(96, 12)
         Me.txtIdVenta.Name = "txtIdVenta"
         Me.txtIdVenta.Size = New System.Drawing.Size(100, 27)
         Me.txtIdVenta.TabIndex = 29
@@ -74,7 +74,7 @@ Partial Class frmMovimientoVentas
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label1.Location = New System.Drawing.Point(23, 21)
+        Me.Label1.Location = New System.Drawing.Point(23, 15)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(67, 20)
         Me.Label1.TabIndex = 28
@@ -86,7 +86,7 @@ Partial Class frmMovimientoVentas
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(244, 19)
+        Me.Label2.Location = New System.Drawing.Point(334, 15)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(52, 20)
         Me.Label2.TabIndex = 30
@@ -97,7 +97,7 @@ Partial Class frmMovimientoVentas
         Me.dtpFecha.Enabled = False
         Me.dtpFecha.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(302, 16)
+        Me.dtpFecha.Location = New System.Drawing.Point(392, 12)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(130, 27)
         Me.dtpFecha.TabIndex = 31
@@ -185,47 +185,16 @@ Partial Class frmMovimientoVentas
         Me.dgVenta.AllowUserToAddRows = False
         Me.dgVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgVenta.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
-        Me.dgVenta.Location = New System.Drawing.Point(12, 222)
+        Me.dgVenta.Location = New System.Drawing.Point(109, 208)
         Me.dgVenta.Name = "dgVenta"
-        Me.dgVenta.Size = New System.Drawing.Size(710, 150)
+        Me.dgVenta.Size = New System.Drawing.Size(697, 150)
         Me.dgVenta.TabIndex = 62
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "idProducto"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "Producto"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        Me.Column2.Width = 265
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "Cantidad"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "Precio"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Importe"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
         '
         'txtTotal
         '
         Me.txtTotal.Enabled = False
         Me.txtTotal.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtTotal.Location = New System.Drawing.Point(608, 383)
+        Me.txtTotal.Location = New System.Drawing.Point(692, 364)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(114, 27)
         Me.txtTotal.TabIndex = 64
@@ -236,7 +205,7 @@ Partial Class frmMovimientoVentas
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(554, 386)
+        Me.Label7.Location = New System.Drawing.Point(638, 367)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(48, 20)
         Me.Label7.TabIndex = 63
@@ -248,9 +217,9 @@ Partial Class frmMovimientoVentas
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.dtpFecha)
-        Me.GroupBox1.Location = New System.Drawing.Point(43, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(105, 18)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(474, 53)
+        Me.GroupBox1.Size = New System.Drawing.Size(531, 47)
         Me.GroupBox1.TabIndex = 69
         Me.GroupBox1.TabStop = False
         '
@@ -268,7 +237,7 @@ Partial Class frmMovimientoVentas
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.txtPrecio)
         Me.GroupBox2.Controls.Add(Me.btnAceptar)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 71)
+        Me.GroupBox2.Location = New System.Drawing.Point(105, 71)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(531, 131)
         Me.GroupBox2.TabIndex = 70
@@ -329,7 +298,7 @@ Partial Class frmMovimientoVentas
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(455, 378)
+        Me.btnSalir.Location = New System.Drawing.Point(12, 71)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(87, 39)
         Me.btnSalir.TabIndex = 68
@@ -344,7 +313,7 @@ Partial Class frmMovimientoVentas
         Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(299, 378)
+        Me.btnCancelar.Location = New System.Drawing.Point(443, 364)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(101, 39)
         Me.btnCancelar.TabIndex = 67
@@ -359,9 +328,9 @@ Partial Class frmMovimientoVentas
         Me.btnGrabar.ForeColor = System.Drawing.Color.Black
         Me.btnGrabar.Image = Global.ThinkCoffee.My.Resources.Resources.Burn_CD_30
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGrabar.Location = New System.Drawing.Point(158, 378)
+        Me.btnGrabar.Location = New System.Drawing.Point(289, 364)
         Me.btnGrabar.Name = "btnGrabar"
-        Me.btnGrabar.Size = New System.Drawing.Size(87, 39)
+        Me.btnGrabar.Size = New System.Drawing.Size(101, 39)
         Me.btnGrabar.TabIndex = 66
         Me.btnGrabar.Text = "Grabar"
         Me.btnGrabar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -373,7 +342,7 @@ Partial Class frmMovimientoVentas
         Me.btnNuevo.ForeColor = System.Drawing.Color.Black
         Me.btnNuevo.Image = Global.ThinkCoffee.My.Resources.Resources.Add_List_30
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(12, 378)
+        Me.btnNuevo.Location = New System.Drawing.Point(12, 18)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(87, 39)
         Me.btnNuevo.TabIndex = 65
@@ -384,18 +353,49 @@ Partial Class frmMovimientoVentas
         'ptbImagen
         '
         Me.ptbImagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.ptbImagen.Location = New System.Drawing.Point(558, 24)
+        Me.ptbImagen.Location = New System.Drawing.Point(642, 24)
         Me.ptbImagen.Name = "ptbImagen"
         Me.ptbImagen.Size = New System.Drawing.Size(164, 178)
         Me.ptbImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.ptbImagen.TabIndex = 56
         Me.ptbImagen.TabStop = False
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = "idProducto"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Producto"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 250
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Cantidad"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Precio"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Importe"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        '
         'frmMovimientoVentas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(762, 425)
+        Me.ClientSize = New System.Drawing.Size(822, 415)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnSalir)
@@ -442,13 +442,13 @@ Partial Class frmMovimientoVentas
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents btnBuscar As Button
+    Friend WithEvents txtCategoria As TextBox
+    Friend WithEvents txtNombreP As TextBox
+    Friend WithEvents txtIdProducto As TextBox
+    Friend WithEvents Label8 As Label
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents txtCategoria As TextBox
-    Friend WithEvents txtNombreP As TextBox
-    Friend WithEvents txtIdProducto As TextBox
-    Friend WithEvents Label8 As Label
 End Class

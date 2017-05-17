@@ -54,7 +54,6 @@ Module Module1
         frmCatalogoInsumos.txtMax.Enabled = True
         frmCatalogoInsumos.txtMin.Enabled = True
         frmCatalogoInsumos.txtExist.Enabled = True
-        frmCatalogoInsumos.txtCosto.Enabled = True
         frmCatalogoInsumos.btnAceptar.Enabled = True
     End Sub
 
@@ -65,7 +64,6 @@ Module Module1
         frmCatalogoInsumos.txtMax.Enabled = False
         frmCatalogoInsumos.txtMin.Enabled = False
         frmCatalogoInsumos.txtExist.Enabled = False
-        frmCatalogoInsumos.txtCosto.Enabled = False
         frmCatalogoInsumos.btnAceptar.Enabled = False
 
     End Sub
@@ -75,7 +73,6 @@ Module Module1
         frmCatalogoInsumos.txtMax.Text = vbEmpty
         frmCatalogoInsumos.txtMin.Text = vbEmpty
         frmCatalogoInsumos.txtExist.Text = vbEmpty
-        frmCatalogoInsumos.txtCosto.Text = vbEmpty
 
     End Sub
     '-*****************************************ventas otros*-----------------------------------
@@ -230,5 +227,9 @@ Module Module1
 
     Public Sub mensajeGrabar()
         MessageBox.Show("SU INFORMACIÓN HA SIDO GUARDADA", "REGISTRO COMPLETO", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Public Sub mensajeVenta()
+        MessageBox.Show("VENTA REGISTRADA CON EXITO", "REGISTRO COMPLETO", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 End Module

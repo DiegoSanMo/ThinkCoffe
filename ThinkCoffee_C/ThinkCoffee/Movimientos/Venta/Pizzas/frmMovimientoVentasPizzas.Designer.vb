@@ -51,7 +51,7 @@ Partial Class frmMovimientoVentasPizzas
         '
         Me.gbMixta.Controls.Add(Me.CheckedListBox1)
         Me.gbMixta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.gbMixta.Location = New System.Drawing.Point(22, 184)
+        Me.gbMixta.Location = New System.Drawing.Point(122, 184)
         Me.gbMixta.Name = "gbMixta"
         Me.gbMixta.Size = New System.Drawing.Size(690, 184)
         Me.gbMixta.TabIndex = 71
@@ -110,7 +110,7 @@ Partial Class frmMovimientoVentasPizzas
         Me.GroupBox2.Controls.Add(Me.txtPrecio)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.cboTamaño)
-        Me.GroupBox2.Location = New System.Drawing.Point(22, 71)
+        Me.GroupBox2.Location = New System.Drawing.Point(122, 71)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(684, 107)
         Me.GroupBox2.TabIndex = 82
@@ -183,7 +183,7 @@ Partial Class frmMovimientoVentasPizzas
         '
         'btnCrear
         '
-        Me.btnCrear.Location = New System.Drawing.Point(718, 26)
+        Me.btnCrear.Location = New System.Drawing.Point(12, 76)
         Me.btnCrear.Name = "btnCrear"
         Me.btnCrear.Size = New System.Drawing.Size(100, 36)
         Me.btnCrear.TabIndex = 84
@@ -196,7 +196,7 @@ Partial Class frmMovimientoVentasPizzas
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.dtpFecha)
-        Me.GroupBox1.Location = New System.Drawing.Point(22, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(122, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(684, 53)
         Me.GroupBox1.TabIndex = 83
@@ -251,7 +251,7 @@ Partial Class frmMovimientoVentasPizzas
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(718, 251)
+        Me.btnSalir.Location = New System.Drawing.Point(12, 118)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(100, 36)
         Me.btnSalir.TabIndex = 88
@@ -266,7 +266,7 @@ Partial Class frmMovimientoVentasPizzas
         Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(718, 176)
+        Me.btnCancelar.Location = New System.Drawing.Point(477, 374)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(100, 36)
         Me.btnCancelar.TabIndex = 87
@@ -281,7 +281,7 @@ Partial Class frmMovimientoVentasPizzas
         Me.btnGrabar.ForeColor = System.Drawing.Color.Black
         Me.btnGrabar.Image = Global.ThinkCoffee.My.Resources.Resources.Burn_CD_30
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGrabar.Location = New System.Drawing.Point(718, 101)
+        Me.btnGrabar.Location = New System.Drawing.Point(280, 374)
         Me.btnGrabar.Name = "btnGrabar"
         Me.btnGrabar.Size = New System.Drawing.Size(100, 36)
         Me.btnGrabar.TabIndex = 86
@@ -293,7 +293,7 @@ Partial Class frmMovimientoVentasPizzas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(840, 380)
+        Me.ClientSize = New System.Drawing.Size(828, 421)
         Me.Controls.Add(Me.btnCrear)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnCancelar)

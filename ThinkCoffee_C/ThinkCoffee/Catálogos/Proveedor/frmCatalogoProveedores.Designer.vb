@@ -41,10 +41,6 @@ Partial Class frmCatalogoProveedores
         Me.btnMinimizar = New System.Windows.Forms.Button()
         Me.btnCerrar = New System.Windows.Forms.Button()
         Me.ptbBarra = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.mskTelefono = New System.Windows.Forms.MaskedTextBox()
@@ -133,9 +129,9 @@ Partial Class frmCatalogoProveedores
         Me.dgProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgProveedores.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column8})
         Me.dgProveedores.GridColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.dgProveedores.Location = New System.Drawing.Point(15, 310)
+        Me.dgProveedores.Location = New System.Drawing.Point(145, 233)
         Me.dgProveedores.Name = "dgProveedores"
-        Me.dgProveedores.Size = New System.Drawing.Size(665, 184)
+        Me.dgProveedores.Size = New System.Drawing.Size(686, 184)
         Me.dgProveedores.TabIndex = 22
         '
         'Column1
@@ -171,7 +167,7 @@ Partial Class frmCatalogoProveedores
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(531, 509)
+        Me.btnSalir.Location = New System.Drawing.Point(32, 144)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(87, 39)
         Me.btnSalir.TabIndex = 26
@@ -186,7 +182,7 @@ Partial Class frmCatalogoProveedores
         Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(372, 509)
+        Me.btnCancelar.Location = New System.Drawing.Point(473, 423)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(101, 39)
         Me.btnCancelar.TabIndex = 25
@@ -201,7 +197,7 @@ Partial Class frmCatalogoProveedores
         Me.btnGrabar.ForeColor = System.Drawing.Color.Black
         Me.btnGrabar.Image = Global.ThinkCoffee.My.Resources.Resources.Burn_CD_30
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGrabar.Location = New System.Drawing.Point(200, 509)
+        Me.btnGrabar.Location = New System.Drawing.Point(307, 423)
         Me.btnGrabar.Name = "btnGrabar"
         Me.btnGrabar.Size = New System.Drawing.Size(87, 39)
         Me.btnGrabar.TabIndex = 24
@@ -215,7 +211,7 @@ Partial Class frmCatalogoProveedores
         Me.btnNuevo.ForeColor = System.Drawing.Color.Black
         Me.btnNuevo.Image = Global.ThinkCoffee.My.Resources.Resources.Add_List_30
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(56, 509)
+        Me.btnNuevo.Location = New System.Drawing.Point(32, 94)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(87, 39)
         Me.btnNuevo.TabIndex = 23
@@ -234,7 +230,7 @@ Partial Class frmCatalogoProveedores
         Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMinimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnMinimizar.Image = Global.ThinkCoffee.My.Resources.Resources.Minimize_Window_30
-        Me.btnMinimizar.Location = New System.Drawing.Point(644, 0)
+        Me.btnMinimizar.Location = New System.Drawing.Point(785, 0)
         Me.btnMinimizar.Name = "btnMinimizar"
         Me.btnMinimizar.Size = New System.Drawing.Size(36, 33)
         Me.btnMinimizar.TabIndex = 19
@@ -253,7 +249,7 @@ Partial Class frmCatalogoProveedores
         Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnCerrar.Image = Global.ThinkCoffee.My.Resources.Resources.Close_Window_30
-        Me.btnCerrar.Location = New System.Drawing.Point(676, 0)
+        Me.btnCerrar.Location = New System.Drawing.Point(817, 0)
         Me.btnCerrar.Name = "btnCerrar"
         Me.btnCerrar.Size = New System.Drawing.Size(36, 33)
         Me.btnCerrar.TabIndex = 18
@@ -267,54 +263,10 @@ Partial Class frmCatalogoProveedores
         Me.ptbBarra.Image = Global.ThinkCoffee.My.Resources.Resources.BarraSuperior
         Me.ptbBarra.Location = New System.Drawing.Point(0, 0)
         Me.ptbBarra.Name = "ptbBarra"
-        Me.ptbBarra.Size = New System.Drawing.Size(710, 33)
+        Me.ptbBarra.Size = New System.Drawing.Size(851, 33)
         Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.ptbBarra.TabIndex = 0
         Me.ptbBarra.TabStop = False
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Location = New System.Drawing.Point(51, 262)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(92, 32)
-        Me.Button1.TabIndex = 27
-        Me.Button1.Text = "Inicio"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.Black
-        Me.Button2.Location = New System.Drawing.Point(220, 262)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(92, 32)
-        Me.Button2.TabIndex = 28
-        Me.Button2.Text = "Siguiente"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.Black
-        Me.Button3.Location = New System.Drawing.Point(389, 262)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(92, 32)
-        Me.Button3.TabIndex = 29
-        Me.Button3.Text = "Anterior"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.Black
-        Me.Button4.Location = New System.Drawing.Point(558, 262)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(92, 32)
-        Me.Button4.TabIndex = 30
-        Me.Button4.Text = "Último"
-        Me.Button4.UseVisualStyleBackColor = True
         '
         'Label4
         '
@@ -339,9 +291,9 @@ Partial Class frmCatalogoProveedores
         Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Location = New System.Drawing.Point(15, 94)
+        Me.GroupBox1.Location = New System.Drawing.Point(145, 94)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(686, 149)
+        Me.GroupBox1.Size = New System.Drawing.Size(686, 133)
         Me.GroupBox1.TabIndex = 31
         Me.GroupBox1.TabStop = False
         '
@@ -375,12 +327,8 @@ Partial Class frmCatalogoProveedores
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.ThinkCoffee.My.Resources.Resources.fondo_formulario_1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(710, 558)
+        Me.ClientSize = New System.Drawing.Size(851, 469)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnGrabar)
@@ -419,14 +367,10 @@ Partial Class frmCatalogoProveedores
     Friend WithEvents btnGrabar As Button
     Friend WithEvents btnCancelar As Button
     Friend WithEvents btnSalir As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnAceptar As Button

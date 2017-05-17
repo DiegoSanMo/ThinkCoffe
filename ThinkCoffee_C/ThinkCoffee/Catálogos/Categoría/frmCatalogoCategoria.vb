@@ -197,7 +197,5 @@ Public Class frmCatalogoCategoria
         txtIdCategoria.Text = dgCategoria(0, filaSel).Value
         txtNombre.Text = dgCategoria(1, filaSel).Value
 
-
-
     End Sub
 End Class
