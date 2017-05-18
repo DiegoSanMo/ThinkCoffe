@@ -93,7 +93,7 @@
         detallesCompra.dtpFecha.Value = lector(2)
         lector.Close()
 
-        comando.CommandText = "select tlb_compra.idCompra, tlb_detCompra.idInsumo, tlb_insumo.nombre, tlb_detCompra.cantidad, tlb_detCompra.costo from tlb_detCompra inner join tlb_insumo.idInsumo on tlb_detCompra.idInsumo = tlb_detCompra.idInsumo where tlb_detCompra.idCompra = " & idCom & ""
+        comando.CommandText = "select tlb_detCompra.idCompra, tlb_detCompra.idInsumo, tlb_insumo.nombre, tlb_detCompra.cantidad, tlb_detCompra.costo from tlb_detCompra inner join tlb_insumo on tlb_detCompra.idInsumo = tlb_insumo.idInsumo where tlb_detCompra.idCompra = " & idCom & ""
         lector = comando.ExecuteReader
         detallesCompra.dgInsumos.Rows.Clear()
         While lector.Read
