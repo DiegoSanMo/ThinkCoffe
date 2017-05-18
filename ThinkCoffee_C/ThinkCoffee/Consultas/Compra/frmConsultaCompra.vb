@@ -36,6 +36,7 @@
                 MessageBox.Show("NO SE HA INGRESADO PROVEEDOR", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 btnBuscarP.Focus()
             Else
+                dgCompra.Rows.Clear()
                 comando.CommandText = "Select tlb_compra.idCompra, tlb_proveedor.nombre, tlb_compra.fecha, tlb_compra.total from tlb_compra inner join tlb_proveedor on tlb_proveedor.idProveedor = tlb_compra.idProveedor where tlb_proveedor.nombre = '" & txtProveedor.Text & "'"
                 lector = comando.ExecuteReader
                 While lector.Read
@@ -82,6 +83,10 @@
     End Sub
 
     Private Sub btnDetalles_Click(sender As Object, e As EventArgs) Handles btnDetalles.Click
-        detallesCompra.ShowDialog()
+        Dim fila As Integer = dgCompra.CurrentRow.Index
+        Dim idCom As Integer = CInt(dgCompra(0, fila).Value)
+
+
+        'detallesCompra.ShowDialog()
     End Sub
 End Class
