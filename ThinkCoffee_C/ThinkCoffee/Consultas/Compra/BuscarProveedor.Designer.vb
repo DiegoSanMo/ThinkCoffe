@@ -23,9 +23,9 @@ Partial Class BuscarProveedor
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgProv = New System.Windows.Forms.DataGridView()
-        Me.btnAceptar = New System.Windows.Forms.Button()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnAceptar = New System.Windows.Forms.Button()
         CType(Me.dgProv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -39,15 +39,6 @@ Partial Class BuscarProveedor
         Me.dgProv.Size = New System.Drawing.Size(607, 267)
         Me.dgProv.TabIndex = 0
         '
-        'btnAceptar
-        '
-        Me.btnAceptar.Location = New System.Drawing.Point(12, 285)
-        Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(607, 30)
-        Me.btnAceptar.TabIndex = 1
-        Me.btnAceptar.Text = "Aceptar"
-        Me.btnAceptar.UseVisualStyleBackColor = True
-        '
         'Column1
         '
         Me.Column1.HeaderText = "No.Proveedor"
@@ -60,6 +51,15 @@ Partial Class BuscarProveedor
         Me.Column2.Name = "Column2"
         Me.Column2.ReadOnly = True
         Me.Column2.Width = 450
+        '
+        'btnAceptar
+        '
+        Me.btnAceptar.Location = New System.Drawing.Point(12, 285)
+        Me.btnAceptar.Name = "btnAceptar"
+        Me.btnAceptar.Size = New System.Drawing.Size(607, 30)
+        Me.btnAceptar.TabIndex = 1
+        Me.btnAceptar.Text = "Aceptar"
+        Me.btnAceptar.UseVisualStyleBackColor = True
         '
         'BuscarProveedor
         '

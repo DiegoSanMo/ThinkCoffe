@@ -32,7 +32,7 @@
     Private Sub btnBuscarIn_Click(sender As Object, e As EventArgs) Handles btnBuscarIn.Click
         Dim n As Integer
         comando.CommandText = "Select count(*) from tlb_insumo"
-        n = comando.ExecuteScalar + 1
+        n = comando.ExecuteScalar
         If n > 1 Then
             Dim fila As Integer
             frmAgregarInsumo.dgInsumos.SelectionMode = DataGridViewSelectionMode.FullRowSelect

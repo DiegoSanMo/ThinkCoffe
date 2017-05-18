@@ -26,7 +26,6 @@ Partial Class frmConsultaCompra
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.lblFinal = New System.Windows.Forms.Label()
         Me.lblInicial = New System.Windows.Forms.Label()
-        Me.btnBuscarP = New System.Windows.Forms.Button()
         Me.txtProveedor = New System.Windows.Forms.TextBox()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.dtpFechaFinal = New System.Windows.Forms.DateTimePicker()
@@ -39,6 +38,7 @@ Partial Class frmConsultaCompra
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnDetalles = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
+        Me.btnBuscarP = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgCompra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -91,16 +91,6 @@ Partial Class frmConsultaCompra
         Me.lblInicial.TabIndex = 7
         Me.lblInicial.Text = "Fecha inicial"
         Me.lblInicial.Visible = False
-        '
-        'btnBuscarP
-        '
-        Me.btnBuscarP.Image = Global.ThinkCoffee.My.Resources.Resources.Search_20
-        Me.btnBuscarP.Location = New System.Drawing.Point(495, 24)
-        Me.btnBuscarP.Name = "btnBuscarP"
-        Me.btnBuscarP.Size = New System.Drawing.Size(49, 29)
-        Me.btnBuscarP.TabIndex = 6
-        Me.btnBuscarP.UseVisualStyleBackColor = True
-        Me.btnBuscarP.Visible = False
         '
         'txtProveedor
         '
@@ -206,6 +196,16 @@ Partial Class frmConsultaCompra
         Me.btnSalir.TabIndex = 10
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
+        '
+        'btnBuscarP
+        '
+        Me.btnBuscarP.Image = Global.ThinkCoffee.My.Resources.Resources.Search_20
+        Me.btnBuscarP.Location = New System.Drawing.Point(495, 24)
+        Me.btnBuscarP.Name = "btnBuscarP"
+        Me.btnBuscarP.Size = New System.Drawing.Size(49, 29)
+        Me.btnBuscarP.TabIndex = 6
+        Me.btnBuscarP.UseVisualStyleBackColor = True
+        Me.btnBuscarP.Visible = False
         '
         'frmConsultaCompra
         '

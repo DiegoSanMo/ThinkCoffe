@@ -39,13 +39,13 @@ Partial Class frmPrincipal
         Me.InsumosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RecetasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CompraDeInsumosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnMin = New System.Windows.Forms.Button()
-        Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBar.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -199,6 +199,20 @@ Partial Class frmPrincipal
         Me.RecetasToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
         Me.RecetasToolStripMenuItem.Text = "Recetas"
         '
+        'ComprasToolStripMenuItem
+        '
+        Me.ComprasToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Banknotes_50
+        Me.ComprasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ComprasToolStripMenuItem.Name = "ComprasToolStripMenuItem"
+        Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
+        Me.ComprasToolStripMenuItem.Text = "Compras"
+        '
+        'VentasToolStripMenuItem
+        '
+        Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
+        Me.VentasToolStripMenuItem.Text = "Ventas"
+        '
         'MovimientosToolStripMenuItem
         '
         Me.MovimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CompraDeInsumosToolStripMenuItem})
@@ -257,18 +271,6 @@ Partial Class frmPrincipal
         Me.btnMin.Text = ">>"
         Me.btnMin.UseVisualStyleBackColor = False
         Me.btnMin.Visible = False
-        '
-        'ComprasToolStripMenuItem
-        '
-        Me.ComprasToolStripMenuItem.Name = "ComprasToolStripMenuItem"
-        Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
-        Me.ComprasToolStripMenuItem.Text = "Compras"
-        '
-        'VentasToolStripMenuItem
-        '
-        Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
-        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
-        Me.VentasToolStripMenuItem.Text = "Ventas"
         '
         'frmPrincipal
         '
