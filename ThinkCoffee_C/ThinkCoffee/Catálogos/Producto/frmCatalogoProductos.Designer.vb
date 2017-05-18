@@ -51,13 +51,13 @@ Partial Class frmCatalogoProductos
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGrabar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.btnModificar = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ptbImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgProductos, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -82,7 +82,7 @@ Partial Class frmCatalogoProductos
         Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Location = New System.Drawing.Point(157, 68)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(681, 242)
+        Me.GroupBox1.Size = New System.Drawing.Size(681, 266)
         Me.GroupBox1.TabIndex = 63
         Me.GroupBox1.TabStop = False
         '
@@ -90,7 +90,7 @@ Partial Class frmCatalogoProductos
         '
         Me.btnBuscarR.Enabled = False
         Me.btnBuscarR.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.btnBuscarR.Location = New System.Drawing.Point(102, 139)
+        Me.btnBuscarR.Location = New System.Drawing.Point(359, 103)
         Me.btnBuscarR.Name = "btnBuscarR"
         Me.btnBuscarR.Size = New System.Drawing.Size(97, 29)
         Me.btnBuscarR.TabIndex = 61
@@ -101,7 +101,7 @@ Partial Class frmCatalogoProductos
         '
         Me.btnAceptar.Enabled = False
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.btnAceptar.Location = New System.Drawing.Point(383, 184)
+        Me.btnAceptar.Location = New System.Drawing.Point(279, 220)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(97, 29)
         Me.btnAceptar.TabIndex = 7
@@ -124,7 +124,7 @@ Partial Class frmCatalogoProductos
         '
         Me.txtPrecio.Enabled = False
         Me.txtPrecio.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtPrecio.Location = New System.Drawing.Point(103, 186)
+        Me.txtPrecio.Location = New System.Drawing.Point(360, 145)
         Me.txtPrecio.MaxLength = 7
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(99, 27)
@@ -137,7 +137,7 @@ Partial Class frmCatalogoProductos
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label14.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label14.Location = New System.Drawing.Point(26, 189)
+        Me.Label14.Location = New System.Drawing.Point(283, 148)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(70, 20)
         Me.Label14.TabIndex = 60
@@ -151,6 +151,7 @@ Partial Class frmCatalogoProductos
         Me.txtIdCategoria.Name = "txtIdCategoria"
         Me.txtIdCategoria.Size = New System.Drawing.Size(100, 27)
         Me.txtIdCategoria.TabIndex = 59
+        Me.txtIdCategoria.Visible = False
         '
         'Label12
         '
@@ -164,6 +165,7 @@ Partial Class frmCatalogoProductos
         Me.Label12.Size = New System.Drawing.Size(98, 20)
         Me.Label12.TabIndex = 58
         Me.Label12.Text = "idCategoria"
+        Me.Label12.Visible = False
         '
         'Label13
         '
@@ -206,6 +208,7 @@ Partial Class frmCatalogoProductos
         Me.txtIdReceta.Name = "txtIdReceta"
         Me.txtIdReceta.Size = New System.Drawing.Size(100, 27)
         Me.txtIdReceta.TabIndex = 54
+        Me.txtIdReceta.Visible = False
         '
         'Label11
         '
@@ -219,6 +222,7 @@ Partial Class frmCatalogoProductos
         Me.Label11.Size = New System.Drawing.Size(75, 20)
         Me.Label11.TabIndex = 53
         Me.Label11.Text = "idReceta"
+        Me.Label11.Visible = False
         '
         'Label9
         '
@@ -226,7 +230,7 @@ Partial Class frmCatalogoProductos
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label9.Location = New System.Drawing.Point(36, 144)
+        Me.Label9.Location = New System.Drawing.Point(293, 108)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(60, 20)
         Me.Label9.TabIndex = 52
@@ -279,7 +283,7 @@ Partial Class frmCatalogoProductos
         Me.dgProductos.AllowUserToAddRows = False
         Me.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column4, Me.Column2, Me.Column5, Me.Column6})
-        Me.dgProductos.Location = New System.Drawing.Point(157, 316)
+        Me.dgProductos.Location = New System.Drawing.Point(157, 342)
         Me.dgProductos.Name = "dgProductos"
         Me.dgProductos.Size = New System.Drawing.Size(681, 174)
         Me.dgProductos.TabIndex = 54
@@ -321,11 +325,11 @@ Partial Class frmCatalogoProductos
         '
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Adobe Gothic Std B", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(255, 9)
+        Me.Label10.Location = New System.Drawing.Point(322, 16)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(202, 40)
+        Me.Label10.Size = New System.Drawing.Size(229, 37)
         Me.Label10.TabIndex = 53
         Me.Label10.Text = "PRODUCTOS"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -336,7 +340,7 @@ Partial Class frmCatalogoProductos
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(29, 175)
+        Me.btnSalir.Location = New System.Drawing.Point(7, 394)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(103, 39)
         Me.btnSalir.TabIndex = 62
@@ -351,7 +355,7 @@ Partial Class frmCatalogoProductos
         Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(587, 496)
+        Me.btnCancelar.Location = New System.Drawing.Point(6, 134)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(101, 39)
         Me.btnCancelar.TabIndex = 61
@@ -366,9 +370,9 @@ Partial Class frmCatalogoProductos
         Me.btnGrabar.ForeColor = System.Drawing.Color.Black
         Me.btnGrabar.Image = Global.ThinkCoffee.My.Resources.Resources.Burn_CD_30
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGrabar.Location = New System.Drawing.Point(318, 496)
+        Me.btnGrabar.Location = New System.Drawing.Point(6, 77)
         Me.btnGrabar.Name = "btnGrabar"
-        Me.btnGrabar.Size = New System.Drawing.Size(87, 39)
+        Me.btnGrabar.Size = New System.Drawing.Size(103, 39)
         Me.btnGrabar.TabIndex = 60
         Me.btnGrabar.Text = "Grabar"
         Me.btnGrabar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -380,23 +384,13 @@ Partial Class frmCatalogoProductos
         Me.btnNuevo.ForeColor = System.Drawing.Color.Black
         Me.btnNuevo.Image = Global.ThinkCoffee.My.Resources.Resources.Add_List_30
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(29, 81)
+        Me.btnNuevo.Location = New System.Drawing.Point(6, 19)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(103, 39)
         Me.btnNuevo.TabIndex = 59
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnNuevo.UseVisualStyleBackColor = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.LightSlateGray
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(872, 50)
-        Me.PictureBox1.TabIndex = 64
-        Me.PictureBox1.TabStop = False
         '
         'OpenFileDialog1
         '
@@ -410,13 +404,27 @@ Partial Class frmCatalogoProductos
         Me.btnModificar.ForeColor = System.Drawing.Color.Black
         Me.btnModificar.Image = Global.ThinkCoffee.My.Resources.Resources.Sort_By_Modified_Date_30
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnModificar.Location = New System.Drawing.Point(29, 130)
+        Me.btnModificar.Location = New System.Drawing.Point(6, 196)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(103, 39)
         Me.btnModificar.TabIndex = 61
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnModificar.UseVisualStyleBackColor = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox2.Controls.Add(Me.btnNuevo)
+        Me.GroupBox2.Controls.Add(Me.btnModificar)
+        Me.GroupBox2.Controls.Add(Me.btnGrabar)
+        Me.GroupBox2.Controls.Add(Me.btnCancelar)
+        Me.GroupBox2.Controls.Add(Me.btnSalir)
+        Me.GroupBox2.Location = New System.Drawing.Point(28, 68)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(123, 448)
+        Me.GroupBox2.TabIndex = 62
+        Me.GroupBox2.TabStop = False
         '
         'frmCatalogoProductos
         '
@@ -425,16 +433,11 @@ Partial Class frmCatalogoProductos
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.BackgroundImage = Global.ThinkCoffee.My.Resources.Resources.fondo_formulario_1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(872, 547)
-        Me.Controls.Add(Me.btnModificar)
+        Me.ClientSize = New System.Drawing.Size(872, 530)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.btnSalir)
-        Me.Controls.Add(Me.btnCancelar)
-        Me.Controls.Add(Me.btnGrabar)
-        Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.dgProductos)
-        Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmCatalogoProductos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -443,7 +446,7 @@ Partial Class frmCatalogoProductos
         Me.GroupBox1.PerformLayout()
         CType(Me.ptbImagen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgProductos, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -471,8 +474,6 @@ Partial Class frmCatalogoProductos
     Friend WithEvents btnBuscar As Button
     Friend WithEvents txtPrecio As TextBox
     Friend WithEvents Label14 As Label
-
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents btnAceptar As Button
     Friend WithEvents btnModificar As Button
@@ -482,4 +483,5 @@ Partial Class frmCatalogoProductos
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents btnBuscarR As Button
+    Friend WithEvents GroupBox2 As GroupBox
 End Class

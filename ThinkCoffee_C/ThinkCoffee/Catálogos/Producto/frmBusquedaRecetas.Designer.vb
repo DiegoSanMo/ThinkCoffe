@@ -34,24 +34,27 @@ Partial Class frmBusquedaRecetas
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(22, 50)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(22, 30)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(42, 13)
+        Me.Label1.Size = New System.Drawing.Size(60, 20)
         Me.Label1.TabIndex = 59
         Me.Label1.Text = "Receta"
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(70, 47)
+        Me.txtNombre.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtNombre.Location = New System.Drawing.Point(88, 27)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(323, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(323, 27)
         Me.txtNombre.TabIndex = 58
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(408, 47)
+        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnAgregar.Location = New System.Drawing.Point(417, 28)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(117, 22)
+        Me.btnAgregar.Size = New System.Drawing.Size(117, 27)
         Me.btnAgregar.TabIndex = 57
         Me.btnAgregar.Text = "Agregar receta"
         Me.btnAgregar.UseVisualStyleBackColor = True
@@ -61,7 +64,7 @@ Partial Class frmBusquedaRecetas
         Me.dgBusquedaRecetas.AllowUserToAddRows = False
         Me.dgBusquedaRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgBusquedaRecetas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
-        Me.dgBusquedaRecetas.Location = New System.Drawing.Point(12, 75)
+        Me.dgBusquedaRecetas.Location = New System.Drawing.Point(12, 73)
         Me.dgBusquedaRecetas.Name = "dgBusquedaRecetas"
         Me.dgBusquedaRecetas.Size = New System.Drawing.Size(553, 205)
         Me.dgBusquedaRecetas.TabIndex = 56

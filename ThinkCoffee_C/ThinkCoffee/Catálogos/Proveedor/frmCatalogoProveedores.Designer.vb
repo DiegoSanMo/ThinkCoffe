@@ -45,9 +45,13 @@ Partial Class frmCatalogoProveedores
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.mskTelefono = New System.Windows.Forms.MaskedTextBox()
         Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.btnModificar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         CType(Me.dgProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -114,11 +118,11 @@ Partial Class frmCatalogoProveedores
         '
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Adobe Gothic Std B", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label10.Location = New System.Drawing.Point(228, 51)
+        Me.Label10.Location = New System.Drawing.Point(280, 51)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(234, 40)
+        Me.Label10.Size = New System.Drawing.Size(272, 37)
         Me.Label10.TabIndex = 21
         Me.Label10.Text = "PROVEEDORES"
         Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -167,9 +171,9 @@ Partial Class frmCatalogoProveedores
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(32, 144)
+        Me.btnSalir.Location = New System.Drawing.Point(15, 272)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(87, 39)
+        Me.btnSalir.Size = New System.Drawing.Size(101, 39)
         Me.btnSalir.TabIndex = 26
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -182,7 +186,7 @@ Partial Class frmCatalogoProveedores
         Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(473, 423)
+        Me.btnCancelar.Location = New System.Drawing.Point(198, 144)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(101, 39)
         Me.btnCancelar.TabIndex = 25
@@ -197,9 +201,9 @@ Partial Class frmCatalogoProveedores
         Me.btnGrabar.ForeColor = System.Drawing.Color.Black
         Me.btnGrabar.Image = Global.ThinkCoffee.My.Resources.Resources.Burn_CD_30
         Me.btnGrabar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGrabar.Location = New System.Drawing.Point(307, 423)
+        Me.btnGrabar.Location = New System.Drawing.Point(15, 64)
         Me.btnGrabar.Name = "btnGrabar"
-        Me.btnGrabar.Size = New System.Drawing.Size(87, 39)
+        Me.btnGrabar.Size = New System.Drawing.Size(101, 39)
         Me.btnGrabar.TabIndex = 24
         Me.btnGrabar.Text = "Grabar"
         Me.btnGrabar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -211,9 +215,9 @@ Partial Class frmCatalogoProveedores
         Me.btnNuevo.ForeColor = System.Drawing.Color.Black
         Me.btnNuevo.Image = Global.ThinkCoffee.My.Resources.Resources.Add_List_30
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(32, 94)
+        Me.btnNuevo.Location = New System.Drawing.Point(15, 15)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(87, 39)
+        Me.btnNuevo.Size = New System.Drawing.Size(101, 39)
         Me.btnNuevo.TabIndex = 23
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -320,6 +324,49 @@ Partial Class frmCatalogoProveedores
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
+        'btnModificar
+        '
+        Me.btnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar.ForeColor = System.Drawing.Color.Black
+        Me.btnModificar.Image = Global.ThinkCoffee.My.Resources.Resources.Sort_By_Modified_Date_30
+        Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnModificar.Location = New System.Drawing.Point(15, 170)
+        Me.btnModificar.Name = "btnModificar"
+        Me.btnModificar.Size = New System.Drawing.Size(101, 39)
+        Me.btnModificar.TabIndex = 62
+        Me.btnModificar.Text = "Modificar"
+        Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnModificar.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Enabled = False
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Black
+        Me.Button1.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(15, 115)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(101, 39)
+        Me.Button1.TabIndex = 63
+        Me.Button1.Text = "Cancelar"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox2.Controls.Add(Me.btnNuevo)
+        Me.GroupBox2.Controls.Add(Me.btnModificar)
+        Me.GroupBox2.Controls.Add(Me.btnGrabar)
+        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.btnSalir)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 94)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(127, 323)
+        Me.GroupBox2.TabIndex = 8
+        Me.GroupBox2.TabStop = False
+        '
         'frmCatalogoProveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -327,12 +374,10 @@ Partial Class frmCatalogoProveedores
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImage = Global.ThinkCoffee.My.Resources.Resources.fondo_formulario_1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(851, 469)
+        Me.ClientSize = New System.Drawing.Size(851, 436)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnCancelar)
-        Me.Controls.Add(Me.btnGrabar)
-        Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.dgProveedores)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.btnMinimizar)
@@ -347,6 +392,7 @@ Partial Class frmCatalogoProveedores
         CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -375,4 +421,7 @@ Partial Class frmCatalogoProveedores
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnAceptar As Button
     Friend WithEvents mskTelefono As MaskedTextBox
+    Friend WithEvents btnModificar As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents GroupBox2 As GroupBox
 End Class

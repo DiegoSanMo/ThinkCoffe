@@ -38,7 +38,7 @@ Partial Class frmAgregarInsumo
         Me.dgInsumos.AllowUserToAddRows = False
         Me.dgInsumos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgInsumos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.Column1, Me.DataGridViewTextBoxColumn3})
-        Me.dgInsumos.Location = New System.Drawing.Point(12, 77)
+        Me.dgInsumos.Location = New System.Drawing.Point(12, 58)
         Me.dgInsumos.Name = "dgInsumos"
         Me.dgInsumos.Size = New System.Drawing.Size(599, 205)
         Me.dgInsumos.TabIndex = 52
@@ -69,34 +69,37 @@ Partial Class frmAgregarInsumo
         '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(408, 49)
+        Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnAgregar.Location = New System.Drawing.Point(460, 19)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(117, 22)
+        Me.btnAgregar.Size = New System.Drawing.Size(149, 27)
         Me.btnAgregar.TabIndex = 53
-        Me.btnAgregar.Text = "Agregar insumos"
+        Me.btnAgregar.Text = "Agregar ingrediente"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(70, 49)
+        Me.txtNombre.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtNombre.Location = New System.Drawing.Point(124, 19)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(323, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(323, 27)
         Me.txtNombre.TabIndex = 54
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(22, 52)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(22, 21)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 13)
+        Me.Label1.Size = New System.Drawing.Size(96, 20)
         Me.Label1.TabIndex = 55
-        Me.Label1.Text = "Nombre"
+        Me.Label1.Text = "Ingrediente"
         '
         'frmAgregarInsumo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(623, 307)
+        Me.ClientSize = New System.Drawing.Size(623, 279)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.btnAgregar)

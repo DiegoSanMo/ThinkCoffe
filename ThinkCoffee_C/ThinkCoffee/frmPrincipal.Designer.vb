@@ -89,13 +89,13 @@ Partial Class frmPrincipal
         'RegistroToolStripMenuItem
         '
         Me.RegistroToolStripMenuItem.Name = "RegistroToolStripMenuItem"
-        Me.RegistroToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.RegistroToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.RegistroToolStripMenuItem.Text = "Registro"
         '
         'ModificaciónToolStripMenuItem
         '
         Me.ModificaciónToolStripMenuItem.Name = "ModificaciónToolStripMenuItem"
-        Me.ModificaciónToolStripMenuItem.Size = New System.Drawing.Size(144, 22)
+        Me.ModificaciónToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ModificaciónToolStripMenuItem.Text = "Modificación"
         '
         'ProveedoresToolStripMenuItem1
@@ -177,7 +177,7 @@ Partial Class frmPrincipal
         Me.CategoríaToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Tree_Structure_50
         Me.CategoríaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CategoríaToolStripMenuItem.Name = "CategoríaToolStripMenuItem"
-        Me.CategoríaToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
+        Me.CategoríaToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
         Me.CategoríaToolStripMenuItem.Text = "Categoría"
         '
         'InsumosToolStripMenuItem
@@ -185,7 +185,7 @@ Partial Class frmPrincipal
         Me.InsumosToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Vegetarian_Food_50
         Me.InsumosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.InsumosToolStripMenuItem.Name = "InsumosToolStripMenuItem"
-        Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
+        Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
         Me.InsumosToolStripMenuItem.Text = "Insumos"
         '
         'ProductosToolStripMenuItem
@@ -193,7 +193,7 @@ Partial Class frmPrincipal
         Me.ProductosToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Coffee_to_Go_50
         Me.ProductosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
         Me.ProductosToolStripMenuItem.Text = "Productos"
         '
         'RecetasToolStripMenuItem
@@ -201,7 +201,7 @@ Partial Class frmPrincipal
         Me.RecetasToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Book_48
         Me.RecetasToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.RecetasToolStripMenuItem.Name = "RecetasToolStripMenuItem"
-        Me.RecetasToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
+        Me.RecetasToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
         Me.RecetasToolStripMenuItem.Text = "Recetas"
         '
         'ProveedoresToolStripMenuItem
@@ -209,7 +209,7 @@ Partial Class frmPrincipal
         Me.ProveedoresToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Conference_48
         Me.ProveedoresToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(173, 56)
+        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
         Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
         '
         'MovimientosToolStripMenuItem

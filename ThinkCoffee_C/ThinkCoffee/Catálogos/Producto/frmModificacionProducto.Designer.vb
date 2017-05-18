@@ -77,7 +77,7 @@ Partial Class frmModificacionProducto
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtNombre)
-        Me.GroupBox1.Location = New System.Drawing.Point(391, 67)
+        Me.GroupBox1.Location = New System.Drawing.Point(391, 87)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(681, 318)
         Me.GroupBox1.TabIndex = 64
@@ -306,7 +306,7 @@ Partial Class frmModificacionProducto
         Me.dgModificacion.AllowUserToAddRows = False
         Me.dgModificacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgModificacion.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2})
-        Me.dgModificacion.Location = New System.Drawing.Point(10, 112)
+        Me.dgModificacion.Location = New System.Drawing.Point(10, 132)
         Me.dgModificacion.Name = "dgModificacion"
         Me.dgModificacion.Size = New System.Drawing.Size(365, 264)
         Me.dgModificacion.TabIndex = 65
@@ -330,7 +330,7 @@ Partial Class frmModificacionProducto
         Me.btnModificar.ForeColor = System.Drawing.Color.Black
         Me.btnModificar.Image = Global.ThinkCoffee.My.Resources.Resources.Sort_By_Modified_Date_30
         Me.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnModificar.Location = New System.Drawing.Point(41, 382)
+        Me.btnModificar.Location = New System.Drawing.Point(41, 402)
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.Size = New System.Drawing.Size(103, 39)
         Me.btnModificar.TabIndex = 67
@@ -344,7 +344,7 @@ Partial Class frmModificacionProducto
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(197, 382)
+        Me.btnSalir.Location = New System.Drawing.Point(197, 402)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(87, 39)
         Me.btnSalir.TabIndex = 69
@@ -355,7 +355,7 @@ Partial Class frmModificacionProducto
         'txtNombreP
         '
         Me.txtNombreP.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtNombreP.Location = New System.Drawing.Point(12, 67)
+        Me.txtNombreP.Location = New System.Drawing.Point(12, 87)
         Me.txtNombreP.Name = "txtNombreP"
         Me.txtNombreP.Size = New System.Drawing.Size(363, 27)
         Me.txtNombreP.TabIndex = 70
@@ -366,7 +366,7 @@ Partial Class frmModificacionProducto
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(12, 44)
+        Me.Label3.Location = New System.Drawing.Point(12, 64)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(173, 20)
         Me.Label3.TabIndex = 69
@@ -376,11 +376,11 @@ Partial Class frmModificacionProducto
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(366, 9)
+        Me.Label4.Location = New System.Drawing.Point(302, 12)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(230, 20)
+        Me.Label4.Size = New System.Drawing.Size(496, 37)
         Me.Label4.TabIndex = 71
         Me.Label4.Text = "MODIFICACIÓN DE PRODCTO"
         '
@@ -388,7 +388,7 @@ Partial Class frmModificacionProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1074, 444)
+        Me.ClientSize = New System.Drawing.Size(1074, 473)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtNombreP)
