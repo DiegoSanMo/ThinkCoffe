@@ -46,11 +46,28 @@
     End Sub
 
     Private Sub btnBuscarP_Click(sender As Object, e As EventArgs) Handles btnBuscarP.Click
-        comando.CommandText = "select tlb_proveedor.idProveedor, tlb_proveedor.nombre from tlb_proveedor"
-        lector = comando.ExecuteReader
-        While lector.Read
-            BuscarProveedor.dgProv.Rows.Add(lector(0), lector(1))
-        End While
-        BuscarProveedor.ShowDialog()
+
+        comando.CommandText = "Select count(tlb_proveedor.idProveedor) from tlb_proveedor"
+        Dim n As Integer = comando.ExecuteScalar
+        If n > 1 Then
+            If BuscarProveedor.dgProv.CurrentRow IsNot Nothing Then
+
+            Else
+                comando.CommandText = "select tlb_proveedor.idProveedor, tlb_proveedor.nombre from tlb_proveedor"
+                lector = comando.ExecuteReader
+                While lector.Read
+                    BuscarProveedor.dgProv.Rows.Add(lector(0), lector(1))
+                End While
+                BuscarProveedor.ShowDialog()
+                lector.Close()
+            End If
+
+        Else
+            MessageBox.Show("NO SE HAN REGISTRADO PROVEEDORES", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error
+                            )
+        End If
+
+
+
     End Sub
 End Class
