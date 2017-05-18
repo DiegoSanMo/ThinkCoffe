@@ -86,7 +86,20 @@
         Dim fila As Integer = dgCompra.CurrentRow.Index
         Dim idCom As Integer = CInt(dgCompra(0, fila).Value)
 
+        comando.CommandText = "Select tlb_compra.idCompra, tlb_proveedor.nombre, tlb_compra.fecha from tlb_compra inner join tlb_proveedor on tlb_compra.idProveedor = tlb_proveedor.idProveedor where tlb_compra.idCompra = " & idCom & ""
+        lector = comando.ExecuteReader
+        lector.Read()
+        detallesCompra.txtProv.Text = lector(1)
+        detallesCompra.dtpFecha.Value = lector(2)
+        lector.Close()
 
-        'detallesCompra.ShowDialog()
+        comando.CommandText = "select tlb_compra.idCompra, tlb_detCompra.idInsumo, tlb_insumo.nombre, tlb_detCompra.cantidad, tlb_detCompra.costo from tlb_detCompra inner join tlb_insumo.idInsumo on tlb_detCompra.idInsumo = tlb_detCompra.idInsumo where tlb_detCompra.idCompra = " & idCom & ""
+        lector = comando.ExecuteReader
+        detallesCompra.dgInsumos.Rows.Clear()
+        While lector.Read
+            detallesCompra.dgInsumos.Rows.Add(lector(1), lector(2), lector(3), lector(4), lector(3) * lector(4))
+        End While
+        lector.Close()
+        detallesCompra.ShowDialog()
     End Sub
 End Class

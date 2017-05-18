@@ -82,7 +82,7 @@ Partial Class detallesCompra
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(12, 333)
+        Me.btnAceptar.Location = New System.Drawing.Point(12, 320)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(727, 31)
         Me.btnAceptar.TabIndex = 8
