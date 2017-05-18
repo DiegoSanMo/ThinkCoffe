@@ -167,7 +167,6 @@ Partial Class frmPrincipal
         '
         'ConsultaToolStripMenuItem
         '
-        Me.ConsultaToolStripMenuItem.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ConsultaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CategoríaToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.RecetasToolStripMenuItem, Me.ProveedoresToolStripMenuItem})
         Me.ConsultaToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Search_Property_50
         Me.ConsultaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
