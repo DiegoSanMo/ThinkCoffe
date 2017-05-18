@@ -68,4 +68,8 @@
     Private Sub CompraDeInsumosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CompraDeInsumosToolStripMenuItem.Click
         frmCompraDeInsumos.ShowDialog()
     End Sub
+
+    Private Sub ComprasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ComprasToolStripMenuItem.Click
+        frmConsultaCompra.ShowDialog()
+    End Sub
 End Class

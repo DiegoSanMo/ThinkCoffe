@@ -36,16 +36,16 @@ Partial Class frmPrincipal
         Me.menuBar = New System.Windows.Forms.MenuStrip()
         Me.HolaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CategoríaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsumosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RecetasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MovimientosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CompraDeInsumosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnMin = New System.Windows.Forms.Button()
+        Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuBar.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -164,23 +164,16 @@ Partial Class frmPrincipal
         Me.HolaToolStripMenuItem.Margin = New System.Windows.Forms.Padding(10, 10, 10, 50)
         Me.HolaToolStripMenuItem.Name = "HolaToolStripMenuItem"
         Me.HolaToolStripMenuItem.Size = New System.Drawing.Size(167, 37)
+        Me.HolaToolStripMenuItem.Text = "x|x"
         '
         'ConsultaToolStripMenuItem
         '
-        Me.ConsultaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CategoríaToolStripMenuItem, Me.InsumosToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.RecetasToolStripMenuItem, Me.ProveedoresToolStripMenuItem})
+        Me.ConsultaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InsumosToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.RecetasToolStripMenuItem, Me.ComprasToolStripMenuItem, Me.VentasToolStripMenuItem})
         Me.ConsultaToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Search_Property_50
         Me.ConsultaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ConsultaToolStripMenuItem.Name = "ConsultaToolStripMenuItem"
         Me.ConsultaToolStripMenuItem.Size = New System.Drawing.Size(187, 54)
         Me.ConsultaToolStripMenuItem.Text = "Consulta"
-        '
-        'CategoríaToolStripMenuItem
-        '
-        Me.CategoríaToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Tree_Structure_50
-        Me.CategoríaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.CategoríaToolStripMenuItem.Name = "CategoríaToolStripMenuItem"
-        Me.CategoríaToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
-        Me.CategoríaToolStripMenuItem.Text = "Categoría"
         '
         'InsumosToolStripMenuItem
         '
@@ -206,22 +199,16 @@ Partial Class frmPrincipal
         Me.RecetasToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
         Me.RecetasToolStripMenuItem.Text = "Recetas"
         '
-        'ProveedoresToolStripMenuItem
-        '
-        Me.ProveedoresToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Conference_48
-        Me.ProveedoresToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ProveedoresToolStripMenuItem.Name = "ProveedoresToolStripMenuItem"
-        Me.ProveedoresToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
-        Me.ProveedoresToolStripMenuItem.Text = "Proveedores"
-        '
         'MovimientosToolStripMenuItem
         '
         Me.MovimientosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CompraDeInsumosToolStripMenuItem})
         Me.MovimientosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.MovimientosToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Banknotes_48
+        Me.MovimientosToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Banknotes_50
         Me.MovimientosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.MovimientosToolStripMenuItem.Margin = New System.Windows.Forms.Padding(-5, 0, 0, 0)
         Me.MovimientosToolStripMenuItem.Name = "MovimientosToolStripMenuItem"
-        Me.MovimientosToolStripMenuItem.Size = New System.Drawing.Size(187, 52)
+        Me.MovimientosToolStripMenuItem.Padding = New System.Windows.Forms.Padding(0)
+        Me.MovimientosToolStripMenuItem.Size = New System.Drawing.Size(192, 54)
         Me.MovimientosToolStripMenuItem.Text = "Compras"
         '
         'CompraDeInsumosToolStripMenuItem
@@ -271,6 +258,18 @@ Partial Class frmPrincipal
         Me.btnMin.UseVisualStyleBackColor = False
         Me.btnMin.Visible = False
         '
+        'ComprasToolStripMenuItem
+        '
+        Me.ComprasToolStripMenuItem.Name = "ComprasToolStripMenuItem"
+        Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
+        Me.ComprasToolStripMenuItem.Text = "Compras"
+        '
+        'VentasToolStripMenuItem
+        '
+        Me.VentasToolStripMenuItem.Name = "VentasToolStripMenuItem"
+        Me.VentasToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
+        Me.VentasToolStripMenuItem.Text = "Ventas"
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -313,9 +312,9 @@ Partial Class frmPrincipal
     Friend WithEvents MovimientosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CompraDeInsumosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConsultaToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents CategoríaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InsumosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProductosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RecetasToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ProveedoresToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ComprasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents VentasToolStripMenuItem As ToolStripMenuItem
 End Class

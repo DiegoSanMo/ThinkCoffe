@@ -121,6 +121,18 @@
     <Compile Include="Catálogos\Producto\frmModificacionProducto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Consultas\Compra\BuscarProveedor.Designer.vb">
+      <DependentUpon>BuscarProveedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Compra\BuscarProveedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Compra\frmConsultaCompra.Designer.vb">
+      <DependentUpon>frmConsultaCompra.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Compra\frmConsultaCompra.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Movimientos\CompraDeInsumos\frmCompraDeInsumos.Designer.vb">
       <DependentUpon>frmCompraDeInsumos.vb</DependentUpon>
     </Compile>
@@ -192,6 +204,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catálogos\Producto\frmModificacionProducto.resx">
       <DependentUpon>frmModificacionProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Compra\BuscarProveedor.resx">
+      <DependentUpon>BuscarProveedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Compra\frmConsultaCompra.resx">
+      <DependentUpon>frmConsultaCompra.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Movimientos\CompraDeInsumos\frmCompraDeInsumos.resx">
       <DependentUpon>frmCompraDeInsumos.vb</DependentUpon>
@@ -400,6 +418,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Search Property-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banknotes-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
