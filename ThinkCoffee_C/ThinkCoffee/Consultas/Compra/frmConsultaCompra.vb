@@ -51,6 +51,22 @@
 
                 End If
             End If
+        Else
+            dgCompra.Rows.Clear()
+            comando.CommandText = "Select tlb_compra.idCompra, tlb_proveedor.nombre, tlb_compra.fecha, tlb_compra.total from tlb_compra inner join tlb_proveedor on tlb_proveedor.idProveedor = tlb_compra.idProveedor where tlb_compra.fecha between '" & dtpFechaInicial.Value & "' and '" & dtpFechaFinal.Value & "' "
+            lector = comando.ExecuteReader
+            While lector.Read
+                dgCompra.Rows.Add(lector(0), lector(1), lector(2), lector(3))
+            End While
+            lector.Close()
+
+            If dgCompra.Rows.Count = 0 Then
+                MessageBox.Show("NO SE HAN REALIZADO COMPRAS EN EL PERIODO SELECCIONADO", "INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+            Else
+                btnDetalles.Visible = True
+
+            End If
+
         End If
     End Sub
 
@@ -83,23 +99,38 @@
     End Sub
 
     Private Sub btnDetalles_Click(sender As Object, e As EventArgs) Handles btnDetalles.Click
-        Dim fila As Integer = dgCompra.CurrentRow.Index
-        Dim idCom As Integer = CInt(dgCompra(0, fila).Value)
+        If dgCompra.CurrentRow IsNot Nothing Then
+            Dim fila As Integer = dgCompra.CurrentRow.Index
+            Dim idCom As Integer = CInt(dgCompra(0, fila).Value)
 
-        comando.CommandText = "Select tlb_compra.idCompra, tlb_proveedor.nombre, tlb_compra.fecha from tlb_compra inner join tlb_proveedor on tlb_compra.idProveedor = tlb_proveedor.idProveedor where tlb_compra.idCompra = " & idCom & ""
-        lector = comando.ExecuteReader
-        lector.Read()
-        detallesCompra.txtProv.Text = lector(1)
-        detallesCompra.dtpFecha.Value = lector(2)
-        lector.Close()
+            comando.CommandText = "Select tlb_compra.idCompra, tlb_proveedor.nombre, tlb_compra.fecha from tlb_compra inner join tlb_proveedor on tlb_compra.idProveedor = tlb_proveedor.idProveedor where tlb_compra.idCompra = " & idCom & ""
+            lector = comando.ExecuteReader
+            lector.Read()
+            detallesCompra.txtProv.Text = lector(1)
+            detallesCompra.dtpFecha.Value = lector(2)
+            lector.Close()
 
-        comando.CommandText = "select tlb_detCompra.idCompra, tlb_detCompra.idInsumo, tlb_insumo.nombre, tlb_detCompra.cantidad, tlb_detCompra.costo from tlb_detCompra inner join tlb_insumo on tlb_detCompra.idInsumo = tlb_insumo.idInsumo where tlb_detCompra.idCompra = " & idCom & ""
-        lector = comando.ExecuteReader
-        detallesCompra.dgInsumos.Rows.Clear()
-        While lector.Read
-            detallesCompra.dgInsumos.Rows.Add(lector(1), lector(2), lector(3), lector(4), lector(3) * lector(4))
-        End While
-        lector.Close()
-        detallesCompra.ShowDialog()
+            comando.CommandText = "select tlb_detCompra.idCompra, tlb_detCompra.idInsumo, tlb_insumo.nombre, tlb_detCompra.cantidad, tlb_detCompra.costo from tlb_detCompra inner join tlb_insumo on tlb_detCompra.idInsumo = tlb_insumo.idInsumo where tlb_detCompra.idCompra = " & idCom & ""
+            lector = comando.ExecuteReader
+            detallesCompra.dgInsumos.Rows.Clear()
+            While lector.Read
+                detallesCompra.dgInsumos.Rows.Add(lector(1), lector(2), lector(3), lector(4), lector(3) * lector(4))
+            End While
+            lector.Close()
+
+            Dim suma As Decimal = 0
+            For x = 0 To detallesCompra.dgInsumos.RowCount - 1
+                suma = suma + CDec(detallesCompra.dgInsumos(4, x).Value)
+                detallesCompra.lblTotal.Text = Format(suma, "#0.000")
+
+            Next
+
+
+
+            detallesCompra.ShowDialog()
+        Else
+            btnDetalles.Visible = False
+        End If
+
     End Sub
 End Class

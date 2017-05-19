@@ -82,7 +82,7 @@
     Private Sub btnAgregarI_Click(sender As Object, e As EventArgs) Handles btnAgregarI.Click
         Dim ban As Boolean = False
         Dim pos As Integer
-        Dim suma As Decimal
+        Dim suma As Decimal = 0
 
         If String.IsNullOrWhiteSpace(txtNombreInsumo.Text) Then
             MsgBox("No se ha ingresado insumo")
@@ -106,7 +106,7 @@
                     MsgBox("Hay datos en blanco")
                     txtNuevoC.Focus()
                 Else
-                    dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, txtNuevoC.Text, txtCantidad.Text * txtNuevoC.Text)
+                    dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, txtNuevoC.Text, CDec(txtCantidad.Text * txtNuevoC.Text))
                     dgInsumosC.CurrentCell = dgInsumosC.Rows(dgInsumosC.RowCount - 1).Cells(0)
 
                     txtIdInsumo.Text = ""
@@ -122,6 +122,7 @@
                 End If
             End If
         End If
+
 
         For x = 0 To dgInsumosC.RowCount - 1
             suma = suma + CDec(dgInsumosC(4, x).Value)

@@ -34,7 +34,7 @@ Partial Class detallesCompra
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lblTotal = New System.Windows.Forms.Label()
         CType(Me.dgInsumos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -135,22 +135,22 @@ Partial Class detallesCompra
         Me.Label3.TabIndex = 13
         Me.Label3.Text = "Total $"
         '
-        'Label4
+        'lblTotal
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(657, 297)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(44, 20)
-        Me.Label4.TabIndex = 14
-        Me.Label4.Text = "0.00"
+        Me.lblTotal.AutoSize = True
+        Me.lblTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTotal.Location = New System.Drawing.Point(657, 297)
+        Me.lblTotal.Name = "lblTotal"
+        Me.lblTotal.Size = New System.Drawing.Size(44, 20)
+        Me.lblTotal.TabIndex = 14
+        Me.lblTotal.Text = "0.00"
         '
         'detallesCompra
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(751, 362)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.lblTotal)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.dtpFecha)
@@ -178,5 +178,5 @@ Partial Class detallesCompra
     Friend WithEvents dtpFecha As DateTimePicker
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents lblTotal As Label
 End Class
