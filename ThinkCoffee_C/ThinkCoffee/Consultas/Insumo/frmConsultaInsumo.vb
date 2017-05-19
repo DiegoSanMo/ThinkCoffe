@@ -2,17 +2,17 @@
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
         dgvConsultaInsumo.Rows.Clear()
         If rbtTodo.Checked Then
-            comando.CommandText = "Select tlb_insumo.idInsumo, tlb_insumo.nombre, tlb_insumo.maximo, tlb_insumo.minimo, tlb_insumo.existencia, tlb_insumo.costo, tlb_insumo.fecha from tlb_insumo"
+            comando.CommandText = "Select tlb_insumo.idInsumo, tlb_insumo.nombre, tlb_insumo.unidadM,tlb_insumo.maximo, tlb_insumo.minimo, tlb_insumo.existencia, tlb_insumo.costo, tlb_insumo.fecha from tlb_insumo"
             lector = comando.ExecuteReader
             While lector.Read
-                dgvConsultaInsumo.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6))
+                dgvConsultaInsumo.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6), lector(7))
             End While
             lector.Close()
         ElseIf rbtUnidadDeMedida.Checked Then
-            comando.CommandText = "Select tlb_insumo.idInsumo, tlb_insumo.nombre, tlb_insumo.maximo, tlb_insumo.minimo, tlb_insumo.existencia, tlb_insumo.costo, tlb_insumo.fecha from tlb_insumo Where tlb_insumo.nombre='" & cboInsumo.Text & "'"
+            comando.CommandText = "Select tlb_insumo.idInsumo, tlb_insumo.nombre, tlb_insumo.unidadM,tlb_insumo.maximo, tlb_insumo.minimo, tlb_insumo.existencia, tlb_insumo.costo, tlb_insumo.fecha from tlb_insumo Where tlb_insumo.unidadM='" & cboInsumo.Text & "'"
             lector = comando.ExecuteReader
             While lector.Read
-                dgvConsultaInsumo.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6))
+                dgvConsultaInsumo.Rows.Add(lector(0), lector(1), lector(2), lector(3), lector(4), lector(5), lector(6), lector(7))
             End While
             lector.Close()
         End If
