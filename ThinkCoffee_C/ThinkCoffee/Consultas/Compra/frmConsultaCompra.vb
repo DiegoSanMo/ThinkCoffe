@@ -63,7 +63,7 @@
 
         comando.CommandText = "Select count(tlb_proveedor.idProveedor) from tlb_proveedor"
         Dim n As Integer = comando.ExecuteScalar
-        If n > 1 Then
+        If n > 0 Then
             BuscarProveedor.ShowDialog()
             If BuscarProveedor.dgProv.CurrentRow IsNot Nothing Then
                 Dim fila As Integer
