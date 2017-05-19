@@ -139,6 +139,12 @@
     <Compile Include="Consultas\Compra\frmConsultaCompra.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Consultas\Insumo\frmConsultaInsumo.Designer.vb">
+      <DependentUpon>frmConsultaInsumo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Insumo\frmConsultaInsumo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Movimientos\CompraDeInsumos\frmCompraDeInsumos.Designer.vb">
       <DependentUpon>frmCompraDeInsumos.vb</DependentUpon>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\Compra\frmConsultaCompra.resx">
       <DependentUpon>frmConsultaCompra.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Insumo\frmConsultaInsumo.resx">
+      <DependentUpon>frmConsultaInsumo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Movimientos\CompraDeInsumos\frmCompraDeInsumos.resx">
       <DependentUpon>frmCompraDeInsumos.vb</DependentUpon>
@@ -431,6 +440,7 @@
   <ItemGroup>
     <None Include="Resources\Banknotes-50.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
