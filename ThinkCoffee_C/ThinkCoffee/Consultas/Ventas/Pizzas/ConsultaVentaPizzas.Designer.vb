@@ -27,13 +27,14 @@ Partial Class ConsultaVentaPizzas
         Me.rbGrande = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.dgVentaP = New System.Windows.Forms.DataGridView()
-        Me.btnAceptar = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnDetallesP = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgVentaP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -90,30 +91,10 @@ Partial Class ConsultaVentaPizzas
         Me.dgVentaP.AllowUserToAddRows = False
         Me.dgVentaP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgVentaP.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
-        Me.dgVentaP.Location = New System.Drawing.Point(12, 153)
+        Me.dgVentaP.Location = New System.Drawing.Point(12, 194)
         Me.dgVentaP.Name = "dgVentaP"
         Me.dgVentaP.Size = New System.Drawing.Size(647, 190)
         Me.dgVentaP.TabIndex = 7
-        '
-        'btnAceptar
-        '
-        Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAceptar.ForeColor = System.Drawing.Color.Black
-        Me.btnAceptar.Location = New System.Drawing.Point(277, 349)
-        Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(78, 27)
-        Me.btnAceptar.TabIndex = 42
-        Me.btnAceptar.Text = "Aceptar"
-        Me.btnAceptar.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(262, 25)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(190, 13)
-        Me.Label1.TabIndex = 43
-        Me.Label1.Text = "VENTAS POR CONCEPTO DE PIZZA"
         '
         'Column1
         '
@@ -145,11 +126,44 @@ Partial Class ConsultaVentaPizzas
         Me.Column5.HeaderText = "Total"
         Me.Column5.Name = "Column5"
         '
+        'btnAceptar
+        '
+        Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAceptar.ForeColor = System.Drawing.Color.Black
+        Me.btnAceptar.Location = New System.Drawing.Point(299, 390)
+        Me.btnAceptar.Name = "btnAceptar"
+        Me.btnAceptar.Size = New System.Drawing.Size(78, 27)
+        Me.btnAceptar.TabIndex = 42
+        Me.btnAceptar.Text = "Aceptar"
+        Me.btnAceptar.UseVisualStyleBackColor = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(262, 25)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(190, 13)
+        Me.Label1.TabIndex = 43
+        Me.Label1.Text = "VENTAS POR CONCEPTO DE PIZZA"
+        '
+        'btnDetallesP
+        '
+        Me.btnDetallesP.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDetallesP.ForeColor = System.Drawing.Color.Black
+        Me.btnDetallesP.Location = New System.Drawing.Point(450, 153)
+        Me.btnDetallesP.Name = "btnDetallesP"
+        Me.btnDetallesP.Size = New System.Drawing.Size(209, 35)
+        Me.btnDetallesP.TabIndex = 44
+        Me.btnDetallesP.Text = "Información extra de venta"
+        Me.btnDetallesP.UseVisualStyleBackColor = True
+        Me.btnDetallesP.Visible = False
+        '
         'ConsultaVentaPizzas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(671, 388)
+        Me.ClientSize = New System.Drawing.Size(671, 429)
+        Me.Controls.Add(Me.btnDetallesP)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.dgVentaP)
@@ -176,4 +190,5 @@ Partial Class ConsultaVentaPizzas
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents btnDetallesP As Button
 End Class

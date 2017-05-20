@@ -151,6 +151,12 @@
     <Compile Include="Consultas\Ventas\Pizzas\ConsultaVentaPizzas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Consultas\Ventas\Pizzas\detallesVentaP.Designer.vb">
+      <DependentUpon>detallesVentaP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Ventas\Pizzas\detallesVentaP.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Movimientos\CompraDeInsumos\frmCompraDeInsumos.Designer.vb">
       <DependentUpon>frmCompraDeInsumos.vb</DependentUpon>
     </Compile>
@@ -237,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\Ventas\Pizzas\ConsultaVentaPizzas.resx">
       <DependentUpon>ConsultaVentaPizzas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Ventas\Pizzas\detallesVentaP.resx">
+      <DependentUpon>detallesVentaP.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Movimientos\CompraDeInsumos\frmCompraDeInsumos.resx">
       <DependentUpon>frmCompraDeInsumos.vb</DependentUpon>
