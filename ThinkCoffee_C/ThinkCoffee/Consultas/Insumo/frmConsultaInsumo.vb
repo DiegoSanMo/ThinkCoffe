@@ -27,16 +27,6 @@
         conexionSql.Open()
     End Sub
 
-    Private Sub rbtNombre_CheckedChanged(sender As Object, e As EventArgs) Handles rbtNombre.CheckedChanged
-        If rbtNombre.Checked Then
-            txtNombre.Visible = True
-            btnBuscarNom.Visible = True
-        Else
-            txtNombre.Visible = False
-            btnBuscarNom.Visible = False
-        End If
-    End Sub
-
     Private Sub rbtUnidadDeMedida_CheckedChanged(sender As Object, e As EventArgs) Handles rbtUnidadDeMedida.CheckedChanged
         If rbtUnidadDeMedida.Checked Then
             cboInsumo.Visible = True
