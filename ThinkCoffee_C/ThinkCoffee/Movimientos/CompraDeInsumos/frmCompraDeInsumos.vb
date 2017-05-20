@@ -33,7 +33,7 @@
         Dim n As Integer
         comando.CommandText = "Select count(*) from tlb_insumo"
         n = comando.ExecuteScalar
-        If n > 1 Then
+        If n > 0 Then
             Dim fila As Integer
             frmAgregarInsumo.dgInsumos.SelectionMode = DataGridViewSelectionMode.FullRowSelect
             frmAgregarInsumo.ShowDialog()
@@ -131,6 +131,7 @@
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        Dim total As String = Replace(CDec(txtSubtotal.Text), ",", ".")
         If String.IsNullOrWhiteSpace(txtIdProveedor.Text) Then
             MsgBox("No se ha ingresado proveedor")
             cboProveedor.Focus()
@@ -139,10 +140,12 @@
                 MsgBox("No se han ingresado insumos")
                 btnAgregarI.Focus()
             Else
-                comando.CommandText = "Insert into tlb_compra(idCompra, idProveedor, fecha, total) values(" & Val(txtIdCompra.Text) & ", " & Val(txtIdProveedor.Text) & ", '" & dtpFecha.Value.Date & "', " & CDec(txtSubtotal.Text) & ")"
+                comando.CommandText = "Insert into tlb_compra(idCompra, idProveedor, fecha, total) values(" & Val(txtIdCompra.Text) & ", " & Val(txtIdProveedor.Text) & ", '" & dtpFecha.Value.Date & "', " & total & ")"
                 comando.ExecuteNonQuery()
                 For x = 0 To dgInsumosC.RowCount - 1
-                    comando.CommandText = "Insert into tlb_detCompra(idCompra, idInsumo, cantidad, costo) values(" & Val(txtIdCompra.Text) & "," & Val(dgInsumosC(0, x).Value) & ", " & CDec(dgInsumosC(2, x).Value) & ", " & CDec(dgInsumosC(3, x).Value) & ")"
+                    Dim cant As String = Replace(CDec(dgInsumosC(2, x).Value), ",", ".")
+                    Dim cost As String = Replace(CDec(dgInsumosC(3, x).Value), ",", ".")
+                    comando.CommandText = "Insert into tlb_detCompra(idCompra, idInsumo, cantidad, costo) values(" & Val(txtIdCompra.Text) & "," & Val(dgInsumosC(0, x).Value) & ", " & cant & ", " & cost & ")"
                     comando.ExecuteNonQuery()
                 Next
 
