@@ -144,6 +144,9 @@
                 For x = 0 To dgInsumosC.RowCount - 1
                     comando.CommandText = "Insert into tlb_detCompra(idCompra, idInsumo, cantidad, costo) values(" & Val(txtIdCompra.Text) & "," & Val(dgInsumosC(0, x).Value) & ", " & CDec(dgInsumosC(2, x).Value) & ", " & CDec(dgInsumosC(3, x).Value) & ")"
                     comando.ExecuteNonQuery()
+
+                    comando.CommandText = "Update tlb_insumo set existencia = existencia + " & CDec(dgInsumosC(2, x).Value) & ", costo = " & CDec(dgInsumosC(3, x).Value) & " where idInsumo = " & Val(dgInsumosC(0, x).Value) & " "
+                    comando.ExecuteNonQuery()
                 Next
 
             End If
