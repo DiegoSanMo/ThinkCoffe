@@ -125,8 +125,6 @@
 
             Next
 
-
-
             detallesCompra.ShowDialog()
         Else
             btnDetalles.Visible = False
