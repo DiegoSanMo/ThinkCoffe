@@ -99,6 +99,7 @@ Public Class frmCatalogoCategoria
             btnGrabar.Enabled = False
             btnCancelar.Enabled = False
             dgCategoria.Enabled = True
+            btnModificar.Enabled = True
             mensajeGrabar()
         End If
 
@@ -180,22 +181,27 @@ Public Class frmCatalogoCategoria
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-        btnNuevo.Enabled = False
-        btnSalir.Enabled = False
-        btnModificar.Enabled = False
+        If dgCategoria.RowCount > 0 Then
+            btnNuevo.Enabled = False
+            btnSalir.Enabled = False
+            btnModificar.Enabled = False
 
 
-        txtNombre.Enabled = True
-        banModi = True
-        dgCategoria.Enabled = False
+            txtNombre.Enabled = True
+            banModi = True
+            dgCategoria.Enabled = False
+        Else
+            MessageBox.Show("NO SE HAN INGRESADO CATEGORIAS PARA MODIFICAR", "FALTA DE CATEGORÍAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+        End If
     End Sub
 
     Private Sub dgCategoria_SelectionChanged(sender As Object, e As EventArgs) Handles dgCategoria.SelectionChanged
-        filaSel = dgCategoria.Item(0, dgCategoria.CurrentRow.Index).Value - 1
+        If dgCategoria.RowCount > 0 Then
+            filaSel = dgCategoria.Item(0, dgCategoria.CurrentRow.Index).Value - 1
 
 
-        txtIdCategoria.Text = dgCategoria(0, filaSel).Value
-        txtNombre.Text = dgCategoria(1, filaSel).Value
-
+            txtIdCategoria.Text = dgCategoria(0, filaSel).Value
+            txtNombre.Text = dgCategoria(1, filaSel).Value
+        End If
     End Sub
 End Class
