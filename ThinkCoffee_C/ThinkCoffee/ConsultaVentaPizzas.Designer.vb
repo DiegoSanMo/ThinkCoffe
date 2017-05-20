@@ -27,14 +27,20 @@ Partial Class ConsultaVentaPizzas
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.GroupBox1.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'rbPizza
         '
         Me.rbPizza.AutoSize = True
-        Me.rbPizza.Location = New System.Drawing.Point(44, 30)
+        Me.rbPizza.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.rbPizza.Location = New System.Drawing.Point(6, 19)
         Me.rbPizza.Name = "rbPizza"
-        Me.rbPizza.Size = New System.Drawing.Size(166, 17)
+        Me.rbPizza.Size = New System.Drawing.Size(252, 24)
         Me.rbPizza.TabIndex = 0
         Me.rbPizza.TabStop = True
         Me.rbPizza.Text = "Ventas por concepto de pizza"
@@ -43,9 +49,10 @@ Partial Class ConsultaVentaPizzas
         'rbOtros
         '
         Me.rbOtros.AutoSize = True
-        Me.rbOtros.Location = New System.Drawing.Point(44, 131)
+        Me.rbOtros.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.rbOtros.Location = New System.Drawing.Point(6, 49)
         Me.rbOtros.Name = "rbOtros"
-        Me.rbOtros.Size = New System.Drawing.Size(102, 17)
+        Me.rbOtros.Size = New System.Drawing.Size(152, 24)
         Me.rbOtros.TabIndex = 1
         Me.rbOtros.TabStop = True
         Me.rbOtros.Text = "Ventas por otros"
@@ -54,50 +61,86 @@ Partial Class ConsultaVentaPizzas
         'RadioButton2
         '
         Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(238, 79)
+        Me.RadioButton2.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.RadioButton2.Location = New System.Drawing.Point(289, 19)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(52, 17)
+        Me.RadioButton2.Size = New System.Drawing.Size(197, 24)
         Me.RadioButton2.TabIndex = 3
         Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Chica"
+        Me.RadioButton2.Text = "Ventas por pizza chica"
         Me.RadioButton2.UseVisualStyleBackColor = True
         '
         'RadioButton3
         '
         Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(101, 79)
+        Me.RadioButton3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.RadioButton3.Location = New System.Drawing.Point(6, 79)
         Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(75, 17)
+        Me.RadioButton3.Size = New System.Drawing.Size(184, 24)
         Me.RadioButton3.TabIndex = 4
         Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "Rebanada"
+        Me.RadioButton3.Text = "Ventas por rebanada"
         Me.RadioButton3.UseVisualStyleBackColor = True
         '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(355, 79)
+        Me.RadioButton1.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.RadioButton1.Location = New System.Drawing.Point(289, 49)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(60, 17)
+        Me.RadioButton1.Size = New System.Drawing.Size(211, 24)
         Me.RadioButton1.TabIndex = 5
         Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Grande"
+        Me.RadioButton1.Text = "Ventas por pizza grande"
         Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.rbPizza)
+        Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.Controls.Add(Me.rbOtros)
+        Me.GroupBox1.Controls.Add(Me.RadioButton2)
+        Me.GroupBox1.Controls.Add(Me.RadioButton3)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(523, 116)
+        Me.GroupBox1.TabIndex = 6
+        Me.GroupBox1.TabStop = False
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 140)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(523, 150)
+        Me.DataGridView1.TabIndex = 7
+        '
+        'btnAceptar
+        '
+        Me.btnAceptar.Enabled = False
+        Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAceptar.ForeColor = System.Drawing.Color.Black
+        Me.btnAceptar.Location = New System.Drawing.Point(220, 302)
+        Me.btnAceptar.Name = "btnAceptar"
+        Me.btnAceptar.Size = New System.Drawing.Size(78, 27)
+        Me.btnAceptar.TabIndex = 42
+        Me.btnAceptar.Text = "Aceptar"
+        Me.btnAceptar.UseVisualStyleBackColor = True
         '
         'ConsultaVentaPizzas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(547, 316)
-        Me.Controls.Add(Me.RadioButton1)
-        Me.Controls.Add(Me.RadioButton3)
-        Me.Controls.Add(Me.RadioButton2)
-        Me.Controls.Add(Me.rbOtros)
-        Me.Controls.Add(Me.rbPizza)
+        Me.ClientSize = New System.Drawing.Size(547, 349)
+        Me.Controls.Add(Me.btnAceptar)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Name = "ConsultaVentaPizzas"
-        Me.Text = "ConsultaVentaPizzas"
+        Me.Text = "Consulta de Ventas"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -106,4 +149,7 @@ Partial Class ConsultaVentaPizzas
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents RadioButton3 As RadioButton
     Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnAceptar As Button
 End Class
