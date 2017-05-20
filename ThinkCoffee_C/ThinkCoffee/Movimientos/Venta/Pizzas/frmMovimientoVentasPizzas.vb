@@ -71,7 +71,7 @@
             comando.CommandText = "Insert into tlb_venta(idVenta, tipo, fecha, total) values(" & CInt(txtIdVenta.Text) & ", '" & "PIZZA" & "', '" & dtpFecha.Value.Date & "', " & CDec(txtPrecio.Text) & ")"
             comando.ExecuteNonQuery()
 
-            comando.CommandText = "Insert into tlb_pizza(idVenta, idPizza,	size, cantidad, precio) values(" & CInt(txtIdVenta.Text) & ", '" & txtIdVenta.Text + "-" + cboTamaño.Text & "', '" & cboTamaño.Text & "', " & CInt(txtCantidad.Text) & ", " & CDec(txtPrecio.Text) & ")"
+            comando.CommandText = "Insert into tlb_pizza(idVenta, idPizza,	size, tipo, cantidad, precio) values(" & CInt(txtIdVenta.Text) & ", '" & txtIdVenta.Text + "-" + cboTamaño.Text & "', '" & cboTamaño.Text & "', '" & cboTipo.Text & "', " & CInt(txtCantidad.Text) & ", " & CDec(txtPrecio.Text) & ")"
             comando.ExecuteNonQuery()
             For x = 0 To 20
                 If CheckedListBox1.GetItemCheckState(x) = 1 Then
