@@ -106,7 +106,7 @@
                     MsgBox("Hay datos en blanco")
                     txtNuevoC.Focus()
                 Else
-                    dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, txtNuevoC.Text, CDec(txtCantidad.Text * txtNuevoC.Text))
+                    dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, CDec(txtNuevoC.Text), CDec(txtCantidad.Text * txtNuevoC.Text))
                     dgInsumosC.CurrentCell = dgInsumosC.Rows(dgInsumosC.RowCount - 1).Cells(0)
 
                     txtIdInsumo.Text = ""
