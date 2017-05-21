@@ -5,7 +5,7 @@ Module Module1
     Public CadenaValida As String = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
     Public CadenaNumeros As String = "0123456789-., "
     Public CadenaDirecciones As String = "0123456789.ABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
-
+    Public nombreInsumo As String
 
     Public conexionSql As New SqlConnection("Data Source = 'DESKTOP-B3IP6AD\MANI'; Initial Catalog = 'thinkCoffee'; Integrated security = true")
     Public comando As SqlCommand = conexionSql.CreateCommand

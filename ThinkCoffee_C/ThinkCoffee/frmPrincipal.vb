@@ -84,4 +84,8 @@
     Private Sub ProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem.Click
         frmConsultaProducto.ShowDialog()
     End Sub
+
+    Private Sub RecetasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecetasToolStripMenuItem.Click
+        frmConsultaReceta.ShowDialog()
+    End Sub
 End Class

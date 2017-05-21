@@ -151,6 +151,18 @@
     <Compile Include="Consultas\Producto\frmConsultaProducto.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Consultas\Producto\Receta\frmAgregarReceta.Designer.vb">
+      <DependentUpon>frmAgregarReceta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Producto\Receta\frmAgregarReceta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Consultas\Producto\Receta\frmConsultaReceta.Designer.vb">
+      <DependentUpon>frmConsultaReceta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Producto\Receta\frmConsultaReceta.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Consultas\Ventas\Pizzas\ConsultaVentaPizzas.Designer.vb">
       <DependentUpon>ConsultaVentaPizzas.vb</DependentUpon>
     </Compile>
@@ -249,6 +261,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\Producto\frmConsultaProducto.resx">
       <DependentUpon>frmConsultaProducto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Producto\Receta\frmAgregarReceta.resx">
+      <DependentUpon>frmAgregarReceta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Producto\Receta\frmConsultaReceta.resx">
+      <DependentUpon>frmConsultaReceta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\Ventas\Pizzas\ConsultaVentaPizzas.resx">
       <DependentUpon>ConsultaVentaPizzas.vb</DependentUpon>
