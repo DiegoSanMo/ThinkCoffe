@@ -33,7 +33,7 @@
             txtPrecio.Text = ""
 
             txtCantidad.Enabled = False
-
+            CheckedListBox1.Enabled = True
 
         ElseIf cboTamaño.Text = "GRANDE" Then
             limpiarLista()
@@ -41,6 +41,7 @@
             txtPrecio.Text = ""
 
             txtCantidad.Enabled = False
+            CheckedListBox1.Enabled = True
         End If
     End Sub
 
@@ -150,12 +151,13 @@
             cboTipo.Enabled = True
             txtPrecio.Text = ""
 
-
+            CheckedListBox1.Enabled = True
         ElseIf cboTamaño.Text = "GRANDE" Then
             limpiarLista()
             cboTipo.Enabled = True
             txtPrecio.Text = ""
 
+            CheckedListBox1.Enabled = True
         End If
     End Sub
 
