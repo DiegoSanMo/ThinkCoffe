@@ -39,9 +39,12 @@ Partial Class frmConsultaReceta
         Me.clmCantidadPrincipal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.clmUnidadMedida = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnSalir = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.ptbBarra = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvConsultaDetRecetas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvRecetas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -51,7 +54,7 @@ Partial Class frmConsultaReceta
         Me.GroupBox1.Controls.Add(Me.txtConsultaNombre)
         Me.GroupBox1.Controls.Add(Me.rbtConsultaTodo)
         Me.GroupBox1.Controls.Add(Me.rbtConsultaNombre)
-        Me.GroupBox1.Location = New System.Drawing.Point(173, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(180, 76)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(550, 125)
         Me.GroupBox1.TabIndex = 0
@@ -116,7 +119,7 @@ Partial Class frmConsultaReceta
         '
         Me.dgvConsultaDetRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvConsultaDetRecetas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clmNombreInsumo, Me.clmCantidad, Me.clmUnidadDeMedida})
-        Me.dgvConsultaDetRecetas.Location = New System.Drawing.Point(12, 152)
+        Me.dgvConsultaDetRecetas.Location = New System.Drawing.Point(19, 207)
         Me.dgvConsultaDetRecetas.Name = "dgvConsultaDetRecetas"
         Me.dgvConsultaDetRecetas.Size = New System.Drawing.Size(496, 150)
         Me.dgvConsultaDetRecetas.TabIndex = 1
@@ -145,7 +148,7 @@ Partial Class frmConsultaReceta
         '
         Me.dgvRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRecetas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clmIdReceta, Me.clmNombreReceta, Me.clmNombreInsumoPrincipal, Me.clmCantidadPrincipal, Me.clmUnidadMedida})
-        Me.dgvRecetas.Location = New System.Drawing.Point(12, 152)
+        Me.dgvRecetas.Location = New System.Drawing.Point(19, 207)
         Me.dgvRecetas.Name = "dgvRecetas"
         Me.dgvRecetas.Size = New System.Drawing.Size(846, 150)
         Me.dgvRecetas.TabIndex = 5
@@ -189,7 +192,7 @@ Partial Class frmConsultaReceta
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(732, 308)
+        Me.btnSalir.Location = New System.Drawing.Point(757, 363)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(103, 39)
         Me.btnSalir.TabIndex = 40
@@ -197,16 +200,43 @@ Partial Class frmConsultaReceta
         Me.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnSalir.UseVisualStyleBackColor = True
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label10.Location = New System.Drawing.Point(240, 36)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(424, 37)
+        Me.Label10.TabIndex = 61
+        Me.Label10.Text = "CONSULTA DE RECETAS"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ptbBarra
+        '
+        Me.ptbBarra.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ptbBarra.Image = Global.ThinkCoffee.My.Resources.Resources.BarraSuperior
+        Me.ptbBarra.Location = New System.Drawing.Point(0, 0)
+        Me.ptbBarra.Name = "ptbBarra"
+        Me.ptbBarra.Size = New System.Drawing.Size(872, 33)
+        Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbBarra.TabIndex = 60
+        Me.ptbBarra.TabStop = False
+        '
         'frmConsultaReceta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(872, 356)
+        Me.ClientSize = New System.Drawing.Size(872, 412)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.ptbBarra)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.dgvRecetas)
         Me.Controls.Add(Me.dgvConsultaDetRecetas)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmConsultaReceta"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consulta de recetas"
@@ -214,7 +244,9 @@ Partial Class frmConsultaReceta
         Me.GroupBox1.PerformLayout()
         CType(Me.dgvConsultaDetRecetas, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvRecetas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -235,4 +267,6 @@ Partial Class frmConsultaReceta
     Friend WithEvents clmCantidadPrincipal As DataGridViewTextBoxColumn
     Friend WithEvents clmUnidadMedida As DataGridViewTextBoxColumn
     Friend WithEvents btnSalir As Button
+    Friend WithEvents Label10 As Label
+    Friend WithEvents ptbBarra As PictureBox
 End Class

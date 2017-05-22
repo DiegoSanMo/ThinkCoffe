@@ -23,6 +23,7 @@ Partial Class ConsultaOtros
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cboCategoria = New System.Windows.Forms.ComboBox()
         Me.lblHasta = New System.Windows.Forms.Label()
         Me.lblDesde = New System.Windows.Forms.Label()
         Me.rbCategoria = New System.Windows.Forms.RadioButton()
@@ -34,16 +35,18 @@ Partial Class ConsultaOtros
         Me.rbFecha = New System.Windows.Forms.RadioButton()
         Me.rbProducto = New System.Windows.Forms.RadioButton()
         Me.dgVentaOtro = New System.Windows.Forms.DataGridView()
-        Me.btnSalir = New System.Windows.Forms.Button()
-        Me.cboCategoria = New System.Windows.Forms.ComboBox()
-        Me.btnDetallesP = New System.Windows.Forms.Button()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.btnDetallesP = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.ptbBarra = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgVentaOtro, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -60,12 +63,22 @@ Partial Class ConsultaOtros
         Me.GroupBox1.Controls.Add(Me.rbFecha)
         Me.GroupBox1.Controls.Add(Me.rbProducto)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(81, 79)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(569, 148)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Consultas por:"
+        '
+        'cboCategoria
+        '
+        Me.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCategoria.FormattingEnabled = True
+        Me.cboCategoria.Location = New System.Drawing.Point(128, 68)
+        Me.cboCategoria.Name = "cboCategoria"
+        Me.cboCategoria.Size = New System.Drawing.Size(371, 28)
+        Me.cboCategoria.TabIndex = 13
+        Me.cboCategoria.Visible = False
         '
         'lblHasta
         '
@@ -184,41 +197,10 @@ Partial Class ConsultaOtros
         Me.dgVentaOtro.AllowUserToAddRows = False
         Me.dgVentaOtro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgVentaOtro.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column5, Me.Column3, Me.Column4})
-        Me.dgVentaOtro.Location = New System.Drawing.Point(12, 199)
+        Me.dgVentaOtro.Location = New System.Drawing.Point(12, 266)
         Me.dgVentaOtro.Name = "dgVentaOtro"
         Me.dgVentaOtro.Size = New System.Drawing.Size(720, 230)
         Me.dgVentaOtro.TabIndex = 3
-        '
-        'btnSalir
-        '
-        Me.btnSalir.Location = New System.Drawing.Point(12, 435)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(720, 23)
-        Me.btnSalir.TabIndex = 4
-        Me.btnSalir.Text = "Salir"
-        Me.btnSalir.UseVisualStyleBackColor = True
-        '
-        'cboCategoria
-        '
-        Me.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboCategoria.FormattingEnabled = True
-        Me.cboCategoria.Location = New System.Drawing.Point(128, 68)
-        Me.cboCategoria.Name = "cboCategoria"
-        Me.cboCategoria.Size = New System.Drawing.Size(371, 28)
-        Me.cboCategoria.TabIndex = 13
-        Me.cboCategoria.Visible = False
-        '
-        'btnDetallesP
-        '
-        Me.btnDetallesP.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDetallesP.ForeColor = System.Drawing.Color.Black
-        Me.btnDetallesP.Location = New System.Drawing.Point(372, 166)
-        Me.btnDetallesP.Name = "btnDetallesP"
-        Me.btnDetallesP.Size = New System.Drawing.Size(209, 27)
-        Me.btnDetallesP.TabIndex = 45
-        Me.btnDetallesP.Text = "Información extra de venta"
-        Me.btnDetallesP.UseVisualStyleBackColor = True
-        Me.btnDetallesP.Visible = False
         '
         'Column1
         '
@@ -253,22 +235,72 @@ Partial Class ConsultaOtros
         Me.Column4.Name = "Column4"
         Me.Column4.ReadOnly = True
         '
+        'btnSalir
+        '
+        Me.btnSalir.Location = New System.Drawing.Point(12, 502)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(720, 23)
+        Me.btnSalir.TabIndex = 4
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
+        '
+        'btnDetallesP
+        '
+        Me.btnDetallesP.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDetallesP.ForeColor = System.Drawing.Color.Black
+        Me.btnDetallesP.Location = New System.Drawing.Point(517, 233)
+        Me.btnDetallesP.Name = "btnDetallesP"
+        Me.btnDetallesP.Size = New System.Drawing.Size(209, 27)
+        Me.btnDetallesP.TabIndex = 45
+        Me.btnDetallesP.Text = "Información extra de venta"
+        Me.btnDetallesP.UseVisualStyleBackColor = True
+        Me.btnDetallesP.Visible = False
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label10.Location = New System.Drawing.Point(74, 39)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(601, 37)
+        Me.Label10.TabIndex = 61
+        Me.Label10.Text = "CONSULTA DE VENTAS CAFETERÍA"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ptbBarra
+        '
+        Me.ptbBarra.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ptbBarra.Image = Global.ThinkCoffee.My.Resources.Resources.BarraSuperior
+        Me.ptbBarra.Location = New System.Drawing.Point(0, 0)
+        Me.ptbBarra.Name = "ptbBarra"
+        Me.ptbBarra.Size = New System.Drawing.Size(744, 33)
+        Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbBarra.TabIndex = 60
+        Me.ptbBarra.TabStop = False
+        '
         'ConsultaOtros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(744, 470)
+        Me.ClientSize = New System.Drawing.Size(744, 530)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.ptbBarra)
         Me.Controls.Add(Me.btnDetallesP)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.dgVentaOtro)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "ConsultaOtros"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ConsultaOtros"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgVentaOtro, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -292,4 +324,6 @@ Partial Class ConsultaOtros
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Label10 As Label
+    Friend WithEvents ptbBarra As PictureBox
 End Class

@@ -33,8 +33,11 @@ Partial Class frmConsultaProducto
         Me.clmCategoria = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.clmPrecio = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnSalir = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.ptbBarra = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgvConsultaProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -43,7 +46,7 @@ Partial Class frmConsultaProducto
         Me.GroupBox1.Controls.Add(Me.cboCategoriaConsulta)
         Me.GroupBox1.Controls.Add(Me.rbtConsultaTodo)
         Me.GroupBox1.Controls.Add(Me.rbtConsultaCategoria)
-        Me.GroupBox1.Location = New System.Drawing.Point(198, 21)
+        Me.GroupBox1.Location = New System.Drawing.Point(198, 76)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(437, 117)
         Me.GroupBox1.TabIndex = 0
@@ -98,7 +101,7 @@ Partial Class frmConsultaProducto
         '
         Me.dgvConsultaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvConsultaProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clmIdProducto, Me.clmNombre, Me.clmCategoria, Me.clmPrecio})
-        Me.dgvConsultaProductos.Location = New System.Drawing.Point(16, 150)
+        Me.dgvConsultaProductos.Location = New System.Drawing.Point(16, 209)
         Me.dgvConsultaProductos.Name = "dgvConsultaProductos"
         Me.dgvConsultaProductos.Size = New System.Drawing.Size(745, 162)
         Me.dgvConsultaProductos.TabIndex = 1
@@ -135,7 +138,7 @@ Partial Class frmConsultaProducto
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(659, 318)
+        Me.btnSalir.Location = New System.Drawing.Point(658, 377)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(103, 39)
         Me.btnSalir.TabIndex = 40
@@ -143,22 +146,51 @@ Partial Class frmConsultaProducto
         Me.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnSalir.UseVisualStyleBackColor = True
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label10.Location = New System.Drawing.Point(156, 36)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(479, 37)
+        Me.Label10.TabIndex = 61
+        Me.Label10.Text = "CONSULTA DE PRODUCTOS"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ptbBarra
+        '
+        Me.ptbBarra.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ptbBarra.Image = Global.ThinkCoffee.My.Resources.Resources.BarraSuperior
+        Me.ptbBarra.Location = New System.Drawing.Point(0, 0)
+        Me.ptbBarra.Name = "ptbBarra"
+        Me.ptbBarra.Size = New System.Drawing.Size(773, 33)
+        Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbBarra.TabIndex = 60
+        Me.ptbBarra.TabStop = False
+        '
         'frmConsultaProducto
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(773, 366)
+        Me.ClientSize = New System.Drawing.Size(773, 424)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.ptbBarra)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.dgvConsultaProductos)
         Me.Controls.Add(Me.GroupBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmConsultaProducto"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consulta de producto"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgvConsultaProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -173,4 +205,6 @@ Partial Class frmConsultaProducto
     Friend WithEvents clmCategoria As DataGridViewTextBoxColumn
     Friend WithEvents clmPrecio As DataGridViewTextBoxColumn
     Friend WithEvents btnSalir As Button
+    Friend WithEvents Label10 As Label
+    Friend WithEvents ptbBarra As PictureBox
 End Class

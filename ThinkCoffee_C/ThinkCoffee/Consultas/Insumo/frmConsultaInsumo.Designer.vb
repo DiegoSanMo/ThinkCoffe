@@ -37,8 +37,11 @@ Partial Class frmConsultaInsumo
         Me.clmCosto = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.clmFecha = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnSalir = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.ptbBarra = New System.Windows.Forms.PictureBox()
         Me.gbConsultaInsumos.SuspendLayout()
         CType(Me.dgvConsultaInsumo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gbConsultaInsumos
@@ -47,7 +50,7 @@ Partial Class frmConsultaInsumo
         Me.gbConsultaInsumos.Controls.Add(Me.cboInsumo)
         Me.gbConsultaInsumos.Controls.Add(Me.rbtTodo)
         Me.gbConsultaInsumos.Controls.Add(Me.rbtUnidadDeMedida)
-        Me.gbConsultaInsumos.Location = New System.Drawing.Point(252, 12)
+        Me.gbConsultaInsumos.Location = New System.Drawing.Point(262, 85)
         Me.gbConsultaInsumos.Name = "gbConsultaInsumos"
         Me.gbConsultaInsumos.Size = New System.Drawing.Size(499, 138)
         Me.gbConsultaInsumos.TabIndex = 0
@@ -103,7 +106,7 @@ Partial Class frmConsultaInsumo
         '
         Me.dgvConsultaInsumo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvConsultaInsumo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clmIdInsumo, Me.clmNombre, Me.clmUnidadM, Me.clmMaximo, Me.clmMinimo, Me.clmExistencias, Me.clmCosto, Me.clmFecha})
-        Me.dgvConsultaInsumo.Location = New System.Drawing.Point(12, 170)
+        Me.dgvConsultaInsumo.Location = New System.Drawing.Point(12, 229)
         Me.dgvConsultaInsumo.Name = "dgvConsultaInsumo"
         Me.dgvConsultaInsumo.ReadOnly = True
         Me.dgvConsultaInsumo.Size = New System.Drawing.Size(948, 150)
@@ -164,7 +167,7 @@ Partial Class frmConsultaInsumo
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(844, 326)
+        Me.btnSalir.Location = New System.Drawing.Point(853, 385)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(93, 39)
         Me.btnSalir.TabIndex = 40
@@ -172,21 +175,50 @@ Partial Class frmConsultaInsumo
         Me.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnSalir.UseVisualStyleBackColor = True
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label10.Location = New System.Drawing.Point(304, 45)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(422, 37)
+        Me.Label10.TabIndex = 61
+        Me.Label10.Text = "CONSULTA DE INSUMOS"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ptbBarra
+        '
+        Me.ptbBarra.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ptbBarra.Image = Global.ThinkCoffee.My.Resources.Resources.BarraSuperior
+        Me.ptbBarra.Location = New System.Drawing.Point(0, 0)
+        Me.ptbBarra.Name = "ptbBarra"
+        Me.ptbBarra.Size = New System.Drawing.Size(972, 33)
+        Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbBarra.TabIndex = 60
+        Me.ptbBarra.TabStop = False
+        '
         'frmConsultaInsumo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(972, 371)
+        Me.ClientSize = New System.Drawing.Size(972, 438)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.ptbBarra)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.dgvConsultaInsumo)
         Me.Controls.Add(Me.gbConsultaInsumos)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmConsultaInsumo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmConsultaInsumo"
         Me.gbConsultaInsumos.ResumeLayout(False)
         Me.gbConsultaInsumos.PerformLayout()
         CType(Me.dgvConsultaInsumo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -205,4 +237,6 @@ Partial Class frmConsultaInsumo
     Friend WithEvents clmCosto As DataGridViewTextBoxColumn
     Friend WithEvents clmFecha As DataGridViewTextBoxColumn
     Friend WithEvents btnSalir As Button
+    Friend WithEvents Label10 As Label
+    Friend WithEvents ptbBarra As PictureBox
 End Class
