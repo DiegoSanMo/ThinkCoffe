@@ -18,7 +18,7 @@
         End If
     End Sub
 
-    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) 
         conexionSql.Close()
         Me.Close()
     End Sub
@@ -33,5 +33,10 @@
         Else
             cboInsumo.Visible = False
         End If
+    End Sub
+
+    Private Sub btnSalir_Click_1(sender As Object, e As EventArgs) Handles btnSalir.Click
+        conexionSql.Close()
+        Me.Close()
     End Sub
 End Class

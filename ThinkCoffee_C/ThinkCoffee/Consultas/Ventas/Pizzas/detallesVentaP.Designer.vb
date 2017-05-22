@@ -32,54 +32,62 @@ Partial Class detallesVentaP
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.btnAceptar = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtTamaño
         '
-        Me.txtTamaño.Location = New System.Drawing.Point(99, 22)
+        Me.txtTamaño.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtTamaño.Location = New System.Drawing.Point(111, 19)
         Me.txtTamaño.Name = "txtTamaño"
-        Me.txtTamaño.Size = New System.Drawing.Size(198, 20)
+        Me.txtTamaño.Size = New System.Drawing.Size(198, 27)
         Me.txtTamaño.TabIndex = 0
         '
         'txtTipo
         '
-        Me.txtTipo.Location = New System.Drawing.Point(408, 18)
+        Me.txtTipo.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtTipo.Location = New System.Drawing.Point(414, 19)
         Me.txtTipo.Name = "txtTipo"
-        Me.txtTipo.Size = New System.Drawing.Size(198, 20)
+        Me.txtTipo.Size = New System.Drawing.Size(198, 27)
         Me.txtTipo.TabIndex = 1
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(22, 25)
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Location = New System.Drawing.Point(36, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(46, 13)
+        Me.Label1.Size = New System.Drawing.Size(69, 20)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Tamaño"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(331, 25)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label2.Location = New System.Drawing.Point(365, 22)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(28, 13)
+        Me.Label2.Size = New System.Drawing.Size(43, 20)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Tipo"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(22, 68)
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label3.Location = New System.Drawing.Point(28, 65)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 13)
+        Me.Label3.Size = New System.Drawing.Size(77, 20)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Cantidad"
         '
         'txtCantidad
         '
-        Me.txtCantidad.Location = New System.Drawing.Point(99, 61)
+        Me.txtCantidad.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtCantidad.Location = New System.Drawing.Point(111, 62)
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(198, 20)
+        Me.txtCantidad.Size = New System.Drawing.Size(198, 27)
         Me.txtCantidad.TabIndex = 4
         '
         'CheckedListBox1
@@ -93,7 +101,7 @@ Partial Class detallesVentaP
         Me.CheckedListBox1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
         Me.CheckedListBox1.FormattingEnabled = True
         Me.CheckedListBox1.Items.AddRange(New Object() {"CARAMEL PRETZEL", "CLÁSICA", "FRUTAS Y PHILADELPHIA", "RESSES´S", "M & M´S", "CAJETA CON NUEZ", "PLATANO Y LECHERA", "MENTA", "OREO", "BUBULUBU", "SNICKERS", "STRAWBERRY", "ROCKY SMORE", "CHOCOCHIPS", "CHAI Y MAZAPAN", "PEANUT BUTTER Y JELLY", "CAFÉ Y ALMENDRAS", "PIÑA COLADA", "FERRERO", "ALMON JOY Y COCO", "NUTELLOSA"})
-        Me.CheckedListBox1.Location = New System.Drawing.Point(25, 99)
+        Me.CheckedListBox1.Location = New System.Drawing.Point(25, 130)
         Me.CheckedListBox1.MultiColumn = True
         Me.CheckedListBox1.Name = "CheckedListBox1"
         Me.CheckedListBox1.Size = New System.Drawing.Size(678, 147)
@@ -103,47 +111,60 @@ Partial Class detallesVentaP
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(331, 68)
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label4.Location = New System.Drawing.Point(352, 65)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(37, 13)
+        Me.Label4.Size = New System.Drawing.Size(56, 20)
         Me.Label4.TabIndex = 81
         Me.Label4.Text = "Precio"
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(408, 61)
+        Me.txtPrecio.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtPrecio.Location = New System.Drawing.Point(414, 63)
         Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(198, 20)
+        Me.txtPrecio.Size = New System.Drawing.Size(198, 27)
         Me.txtPrecio.TabIndex = 80
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(25, 300)
+        Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnAceptar.Location = New System.Drawing.Point(335, 288)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(678, 23)
+        Me.btnAceptar.Size = New System.Drawing.Size(92, 29)
         Me.btnAceptar.TabIndex = 82
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.txtPrecio)
+        Me.GroupBox1.Controls.Add(Me.txtTamaño)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.txtTipo)
+        Me.GroupBox1.Controls.Add(Me.Label1)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.txtCantidad)
+        Me.GroupBox1.Location = New System.Drawing.Point(25, 21)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(678, 100)
+        Me.GroupBox1.TabIndex = 83
+        Me.GroupBox1.TabStop = False
         '
         'detallesVentaP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(733, 333)
+        Me.ClientSize = New System.Drawing.Size(733, 329)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnAceptar)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtPrecio)
         Me.Controls.Add(Me.CheckedListBox1)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtCantidad)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtTipo)
-        Me.Controls.Add(Me.txtTamaño)
         Me.Name = "detallesVentaP"
         Me.Text = "detallesVentaP"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -157,4 +178,5 @@ Partial Class detallesVentaP
     Friend WithEvents Label4 As Label
     Friend WithEvents txtPrecio As TextBox
     Friend WithEvents btnAceptar As Button
+    Friend WithEvents GroupBox1 As GroupBox
 End Class

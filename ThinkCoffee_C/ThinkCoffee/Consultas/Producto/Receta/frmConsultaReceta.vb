@@ -18,12 +18,6 @@
             lector.Close()
         End If
     End Sub
-
-    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        conexionSql.Close()
-        Me.Close()
-    End Sub
-
     Private Sub frmConsultaReceta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexionSql.Open()
     End Sub
@@ -69,5 +63,10 @@
         Else
             dgvRecetas.Visible = False
         End If
+    End Sub
+
+    Private Sub btnSalir_Click_1(sender As Object, e As EventArgs) Handles btnSalir.Click
+        conexionSql.Close()
+        Me.Close()
     End Sub
 End Class

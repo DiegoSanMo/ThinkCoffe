@@ -14,13 +14,13 @@
         If rbFecha.Checked Then
             dtpFechaInicial.Visible = True
             dtpFechaFinal.Visible = True
-            lblInicial.Visible = True
-            lblFinal.Visible = True
+            lblDesde.Visible = True
+            lblHasta.Visible = True
         Else
             dtpFechaInicial.Visible = False
             dtpFechaFinal.Visible = False
-            lblInicial.Visible = False
-            lblFinal.Visible = False
+            lblDesde.Visible = False
+            lblHasta.Visible = False
         End If
     End Sub
 

@@ -67,6 +67,7 @@ Partial Class frmCatalogoInsumos
         Me.txtIdInsumo.Name = "txtIdInsumo"
         Me.txtIdInsumo.Size = New System.Drawing.Size(100, 27)
         Me.txtIdInsumo.TabIndex = 0
+        Me.txtIdInsumo.Visible = False
         '
         'txtNombre
         '
@@ -86,6 +87,7 @@ Partial Class frmCatalogoInsumos
         Me.Label1.Size = New System.Drawing.Size(78, 20)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "idInsumo"
+        Me.Label1.Visible = False
         '
         'Label2
         '
@@ -299,6 +301,7 @@ Partial Class frmCatalogoInsumos
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnModificar.UseVisualStyleBackColor = True
+        Me.btnModificar.Visible = False
         '
         'Label7
         '

@@ -70,7 +70,7 @@ Partial Class BuscarProveedor
         Me.Controls.Add(Me.dgProv)
         Me.Name = "BuscarProveedor"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "BuscarProveedor"
+        Me.Text = "Buscar Proveedor"
         CType(Me.dgProv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 

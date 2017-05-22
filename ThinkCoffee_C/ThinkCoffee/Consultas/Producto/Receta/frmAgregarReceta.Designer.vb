@@ -23,9 +23,9 @@ Partial Class frmAgregarReceta
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgvRecetas = New System.Windows.Forms.DataGridView()
-        Me.btnAgregarReceta = New System.Windows.Forms.Button()
         Me.clmIdReceta = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.clmNombreReceta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.btnAgregarReceta = New System.Windows.Forms.Button()
         CType(Me.dgvRecetas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -37,15 +37,6 @@ Partial Class frmAgregarReceta
         Me.dgvRecetas.Name = "dgvRecetas"
         Me.dgvRecetas.Size = New System.Drawing.Size(395, 150)
         Me.dgvRecetas.TabIndex = 0
-        '
-        'btnAgregarReceta
-        '
-        Me.btnAgregarReceta.Location = New System.Drawing.Point(94, 169)
-        Me.btnAgregarReceta.Name = "btnAgregarReceta"
-        Me.btnAgregarReceta.Size = New System.Drawing.Size(246, 23)
-        Me.btnAgregarReceta.TabIndex = 1
-        Me.btnAgregarReceta.Text = "Agregar Receta"
-        Me.btnAgregarReceta.UseVisualStyleBackColor = True
         '
         'clmIdReceta
         '
@@ -60,11 +51,21 @@ Partial Class frmAgregarReceta
         Me.clmNombreReceta.ReadOnly = True
         Me.clmNombreReceta.Width = 250
         '
+        'btnAgregarReceta
+        '
+        Me.btnAgregarReceta.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnAgregarReceta.Location = New System.Drawing.Point(142, 171)
+        Me.btnAgregarReceta.Name = "btnAgregarReceta"
+        Me.btnAgregarReceta.Size = New System.Drawing.Size(138, 35)
+        Me.btnAgregarReceta.TabIndex = 1
+        Me.btnAgregarReceta.Text = "Agregar Receta"
+        Me.btnAgregarReceta.UseVisualStyleBackColor = True
+        '
         'frmAgregarReceta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(422, 198)
+        Me.ClientSize = New System.Drawing.Size(422, 216)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnAgregarReceta)
         Me.Controls.Add(Me.dgvRecetas)

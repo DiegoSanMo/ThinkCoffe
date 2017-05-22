@@ -82,7 +82,7 @@ Partial Class frmCatalogoProductos
         Me.GroupBox1.Controls.Add(Me.txtNombre)
         Me.GroupBox1.Location = New System.Drawing.Point(157, 68)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(681, 266)
+        Me.GroupBox1.Size = New System.Drawing.Size(681, 247)
         Me.GroupBox1.TabIndex = 63
         Me.GroupBox1.TabStop = False
         '
@@ -90,7 +90,7 @@ Partial Class frmCatalogoProductos
         '
         Me.btnBuscarR.Enabled = False
         Me.btnBuscarR.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.btnBuscarR.Location = New System.Drawing.Point(359, 103)
+        Me.btnBuscarR.Location = New System.Drawing.Point(359, 61)
         Me.btnBuscarR.Name = "btnBuscarR"
         Me.btnBuscarR.Size = New System.Drawing.Size(97, 29)
         Me.btnBuscarR.TabIndex = 61
@@ -101,7 +101,7 @@ Partial Class frmCatalogoProductos
         '
         Me.btnAceptar.Enabled = False
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.btnAceptar.Location = New System.Drawing.Point(279, 220)
+        Me.btnAceptar.Location = New System.Drawing.Point(306, 196)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(97, 29)
         Me.btnAceptar.TabIndex = 7
@@ -124,7 +124,7 @@ Partial Class frmCatalogoProductos
         '
         Me.txtPrecio.Enabled = False
         Me.txtPrecio.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtPrecio.Location = New System.Drawing.Point(360, 145)
+        Me.txtPrecio.Location = New System.Drawing.Point(360, 103)
         Me.txtPrecio.MaxLength = 7
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(99, 27)
@@ -137,7 +137,7 @@ Partial Class frmCatalogoProductos
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label14.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label14.Location = New System.Drawing.Point(283, 148)
+        Me.Label14.Location = New System.Drawing.Point(283, 106)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(70, 20)
         Me.Label14.TabIndex = 60
@@ -147,7 +147,7 @@ Partial Class frmCatalogoProductos
         '
         Me.txtIdCategoria.Enabled = False
         Me.txtIdCategoria.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtIdCategoria.Location = New System.Drawing.Point(382, 100)
+        Me.txtIdCategoria.Location = New System.Drawing.Point(382, 58)
         Me.txtIdCategoria.Name = "txtIdCategoria"
         Me.txtIdCategoria.Size = New System.Drawing.Size(100, 27)
         Me.txtIdCategoria.TabIndex = 59
@@ -160,7 +160,7 @@ Partial Class frmCatalogoProductos
         Me.Label12.Enabled = False
         Me.Label12.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label12.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label12.Location = New System.Drawing.Point(278, 103)
+        Me.Label12.Location = New System.Drawing.Point(278, 61)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(98, 20)
         Me.Label12.TabIndex = 58
@@ -173,7 +173,7 @@ Partial Class frmCatalogoProductos
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label13.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label13.Location = New System.Drawing.Point(13, 103)
+        Me.Label13.Location = New System.Drawing.Point(13, 61)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(83, 20)
         Me.Label13.TabIndex = 57
@@ -185,7 +185,7 @@ Partial Class frmCatalogoProductos
         Me.cboCategoria.Enabled = False
         Me.cboCategoria.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.cboCategoria.FormattingEnabled = True
-        Me.cboCategoria.Location = New System.Drawing.Point(102, 100)
+        Me.cboCategoria.Location = New System.Drawing.Point(102, 58)
         Me.cboCategoria.Name = "cboCategoria"
         Me.cboCategoria.Size = New System.Drawing.Size(146, 28)
         Me.cboCategoria.TabIndex = 3
@@ -204,7 +204,7 @@ Partial Class frmCatalogoProductos
         '
         Me.txtIdReceta.Enabled = False
         Me.txtIdReceta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtIdReceta.Location = New System.Drawing.Point(383, 141)
+        Me.txtIdReceta.Location = New System.Drawing.Point(383, 99)
         Me.txtIdReceta.Name = "txtIdReceta"
         Me.txtIdReceta.Size = New System.Drawing.Size(100, 27)
         Me.txtIdReceta.TabIndex = 54
@@ -217,7 +217,7 @@ Partial Class frmCatalogoProductos
         Me.Label11.Enabled = False
         Me.Label11.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label11.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label11.Location = New System.Drawing.Point(302, 144)
+        Me.Label11.Location = New System.Drawing.Point(302, 102)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(75, 20)
         Me.Label11.TabIndex = 53
@@ -230,7 +230,7 @@ Partial Class frmCatalogoProductos
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label9.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label9.Location = New System.Drawing.Point(293, 108)
+        Me.Label9.Location = New System.Drawing.Point(293, 66)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(60, 20)
         Me.Label9.TabIndex = 52
@@ -244,6 +244,7 @@ Partial Class frmCatalogoProductos
         Me.txtIdProducto.Name = "txtIdProducto"
         Me.txtIdProducto.Size = New System.Drawing.Size(100, 27)
         Me.txtIdProducto.TabIndex = 1
+        Me.txtIdProducto.Visible = False
         '
         'Label1
         '
@@ -256,6 +257,7 @@ Partial Class frmCatalogoProductos
         Me.Label1.Size = New System.Drawing.Size(92, 20)
         Me.Label1.TabIndex = 26
         Me.Label1.Text = "idProducto"
+        Me.Label1.Visible = False
         '
         'Label2
         '
@@ -263,7 +265,7 @@ Partial Class frmCatalogoProductos
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(26, 62)
+        Me.Label2.Location = New System.Drawing.Point(26, 20)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 20)
         Me.Label2.TabIndex = 28
@@ -273,7 +275,7 @@ Partial Class frmCatalogoProductos
         '
         Me.txtNombre.Enabled = False
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtNombre.Location = New System.Drawing.Point(102, 59)
+        Me.txtNombre.Location = New System.Drawing.Point(102, 17)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(381, 27)
         Me.txtNombre.TabIndex = 2
@@ -283,7 +285,7 @@ Partial Class frmCatalogoProductos
         Me.dgProductos.AllowUserToAddRows = False
         Me.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column4, Me.Column2, Me.Column5, Me.Column6})
-        Me.dgProductos.Location = New System.Drawing.Point(157, 342)
+        Me.dgProductos.Location = New System.Drawing.Point(157, 328)
         Me.dgProductos.Name = "dgProductos"
         Me.dgProductos.Size = New System.Drawing.Size(681, 174)
         Me.dgProductos.TabIndex = 54
@@ -340,7 +342,7 @@ Partial Class frmCatalogoProductos
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(7, 394)
+        Me.btnSalir.Location = New System.Drawing.Point(7, 382)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(103, 39)
         Me.btnSalir.TabIndex = 62
@@ -411,6 +413,7 @@ Partial Class frmCatalogoProductos
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnModificar.UseVisualStyleBackColor = True
+        Me.btnModificar.Visible = False
         '
         'GroupBox2
         '
@@ -422,7 +425,7 @@ Partial Class frmCatalogoProductos
         Me.GroupBox2.Controls.Add(Me.btnSalir)
         Me.GroupBox2.Location = New System.Drawing.Point(28, 68)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(123, 448)
+        Me.GroupBox2.Size = New System.Drawing.Size(123, 434)
         Me.GroupBox2.TabIndex = 62
         Me.GroupBox2.TabStop = False
         '

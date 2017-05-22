@@ -24,8 +24,9 @@ Partial Class frmConsultaCompra
     Private Sub InitializeComponent()
         Me.rbProveedor = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.lblFinal = New System.Windows.Forms.Label()
-        Me.lblInicial = New System.Windows.Forms.Label()
+        Me.lblHasta = New System.Windows.Forms.Label()
+        Me.lblDesde = New System.Windows.Forms.Label()
+        Me.btnBuscarP = New System.Windows.Forms.Button()
         Me.txtProveedor = New System.Windows.Forms.TextBox()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.dtpFechaFinal = New System.Windows.Forms.DateTimePicker()
@@ -38,7 +39,6 @@ Partial Class frmConsultaCompra
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnDetalles = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
-        Me.btnBuscarP = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgCompra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -46,9 +46,10 @@ Partial Class frmConsultaCompra
         'rbProveedor
         '
         Me.rbProveedor.AutoSize = True
+        Me.rbProveedor.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.rbProveedor.Location = New System.Drawing.Point(21, 30)
         Me.rbProveedor.Name = "rbProveedor"
-        Me.rbProveedor.Size = New System.Drawing.Size(74, 17)
+        Me.rbProveedor.Size = New System.Drawing.Size(104, 24)
         Me.rbProveedor.TabIndex = 0
         Me.rbProveedor.TabStop = True
         Me.rbProveedor.Text = "Proveedor"
@@ -56,8 +57,8 @@ Partial Class frmConsultaCompra
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.lblFinal)
-        Me.GroupBox1.Controls.Add(Me.lblInicial)
+        Me.GroupBox1.Controls.Add(Me.lblHasta)
+        Me.GroupBox1.Controls.Add(Me.lblDesde)
         Me.GroupBox1.Controls.Add(Me.btnBuscarP)
         Me.GroupBox1.Controls.Add(Me.txtProveedor)
         Me.GroupBox1.Controls.Add(Me.btnAceptar)
@@ -67,65 +68,85 @@ Partial Class frmConsultaCompra
         Me.GroupBox1.Controls.Add(Me.rbProveedor)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(569, 167)
+        Me.GroupBox1.Size = New System.Drawing.Size(569, 151)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Consultas por:"
         '
-        'lblFinal
+        'lblHasta
         '
-        Me.lblFinal.AutoSize = True
-        Me.lblFinal.Location = New System.Drawing.Point(274, 69)
-        Me.lblFinal.Name = "lblFinal"
-        Me.lblFinal.Size = New System.Drawing.Size(59, 13)
-        Me.lblFinal.TabIndex = 8
-        Me.lblFinal.Text = "Fecha final"
-        Me.lblFinal.Visible = False
+        Me.lblHasta.AutoSize = True
+        Me.lblHasta.Enabled = False
+        Me.lblHasta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHasta.Location = New System.Drawing.Point(279, 83)
+        Me.lblHasta.Name = "lblHasta"
+        Me.lblHasta.Size = New System.Drawing.Size(47, 20)
+        Me.lblHasta.TabIndex = 10
+        Me.lblHasta.Text = "Hasta"
+        Me.lblHasta.Visible = False
         '
-        'lblInicial
+        'lblDesde
         '
-        Me.lblInicial.AutoSize = True
-        Me.lblInicial.Location = New System.Drawing.Point(127, 69)
-        Me.lblInicial.Name = "lblInicial"
-        Me.lblInicial.Size = New System.Drawing.Size(66, 13)
-        Me.lblInicial.TabIndex = 7
-        Me.lblInicial.Text = "Fecha inicial"
-        Me.lblInicial.Visible = False
+        Me.lblDesde.AutoSize = True
+        Me.lblDesde.Enabled = False
+        Me.lblDesde.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDesde.Location = New System.Drawing.Point(105, 83)
+        Me.lblDesde.Name = "lblDesde"
+        Me.lblDesde.Size = New System.Drawing.Size(51, 20)
+        Me.lblDesde.TabIndex = 9
+        Me.lblDesde.Text = "Desde"
+        Me.lblDesde.Visible = False
+        '
+        'btnBuscarP
+        '
+        Me.btnBuscarP.Image = Global.ThinkCoffee.My.Resources.Resources.Search_20
+        Me.btnBuscarP.Location = New System.Drawing.Point(465, 30)
+        Me.btnBuscarP.Name = "btnBuscarP"
+        Me.btnBuscarP.Size = New System.Drawing.Size(49, 29)
+        Me.btnBuscarP.TabIndex = 6
+        Me.btnBuscarP.UseVisualStyleBackColor = True
+        Me.btnBuscarP.Visible = False
         '
         'txtProveedor
         '
-        Me.txtProveedor.Location = New System.Drawing.Point(101, 28)
+        Me.txtProveedor.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtProveedor.Location = New System.Drawing.Point(127, 30)
         Me.txtProveedor.Name = "txtProveedor"
         Me.txtProveedor.ReadOnly = True
-        Me.txtProveedor.Size = New System.Drawing.Size(371, 20)
+        Me.txtProveedor.Size = New System.Drawing.Size(328, 27)
         Me.txtProveedor.TabIndex = 5
         Me.txtProveedor.Visible = False
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(21, 125)
+        Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnAceptar.Location = New System.Drawing.Point(460, 109)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(523, 36)
+        Me.btnAceptar.Size = New System.Drawing.Size(87, 33)
         Me.btnAceptar.TabIndex = 4
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
         'dtpFechaFinal
         '
+        Me.dtpFechaFinal.Enabled = False
+        Me.dtpFechaFinal.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaFinal.Location = New System.Drawing.Point(277, 85)
+        Me.dtpFechaFinal.Location = New System.Drawing.Point(330, 81)
         Me.dtpFechaFinal.Name = "dtpFechaFinal"
-        Me.dtpFechaFinal.Size = New System.Drawing.Size(98, 20)
+        Me.dtpFechaFinal.Size = New System.Drawing.Size(98, 27)
         Me.dtpFechaFinal.TabIndex = 3
         Me.dtpFechaFinal.Value = New Date(2017, 5, 18, 0, 0, 0, 0)
         Me.dtpFechaFinal.Visible = False
         '
         'dtpFechaInicial
         '
+        Me.dtpFechaInicial.Enabled = False
+        Me.dtpFechaInicial.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.dtpFechaInicial.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicial.Location = New System.Drawing.Point(130, 85)
+        Me.dtpFechaInicial.Location = New System.Drawing.Point(162, 81)
         Me.dtpFechaInicial.Name = "dtpFechaInicial"
-        Me.dtpFechaInicial.Size = New System.Drawing.Size(98, 20)
+        Me.dtpFechaInicial.Size = New System.Drawing.Size(98, 27)
         Me.dtpFechaInicial.TabIndex = 2
         Me.dtpFechaInicial.Value = New Date(2017, 5, 18, 0, 0, 0, 0)
         Me.dtpFechaInicial.Visible = False
@@ -133,9 +154,10 @@ Partial Class frmConsultaCompra
         'rbFecha
         '
         Me.rbFecha.AutoSize = True
-        Me.rbFecha.Location = New System.Drawing.Point(21, 85)
+        Me.rbFecha.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.rbFecha.Location = New System.Drawing.Point(21, 81)
         Me.rbFecha.Name = "rbFecha"
-        Me.rbFecha.Size = New System.Drawing.Size(55, 17)
+        Me.rbFecha.Size = New System.Drawing.Size(70, 24)
         Me.rbFecha.TabIndex = 1
         Me.rbFecha.TabStop = True
         Me.rbFecha.Text = "Fecha"
@@ -146,7 +168,7 @@ Partial Class frmConsultaCompra
         Me.dgCompra.AllowUserToAddRows = False
         Me.dgCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgCompra.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4})
-        Me.dgCompra.Location = New System.Drawing.Point(12, 209)
+        Me.dgCompra.Location = New System.Drawing.Point(12, 201)
         Me.dgCompra.Name = "dgCompra"
         Me.dgCompra.ReadOnly = True
         Me.dgCompra.Size = New System.Drawing.Size(569, 209)
@@ -180,7 +202,7 @@ Partial Class frmConsultaCompra
         '
         'btnDetalles
         '
-        Me.btnDetalles.Location = New System.Drawing.Point(477, 185)
+        Me.btnDetalles.Location = New System.Drawing.Point(472, 174)
         Me.btnDetalles.Name = "btnDetalles"
         Me.btnDetalles.Size = New System.Drawing.Size(104, 21)
         Me.btnDetalles.TabIndex = 9
@@ -190,34 +212,25 @@ Partial Class frmConsultaCompra
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(12, 424)
+        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnSalir.Location = New System.Drawing.Point(259, 418)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(569, 36)
+        Me.btnSalir.Size = New System.Drawing.Size(79, 30)
         Me.btnSalir.TabIndex = 10
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = True
-        '
-        'btnBuscarP
-        '
-        Me.btnBuscarP.Image = Global.ThinkCoffee.My.Resources.Resources.Search_20
-        Me.btnBuscarP.Location = New System.Drawing.Point(495, 24)
-        Me.btnBuscarP.Name = "btnBuscarP"
-        Me.btnBuscarP.Size = New System.Drawing.Size(49, 29)
-        Me.btnBuscarP.TabIndex = 6
-        Me.btnBuscarP.UseVisualStyleBackColor = True
-        Me.btnBuscarP.Visible = False
         '
         'frmConsultaCompra
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(593, 464)
+        Me.ClientSize = New System.Drawing.Size(593, 458)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnDetalles)
         Me.Controls.Add(Me.dgCompra)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmConsultaCompra"
-        Me.Text = "frmConsultaCompra"
+        Me.Text = "Consulta de Compra de Insumos"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.dgCompra, System.ComponentModel.ISupportInitialize).EndInit()
@@ -227,8 +240,6 @@ Partial Class frmConsultaCompra
 
     Friend WithEvents rbProveedor As RadioButton
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents lblFinal As Label
-    Friend WithEvents lblInicial As Label
     Friend WithEvents btnBuscarP As Button
     Friend WithEvents txtProveedor As TextBox
     Friend WithEvents btnAceptar As Button
@@ -242,4 +253,6 @@ Partial Class frmConsultaCompra
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents btnDetalles As Button
     Friend WithEvents btnSalir As Button
+    Friend WithEvents lblDesde As Label
+    Friend WithEvents lblHasta As Label
 End Class

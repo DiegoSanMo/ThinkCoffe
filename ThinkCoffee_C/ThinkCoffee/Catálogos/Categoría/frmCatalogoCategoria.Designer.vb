@@ -235,6 +235,7 @@ Partial Class frmCatalogoCategoria
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnModificar.UseVisualStyleBackColor = True
+        Me.btnModificar.Visible = False
         '
         'GroupBox2
         '

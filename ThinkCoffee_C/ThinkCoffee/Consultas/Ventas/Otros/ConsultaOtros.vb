@@ -25,13 +25,13 @@
 
     Private Sub rbFecha_CheckedChanged(sender As Object, e As EventArgs) Handles rbFecha.CheckedChanged
         If rbFecha.Checked Then
-            lblFinal.Visible = True
-            lblInicial.Visible = True
+            lblDesde.Visible = True
+            lblHasta.Visible = True
             dtpFechaFinal.Visible = True
             dtpFechaInicial.Visible = True
         Else
-            lblFinal.Visible = False
-            lblInicial.Visible = False
+            lblDesde.Visible = False
+            lblHasta.Visible = False
             dtpFechaFinal.Visible = False
             dtpFechaInicial.Visible = False
         End If

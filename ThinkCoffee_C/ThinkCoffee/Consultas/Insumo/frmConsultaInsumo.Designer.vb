@@ -47,38 +47,41 @@ Partial Class frmConsultaInsumo
         Me.gbConsultaInsumos.Controls.Add(Me.cboInsumo)
         Me.gbConsultaInsumos.Controls.Add(Me.rbtTodo)
         Me.gbConsultaInsumos.Controls.Add(Me.rbtUnidadDeMedida)
-        Me.gbConsultaInsumos.Location = New System.Drawing.Point(13, 13)
+        Me.gbConsultaInsumos.Location = New System.Drawing.Point(252, 12)
         Me.gbConsultaInsumos.Name = "gbConsultaInsumos"
-        Me.gbConsultaInsumos.Size = New System.Drawing.Size(597, 138)
+        Me.gbConsultaInsumos.Size = New System.Drawing.Size(499, 138)
         Me.gbConsultaInsumos.TabIndex = 0
         Me.gbConsultaInsumos.TabStop = False
         Me.gbConsultaInsumos.Text = "Consulta por:"
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(33, 91)
+        Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.btnAceptar.Location = New System.Drawing.Point(374, 88)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(523, 36)
+        Me.btnAceptar.Size = New System.Drawing.Size(90, 33)
         Me.btnAceptar.TabIndex = 9
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
         'cboInsumo
         '
+        Me.cboInsumo.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.cboInsumo.FormattingEnabled = True
         Me.cboInsumo.Items.AddRange(New Object() {"LTS", "KG", "GR" & Global.Microsoft.VisualBasic.ChrW(9), "MLT", "PZA"})
-        Me.cboInsumo.Location = New System.Drawing.Point(128, 22)
+        Me.cboInsumo.Location = New System.Drawing.Point(195, 27)
         Me.cboInsumo.Name = "cboInsumo"
-        Me.cboInsumo.Size = New System.Drawing.Size(121, 21)
+        Me.cboInsumo.Size = New System.Drawing.Size(121, 28)
         Me.cboInsumo.TabIndex = 8
         Me.cboInsumo.Visible = False
         '
         'rbtTodo
         '
         Me.rbtTodo.AutoSize = True
-        Me.rbtTodo.Location = New System.Drawing.Point(7, 57)
+        Me.rbtTodo.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.rbtTodo.Location = New System.Drawing.Point(18, 69)
         Me.rbtTodo.Name = "rbtTodo"
-        Me.rbtTodo.Size = New System.Drawing.Size(50, 17)
+        Me.rbtTodo.Size = New System.Drawing.Size(66, 24)
         Me.rbtTodo.TabIndex = 2
         Me.rbtTodo.TabStop = True
         Me.rbtTodo.Text = "Todo"
@@ -87,9 +90,10 @@ Partial Class frmConsultaInsumo
         'rbtUnidadDeMedida
         '
         Me.rbtUnidadDeMedida.AutoSize = True
-        Me.rbtUnidadDeMedida.Location = New System.Drawing.Point(7, 22)
+        Me.rbtUnidadDeMedida.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.rbtUnidadDeMedida.Location = New System.Drawing.Point(18, 29)
         Me.rbtUnidadDeMedida.Name = "rbtUnidadDeMedida"
-        Me.rbtUnidadDeMedida.Size = New System.Drawing.Size(114, 17)
+        Me.rbtUnidadDeMedida.Size = New System.Drawing.Size(171, 24)
         Me.rbtUnidadDeMedida.TabIndex = 1
         Me.rbtUnidadDeMedida.TabStop = True
         Me.rbtUnidadDeMedida.Text = "Unidad de medida:"
@@ -156,11 +160,16 @@ Partial Class frmConsultaInsumo
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(199, 326)
+        Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
+        Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnSalir.Location = New System.Drawing.Point(844, 326)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(569, 36)
-        Me.btnSalir.TabIndex = 11
+        Me.btnSalir.Size = New System.Drawing.Size(93, 39)
+        Me.btnSalir.TabIndex = 40
         Me.btnSalir.Text = "Salir"
+        Me.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnSalir.UseVisualStyleBackColor = True
         '
         'frmConsultaInsumo

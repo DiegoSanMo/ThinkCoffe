@@ -55,7 +55,7 @@ Partial Class frmPrincipal
         '
         Me.CatálogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CategoriasToolStripMenuItem, Me.IngredientesToolStripMenuItem, Me.ProductosToolStripMenuItem1, Me.ProveedoresToolStripMenuItem1, Me.PromocionesToolStripMenuItem})
         Me.CatálogosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CatálogosToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.CatálogosToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.CatálogosToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Dossier_50
         Me.CatálogosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.CatálogosToolStripMenuItem.Margin = New System.Windows.Forms.Padding(-6, 0, 0, 0)
@@ -136,7 +136,7 @@ Partial Class frmPrincipal
         Me.PiizaToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Pizza_48
         Me.PiizaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PiizaToolStripMenuItem.Name = "PiizaToolStripMenuItem"
-        Me.PiizaToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
+        Me.PiizaToolStripMenuItem.Size = New System.Drawing.Size(155, 56)
         Me.PiizaToolStripMenuItem.Text = "Pizza"
         '
         'OtrosToolStripMenuItem
@@ -144,7 +144,7 @@ Partial Class frmPrincipal
         Me.OtrosToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Tea_50
         Me.OtrosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.OtrosToolStripMenuItem.Name = "OtrosToolStripMenuItem"
-        Me.OtrosToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
+        Me.OtrosToolStripMenuItem.Size = New System.Drawing.Size(155, 56)
         Me.OtrosToolStripMenuItem.Text = "Otros"
         '
         'menuBar
@@ -227,7 +227,7 @@ Partial Class frmPrincipal
         Me.OtrosToolStripMenuItem1.Image = Global.ThinkCoffee.My.Resources.Resources.Tea_50
         Me.OtrosToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.OtrosToolStripMenuItem1.Name = "OtrosToolStripMenuItem1"
-        Me.OtrosToolStripMenuItem1.Size = New System.Drawing.Size(186, 56)
+        Me.OtrosToolStripMenuItem1.Size = New System.Drawing.Size(155, 56)
         Me.OtrosToolStripMenuItem1.Text = "Otros"
         '
         'PizzaToolStripMenuItem
@@ -235,7 +235,7 @@ Partial Class frmPrincipal
         Me.PizzaToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Pizza_48
         Me.PizzaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.PizzaToolStripMenuItem.Name = "PizzaToolStripMenuItem"
-        Me.PizzaToolStripMenuItem.Size = New System.Drawing.Size(186, 56)
+        Me.PizzaToolStripMenuItem.Size = New System.Drawing.Size(155, 56)
         Me.PizzaToolStripMenuItem.Text = "Pizza"
         '
         'MovimientosToolStripMenuItem

@@ -64,6 +64,7 @@ Partial Class frmCatalogoProveedores
         Me.Label1.Size = New System.Drawing.Size(92, 20)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Clave Prov."
+        Me.Label1.Visible = False
         '
         'txtIdProveedor
         '
@@ -73,12 +74,13 @@ Partial Class frmCatalogoProveedores
         Me.txtIdProveedor.Name = "txtIdProveedor"
         Me.txtIdProveedor.Size = New System.Drawing.Size(101, 27)
         Me.txtIdProveedor.TabIndex = 1
+        Me.txtIdProveedor.Visible = False
         '
         'txtNombre
         '
         Me.txtNombre.Enabled = False
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.Location = New System.Drawing.Point(114, 55)
+        Me.txtNombre.Location = New System.Drawing.Point(110, 15)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(324, 27)
         Me.txtNombre.TabIndex = 2
@@ -88,7 +90,7 @@ Partial Class frmCatalogoProveedores
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(35, 57)
+        Me.Label2.Location = New System.Drawing.Point(31, 17)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 20)
         Me.Label2.TabIndex = 3
@@ -98,7 +100,7 @@ Partial Class frmCatalogoProveedores
         '
         Me.txtDireccion.Enabled = False
         Me.txtDireccion.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDireccion.Location = New System.Drawing.Point(114, 95)
+        Me.txtDireccion.Location = New System.Drawing.Point(110, 55)
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(324, 27)
         Me.txtDireccion.TabIndex = 4
@@ -108,7 +110,7 @@ Partial Class frmCatalogoProveedores
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(27, 98)
+        Me.Label3.Location = New System.Drawing.Point(23, 58)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(81, 20)
         Me.Label3.TabIndex = 5
@@ -133,7 +135,7 @@ Partial Class frmCatalogoProveedores
         Me.dgProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgProveedores.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column8})
         Me.dgProveedores.GridColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.dgProveedores.Location = New System.Drawing.Point(145, 233)
+        Me.dgProveedores.Location = New System.Drawing.Point(145, 207)
         Me.dgProveedores.Name = "dgProveedores"
         Me.dgProveedores.Size = New System.Drawing.Size(686, 184)
         Me.dgProveedores.TabIndex = 22
@@ -171,7 +173,7 @@ Partial Class frmCatalogoProveedores
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(15, 272)
+        Me.btnSalir.Location = New System.Drawing.Point(15, 246)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(101, 39)
         Me.btnSalir.TabIndex = 26
@@ -277,7 +279,7 @@ Partial Class frmCatalogoProveedores
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label4.Location = New System.Drawing.Point(449, 58)
+        Me.Label4.Location = New System.Drawing.Point(445, 18)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(76, 20)
         Me.Label4.TabIndex = 7
@@ -297,7 +299,7 @@ Partial Class frmCatalogoProveedores
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Location = New System.Drawing.Point(145, 94)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(686, 133)
+        Me.GroupBox1.Size = New System.Drawing.Size(686, 103)
         Me.GroupBox1.TabIndex = 31
         Me.GroupBox1.TabStop = False
         '
@@ -305,7 +307,7 @@ Partial Class frmCatalogoProveedores
         '
         Me.mskTelefono.Enabled = False
         Me.mskTelefono.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.mskTelefono.Location = New System.Drawing.Point(527, 55)
+        Me.mskTelefono.Location = New System.Drawing.Point(523, 15)
         Me.mskTelefono.Mask = "(999)000-0000"
         Me.mskTelefono.Name = "mskTelefono"
         Me.mskTelefono.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
@@ -317,7 +319,7 @@ Partial Class frmCatalogoProveedores
         Me.btnAceptar.Enabled = False
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAceptar.ForeColor = System.Drawing.Color.Black
-        Me.btnAceptar.Location = New System.Drawing.Point(543, 95)
+        Me.btnAceptar.Location = New System.Drawing.Point(539, 55)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(92, 32)
         Me.btnAceptar.TabIndex = 5
@@ -337,6 +339,7 @@ Partial Class frmCatalogoProveedores
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnModificar.UseVisualStyleBackColor = True
+        Me.btnModificar.Visible = False
         '
         'Button1
         '
@@ -363,7 +366,7 @@ Partial Class frmCatalogoProveedores
         Me.GroupBox2.Controls.Add(Me.btnSalir)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 94)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(127, 323)
+        Me.GroupBox2.Size = New System.Drawing.Size(127, 297)
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
         '

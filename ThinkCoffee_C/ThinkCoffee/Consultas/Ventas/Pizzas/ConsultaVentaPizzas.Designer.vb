@@ -43,36 +43,36 @@ Partial Class ConsultaVentaPizzas
         '
         Me.rbChica.AutoSize = True
         Me.rbChica.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.rbChica.Location = New System.Drawing.Point(6, 19)
+        Me.rbChica.Location = New System.Drawing.Point(16, 82)
         Me.rbChica.Name = "rbChica"
-        Me.rbChica.Size = New System.Drawing.Size(75, 24)
+        Me.rbChica.Size = New System.Drawing.Size(68, 24)
         Me.rbChica.TabIndex = 3
         Me.rbChica.TabStop = True
-        Me.rbChica.Text = "CHICA"
+        Me.rbChica.Text = "Chica"
         Me.rbChica.UseVisualStyleBackColor = True
         '
         'rbRebanada
         '
         Me.rbRebanada.AutoSize = True
         Me.rbRebanada.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.rbRebanada.Location = New System.Drawing.Point(386, 19)
+        Me.rbRebanada.Location = New System.Drawing.Point(16, 29)
         Me.rbRebanada.Name = "rbRebanada"
-        Me.rbRebanada.Size = New System.Drawing.Size(113, 24)
+        Me.rbRebanada.Size = New System.Drawing.Size(102, 24)
         Me.rbRebanada.TabIndex = 4
         Me.rbRebanada.TabStop = True
-        Me.rbRebanada.Text = "REBANADA"
+        Me.rbRebanada.Text = "Rebanada"
         Me.rbRebanada.UseVisualStyleBackColor = True
         '
         'rbGrande
         '
         Me.rbGrande.AutoSize = True
         Me.rbGrande.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.rbGrande.Location = New System.Drawing.Point(6, 49)
+        Me.rbGrande.Location = New System.Drawing.Point(16, 138)
         Me.rbGrande.Name = "rbGrande"
-        Me.rbGrande.Size = New System.Drawing.Size(92, 24)
+        Me.rbGrande.Size = New System.Drawing.Size(81, 24)
         Me.rbGrande.TabIndex = 5
         Me.rbGrande.TabStop = True
-        Me.rbGrande.Text = "GRANDE"
+        Me.rbGrande.Text = "Grande"
         Me.rbGrande.UseVisualStyleBackColor = True
         '
         'GroupBox1
@@ -80,9 +80,9 @@ Partial Class ConsultaVentaPizzas
         Me.GroupBox1.Controls.Add(Me.rbGrande)
         Me.GroupBox1.Controls.Add(Me.rbChica)
         Me.GroupBox1.Controls.Add(Me.rbRebanada)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 63)
+        Me.GroupBox1.Location = New System.Drawing.Point(14, 115)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(647, 84)
+        Me.GroupBox1.Size = New System.Drawing.Size(138, 195)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         '
@@ -91,7 +91,7 @@ Partial Class ConsultaVentaPizzas
         Me.dgVentaP.AllowUserToAddRows = False
         Me.dgVentaP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgVentaP.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
-        Me.dgVentaP.Location = New System.Drawing.Point(12, 194)
+        Me.dgVentaP.Location = New System.Drawing.Point(158, 120)
         Me.dgVentaP.Name = "dgVentaP"
         Me.dgVentaP.Size = New System.Drawing.Size(647, 190)
         Me.dgVentaP.TabIndex = 7
@@ -130,9 +130,9 @@ Partial Class ConsultaVentaPizzas
         '
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAceptar.ForeColor = System.Drawing.Color.Black
-        Me.btnAceptar.Location = New System.Drawing.Point(299, 390)
+        Me.btnAceptar.Location = New System.Drawing.Point(434, 317)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(78, 27)
+        Me.btnAceptar.Size = New System.Drawing.Size(78, 34)
         Me.btnAceptar.TabIndex = 42
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
@@ -140,9 +140,11 @@ Partial Class ConsultaVentaPizzas
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(262, 25)
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.DarkRed
+        Me.Label1.Location = New System.Drawing.Point(242, 19)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(190, 13)
+        Me.Label1.Size = New System.Drawing.Size(354, 25)
         Me.Label1.TabIndex = 43
         Me.Label1.Text = "VENTAS POR CONCEPTO DE PIZZA"
         '
@@ -150,7 +152,7 @@ Partial Class ConsultaVentaPizzas
         '
         Me.btnDetallesP.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDetallesP.ForeColor = System.Drawing.Color.Black
-        Me.btnDetallesP.Location = New System.Drawing.Point(450, 153)
+        Me.btnDetallesP.Location = New System.Drawing.Point(596, 79)
         Me.btnDetallesP.Name = "btnDetallesP"
         Me.btnDetallesP.Size = New System.Drawing.Size(209, 35)
         Me.btnDetallesP.TabIndex = 44
@@ -162,7 +164,7 @@ Partial Class ConsultaVentaPizzas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(671, 429)
+        Me.ClientSize = New System.Drawing.Size(834, 357)
         Me.Controls.Add(Me.btnDetallesP)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnAceptar)
