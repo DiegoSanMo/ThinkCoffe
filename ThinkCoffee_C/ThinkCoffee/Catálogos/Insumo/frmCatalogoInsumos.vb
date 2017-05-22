@@ -30,12 +30,13 @@ Public Class frmCatalogoInsumos
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-
+        dtpFecha.Enabled = False
         limpiarCajaInsumos()
 
         btnNuevo.Enabled = False
         btnSalir.Enabled = False
         btnModificar.Enabled = False
+        btnCancelar.Enabled = True
 
         activarCajasInsumo()
         txtNombre.Focus()
@@ -48,34 +49,55 @@ Public Class frmCatalogoInsumos
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
-        If banModi Then
-
-            MsgBox(filaSel)
-            dgInsumo.Item(1, filaSel).Value = txtNombre.Text
-            dgInsumo.Item(2, filaSel).Value = cboUnidadM.Text
-            dgInsumo.Item(3, filaSel).Value = txtMax.Text
-            dgInsumo.Item(4, filaSel).Value = txtMin.Text
-            dgInsumo.Item(5, filaSel).Value = txtExist.Text
-            dgInsumo.Item(6, filaSel).Value = "0"
-            dgInsumo.Item(7, filaSel).Value = dtpFecha.Value.Date
-
-
-            btnGrabar.Enabled = True
-            btnCancelar.Enabled = True
-
-            limpiarCajaInsumos()
-            bloquearCajasInsumo()
-
+        If cboUnidadM.Text = "" Or txtMax.Text = "" Or txtMax.Text = "" Or txtExist.Text = "" Then
+            MessageBox.Show("FALTA DE INFORMACIÓN", "ERROR, FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            dgInsumo.Rows.Add(txtIdInsumo.Text, txtNombre.Text, cboUnidadM.Text, txtMax.Text, txtMin.Text, txtExist.Text, "0", dtpFecha.Value.Date)
 
-            btnGrabar.Enabled = True
-            btnCancelar.Enabled = True
+            If banModi Then
 
-            limpiarCajaInsumos()
-            bloquearCajasInsumo()
+                MsgBox(filaSel)
+                dgInsumo.Item(1, filaSel).Value = txtNombre.Text
+                dgInsumo.Item(2, filaSel).Value = cboUnidadM.Text
+                dgInsumo.Item(3, filaSel).Value = txtMax.Text
+                dgInsumo.Item(4, filaSel).Value = txtMin.Text
+                dgInsumo.Item(5, filaSel).Value = txtExist.Text
+                dgInsumo.Item(6, filaSel).Value = "0"
+                dgInsumo.Item(7, filaSel).Value = dtpFecha.Value.Date
+
+
+                btnGrabar.Enabled = True
+                btnCancelar.Enabled = True
+
+                limpiarCajaInsumos()
+                bloquearCajasInsumo()
+
+            Else
+                Dim entra As Boolean = False
+                Dim p As Integer = 0
+
+                For x = 0 To dgInsumo.RowCount - 1
+                    If dgInsumo(1, x).Value = txtNombre.Text Then
+                        entra = True
+                        p = x
+                        Exit For
+                    End If
+                Next
+
+                If entra Then
+                    MessageBox.Show("INSUMO YA REGISTRADO", "ERROR INSUMO YA REGISTRADO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    txtNombre.Focus()
+                Else
+                    dgInsumo.Rows.Add(txtIdInsumo.Text, txtNombre.Text, cboUnidadM.Text, txtMax.Text, txtMin.Text, txtExist.Text, "0", dtpFecha.Value.Date)
+
+                    btnGrabar.Enabled = True
+                    btnCancelar.Enabled = True
+
+                    limpiarCajaInsumos()
+                    bloquearCajasInsumo()
+                End If
+            End If
+
         End If
-
 
     End Sub
 
@@ -91,7 +113,7 @@ Public Class frmCatalogoInsumos
 
     Private Sub txtNombre_Validating(sender As Object, e As CancelEventArgs) Handles txtNombre.Validating
         If Len(txtNombre.Text) < 5 Then
-            MessageBox.Show("DEBES INTRODUCIR AL MENOS 10 CARACTERES", "FALTA INFORMACION",
+            MessageBox.Show("DEBES INTRODUCIR AL MENOS 5 CARACTERES", "FALTA INFORMACION",
             MessageBoxButtons.OK, MessageBoxIcon.Error)
             txtNombre.Focus()
         End If
@@ -100,6 +122,7 @@ Public Class frmCatalogoInsumos
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
 
         If banModi Then
+            dtpFecha.Enabled = False
             comando.CommandText = "Update tlb_insumo set nombre = '" & dgInsumo.Item(1, filaSel).Value & "', unidadM = '" & dgInsumo.Item(2, filaSel).Value & "', maximo = " & CDec(dgInsumo.Item(3, filaSel).Value) & ", minimo = " & CDec(dgInsumo.Item(4, filaSel).Value) & ", existencia = " & CDec(dgInsumo.Item(5, filaSel).Value) & ", costo = " & CDec(dgInsumo.Item(6, filaSel).Value) & ", fecha = '" & dgInsumo.Item(7, filaSel).Value & "' where idInsumo = " & Val(dgInsumo.Item(0, filaSel).Value) & ""
             comando.ExecuteNonQuery()
 
@@ -111,6 +134,7 @@ Public Class frmCatalogoInsumos
             banModi = False
 
         Else
+            dtpFecha.Enabled = False
             Dim ultimo As Integer = dgInsumo.RowCount - 1
             comando.CommandText = "Insert into tlb_insumo(idInsumo, nombre, unidadM, maximo, minimo, existencia, costo, fecha) values(" & Val(dgInsumo.Item(0, ultimo).Value) & ",'" & CStr(dgInsumo.Item(1, ultimo).Value) & "', '" & CStr(dgInsumo.Item(2, ultimo).Value) & "', " & CDec(dgInsumo.Item(3, ultimo).Value) & ", " & CDec(dgInsumo.Item(4, ultimo).Value) & ", " & CDec(dgInsumo.Item(5, ultimo).Value) & "," & CDec(dgInsumo.Item(6, ultimo).Value) & ",'" & dgInsumo.Item(7, ultimo).Value & "')"
             comando.ExecuteNonQuery()
@@ -127,7 +151,7 @@ Public Class frmCatalogoInsumos
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         If banModi Then
-
+            dtpFecha.Enabled = False
             'Variables que tomarán los datos del insumo que corresponda al ID y en caso de que se cancele la 
             'modificacion el dataGried tomará los datos de las variebles que previamente tienen los datos ya registrados
 
@@ -164,8 +188,16 @@ Public Class frmCatalogoInsumos
             btnSalir.Enabled = True
             btnModificar.Enabled = True
 
+            txtNombre.Enabled = False
+            txtMin.Enabled = False
+            txtMax.Enabled = False
+            cboUnidadM.Enabled = False
+            txtExist.Enabled = False
+            btnAceptar.Enabled = False
+
             banModi = False
         Else
+            dtpFecha.Enabled = False
             Dim ultimo As Integer = dgInsumo.RowCount - 1
             dgInsumo.Rows.RemoveAt(ultimo)
             dgInsumo.Refresh()
@@ -175,17 +207,36 @@ Public Class frmCatalogoInsumos
             btnNuevo.Enabled = True
             btnSalir.Enabled = True
             btnModificar.Enabled = True
+            txtNombre.Text = ""
+            txtNombre.Enabled = False
+            txtMin.Enabled = False
+            txtMax.Enabled = False
+            cboUnidadM.Enabled = False
+            txtExist.Enabled = False
+            btnAceptar.Enabled = False
+
         End If
 
     End Sub
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-        btnNuevo.Enabled = False
-        btnModificar.Enabled = False
-        btnSalir.Enabled = False
-        activarCajasInsumo()
-        txtNombre.Focus()
-        banModi = True
+        If dgInsumo.RowCount = 0 Then
+            MessageBox.Show("NO SE HAN REGISTRADO INSUMOS PARA REALIZAR MODIFICACIÓN", "ERROR, FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            If txtNombre.Text = "" Then
+                MessageBox.Show("NO SE HA SELECCIONADO INSUMO PARA REALIZAR MODIFICACIÓN", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+                btnNuevo.Enabled = False
+                btnModificar.Enabled = False
+                btnSalir.Enabled = False
+                btnCancelar.Enabled = True
+                btnGrabar.Enabled = True
+                activarCajasInsumo()
+                txtNombre.Focus()
+                banModi = True
+            End If
+        End If
+
 
     End Sub
 

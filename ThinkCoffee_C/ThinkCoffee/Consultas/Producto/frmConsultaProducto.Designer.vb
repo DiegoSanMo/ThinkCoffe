@@ -56,7 +56,7 @@ Partial Class frmConsultaProducto
         'btnBuscar
         '
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.btnBuscar.Location = New System.Drawing.Point(323, 74)
+        Me.btnBuscar.Location = New System.Drawing.Point(318, 23)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(87, 28)
         Me.btnBuscar.TabIndex = 5
@@ -65,6 +65,7 @@ Partial Class frmConsultaProducto
         '
         'cboCategoriaConsulta
         '
+        Me.cboCategoriaConsulta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboCategoriaConsulta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.cboCategoriaConsulta.FormattingEnabled = True
         Me.cboCategoriaConsulta.Location = New System.Drawing.Point(119, 22)

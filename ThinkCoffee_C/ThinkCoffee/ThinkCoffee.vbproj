@@ -151,16 +151,16 @@
     <Compile Include="Consultas\Producto\frmConsultaProducto.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\Producto\Receta\frmAgregarReceta.Designer.vb">
+    <Compile Include="Consultas\Receta\frmAgregarReceta.Designer.vb">
       <DependentUpon>frmAgregarReceta.vb</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\Producto\Receta\frmAgregarReceta.vb">
+    <Compile Include="Consultas\Receta\frmAgregarReceta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas\Producto\Receta\frmConsultaReceta.Designer.vb">
+    <Compile Include="Consultas\Receta\frmConsultaReceta.Designer.vb">
       <DependentUpon>frmConsultaReceta.vb</DependentUpon>
     </Compile>
-    <Compile Include="Consultas\Producto\Receta\frmConsultaReceta.vb">
+    <Compile Include="Consultas\Receta\frmConsultaReceta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Consultas\Ventas\Otros\ConsultaOtros.Designer.vb">
@@ -268,10 +268,10 @@
     <EmbeddedResource Include="Consultas\Producto\frmConsultaProducto.resx">
       <DependentUpon>frmConsultaProducto.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\Producto\Receta\frmAgregarReceta.resx">
+    <EmbeddedResource Include="Consultas\Receta\frmAgregarReceta.resx">
       <DependentUpon>frmAgregarReceta.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Consultas\Producto\Receta\frmConsultaReceta.resx">
+    <EmbeddedResource Include="Consultas\Receta\frmConsultaReceta.resx">
       <DependentUpon>frmConsultaReceta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\Ventas\Otros\ConsultaOtros.resx">

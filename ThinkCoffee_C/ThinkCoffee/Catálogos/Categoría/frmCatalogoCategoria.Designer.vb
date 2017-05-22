@@ -85,6 +85,7 @@ Partial Class frmCatalogoCategoria
         Me.txtIdCategoria.Name = "txtIdCategoria"
         Me.txtIdCategoria.Size = New System.Drawing.Size(100, 27)
         Me.txtIdCategoria.TabIndex = 27
+        Me.txtIdCategoria.Visible = False
         '
         'Label1
         '
@@ -97,6 +98,7 @@ Partial Class frmCatalogoCategoria
         Me.Label1.Size = New System.Drawing.Size(98, 20)
         Me.Label1.TabIndex = 26
         Me.Label1.Text = "idCategoria"
+        Me.Label1.Visible = False
         '
         'dgCategoria
         '

@@ -117,9 +117,9 @@ Partial Class frmCatalogoInsumos
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label4.Location = New System.Drawing.Point(690, 22)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(138, 20)
+        Me.Label4.Size = New System.Drawing.Size(140, 20)
         Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Fecha de compra"
+        Me.Label4.Text = "Fecha de registro"
         '
         'Label6
         '
@@ -141,7 +141,7 @@ Partial Class frmCatalogoInsumos
         Me.cboUnidadM.Location = New System.Drawing.Point(166, 113)
         Me.cboUnidadM.Name = "cboUnidadM"
         Me.cboUnidadM.Size = New System.Drawing.Size(100, 28)
-        Me.cboUnidadM.TabIndex = 11
+        Me.cboUnidadM.TabIndex = 2
         '
         'txtExist
         '
@@ -150,7 +150,7 @@ Partial Class frmCatalogoInsumos
         Me.txtExist.Location = New System.Drawing.Point(790, 116)
         Me.txtExist.Name = "txtExist"
         Me.txtExist.Size = New System.Drawing.Size(100, 27)
-        Me.txtExist.TabIndex = 15
+        Me.txtExist.TabIndex = 5
         '
         'btnSalir
         '
@@ -217,7 +217,7 @@ Partial Class frmCatalogoInsumos
         Me.btnAceptar.Location = New System.Drawing.Point(429, 160)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(97, 29)
-        Me.btnAceptar.TabIndex = 67
+        Me.btnAceptar.TabIndex = 6
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = True
         '
@@ -303,7 +303,6 @@ Partial Class frmCatalogoInsumos
         Me.btnModificar.Text = "Modificar"
         Me.btnModificar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnModificar.UseVisualStyleBackColor = True
-        Me.btnModificar.Visible = False
         '
         'Label7
         '
@@ -332,7 +331,7 @@ Partial Class frmCatalogoInsumos
         Me.txtMax.Location = New System.Drawing.Point(399, 116)
         Me.txtMax.Name = "txtMax"
         Me.txtMax.Size = New System.Drawing.Size(69, 27)
-        Me.txtMax.TabIndex = 13
+        Me.txtMax.TabIndex = 3
         '
         'txtMin
         '
@@ -341,7 +340,7 @@ Partial Class frmCatalogoInsumos
         Me.txtMin.Location = New System.Drawing.Point(586, 116)
         Me.txtMin.Name = "txtMin"
         Me.txtMin.Size = New System.Drawing.Size(73, 27)
-        Me.txtMin.TabIndex = 16
+        Me.txtMin.TabIndex = 4
         '
         'Label10
         '

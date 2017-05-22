@@ -60,7 +60,7 @@ Partial Class frmConsultaInsumo
         'btnAceptar
         '
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.btnAceptar.Location = New System.Drawing.Point(374, 88)
+        Me.btnAceptar.Location = New System.Drawing.Point(386, 65)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(90, 33)
         Me.btnAceptar.TabIndex = 9
@@ -69,6 +69,7 @@ Partial Class frmConsultaInsumo
         '
         'cboInsumo
         '
+        Me.cboInsumo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboInsumo.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.cboInsumo.FormattingEnabled = True
         Me.cboInsumo.Items.AddRange(New Object() {"LTS", "KG", "GR" & Global.Microsoft.VisualBasic.ChrW(9), "MLT", "PZA"})

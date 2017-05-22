@@ -121,14 +121,31 @@ Public Class frmCatalogoCategoria
             btnAceptar.Enabled = False
 
         Else
-            dgCategoria.Rows.Add(txtIdCategoria.Text, txtNombre.Text)
-            txtIdCategoria.Text = ""
-            txtNombre.Text = ""
+            Dim p As Integer = 0
+            Dim entra As Boolean = False
 
-            txtNombre.Enabled = False
-            btnGrabar.Enabled = True
-            btnCancelar.Enabled = True
-            btnAceptar.Enabled = False
+            For x = 0 To dgCategoria.RowCount - 1
+                If dgCategoria(1, x).Value = txtNombre.Text Then
+                    p = x
+                    entra = True
+                    Exit For
+                End If
+            Next
+
+            If entra = True Then
+                MessageBox.Show("CATEGORÍA YA REGISTRADA", "ERROR CATEGORÍA REPETIDA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                txtNombre.Focus()
+            Else
+                dgCategoria.Rows.Add(txtIdCategoria.Text, txtNombre.Text)
+                txtIdCategoria.Text = ""
+                txtNombre.Text = ""
+
+                txtNombre.Enabled = False
+                btnGrabar.Enabled = True
+                btnCancelar.Enabled = True
+                btnAceptar.Enabled = False
+            End If
+
         End If
 
     End Sub
