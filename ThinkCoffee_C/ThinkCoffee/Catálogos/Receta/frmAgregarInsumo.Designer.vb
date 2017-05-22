@@ -30,7 +30,10 @@ Partial Class frmAgregarInsumo
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ptbBarra = New System.Windows.Forms.PictureBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.dgInsumos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgInsumos
@@ -38,7 +41,7 @@ Partial Class frmAgregarInsumo
         Me.dgInsumos.AllowUserToAddRows = False
         Me.dgInsumos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgInsumos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.Column1, Me.DataGridViewTextBoxColumn3})
-        Me.dgInsumos.Location = New System.Drawing.Point(12, 58)
+        Me.dgInsumos.Location = New System.Drawing.Point(38, 128)
         Me.dgInsumos.Name = "dgInsumos"
         Me.dgInsumos.Size = New System.Drawing.Size(599, 205)
         Me.dgInsumos.TabIndex = 52
@@ -70,7 +73,7 @@ Partial Class frmAgregarInsumo
         'btnAgregar
         '
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.btnAgregar.Location = New System.Drawing.Point(460, 19)
+        Me.btnAgregar.Location = New System.Drawing.Point(486, 89)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(149, 27)
         Me.btnAgregar.TabIndex = 53
@@ -80,7 +83,7 @@ Partial Class frmAgregarInsumo
         'txtNombre
         '
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtNombre.Location = New System.Drawing.Point(124, 19)
+        Me.txtNombre.Location = New System.Drawing.Point(150, 89)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(323, 27)
         Me.txtNombre.TabIndex = 54
@@ -89,25 +92,53 @@ Partial Class frmAgregarInsumo
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(22, 21)
+        Me.Label1.Location = New System.Drawing.Point(48, 91)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(96, 20)
         Me.Label1.TabIndex = 55
         Me.Label1.Text = "Ingrediente"
         '
+        'ptbBarra
+        '
+        Me.ptbBarra.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ptbBarra.Image = Global.ThinkCoffee.My.Resources.Resources.BarraSuperior
+        Me.ptbBarra.Location = New System.Drawing.Point(0, 0)
+        Me.ptbBarra.Name = "ptbBarra"
+        Me.ptbBarra.Size = New System.Drawing.Size(672, 33)
+        Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbBarra.TabIndex = 56
+        Me.ptbBarra.TabStop = False
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label10.Location = New System.Drawing.Point(82, 36)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(520, 37)
+        Me.Label10.TabIndex = 57
+        Me.Label10.Text = "BUSQUEDA DE INGREDIENTES"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frmAgregarInsumo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(623, 279)
+        Me.ClientSize = New System.Drawing.Size(672, 348)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.ptbBarra)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgInsumos)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmAgregarInsumo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmAgregarInsumo"
         CType(Me.dgInsumos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -120,4 +151,6 @@ Partial Class frmAgregarInsumo
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents ptbBarra As PictureBox
+    Friend WithEvents Label10 As Label
 End Class

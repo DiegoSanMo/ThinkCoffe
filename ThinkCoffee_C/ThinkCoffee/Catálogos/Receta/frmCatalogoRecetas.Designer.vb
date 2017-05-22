@@ -37,8 +37,6 @@ Partial Class frmCatalogoRecetas
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGrabar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
-        Me.btnMinimizar = New System.Windows.Forms.Button()
-        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.ptbBarra = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
@@ -226,44 +224,6 @@ Partial Class frmCatalogoRecetas
         Me.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
-        'btnMinimizar
-        '
-        Me.btnMinimizar.AllowDrop = True
-        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMinimizar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnMinimizar.FlatAppearance.BorderSize = 0
-        Me.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMinimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnMinimizar.Image = Global.ThinkCoffee.My.Resources.Resources.Minimize_Window_30
-        Me.btnMinimizar.Location = New System.Drawing.Point(693, 0)
-        Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(36, 33)
-        Me.btnMinimizar.TabIndex = 53
-        Me.btnMinimizar.TextAlign = System.Drawing.ContentAlignment.TopRight
-        Me.btnMinimizar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.btnMinimizar.UseVisualStyleBackColor = False
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.AllowDrop = True
-        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnCerrar.FlatAppearance.BorderSize = 0
-        Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnCerrar.Image = Global.ThinkCoffee.My.Resources.Resources.Close_Window_30
-        Me.btnCerrar.Location = New System.Drawing.Point(725, 0)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(36, 33)
-        Me.btnCerrar.TabIndex = 52
-        Me.btnCerrar.TextAlign = System.Drawing.ContentAlignment.TopRight
-        Me.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.btnCerrar.UseVisualStyleBackColor = False
-        '
         'ptbBarra
         '
         Me.ptbBarra.Dock = System.Windows.Forms.DockStyle.Top
@@ -339,7 +299,7 @@ Partial Class frmCatalogoRecetas
         '
         Me.cmbUnidadM.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.cmbUnidadM.FormattingEnabled = True
-        Me.cmbUnidadM.Items.AddRange(New Object() {"OZ", "CDAS", "TAZAS", "VASOS", "PIEZA", "GRS", "PIZCA"})
+        Me.cmbUnidadM.Items.AddRange(New Object() {"OZ", "CDAS", "TAZAS", "PIEZA", "gr"})
         Me.cmbUnidadM.Location = New System.Drawing.Point(345, 64)
         Me.cmbUnidadM.Name = "cmbUnidadM"
         Me.cmbUnidadM.Size = New System.Drawing.Size(133, 28)
@@ -478,8 +438,6 @@ Partial Class frmCatalogoRecetas
         Me.ClientSize = New System.Drawing.Size(761, 493)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.btnMinimizar)
-        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.dgReceta)
         Me.Controls.Add(Me.Label10)
@@ -511,8 +469,6 @@ Partial Class frmCatalogoRecetas
     Friend WithEvents btnNuevo As Button
     Friend WithEvents dgReceta As DataGridView
     Friend WithEvents Label10 As Label
-    Friend WithEvents btnMinimizar As Button
-    Friend WithEvents btnCerrar As Button
     Friend WithEvents ptbBarra As PictureBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents txtCantidad As TextBox

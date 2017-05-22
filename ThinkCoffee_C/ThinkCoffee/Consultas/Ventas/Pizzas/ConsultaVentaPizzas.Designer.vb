@@ -35,6 +35,7 @@ Partial Class ConsultaVentaPizzas
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnDetallesP = New System.Windows.Forms.Button()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.GroupBox1.SuspendLayout()
         CType(Me.dgVentaP, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -77,6 +78,7 @@ Partial Class ConsultaVentaPizzas
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.RadioButton1)
         Me.GroupBox1.Controls.Add(Me.rbGrande)
         Me.GroupBox1.Controls.Add(Me.rbChica)
         Me.GroupBox1.Controls.Add(Me.rbRebanada)
@@ -160,6 +162,19 @@ Partial Class ConsultaVentaPizzas
         Me.btnDetallesP.UseVisualStyleBackColor = True
         Me.btnDetallesP.Visible = False
         '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Checked = True
+        Me.RadioButton1.Location = New System.Drawing.Point(16, 168)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton1.TabIndex = 45
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "RadioButton1"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.RadioButton1.Visible = False
+        '
         'ConsultaVentaPizzas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -193,4 +208,5 @@ Partial Class ConsultaVentaPizzas
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents btnDetallesP As Button
+    Friend WithEvents RadioButton1 As RadioButton
 End Class

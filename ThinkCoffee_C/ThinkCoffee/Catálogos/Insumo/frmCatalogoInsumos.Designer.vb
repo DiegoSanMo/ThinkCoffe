@@ -54,9 +54,11 @@ Partial Class frmCatalogoInsumos
         Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ptbBarra = New System.Windows.Forms.PictureBox()
         CType(Me.dgInsumo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtIdInsumo
@@ -224,7 +226,7 @@ Partial Class frmCatalogoInsumos
         Me.dgInsumo.AllowUserToAddRows = False
         Me.dgInsumo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgInsumo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
-        Me.dgInsumo.Location = New System.Drawing.Point(143, 273)
+        Me.dgInsumo.Location = New System.Drawing.Point(140, 300)
         Me.dgInsumo.Name = "dgInsumo"
         Me.dgInsumo.Size = New System.Drawing.Size(967, 201)
         Me.dgInsumo.TabIndex = 68
@@ -347,7 +349,7 @@ Partial Class frmCatalogoInsumos
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label10.Location = New System.Drawing.Point(377, 17)
+        Me.Label10.Location = New System.Drawing.Point(379, 48)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(444, 37)
         Me.Label10.TabIndex = 71
@@ -371,7 +373,7 @@ Partial Class frmCatalogoInsumos
         Me.GroupBox1.Controls.Add(Me.txtMax)
         Me.GroupBox1.Controls.Add(Me.txtMin)
         Me.GroupBox1.Controls.Add(Me.txtExist)
-        Me.GroupBox1.Location = New System.Drawing.Point(143, 61)
+        Me.GroupBox1.Location = New System.Drawing.Point(140, 88)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(967, 198)
         Me.GroupBox1.TabIndex = 72
@@ -384,18 +386,30 @@ Partial Class frmCatalogoInsumos
         Me.GroupBox2.Controls.Add(Me.btnCancelar)
         Me.GroupBox2.Controls.Add(Me.btnModificar)
         Me.GroupBox2.Controls.Add(Me.btnSalir)
-        Me.GroupBox2.Location = New System.Drawing.Point(15, 61)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 88)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(118, 413)
         Me.GroupBox2.TabIndex = 73
         Me.GroupBox2.TabStop = False
         '
+        'ptbBarra
+        '
+        Me.ptbBarra.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ptbBarra.Image = Global.ThinkCoffee.My.Resources.Resources.BarraSuperior
+        Me.ptbBarra.Location = New System.Drawing.Point(0, 0)
+        Me.ptbBarra.Name = "ptbBarra"
+        Me.ptbBarra.Size = New System.Drawing.Size(1129, 33)
+        Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbBarra.TabIndex = 74
+        Me.ptbBarra.TabStop = False
+        '
         'frmCatalogoInsumos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1129, 494)
+        Me.ClientSize = New System.Drawing.Size(1129, 513)
         Me.ControlBox = False
+        Me.Controls.Add(Me.ptbBarra)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label10)
@@ -408,6 +422,7 @@ Partial Class frmCatalogoInsumos
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -445,4 +460,5 @@ Partial Class frmCatalogoInsumos
     Friend WithEvents Label10 As Label
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents ptbBarra As PictureBox
 End Class

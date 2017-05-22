@@ -51,8 +51,8 @@ Public Class frmCatalogoCategoria
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
-        Dim n As Integer
 
+        Dim n As Integer
         comando.CommandText = String.Format("Select count(*) from tlb_categoria")
         n = comando.ExecuteScalar + 1
         txtIdCategoria.Text = n
@@ -86,6 +86,7 @@ Public Class frmCatalogoCategoria
             dgCategoria.Enabled = True
             btnModificar.Enabled = True
             dgCategoria.Enabled = True
+            
 
         Else
             Dim ultimo As Integer = dgCategoria.RowCount - 1
@@ -102,6 +103,7 @@ Public Class frmCatalogoCategoria
             btnModificar.Enabled = True
             mensajeGrabar()
         End If
+
 
 
 
@@ -182,14 +184,18 @@ Public Class frmCatalogoCategoria
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
         If dgCategoria.RowCount > 0 Then
-            btnNuevo.Enabled = False
-            btnSalir.Enabled = False
-            btnModificar.Enabled = False
+            If txtNombre.Text = "" Then
+                MessageBox.Show("NO SE SELECCIONADO CATEGORÍA A MODIFICAR", "FALTA DE CATGORÍA", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+                btnNuevo.Enabled = False
+                btnSalir.Enabled = False
+                btnModificar.Enabled = False
 
 
-            txtNombre.Enabled = True
-            banModi = True
-            dgCategoria.Enabled = False
+                txtNombre.Enabled = True
+                banModi = True
+                dgCategoria.Enabled = False
+            End If
         Else
             MessageBox.Show("NO SE HAN INGRESADO CATEGORIAS PARA MODIFICAR", "FALTA DE CATEGORÍAS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If

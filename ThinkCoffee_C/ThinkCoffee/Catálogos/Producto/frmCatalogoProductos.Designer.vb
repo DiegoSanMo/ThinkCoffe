@@ -54,10 +54,12 @@ Partial Class frmCatalogoProductos
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ptbBarra = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ptbImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgProductos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -80,7 +82,7 @@ Partial Class frmCatalogoProductos
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.txtNombre)
-        Me.GroupBox1.Location = New System.Drawing.Point(157, 68)
+        Me.GroupBox1.Location = New System.Drawing.Point(155, 84)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(681, 247)
         Me.GroupBox1.TabIndex = 63
@@ -285,7 +287,7 @@ Partial Class frmCatalogoProductos
         Me.dgProductos.AllowUserToAddRows = False
         Me.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column3, Me.Column4, Me.Column2, Me.Column5, Me.Column6})
-        Me.dgProductos.Location = New System.Drawing.Point(157, 328)
+        Me.dgProductos.Location = New System.Drawing.Point(155, 344)
         Me.dgProductos.Name = "dgProductos"
         Me.dgProductos.Size = New System.Drawing.Size(681, 174)
         Me.dgProductos.TabIndex = 54
@@ -329,7 +331,7 @@ Partial Class frmCatalogoProductos
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
         Me.Label10.ForeColor = System.Drawing.Color.Black
-        Me.Label10.Location = New System.Drawing.Point(322, 16)
+        Me.Label10.Location = New System.Drawing.Point(329, 44)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(229, 37)
         Me.Label10.TabIndex = 53
@@ -423,11 +425,22 @@ Partial Class frmCatalogoProductos
         Me.GroupBox2.Controls.Add(Me.btnGrabar)
         Me.GroupBox2.Controls.Add(Me.btnCancelar)
         Me.GroupBox2.Controls.Add(Me.btnSalir)
-        Me.GroupBox2.Location = New System.Drawing.Point(28, 68)
+        Me.GroupBox2.Location = New System.Drawing.Point(26, 84)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(123, 434)
         Me.GroupBox2.TabIndex = 62
         Me.GroupBox2.TabStop = False
+        '
+        'ptbBarra
+        '
+        Me.ptbBarra.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ptbBarra.Image = Global.ThinkCoffee.My.Resources.Resources.BarraSuperior
+        Me.ptbBarra.Location = New System.Drawing.Point(0, 0)
+        Me.ptbBarra.Name = "ptbBarra"
+        Me.ptbBarra.Size = New System.Drawing.Size(872, 33)
+        Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbBarra.TabIndex = 64
+        Me.ptbBarra.TabStop = False
         '
         'frmCatalogoProductos
         '
@@ -437,6 +450,7 @@ Partial Class frmCatalogoProductos
         Me.BackgroundImage = Global.ThinkCoffee.My.Resources.Resources.fondo_formulario_1
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(872, 530)
+        Me.Controls.Add(Me.ptbBarra)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.GroupBox1)
@@ -450,6 +464,7 @@ Partial Class frmCatalogoProductos
         CType(Me.ptbImagen, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgProductos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -487,4 +502,5 @@ Partial Class frmCatalogoProductos
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents btnBuscarR As Button
     Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents ptbBarra As PictureBox
 End Class

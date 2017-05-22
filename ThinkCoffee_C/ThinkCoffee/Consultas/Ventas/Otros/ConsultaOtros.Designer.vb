@@ -23,8 +23,8 @@ Partial Class ConsultaOtros
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.btnBuscarC = New System.Windows.Forms.Button()
-        Me.txtCategoria = New System.Windows.Forms.TextBox()
+        Me.lblHasta = New System.Windows.Forms.Label()
+        Me.lblDesde = New System.Windows.Forms.Label()
         Me.rbCategoria = New System.Windows.Forms.RadioButton()
         Me.btnBuscarP = New System.Windows.Forms.Button()
         Me.txtProducto = New System.Windows.Forms.TextBox()
@@ -33,17 +33,24 @@ Partial Class ConsultaOtros
         Me.dtpFechaInicial = New System.Windows.Forms.DateTimePicker()
         Me.rbFecha = New System.Windows.Forms.RadioButton()
         Me.rbProducto = New System.Windows.Forms.RadioButton()
-        Me.lblHasta = New System.Windows.Forms.Label()
-        Me.lblDesde = New System.Windows.Forms.Label()
+        Me.dgVentaOtro = New System.Windows.Forms.DataGridView()
+        Me.btnSalir = New System.Windows.Forms.Button()
+        Me.cboCategoria = New System.Windows.Forms.ComboBox()
+        Me.btnDetallesP = New System.Windows.Forms.Button()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.dgVentaOtro, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cboCategoria)
         Me.GroupBox1.Controls.Add(Me.lblHasta)
-        Me.GroupBox1.Controls.Add(Me.btnBuscarC)
         Me.GroupBox1.Controls.Add(Me.lblDesde)
-        Me.GroupBox1.Controls.Add(Me.txtCategoria)
         Me.GroupBox1.Controls.Add(Me.rbCategoria)
         Me.GroupBox1.Controls.Add(Me.btnBuscarP)
         Me.GroupBox1.Controls.Add(Me.txtProducto)
@@ -52,38 +59,43 @@ Partial Class ConsultaOtros
         Me.GroupBox1.Controls.Add(Me.dtpFechaInicial)
         Me.GroupBox1.Controls.Add(Me.rbFecha)
         Me.GroupBox1.Controls.Add(Me.rbProducto)
+        Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(569, 201)
+        Me.GroupBox1.Size = New System.Drawing.Size(569, 148)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Consultas por:"
         '
-        'btnBuscarC
+        'lblHasta
         '
-        Me.btnBuscarC.Image = Global.ThinkCoffee.My.Resources.Resources.Search_20
-        Me.btnBuscarC.Location = New System.Drawing.Point(505, 69)
-        Me.btnBuscarC.Name = "btnBuscarC"
-        Me.btnBuscarC.Size = New System.Drawing.Size(49, 29)
-        Me.btnBuscarC.TabIndex = 11
-        Me.btnBuscarC.UseVisualStyleBackColor = True
-        Me.btnBuscarC.Visible = False
+        Me.lblHasta.AutoSize = True
+        Me.lblHasta.Enabled = False
+        Me.lblHasta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHasta.Location = New System.Drawing.Point(298, 110)
+        Me.lblHasta.Name = "lblHasta"
+        Me.lblHasta.Size = New System.Drawing.Size(47, 20)
+        Me.lblHasta.TabIndex = 12
+        Me.lblHasta.Text = "Hasta"
+        Me.lblHasta.Visible = False
         '
-        'txtCategoria
+        'lblDesde
         '
-        Me.txtCategoria.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtCategoria.Location = New System.Drawing.Point(128, 69)
-        Me.txtCategoria.Name = "txtCategoria"
-        Me.txtCategoria.ReadOnly = True
-        Me.txtCategoria.Size = New System.Drawing.Size(371, 27)
-        Me.txtCategoria.TabIndex = 10
-        Me.txtCategoria.Visible = False
+        Me.lblDesde.AutoSize = True
+        Me.lblDesde.Enabled = False
+        Me.lblDesde.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDesde.Location = New System.Drawing.Point(124, 110)
+        Me.lblDesde.Name = "lblDesde"
+        Me.lblDesde.Size = New System.Drawing.Size(51, 20)
+        Me.lblDesde.TabIndex = 11
+        Me.lblDesde.Text = "Desde"
+        Me.lblDesde.Visible = False
         '
         'rbCategoria
         '
         Me.rbCategoria.AutoSize = True
         Me.rbCategoria.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.rbCategoria.Location = New System.Drawing.Point(21, 72)
+        Me.rbCategoria.Location = New System.Drawing.Point(21, 70)
         Me.rbCategoria.Name = "rbCategoria"
         Me.rbCategoria.Size = New System.Drawing.Size(101, 24)
         Me.rbCategoria.TabIndex = 9
@@ -114,7 +126,7 @@ Partial Class ConsultaOtros
         'btnAceptar
         '
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.btnAceptar.Location = New System.Drawing.Point(468, 153)
+        Me.btnAceptar.Location = New System.Drawing.Point(468, 104)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(95, 32)
         Me.btnAceptar.TabIndex = 4
@@ -125,7 +137,7 @@ Partial Class ConsultaOtros
         '
         Me.dtpFechaFinal.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaFinal.Location = New System.Drawing.Point(351, 119)
+        Me.dtpFechaFinal.Location = New System.Drawing.Point(351, 107)
         Me.dtpFechaFinal.Name = "dtpFechaFinal"
         Me.dtpFechaFinal.Size = New System.Drawing.Size(98, 27)
         Me.dtpFechaFinal.TabIndex = 3
@@ -136,7 +148,7 @@ Partial Class ConsultaOtros
         '
         Me.dtpFechaInicial.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.dtpFechaInicial.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaInicial.Location = New System.Drawing.Point(181, 118)
+        Me.dtpFechaInicial.Location = New System.Drawing.Point(181, 107)
         Me.dtpFechaInicial.Name = "dtpFechaInicial"
         Me.dtpFechaInicial.Size = New System.Drawing.Size(98, 27)
         Me.dtpFechaInicial.TabIndex = 2
@@ -147,7 +159,7 @@ Partial Class ConsultaOtros
         '
         Me.rbFecha.AutoSize = True
         Me.rbFecha.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.rbFecha.Location = New System.Drawing.Point(21, 118)
+        Me.rbFecha.Location = New System.Drawing.Point(21, 108)
         Me.rbFecha.Name = "rbFecha"
         Me.rbFecha.Size = New System.Drawing.Size(70, 24)
         Me.rbFecha.TabIndex = 1
@@ -167,41 +179,95 @@ Partial Class ConsultaOtros
         Me.rbProducto.Text = "Producto"
         Me.rbProducto.UseVisualStyleBackColor = True
         '
-        'lblHasta
+        'dgVentaOtro
         '
-        Me.lblHasta.AutoSize = True
-        Me.lblHasta.Enabled = False
-        Me.lblHasta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHasta.Location = New System.Drawing.Point(298, 122)
-        Me.lblHasta.Name = "lblHasta"
-        Me.lblHasta.Size = New System.Drawing.Size(47, 20)
-        Me.lblHasta.TabIndex = 12
-        Me.lblHasta.Text = "Hasta"
-        Me.lblHasta.Visible = False
+        Me.dgVentaOtro.AllowUserToAddRows = False
+        Me.dgVentaOtro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgVentaOtro.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column5, Me.Column3, Me.Column4})
+        Me.dgVentaOtro.Location = New System.Drawing.Point(12, 199)
+        Me.dgVentaOtro.Name = "dgVentaOtro"
+        Me.dgVentaOtro.Size = New System.Drawing.Size(720, 230)
+        Me.dgVentaOtro.TabIndex = 3
         '
-        'lblDesde
+        'btnSalir
         '
-        Me.lblDesde.AutoSize = True
-        Me.lblDesde.Enabled = False
-        Me.lblDesde.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDesde.Location = New System.Drawing.Point(124, 122)
-        Me.lblDesde.Name = "lblDesde"
-        Me.lblDesde.Size = New System.Drawing.Size(51, 20)
-        Me.lblDesde.TabIndex = 11
-        Me.lblDesde.Text = "Desde"
-        Me.lblDesde.Visible = False
+        Me.btnSalir.Location = New System.Drawing.Point(12, 435)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(720, 23)
+        Me.btnSalir.TabIndex = 4
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
+        '
+        'cboCategoria
+        '
+        Me.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCategoria.FormattingEnabled = True
+        Me.cboCategoria.Location = New System.Drawing.Point(128, 68)
+        Me.cboCategoria.Name = "cboCategoria"
+        Me.cboCategoria.Size = New System.Drawing.Size(371, 28)
+        Me.cboCategoria.TabIndex = 13
+        Me.cboCategoria.Visible = False
+        '
+        'btnDetallesP
+        '
+        Me.btnDetallesP.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDetallesP.ForeColor = System.Drawing.Color.Black
+        Me.btnDetallesP.Location = New System.Drawing.Point(372, 166)
+        Me.btnDetallesP.Name = "btnDetallesP"
+        Me.btnDetallesP.Size = New System.Drawing.Size(209, 27)
+        Me.btnDetallesP.TabIndex = 45
+        Me.btnDetallesP.Text = "Información extra de venta"
+        Me.btnDetallesP.UseVisualStyleBackColor = True
+        Me.btnDetallesP.Visible = False
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "No.Venta"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "Producto"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 170
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Categoría"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 150
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "Fecha de venta"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 150
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "Total"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
         '
         'ConsultaOtros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(603, 236)
+        Me.ClientSize = New System.Drawing.Size(744, 470)
+        Me.Controls.Add(Me.btnDetallesP)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.dgVentaOtro)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "ConsultaOtros"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ConsultaOtros"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.dgVentaOtro, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -215,8 +281,15 @@ Partial Class ConsultaOtros
     Friend WithEvents rbFecha As RadioButton
     Friend WithEvents rbProducto As RadioButton
     Friend WithEvents rbCategoria As RadioButton
-    Friend WithEvents btnBuscarC As Button
-    Friend WithEvents txtCategoria As TextBox
     Friend WithEvents lblHasta As Label
     Friend WithEvents lblDesde As Label
+    Friend WithEvents dgVentaOtro As DataGridView
+    Friend WithEvents btnSalir As Button
+    Friend WithEvents cboCategoria As ComboBox
+    Friend WithEvents btnDetallesP As Button
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
 End Class

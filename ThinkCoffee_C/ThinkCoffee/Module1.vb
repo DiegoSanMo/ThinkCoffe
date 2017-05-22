@@ -7,7 +7,7 @@ Module Module1
     Public CadenaDirecciones As String = "0123456789.ABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
     Public nombreInsumo As String
 
-    Public conexionSql As New SqlConnection("Data Source = 'LUCY'; Initial Catalog = 'thinkCoffee'; Integrated security = true")
+    Public conexionSql As New SqlConnection("Data Source = 'PRO'; Initial Catalog = 'thinkCoffee'; Integrated security = true")
     Public comando As SqlCommand = conexionSql.CreateCommand
     Public lector As SqlDataReader
 
@@ -138,6 +138,9 @@ Module Module1
                     'obtener la unidad de medida del insumo
                     Dim unidad As String
                     unidad = todosInsumos(x, 1)
+                    Dim unidadReceta As String
+                    unidadReceta = insumos(t, 2)
+                    MsgBox(unidadReceta)
                     'Variable que nos guarda saber la existencia del insumo que se busca
                     Dim unidadBase As Decimal = todosInsumos(x, 2)
 
@@ -145,47 +148,147 @@ Module Module1
 
                     Dim insumoRestante As Decimal
 
-                    If unidad = "LTS" Then
+                    If unidadReceta = "OZ" Then
+                        If unidad = "LTS" Then
 
 
-                        cantidadInsumo = insumos(t, 1) * 0.0295735
-                        cantidadInsumo = cantidadInsumo * cantidadProductos
-                        insumoRestante = unidadBase - cantidadInsumo
+                            cantidadInsumo = insumos(t, 1) * 0.0295735
+                            cantidadInsumo = cantidadInsumo * cantidadProductos
+                            insumoRestante = unidadBase - cantidadInsumo
 
 
-                    ElseIf unidad = "KG" Then
-                        MsgBox("Son kilos")
+                        ElseIf unidad = "KG" Then
+                            MsgBox("Son kilos")
 
-                        cantidadInsumo = insumos(t, 1) * 0.0283495
-                        cantidadInsumo = cantidadInsumo * cantidadProductos
-                        insumoRestante = unidadBase - cantidadInsumo
-
-
-                    ElseIf unidad = "GR" Then
-                        MsgBox("Son gramos")
-
-                        cantidadInsumo = insumos(t, 1) * 28.3495
-                        cantidadInsumo = cantidadInsumo * cantidadProductos
-                        insumoRestante = unidadBase - cantidadInsumo
+                            cantidadInsumo = insumos(t, 1) * 0.0283495
+                            cantidadInsumo = cantidadInsumo * cantidadProductos
+                            insumoRestante = unidadBase - cantidadInsumo
 
 
-                    ElseIf unidad = "MLT" Then
-                        MsgBox("Son mililitros")
-                        cantidadInsumo = insumos(t, 1) * 28.4131
-                        cantidadInsumo = cantidadInsumo * cantidadProductos
-                        insumoRestante = unidadBase - cantidadInsumo
+                        ElseIf unidad = "GR" Then
+                            MsgBox("Son gramos")
+
+                            cantidadInsumo = insumos(t, 1) * 28.3495
+                            cantidadInsumo = cantidadInsumo * cantidadProductos
+                            insumoRestante = unidadBase - cantidadInsumo
 
 
-                    ElseIf unidad = "PZA" Then
-                        MsgBox("son piezas")
-                        cantidadInsumo = insumos(t, 1) * cantidadProductos
-                        insumoRestante = unidadBase - cantidadInsumo
+                        ElseIf unidad = "MLT" Then
+                            MsgBox("Son mililitros")
+                            cantidadInsumo = insumos(t, 1) * 28.4131
+                            cantidadInsumo = cantidadInsumo * cantidadProductos
+                            insumoRestante = unidadBase - cantidadInsumo
+
+
+                        ElseIf unidad = "PZA" Then
+                            MsgBox("son piezas")
+                            cantidadInsumo = insumos(t, 1) * cantidadProductos
+                            insumoRestante = unidadBase - cantidadInsumo
+
+                        End If
+                        'actualizar las existencias del insumo
+                        comando.CommandText = "Update tlb_insumo set existencia = " & insumoRestante & " where idInsumo = " & todosInsumos(x, 0) & ""
+                        comando.ExecuteNonQuery()
+
+
+
+
+                    ElseIf unidadReceta = "CDAS" Then
+                        If unidad = "LTS" Then
+
+
+                            cantidadInsumo = insumos(t, 1) * 66.67
+                            cantidadInsumo = cantidadInsumo * cantidadProductos
+                            insumoRestante = unidadBase - cantidadInsumo
+
+
+                        ElseIf unidad = "KG" Then
+                            MsgBox("Son kilos")
+
+                            cantidadInsumo = insumos(t, 1) * 0.0283495
+                            cantidadInsumo = cantidadInsumo * cantidadProductos
+                            insumoRestante = unidadBase - cantidadInsumo
+
+
+                        ElseIf unidad = "GR" Then
+                            MsgBox("Son gramos")
+
+                            cantidadInsumo = insumos(t, 1) * 28.3495
+                            cantidadInsumo = cantidadInsumo * cantidadProductos
+                            insumoRestante = unidadBase - cantidadInsumo
+
+
+                        ElseIf unidad = "MLT" Then
+                            MsgBox("Son mililitros")
+                            cantidadInsumo = insumos(t, 1) * 28.4131
+                            cantidadInsumo = cantidadInsumo * cantidadProductos
+                            insumoRestante = unidadBase - cantidadInsumo
+
+
+                        ElseIf unidad = "PZA" Then
+                            MsgBox("son piezas")
+                            cantidadInsumo = insumos(t, 1) * cantidadProductos
+                            insumoRestante = unidadBase - cantidadInsumo
+
+                        End If
+                        'actualizar las existencias del insumo
+                        comando.CommandText = "Update tlb_insumo set existencia = " & insumoRestante & " where idInsumo = " & todosInsumos(x, 0) & ""
+                        comando.ExecuteNonQuery()
+
 
                     End If
-                    'actualizar las existencias del insumo
-                    comando.CommandText = "Update tlb_insumo set existencia = " & insumoRestante & " where idInsumo = " & todosInsumos(x, 0) & ""
-                    comando.ExecuteNonQuery()
+
                 End If
+
+
+
+
+
+
+
+
+
+                '    If unidad = "LTS" Then
+
+
+                '        cantidadInsumo = insumos(t, 1) * 0.0295735
+                '        cantidadInsumo = cantidadInsumo * cantidadProductos
+                '        insumoRestante = unidadBase - cantidadInsumo
+
+
+                '    ElseIf unidad = "KG" Then
+                '        MsgBox("Son kilos")
+
+                '        cantidadInsumo = insumos(t, 1) * 0.0283495
+                '        cantidadInsumo = cantidadInsumo * cantidadProductos
+                '        insumoRestante = unidadBase - cantidadInsumo
+
+
+                '    ElseIf unidad = "GR" Then
+                '        MsgBox("Son gramos")
+
+                '        cantidadInsumo = insumos(t, 1) * 28.3495
+                '        cantidadInsumo = cantidadInsumo * cantidadProductos
+                '        insumoRestante = unidadBase - cantidadInsumo
+
+
+                '    ElseIf unidad = "MLT" Then
+                '        MsgBox("Son mililitros")
+                '        cantidadInsumo = insumos(t, 1) * 28.4131
+                '        cantidadInsumo = cantidadInsumo * cantidadProductos
+                '        insumoRestante = unidadBase - cantidadInsumo
+
+
+                '    ElseIf unidad = "PZA" Then
+                '        MsgBox("son piezas")
+                '        cantidadInsumo = insumos(t, 1) * cantidadProductos
+                '        insumoRestante = unidadBase - cantidadInsumo
+
+                '    End If
+                '    'actualizar las existencias del insumo
+                '    comando.CommandText = "Update tlb_insumo set existencia = " & insumoRestante & " where idInsumo = " & todosInsumos(x, 0) & ""
+                '    comando.ExecuteNonQuery()
+                'End If
             Next
         Next
     End Sub

@@ -26,8 +26,6 @@ Partial Class frmPrincipal
         Me.CategoriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IngredientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.RegistroToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificaciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PromocionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -82,24 +80,11 @@ Partial Class frmPrincipal
         '
         'ProductosToolStripMenuItem1
         '
-        Me.ProductosToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistroToolStripMenuItem, Me.ModificaciónToolStripMenuItem})
         Me.ProductosToolStripMenuItem1.Image = Global.ThinkCoffee.My.Resources.Resources.Coffee_to_Go_50
         Me.ProductosToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ProductosToolStripMenuItem1.Name = "ProductosToolStripMenuItem1"
         Me.ProductosToolStripMenuItem1.Size = New System.Drawing.Size(209, 56)
         Me.ProductosToolStripMenuItem1.Text = "Productos"
-        '
-        'RegistroToolStripMenuItem
-        '
-        Me.RegistroToolStripMenuItem.Name = "RegistroToolStripMenuItem"
-        Me.RegistroToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.RegistroToolStripMenuItem.Text = "Registro"
-        '
-        'ModificaciónToolStripMenuItem
-        '
-        Me.ModificaciónToolStripMenuItem.Name = "ModificaciónToolStripMenuItem"
-        Me.ModificaciónToolStripMenuItem.Size = New System.Drawing.Size(181, 26)
-        Me.ModificaciónToolStripMenuItem.Text = "Modificación"
         '
         'ProveedoresToolStripMenuItem1
         '
@@ -336,8 +321,6 @@ Partial Class frmPrincipal
     
     Friend WithEvents PiizaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OtrosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents RegistroToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ModificaciónToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MovimientosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CompraDeInsumosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConsultaToolStripMenuItem As ToolStripMenuItem

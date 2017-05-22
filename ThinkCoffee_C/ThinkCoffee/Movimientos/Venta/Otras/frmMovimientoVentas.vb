@@ -105,6 +105,7 @@
         btnCancelar.Enabled = False
         btnBuscar.Enabled = False
         btnAceptar.Enabled = False
+        btnSalir.Enabled = True
 
         'bloqueo de cajas de texto
         txtIdVenta.Enabled = False

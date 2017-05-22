@@ -105,7 +105,7 @@ Partial Class frmMovimientoVentas
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(130, 27)
         Me.dtpFecha.TabIndex = 31
-        Me.dtpFecha.Value = New Date(2017, 5, 10, 0, 0, 0, 0)
+        Me.dtpFecha.Value = New Date(2017, 5, 22, 0, 0, 0, 0)
         '
         'Label3
         '

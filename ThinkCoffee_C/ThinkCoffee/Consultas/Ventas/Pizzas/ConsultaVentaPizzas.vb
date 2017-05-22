@@ -1,9 +1,11 @@
 ﻿Public Class ConsultaVentaPizzas
 
     Private Sub ConsultaVentaPizzas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        dgVentaP.Rows.Clear()
         conexionSql.Open()
-
+        dgVentaP.Rows.Clear()
+        rbRebanada.Checked = False
+        rbChica.Checked = False
+        rbGrande.Checked = False
     End Sub
 
     Private Sub rbChica_CheckedChanged(sender As Object, e As EventArgs) Handles rbChica.CheckedChanged
@@ -26,6 +28,8 @@
                 MessageBox.Show("NO SE HAN REGISTRADO VENTAS DE PIZZAS CHICAS", "INFORMACIÒN DE CONSULTA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 btnDetallesP.Visible = False
             End If
+            rbChica.Checked = False
+        Else
             rbChica.Checked = False
         End If
 
@@ -109,10 +113,6 @@
             lector.Close()
 
 
-
-            'comando.CommandText = "Select tlb_detPizza.topping from tlb_detPizza where tlb_detPizza.idPizza = '" & idPizza & "' "
-            'lector = comando.ExecuteReader
-
             For x = 0 To 20
                 comando.CommandText = "Select tlb_detPizza.topping from tlb_detPizza where tlb_detPizza.idPizza = '" & idPizza & "' "
                 lector = comando.ExecuteReader
@@ -124,33 +124,7 @@
                 End While
                 lector.Close()
             Next
-
-
-
-            'Dim con As Integer = 0
-            'While lector.Read
-            '    If detallesVentaP.CheckedListBox1.Items(con) = lector(0) Then
-            '        detallesVentaP.CheckedListBox1.SetItemChecked(con, True)
-            '    End If
-            '    con += 1
-            'End While
-            'lector.Close()
-
-
-
-
-
-            'For x = 0 To 20
-
-
-            'Next
-
-
-
-
             detallesVentaP.ShowDialog()
-
-
         End If
     End Sub
 End Class

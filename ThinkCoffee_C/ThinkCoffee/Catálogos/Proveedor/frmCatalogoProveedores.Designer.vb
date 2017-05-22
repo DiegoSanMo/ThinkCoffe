@@ -38,8 +38,6 @@ Partial Class frmCatalogoProveedores
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGrabar = New System.Windows.Forms.Button()
         Me.btnNuevo = New System.Windows.Forms.Button()
-        Me.btnMinimizar = New System.Windows.Forms.Button()
-        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.ptbBarra = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -225,44 +223,6 @@ Partial Class frmCatalogoProveedores
         Me.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnNuevo.UseVisualStyleBackColor = True
         '
-        'btnMinimizar
-        '
-        Me.btnMinimizar.AllowDrop = True
-        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMinimizar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnMinimizar.FlatAppearance.BorderSize = 0
-        Me.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMinimizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnMinimizar.Image = Global.ThinkCoffee.My.Resources.Resources.Minimize_Window_30
-        Me.btnMinimizar.Location = New System.Drawing.Point(785, 0)
-        Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(36, 33)
-        Me.btnMinimizar.TabIndex = 19
-        Me.btnMinimizar.TextAlign = System.Drawing.ContentAlignment.TopRight
-        Me.btnMinimizar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.btnMinimizar.UseVisualStyleBackColor = False
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.AllowDrop = True
-        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnCerrar.FlatAppearance.BorderSize = 0
-        Me.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray
-        Me.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnCerrar.Image = Global.ThinkCoffee.My.Resources.Resources.Close_Window_30
-        Me.btnCerrar.Location = New System.Drawing.Point(817, 0)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(36, 33)
-        Me.btnCerrar.TabIndex = 18
-        Me.btnCerrar.TextAlign = System.Drawing.ContentAlignment.TopRight
-        Me.btnCerrar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.btnCerrar.UseVisualStyleBackColor = False
-        '
         'ptbBarra
         '
         Me.ptbBarra.Dock = System.Windows.Forms.DockStyle.Top
@@ -383,8 +343,6 @@ Partial Class frmCatalogoProveedores
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.dgProveedores)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.btnMinimizar)
-        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.ptbBarra)
         Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -408,8 +366,6 @@ Partial Class frmCatalogoProveedores
     Friend WithEvents Label2 As Label
     Friend WithEvents txtDireccion As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents btnCerrar As Button
-    Friend WithEvents btnMinimizar As Button
     Friend WithEvents Label10 As Label
     Friend WithEvents dgProveedores As DataGridView
     Friend WithEvents btnNuevo As Button

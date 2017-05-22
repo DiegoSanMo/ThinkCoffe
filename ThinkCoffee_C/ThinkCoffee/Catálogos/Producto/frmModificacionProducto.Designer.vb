@@ -397,6 +397,7 @@ Partial Class frmModificacionProducto
         Me.Controls.Add(Me.dgModificacion)
         Me.Controls.Add(Me.GroupBox1)
         Me.Name = "frmModificacionProducto"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmModificacionProducto"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
