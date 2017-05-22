@@ -43,11 +43,11 @@ Partial Class frmMovimientoVentas
         Me.Label7 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txtIdProducto = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.txtCategoria = New System.Windows.Forms.TextBox()
         Me.txtNombreP = New System.Windows.Forms.TextBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.txtIdProducto = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGrabar = New System.Windows.Forms.Button()
@@ -278,29 +278,6 @@ Partial Class frmMovimientoVentas
         Me.GroupBox2.TabIndex = 70
         Me.GroupBox2.TabStop = False
         '
-        'txtIdProducto
-        '
-        Me.txtIdProducto.Enabled = False
-        Me.txtIdProducto.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtIdProducto.Location = New System.Drawing.Point(93, 54)
-        Me.txtIdProducto.Name = "txtIdProducto"
-        Me.txtIdProducto.Size = New System.Drawing.Size(100, 27)
-        Me.txtIdProducto.TabIndex = 66
-        Me.txtIdProducto.Visible = False
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label8.Location = New System.Drawing.Point(0, 61)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(92, 20)
-        Me.Label8.TabIndex = 65
-        Me.Label8.Text = "IdProducto"
-        Me.Label8.Visible = False
-        '
         'txtCategoria
         '
         Me.txtCategoria.Enabled = False
@@ -328,6 +305,29 @@ Partial Class frmMovimientoVentas
         Me.btnBuscar.Size = New System.Drawing.Size(46, 28)
         Me.btnBuscar.TabIndex = 62
         Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'txtIdProducto
+        '
+        Me.txtIdProducto.Enabled = False
+        Me.txtIdProducto.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtIdProducto.Location = New System.Drawing.Point(93, 54)
+        Me.txtIdProducto.Name = "txtIdProducto"
+        Me.txtIdProducto.Size = New System.Drawing.Size(100, 27)
+        Me.txtIdProducto.TabIndex = 66
+        Me.txtIdProducto.Visible = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label8.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label8.Location = New System.Drawing.Point(0, 61)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(92, 20)
+        Me.Label8.TabIndex = 65
+        Me.Label8.Text = "IdProducto"
+        Me.Label8.Visible = False
         '
         'btnSalir
         '
@@ -414,6 +414,7 @@ Partial Class frmMovimientoVentas
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(863, 415)
+        Me.ControlBox = False
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -421,6 +422,7 @@ Partial Class frmMovimientoVentas
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.dgVenta)
         Me.Controls.Add(Me.ptbImagen)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "frmMovimientoVentas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Venta"

@@ -15,6 +15,8 @@
             txtPrecio.Text = lector(2)
             txtIdProducto.Text = lector(3)
             lector.Close()
+        Else
+            MessageBox.Show("NO SE HA INGRESADO PRODUCTO", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
         End If
     End Sub
 
@@ -27,6 +29,9 @@
         btnBuscar.Enabled = True
         btnAceptar.Enabled = True
         btnGrabar.Enabled = True
+        btnNuevo.Enabled = False
+        btnSalir.Enabled = False
+
 
         comando.CommandText = "select count(tlb_venta.idVenta) from tlb_venta;"
         Dim n As Integer = comando.ExecuteScalar + 1
@@ -82,5 +87,65 @@
             comando.ExecuteNonQuery()
         Next
         mensajeVenta()
+
+
+        'limpieza de textBox
+        txtIdVenta.Text = ""
+        dtpFecha.Text = ""
+        txtCantidad.Text = ""
+        txtCategoria.Text = ""
+        txtIdProducto.Text = ""
+        txtNombreP.Text = ""
+        txtPrecio.Text = ""
+        txtTotal.Text = "0.00"
+
+        'bloqueo de botones
+        btnNuevo.Enabled = True
+        btnGrabar.Enabled = False
+        btnCancelar.Enabled = False
+        btnBuscar.Enabled = False
+        btnAceptar.Enabled = False
+
+        'bloqueo de cajas de texto
+        txtIdVenta.Enabled = False
+        dtpFecha.Enabled = False
+        txtCantidad.Enabled = False
+        txtCategoria.Enabled = False
+        txtIdProducto.Enabled = False
+        txtNombreP.Enabled = False
+        txtPrecio.Enabled = False
+        txtTotal.Enabled = False
+        dgVenta.Rows.Clear()
+    End Sub
+
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+
+        'limpieza de textBox
+        txtIdVenta.Text = ""
+        dtpFecha.Text = ""
+        txtCantidad.Text = ""
+        txtCategoria.Text = ""
+        txtIdProducto.Text = ""
+        txtNombreP.Text = ""
+        txtPrecio.Text = ""
+        txtTotal.Text = "0.00"
+
+        'bloqueo de botones
+        btnNuevo.Enabled = True
+        btnGrabar.Enabled = False
+        btnCancelar.Enabled = False
+        btnBuscar.Enabled = False
+        btnAceptar.Enabled = False
+
+        'bloqueo de cajas de texto
+        txtIdVenta.Enabled = False
+        dtpFecha.Enabled = False
+        txtCantidad.Enabled = False
+        txtCategoria.Enabled = False
+        txtIdProducto.Enabled = False
+        txtNombreP.Enabled = False
+        txtPrecio.Enabled = False
+        txtTotal.Enabled = False
+        dgVenta.Rows.Clear()
     End Sub
 End Class

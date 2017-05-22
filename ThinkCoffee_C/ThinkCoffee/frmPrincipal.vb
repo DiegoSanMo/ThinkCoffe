@@ -78,7 +78,7 @@
     End Sub
 
     Private Sub VentasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles VentasToolStripMenuItem.Click
-        ConsultaVentaPizzas.showDialog()
+
     End Sub
 
     Private Sub ProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem.Click
@@ -87,5 +87,13 @@
 
     Private Sub RecetasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecetasToolStripMenuItem.Click
         frmConsultaReceta.ShowDialog()
+    End Sub
+
+    Private Sub PizzaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PizzaToolStripMenuItem.Click
+        ConsultaVentaPizzas.ShowDialog()
+    End Sub
+
+    Private Sub OtrosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles OtrosToolStripMenuItem1.Click
+        ConsultaOtros.ShowDialog()
     End Sub
 End Class

@@ -26,6 +26,7 @@
                 MessageBox.Show("NO SE HAN REGISTRADO VENTAS DE PIZZAS CHICAS", "INFORMACIÒN DE CONSULTA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 btnDetallesP.Visible = False
             End If
+            rbChica.Checked = False
         End If
 
     End Sub
@@ -50,6 +51,8 @@
                 MessageBox.Show("NO SE HAN REGISTRADO VENTAS DE PIZZAS GRANDES", "INFORMACIÒN DE CONSULTA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 btnDetallesP.Visible = False
             End If
+        Else
+            rbGrande.Checked = False
         End If
 
     End Sub
@@ -75,6 +78,9 @@
                 MessageBox.Show("NO SE HAN REGISTRADO VENTAS DE PIZZAS REBANADAS", "INFORMACIÒN DE CONSULTA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 btnDetallesP.Visible = False
             End If
+        Else
+            rbRebanada.Checked = False
+
         End If
 
     End Sub

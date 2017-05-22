@@ -163,6 +163,12 @@
     <Compile Include="Consultas\Producto\Receta\frmConsultaReceta.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Consultas\Ventas\Otros\ConsultaOtros.Designer.vb">
+      <DependentUpon>ConsultaOtros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Consultas\Ventas\Otros\ConsultaOtros.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Consultas\Ventas\Pizzas\ConsultaVentaPizzas.Designer.vb">
       <DependentUpon>ConsultaVentaPizzas.vb</DependentUpon>
     </Compile>
@@ -267,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\Producto\Receta\frmConsultaReceta.resx">
       <DependentUpon>frmConsultaReceta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Consultas\Ventas\Otros\ConsultaOtros.resx">
+      <DependentUpon>ConsultaOtros.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Consultas\Ventas\Pizzas\ConsultaVentaPizzas.resx">
       <DependentUpon>ConsultaVentaPizzas.vb</DependentUpon>
