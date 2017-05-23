@@ -11,8 +11,8 @@ Public Class frmCatalogoInsumos
         dgInsumo.Rows.Clear()
         Dim n As Integer
         comando.CommandText = String.Format("Select count(tlb_insumo.idInsumo) from tlb_insumo")
-        n = comando.ExecuteScalar + 1
-        If n > 1 Then
+        n = comando.ExecuteScalar
+        If n > 0 Then
             dgInsumo.SelectionMode = DataGridViewSelectionMode.FullRowSelect
             comando.CommandText = String.Format("Select * from tlb_insumo")
             lector = comando.ExecuteReader
@@ -54,54 +54,58 @@ Public Class frmCatalogoInsumos
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
-        If cboUnidadM.Text = "" Or txtMax.Text = "" Or txtMax.Text = "" Or txtExist.Text = "" Then
+        If cboUnidadM.Text = "" Then
             MessageBox.Show("FALTA DE INFORMACIÓN", "ERROR, FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
 
-            If banModi Then
-                presionado = True
-                MsgBox(filaSel)
-                dgInsumo.Item(1, filaSel).Value = txtNombre.Text
-                dgInsumo.Item(2, filaSel).Value = cboUnidadM.Text
-                dgInsumo.Item(3, filaSel).Value = txtMax.Text
-                dgInsumo.Item(4, filaSel).Value = txtMin.Text
-                dgInsumo.Item(5, filaSel).Value = txtExist.Text
-                dgInsumo.Item(6, filaSel).Value = "0"
-                dgInsumo.Item(7, filaSel).Value = dtpFecha.Value.Date
+            If IsNumeric(txtExist.Text) Or IsNumeric(txtMax.Text) Or IsNumeric(txtMax.Text) Then
+                If banModi Then
+                    presionado = True
+                    MsgBox(filaSel)
+                    dgInsumo.Item(1, filaSel).Value = txtNombre.Text
+                    dgInsumo.Item(2, filaSel).Value = cboUnidadM.Text
+                    dgInsumo.Item(3, filaSel).Value = txtMax.Text
+                    dgInsumo.Item(4, filaSel).Value = txtMin.Text
+                    dgInsumo.Item(5, filaSel).Value = txtExist.Text
+                    dgInsumo.Item(6, filaSel).Value = "0"
+                    dgInsumo.Item(7, filaSel).Value = dtpFecha.Value.Date
 
-
-                btnGrabar.Enabled = True
-                btnCancelar.Enabled = True
-
-                limpiarCajaInsumos()
-                bloquearCajasInsumo()
-
-            Else
-                Dim entra As Boolean = False
-                Dim p As Integer = 0
-
-                For x = 0 To dgInsumo.RowCount - 1
-                    If dgInsumo(1, x).Value = txtNombre.Text Then
-                        entra = True
-                        p = x
-                        Exit For
-                    End If
-                Next
-
-                If entra Then
-                    MessageBox.Show("INSUMO YA REGISTRADO", "ERROR INSUMO YA REGISTRADO", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                    txtNombre.Focus()
-                Else
-                    dgInsumo.Rows.Add(txtIdInsumo.Text, txtNombre.Text, cboUnidadM.Text, txtMax.Text, txtMin.Text, txtExist.Text, "0", dtpFecha.Value.Date)
 
                     btnGrabar.Enabled = True
                     btnCancelar.Enabled = True
 
                     limpiarCajaInsumos()
                     bloquearCajasInsumo()
-                    presionado = True
+
+                Else
+                    Dim entra As Boolean = False
+                    Dim p As Integer = 0
+
+                    For x = 0 To dgInsumo.RowCount - 1
+                        If dgInsumo(1, x).Value = txtNombre.Text Then
+                            entra = True
+                            p = x
+                            Exit For
+                        End If
+                    Next
+
+                    If entra Then
+                        MessageBox.Show("INSUMO YA REGISTRADO", "ERROR INSUMO YA REGISTRADO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        txtNombre.Focus()
+                    Else
+                        dgInsumo.Rows.Add(txtIdInsumo.Text, txtNombre.Text, cboUnidadM.Text, txtMax.Text, txtMin.Text, txtExist.Text, "0", dtpFecha.Value.Date)
+
+                        btnGrabar.Enabled = True
+                        btnCancelar.Enabled = True
+
+                        limpiarCajaInsumos()
+                        bloquearCajasInsumo()
+                        presionado = True
+                    End If
                 End If
             End If
+
+
 
         End If
 

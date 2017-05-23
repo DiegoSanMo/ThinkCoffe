@@ -20,7 +20,7 @@ Public Class frmCatalogoProductos
 
 
         'Añade los productos a la rejilla si es que existen
-        If n > 1 Then
+        If n > 0 Then
             comando.CommandText = String.Format("Select * from tlb_producto")
             lector = comando.ExecuteReader()
             While lector.Read
