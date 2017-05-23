@@ -250,6 +250,7 @@ Partial Class frmCatalogoProductos
         Me.txtIdProducto.Name = "txtIdProducto"
         Me.txtIdProducto.Size = New System.Drawing.Size(100, 27)
         Me.txtIdProducto.TabIndex = 1
+        Me.txtIdProducto.Visible = False
         '
         'Label1
         '
