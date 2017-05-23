@@ -344,10 +344,10 @@ Partial Class frmCatalogoRecetas
         '
         'txtInsumo
         '
+        Me.txtInsumo.Enabled = False
         Me.txtInsumo.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtInsumo.Location = New System.Drawing.Point(232, 23)
         Me.txtInsumo.Name = "txtInsumo"
-        Me.txtInsumo.ReadOnly = True
         Me.txtInsumo.Size = New System.Drawing.Size(139, 27)
         Me.txtInsumo.TabIndex = 50
         '

@@ -56,9 +56,10 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        If cmbUnidadM.Text = "" Then
+        If cmbUnidadM.Text = "" Or String.IsNullOrWhiteSpace(txtCantidad.Text) Then
             MessageBox.Show("NO SE HA INGRESADO UNIDAD DE MEDIDA", "FALTA DE INFORMACIÒN", MessageBoxButtons.OK, MessageBoxIcon.Error)
             cmbUnidadM.Focus()
+            txtCantidad.Focus()
         Else
             dgReceta.Rows.Add(txtIdInsumo.Text, txtInsumo.Text, txtCantidad.Text, cmbUnidadM.Text)
             txtExistencia.Text = ""
