@@ -78,37 +78,43 @@ Public Class frmCatalogoProductos
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
-        Dim idProducto As Integer
-        Dim idReceta As Integer
-        Dim idCategoria As Integer
-        Dim nombre As String
-        Dim precio As Double
-        Dim precioFin As String
-        Dim imagen As String
+        If txtNombre.Text = "" Then
+            Dim idProducto As Integer
+            Dim idReceta As Integer
+            Dim idCategoria As Integer
+            Dim nombre As String
+            Dim precio As Double
+            Dim precioFin As String
+            Dim imagen As String
 
-        idProducto = CInt(txtIdProducto.Text)
-        idReceta = CInt(txtIdReceta.Text)
-        idCategoria = CInt(txtIdCategoria.Text)
-        nombre = txtNombre.Text
-        precio = CDbl(txtPrecio.Text)
-        'Yo estoy usando la variable "precioFin" porque por el lenguaje de la base de datos
-        'y de Visual, si guardo los decimales con una coma, me lo toma como otra columna,
-        'y si lo guardo con punto, el programa no me muestra los precios como los guardé.
-        'Si ustedes no tienen ese problema, solamente comenten la variable "precioFin", y
-        'en la sentencia de SQL reemplacen la variable "precioFin" por "precio".
-        precioFin = Replace(precio, ",", ".")
-        imagen = OpenFileDialog1.FileName
+            idProducto = CInt(txtIdProducto.Text)
+            idReceta = CInt(txtIdReceta.Text)
+            idCategoria = CInt(txtIdCategoria.Text)
+            nombre = txtNombre.Text
+            precio = CDbl(txtPrecio.Text)
+            'Yo estoy usando la variable "precioFin" porque por el lenguaje de la base de datos
+            'y de Visual, si guardo los decimales con una coma, me lo toma como otra columna,
+            'y si lo guardo con punto, el programa no me muestra los precios como los guardé.
+            'Si ustedes no tienen ese problema, solamente comenten la variable "precioFin", y
+            'en la sentencia de SQL reemplacen la variable "precioFin" por "precio".
+            precioFin = Replace(precio, ",", ".")
+            imagen = OpenFileDialog1.FileName
 
-        comando.CommandText = "Insert Into tlb_producto(idProducto, idReceta, idCategoria, nombre, precio, imagen) values(" & idProducto & "," & idReceta & "," & idCategoria & ",'" & nombre & "'," & precioFin & ",'" & imagen & "')"
-        comando.ExecuteNonQuery()
-        mensajeGrabar()
-        btnGrabar.Enabled = False
-        btnCancelar.Enabled = False
-        btnSalir.Enabled = True
-        btnNuevo.Enabled = True
+            comando.CommandText = "Insert Into tlb_producto(idProducto, idReceta, idCategoria, nombre, precio, imagen) values(" & idProducto & "," & idReceta & "," & idCategoria & ",'" & nombre & "'," & precioFin & ",'" & imagen & "')"
+            comando.ExecuteNonQuery()
+            mensajeGrabar()
+            btnGrabar.Enabled = False
+            btnCancelar.Enabled = False
+            btnSalir.Enabled = True
+            btnNuevo.Enabled = True
 
-        bloquearCajaProductos()
-        limpiarCajaProductos()
+            bloquearCajaProductos()
+            limpiarCajaProductos()
+        Else
+            MessageBox.Show("PRECIONAR EL BOTÓN DE ACEPTAR PARA GUARDAR PRODUCTO", "ERROR DE ALMACENAMIENTO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
+
     End Sub
 
     Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress
@@ -213,5 +219,13 @@ Public Class frmCatalogoProductos
 
 
 
+    End Sub
+
+    Private Sub txtNombre_Validating(sender As Object, e As CancelEventArgs) Handles txtNombre.Validating
+        If Len(txtNombre.Text) < 5 Then
+            MessageBox.Show("DEBES INTRODUCIR AL MENOS 5 CARACTERES", "FALTA INFORMACION",
+            MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtNombre.Focus()
+        End If
     End Sub
 End Class

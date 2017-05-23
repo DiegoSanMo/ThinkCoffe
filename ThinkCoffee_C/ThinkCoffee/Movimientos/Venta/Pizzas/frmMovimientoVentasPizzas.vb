@@ -54,6 +54,10 @@
     End Sub
 
     Private Sub btnCrear_Click(sender As Object, e As EventArgs) Handles btnCrear.Click
+        btnCrear.Enabled = False
+        btnSalir.Enabled = False
+        btnCancelar.Enabled = True
+        btnGrabar.Enabled = True
 
         comando.CommandText = "select count(tlb_venta.idVenta) from tlb_venta;"
         Dim n As Integer = comando.ExecuteScalar + 1

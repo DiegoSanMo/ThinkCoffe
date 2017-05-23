@@ -122,16 +122,22 @@ Public Class frmCatalogoInsumos
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
 
         If banModi Then
-            dtpFecha.Enabled = False
-            comando.CommandText = "Update tlb_insumo set nombre = '" & dgInsumo.Item(1, filaSel).Value & "', unidadM = '" & dgInsumo.Item(2, filaSel).Value & "', maximo = " & CDec(dgInsumo.Item(3, filaSel).Value) & ", minimo = " & CDec(dgInsumo.Item(4, filaSel).Value) & ", existencia = " & CDec(dgInsumo.Item(5, filaSel).Value) & ", costo = " & CDec(dgInsumo.Item(6, filaSel).Value) & ", fecha = '" & dgInsumo.Item(7, filaSel).Value & "' where idInsumo = " & Val(dgInsumo.Item(0, filaSel).Value) & ""
-            comando.ExecuteNonQuery()
+            If txtNombre.Text = "" Then
+                dtpFecha.Enabled = False
+                comando.CommandText = "Update tlb_insumo set nombre = '" & dgInsumo.Item(1, filaSel).Value & "', unidadM = '" & dgInsumo.Item(2, filaSel).Value & "', maximo = " & CDec(dgInsumo.Item(3, filaSel).Value) & ", minimo = " & CDec(dgInsumo.Item(4, filaSel).Value) & ", existencia = " & CDec(dgInsumo.Item(5, filaSel).Value) & ", costo = " & CDec(dgInsumo.Item(6, filaSel).Value) & ", fecha = '" & dgInsumo.Item(7, filaSel).Value & "' where idInsumo = " & Val(dgInsumo.Item(0, filaSel).Value) & ""
+                comando.ExecuteNonQuery()
 
-            btnCancelar.Enabled = False
-            btnGrabar.Enabled = False
-            btnNuevo.Enabled = True
-            btnModificar.Enabled = True
-            btnSalir.Enabled = True
-            banModi = False
+                btnCancelar.Enabled = False
+                btnGrabar.Enabled = False
+                btnNuevo.Enabled = True
+                btnModificar.Enabled = True
+                btnSalir.Enabled = True
+                banModi = False
+            Else
+                MessageBox.Show("ES NECESARIO PRECIONAR EL BOTÓN DE ACEPTAR PARA ACTUALIZAR LA INFORMACIÓN", "ERROR DE ACTUALIZACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                txtNombre.Focus()
+            End If
+
 
         Else
             dtpFecha.Enabled = False
