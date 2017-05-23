@@ -64,7 +64,7 @@
         txtIdVenta.Text = n
         cboTamaño.Enabled = True
         btnGrabar.Enabled = True
-
+        CheckedListBox1.Enabled = True
         CheckedListBox1.SelectionMode = SelectionMode.One
     End Sub
 
@@ -93,7 +93,13 @@
             CheckedListBox1.SelectionMode = SelectionMode.None
             btnCancelar.Enabled = False
             btnCrear.Enabled = True
+            btnSalir.Enabled = True
             btnGrabar.Enabled = False
+            cboTipo.Enabled = False
+            cboTamaño.Enabled = False
+            txtPrecio.Enabled = False
+            txtCantidad.Enabled = False
+
 
             limpiarLista()
             mensajeVenta()
@@ -104,16 +110,17 @@
     End Sub
 
     Private Sub cboTipo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTipo.SelectedIndexChanged
+        limpiarLista()
         If cboTamaño.Text = "CHICA" And cboTipo.Text = "NORMAL" Then
-            limpiarLista()
             txtPrecio.Text = "100.00"
             limite = 2
 
             btnGrabar.Enabled = True
+            txtCantidad.Enabled = True
             txtCantidad.Focus()
 
         ElseIf cboTamaño.Text = "GRANDE" And cboTipo.Text = "NORMAL" Then
-            limpiarLista()
+
             limite = 2
             txtPrecio.Text = "180.00"
 
@@ -121,7 +128,6 @@
             txtCantidad.Focus()
 
         ElseIf cboTamaño.Text = "CHICA" And cboTipo.Text = "MIXTA" Then
-            limpiarLista()
             limite = 5
             txtPrecio.Text = "120.00"
 
@@ -129,7 +135,6 @@
             txtCantidad.Focus()
 
         ElseIf cboTamaño.Text = "GRANDE" And cboTipo.Text = "MIXTA" Then
-            limpiarLista()
             limite = 9
             txtPrecio.Text = "230.00"
 
@@ -168,5 +173,26 @@
     Private Sub btnSalir_Click_1(sender As Object, e As EventArgs) Handles btnSalir.Click
         conexionSql.Close()
         Me.Close()
+    End Sub
+
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        txtCantidad.Text = ""
+        txtPrecio.Text = ""
+        txtIdVenta.Text = ""
+
+        txtIdVenta.Enabled = False
+        txtPrecio.Enabled = False
+        txtPrecio.Enabled = False
+
+        btnCrear.Enabled = True
+        btnGrabar.Enabled = False
+        btnCancelar.Enabled = False
+        btnSalir.Enabled = True
+
+        cboTamaño.Enabled = False
+        cboTipo.Enabled = False
+        CheckedListBox1.Enabled = False
+
+
     End Sub
 End Class

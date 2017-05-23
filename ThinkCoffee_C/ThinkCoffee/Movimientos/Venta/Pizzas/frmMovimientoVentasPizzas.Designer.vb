@@ -27,17 +27,17 @@ Partial Class frmMovimientoVentasPizzas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cboTamaño = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.txtIdVenta = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.cboTipo = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.btnCrear = New System.Windows.Forms.Button()
-        Me.txtIdVenta = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGrabar = New System.Windows.Forms.Button()
@@ -120,6 +120,41 @@ Partial Class frmMovimientoVentasPizzas
         Me.GroupBox2.TabIndex = 82
         Me.GroupBox2.TabStop = False
         '
+        'txtIdVenta
+        '
+        Me.txtIdVenta.Enabled = False
+        Me.txtIdVenta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtIdVenta.Location = New System.Drawing.Point(97, 19)
+        Me.txtIdVenta.Name = "txtIdVenta"
+        Me.txtIdVenta.Size = New System.Drawing.Size(100, 27)
+        Me.txtIdVenta.TabIndex = 29
+        Me.txtIdVenta.Visible = False
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label2.Location = New System.Drawing.Point(24, 22)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(67, 20)
+        Me.Label2.TabIndex = 28
+        Me.Label2.Text = "idVenta"
+        Me.Label2.Visible = False
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label5.Location = New System.Drawing.Point(468, 18)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(52, 20)
+        Me.Label5.TabIndex = 30
+        Me.Label5.Text = "Fecha"
+        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -131,6 +166,16 @@ Partial Class frmMovimientoVentasPizzas
         Me.Label4.Size = New System.Drawing.Size(48, 20)
         Me.Label4.TabIndex = 80
         Me.Label4.Text = "Tipo "
+        '
+        'dtpFecha
+        '
+        Me.dtpFecha.Enabled = False
+        Me.dtpFecha.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpFecha.Location = New System.Drawing.Point(526, 15)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(130, 27)
+        Me.dtpFecha.TabIndex = 31
         '
         'cboTipo
         '
@@ -193,51 +238,6 @@ Partial Class frmMovimientoVentasPizzas
         Me.btnCrear.TabIndex = 84
         Me.btnCrear.Text = "Crear pizza"
         Me.btnCrear.UseVisualStyleBackColor = True
-        '
-        'txtIdVenta
-        '
-        Me.txtIdVenta.Enabled = False
-        Me.txtIdVenta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtIdVenta.Location = New System.Drawing.Point(97, 19)
-        Me.txtIdVenta.Name = "txtIdVenta"
-        Me.txtIdVenta.Size = New System.Drawing.Size(100, 27)
-        Me.txtIdVenta.TabIndex = 29
-        Me.txtIdVenta.Visible = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label2.Location = New System.Drawing.Point(24, 22)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 20)
-        Me.Label2.TabIndex = 28
-        Me.Label2.Text = "idVenta"
-        Me.Label2.Visible = False
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label5.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label5.Location = New System.Drawing.Point(468, 18)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(52, 20)
-        Me.Label5.TabIndex = 30
-        Me.Label5.Text = "Fecha"
-        '
-        'dtpFecha
-        '
-        Me.dtpFecha.Enabled = False
-        Me.dtpFecha.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(526, 15)
-        Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(130, 27)
-        Me.dtpFecha.TabIndex = 31
         '
         'btnSalir
         '
