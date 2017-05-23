@@ -55,6 +55,8 @@ Partial Class frmCatalogoProductos
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ptbBarra = New System.Windows.Forms.PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtNombreReceta = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ptbImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgProductos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +67,8 @@ Partial Class frmCatalogoProductos
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.txtNombreReceta)
         Me.GroupBox1.Controls.Add(Me.btnBuscarR)
         Me.GroupBox1.Controls.Add(Me.btnAceptar)
         Me.GroupBox1.Controls.Add(Me.btnBuscar)
@@ -126,7 +130,7 @@ Partial Class frmCatalogoProductos
         '
         Me.txtPrecio.Enabled = False
         Me.txtPrecio.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtPrecio.Location = New System.Drawing.Point(360, 103)
+        Me.txtPrecio.Location = New System.Drawing.Point(384, 152)
         Me.txtPrecio.MaxLength = 7
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(99, 27)
@@ -139,7 +143,7 @@ Partial Class frmCatalogoProductos
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label14.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label14.Location = New System.Drawing.Point(283, 106)
+        Me.Label14.Location = New System.Drawing.Point(307, 155)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(70, 20)
         Me.Label14.TabIndex = 60
@@ -246,7 +250,6 @@ Partial Class frmCatalogoProductos
         Me.txtIdProducto.Name = "txtIdProducto"
         Me.txtIdProducto.Size = New System.Drawing.Size(100, 27)
         Me.txtIdProducto.TabIndex = 1
-        Me.txtIdProducto.Visible = False
         '
         'Label1
         '
@@ -443,6 +446,28 @@ Partial Class frmCatalogoProductos
         Me.ptbBarra.TabIndex = 64
         Me.ptbBarra.TabStop = False
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label3.Location = New System.Drawing.Point(6, 106)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(60, 20)
+        Me.Label3.TabIndex = 63
+        Me.Label3.Text = "Receta"
+        '
+        'txtNombreReceta
+        '
+        Me.txtNombreReceta.Enabled = False
+        Me.txtNombreReceta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtNombreReceta.Location = New System.Drawing.Point(102, 103)
+        Me.txtNombreReceta.MaxLength = 145
+        Me.txtNombreReceta.Name = "txtNombreReceta"
+        Me.txtNombreReceta.Size = New System.Drawing.Size(381, 27)
+        Me.txtNombreReceta.TabIndex = 62
+        '
         'frmCatalogoProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -504,4 +529,6 @@ Partial Class frmCatalogoProductos
     Friend WithEvents btnBuscarR As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents ptbBarra As PictureBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents txtNombreReceta As TextBox
 End Class
