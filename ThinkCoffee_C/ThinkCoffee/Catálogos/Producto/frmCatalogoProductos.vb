@@ -1,6 +1,7 @@
 ﻿Imports System.ComponentModel
 
 Public Class frmCatalogoProductos
+    Dim presionado As Boolean = False
     Private Sub frmCatalogoProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexionSql.Open()
         dgProductos.Rows.Clear()
@@ -78,41 +79,46 @@ Public Class frmCatalogoProductos
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
-        If txtNombre.Text = "" Or txtIdCategoria.Text = "" Then
-            Dim idProducto As Integer
-            Dim idReceta As Integer
-            Dim idCategoria As Integer
-            Dim nombre As String
-            Dim precio As Double
-            Dim precioFin As String
-            Dim imagen As String
+        If presionado Then
+            If txtNombre.Text = "" Or txtIdCategoria.Text = "" Then
+                Dim idProducto As Integer
+                Dim idReceta As Integer
+                Dim idCategoria As Integer
+                Dim nombre As String
+                Dim precio As Double
+                Dim precioFin As String
+                Dim imagen As String
 
-            idProducto = CInt(txtIdProducto.Text)
-            idReceta = CInt(txtIdReceta.Text)
-            idCategoria = CInt(txtIdCategoria.Text)
-            nombre = txtNombre.Text
-            precio = CDbl(txtPrecio.Text)
-            'Yo estoy usando la variable "precioFin" porque por el lenguaje de la base de datos
-            'y de Visual, si guardo los decimales con una coma, me lo toma como otra columna,
-            'y si lo guardo con punto, el programa no me muestra los precios como los guardé.
-            'Si ustedes no tienen ese problema, solamente comenten la variable "precioFin", y
-            'en la sentencia de SQL reemplacen la variable "precioFin" por "precio".
-            precioFin = Replace(precio, ",", ".")
-            imagen = OpenFileDialog1.FileName
+                idProducto = CInt(txtIdProducto.Text)
+                idReceta = CInt(txtIdReceta.Text)
+                idCategoria = CInt(txtIdCategoria.Text)
+                nombre = txtNombre.Text
+                precio = CDbl(txtPrecio.Text)
+                'Yo estoy usando la variable "precioFin" porque por el lenguaje de la base de datos
+                'y de Visual, si guardo los decimales con una coma, me lo toma como otra columna,
+                'y si lo guardo con punto, el programa no me muestra los precios como los guardé.
+                'Si ustedes no tienen ese problema, solamente comenten la variable "precioFin", y
+                'en la sentencia de SQL reemplacen la variable "precioFin" por "precio".
+                precioFin = Replace(precio, ",", ".")
+                imagen = OpenFileDialog1.FileName
 
-            comando.CommandText = "Insert Into tlb_producto(idProducto, idReceta, idCategoria, nombre, precio, imagen) values(" & idProducto & "," & idReceta & "," & idCategoria & ",'" & nombre & "'," & precioFin & ",'" & imagen & "')"
-            comando.ExecuteNonQuery()
-            mensajeGrabar()
-            btnGrabar.Enabled = False
-            btnCancelar.Enabled = False
-            btnSalir.Enabled = True
-            btnNuevo.Enabled = True
+                comando.CommandText = "Insert Into tlb_producto(idProducto, idReceta, idCategoria, nombre, precio, imagen) values(" & idProducto & "," & idReceta & "," & idCategoria & ",'" & nombre & "'," & precioFin & ",'" & imagen & "')"
+                comando.ExecuteNonQuery()
+                mensajeGrabar()
+                btnGrabar.Enabled = False
+                btnCancelar.Enabled = False
+                btnSalir.Enabled = True
+                btnNuevo.Enabled = True
 
-            bloquearCajaProductos()
-            limpiarCajaProductos()
+                bloquearCajaProductos()
+                limpiarCajaProductos()
+            Else
+                MessageBox.Show("PRECIONAR EL BOTÓN DE ACEPTAR PARA GUARDAR PRODUCTO", "ERROR DE ALMACENAMIENTO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End If
         Else
-            MessageBox.Show("PRECIONAR EL BOTÓN DE ACEPTAR PARA GUARDAR PRODUCTO", "ERROR DE ALMACENAMIENTO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("PRESIONAR EL BOTÓN DE ACEPTAR PARA REGISTRAR PRODUCTO", "ERROR DE ALMACENAMIENTO", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
+
 
 
     End Sub
@@ -127,10 +133,12 @@ Public Class frmCatalogoProductos
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
-        If txtIdCategoria.Text = "" Then
+        If txtIdCategoria.Text = "" Or txtNombre.Text = "" Then
             MessageBox.Show("NO SE HA INGRESADO CATEGORIA", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
             cboCategoria.Focus()
+            presionado = False
         Else
+            presionado = True
             dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, txtIdCategoria.Text, txtIdReceta.Text, txtPrecio.Text)
 
 
@@ -165,9 +173,6 @@ Public Class frmCatalogoProductos
 
     End Sub
 
-    Private Sub txtNombre_KeyDown(sender As Object, e As KeyEventArgs) Handles txtNombre.KeyDown
-
-    End Sub
 
     Private Sub txtPrecio_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPrecio.KeyPress
         e.KeyChar = UCase(e.KeyChar)
@@ -226,11 +231,4 @@ Public Class frmCatalogoProductos
 
     End Sub
 
-    Private Sub txtNombre_Validating(sender As Object, e As CancelEventArgs) Handles txtNombre.Validating
-        If Len(txtNombre.Text) < 5 Then
-            MessageBox.Show("DEBES INTRODUCIR AL MENOS 5 CARACTERES", "FALTA INFORMACION",
-            MessageBoxButtons.OK, MessageBoxIcon.Error)
-            txtNombre.Focus()
-        End If
-    End Sub
 End Class

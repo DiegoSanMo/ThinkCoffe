@@ -262,12 +262,6 @@ Public Class frmCatalogoInsumos
                 activarCajasInsumo()
                 txtNombre.Focus()
                 banModi = True
-
-                txtIdInsumo.Text = ""
-                txtNombre.Text = ""
-                txtMin.Text = ""
-                txtMax.Text = ""
-                txtExist.Text = ""
             End If
         End If
 
