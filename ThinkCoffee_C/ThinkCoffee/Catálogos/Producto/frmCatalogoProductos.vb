@@ -76,6 +76,20 @@ Public Class frmCatalogoProductos
         bloquearCajaProductos()
         limpiarCajaProductos()
 
+        If dgProductos.RowCount > 0 Then
+            dgProductos.Rows.RemoveAt(dgProductos.RowCount - 1)
+        End If
+
+
+
+        txtIdProducto.Text = ""
+        txtIdReceta.Text = ""
+        txtIdCategoria.Text = ""
+        txtNombre.Text = ""
+        txtPrecio.Text = ""
+
+
+
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
@@ -133,17 +147,29 @@ Public Class frmCatalogoProductos
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
-        If txtIdCategoria.Text = "" Or txtNombre.Text = "" Then
+        If txtIdCategoria.Text = "" Then
             MessageBox.Show("NO SE HA INGRESADO CATEGORIA", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
             cboCategoria.Focus()
             presionado = False
+
         Else
-            presionado = True
-            dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, txtIdCategoria.Text, txtIdReceta.Text, txtPrecio.Text)
+            If txtNombre.Text = "" Then
+                MessageBox.Show("NO SE HA INGRESADO NOMBRE DEL PRODUCTO", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Else
+                If txtIdReceta.Text = "" Then
+                    MessageBox.Show("NO SE HA INGRESADO RECETA", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    btnBuscarR.Focus()
+                Else
+                    presionado = True
+                    dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, txtIdCategoria.Text, txtIdReceta.Text, txtPrecio.Text)
 
 
-            limpiarCajaProductos()
-            bloquearCajaProductos()
+                    limpiarCajaProductos()
+                    bloquearCajaProductos()
+                End If
+            End If
+
+
         End If
 
 
