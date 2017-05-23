@@ -297,6 +297,7 @@ Partial Class frmCatalogoRecetas
         '
         'cmbUnidadM
         '
+        Me.cmbUnidadM.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbUnidadM.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.cmbUnidadM.FormattingEnabled = True
         Me.cmbUnidadM.Items.AddRange(New Object() {"OZ", "CDAS", "TAZAS", "PIEZA", "gr"})
