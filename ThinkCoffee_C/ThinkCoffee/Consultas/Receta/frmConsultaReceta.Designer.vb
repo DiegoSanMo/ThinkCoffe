@@ -87,6 +87,7 @@ Partial Class frmConsultaReceta
         Me.txtConsultaNombre.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtConsultaNombre.Location = New System.Drawing.Point(101, 20)
         Me.txtConsultaNombre.Name = "txtConsultaNombre"
+        Me.txtConsultaNombre.ReadOnly = True
         Me.txtConsultaNombre.Size = New System.Drawing.Size(294, 27)
         Me.txtConsultaNombre.TabIndex = 2
         Me.txtConsultaNombre.Visible = False
@@ -146,6 +147,7 @@ Partial Class frmConsultaReceta
         '
         'dgvRecetas
         '
+        Me.dgvRecetas.AllowUserToAddRows = False
         Me.dgvRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRecetas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clmIdReceta, Me.clmNombreReceta, Me.clmNombreInsumoPrincipal, Me.clmCantidadPrincipal, Me.clmUnidadMedida})
         Me.dgvRecetas.Location = New System.Drawing.Point(19, 207)

@@ -23,23 +23,37 @@ Partial Class frmAgregarReceta
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgvRecetas = New System.Windows.Forms.DataGridView()
+        Me.clmIdReceta = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.clmNombreReceta = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnAgregarReceta = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.ptbBarra = New System.Windows.Forms.PictureBox()
-        Me.clmIdReceta = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.clmNombreReceta = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.dgvRecetas, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvRecetas
         '
+        Me.dgvRecetas.AllowUserToAddRows = False
         Me.dgvRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRecetas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clmIdReceta, Me.clmNombreReceta})
         Me.dgvRecetas.Location = New System.Drawing.Point(12, 87)
         Me.dgvRecetas.Name = "dgvRecetas"
         Me.dgvRecetas.Size = New System.Drawing.Size(507, 220)
         Me.dgvRecetas.TabIndex = 0
+        '
+        'clmIdReceta
+        '
+        Me.clmIdReceta.HeaderText = "IdReceta"
+        Me.clmIdReceta.Name = "clmIdReceta"
+        Me.clmIdReceta.ReadOnly = True
+        '
+        'clmNombreReceta
+        '
+        Me.clmNombreReceta.HeaderText = "Receta"
+        Me.clmNombreReceta.Name = "clmNombreReceta"
+        Me.clmNombreReceta.ReadOnly = True
+        Me.clmNombreReceta.Width = 350
         '
         'btnAgregarReceta
         '
@@ -76,19 +90,6 @@ Partial Class frmAgregarReceta
         Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.ptbBarra.TabIndex = 60
         Me.ptbBarra.TabStop = False
-        '
-        'clmIdReceta
-        '
-        Me.clmIdReceta.HeaderText = "IdReceta"
-        Me.clmIdReceta.Name = "clmIdReceta"
-        Me.clmIdReceta.ReadOnly = True
-        '
-        'clmNombreReceta
-        '
-        Me.clmNombreReceta.HeaderText = "Receta"
-        Me.clmNombreReceta.Name = "clmNombreReceta"
-        Me.clmNombreReceta.ReadOnly = True
-        Me.clmNombreReceta.Width = 350
         '
         'frmAgregarReceta
         '

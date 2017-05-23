@@ -17,8 +17,8 @@ Public Class frmCatalogoCategoria
 
         Dim n As Integer
         comando.CommandText = String.Format("Select count(*) from tlb_categoria")
-        n = comando.ExecuteScalar + 1
-        If n > 1 Then
+        n = comando.ExecuteScalar
+        If n > 0 Then
             dgCategoria.SelectionMode = DataGridViewSelectionMode.FullRowSelect
             comando.CommandText = String.Format("Select * from tlb_categoria")
             lector = comando.ExecuteReader

@@ -105,12 +105,14 @@ Partial Class frmConsultaInsumo
         '
         'dgvConsultaInsumo
         '
+        Me.dgvConsultaInsumo.AllowDrop = True
+        Me.dgvConsultaInsumo.AllowUserToAddRows = False
         Me.dgvConsultaInsumo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvConsultaInsumo.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clmIdInsumo, Me.clmNombre, Me.clmUnidadM, Me.clmMaximo, Me.clmMinimo, Me.clmExistencias, Me.clmCosto, Me.clmFecha})
         Me.dgvConsultaInsumo.Location = New System.Drawing.Point(12, 229)
         Me.dgvConsultaInsumo.Name = "dgvConsultaInsumo"
         Me.dgvConsultaInsumo.ReadOnly = True
-        Me.dgvConsultaInsumo.Size = New System.Drawing.Size(948, 150)
+        Me.dgvConsultaInsumo.Size = New System.Drawing.Size(948, 234)
         Me.dgvConsultaInsumo.TabIndex = 1
         '
         'clmIdInsumo
@@ -168,7 +170,7 @@ Partial Class frmConsultaInsumo
         Me.btnSalir.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnSalir.Image = Global.ThinkCoffee.My.Resources.Resources.Exit_Sign_Filled_30
         Me.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnSalir.Location = New System.Drawing.Point(853, 385)
+        Me.btnSalir.Location = New System.Drawing.Point(867, 469)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(93, 39)
         Me.btnSalir.TabIndex = 40
@@ -204,7 +206,7 @@ Partial Class frmConsultaInsumo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(972, 438)
+        Me.ClientSize = New System.Drawing.Size(972, 520)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.ptbBarra)
         Me.Controls.Add(Me.btnSalir)
