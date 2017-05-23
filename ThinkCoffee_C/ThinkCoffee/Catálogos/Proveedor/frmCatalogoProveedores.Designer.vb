@@ -79,6 +79,7 @@ Partial Class frmCatalogoProveedores
         Me.txtNombre.Enabled = False
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.Location = New System.Drawing.Point(110, 15)
+        Me.txtNombre.MaxLength = 145
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(324, 27)
         Me.txtNombre.TabIndex = 2
@@ -99,6 +100,7 @@ Partial Class frmCatalogoProveedores
         Me.txtDireccion.Enabled = False
         Me.txtDireccion.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDireccion.Location = New System.Drawing.Point(110, 55)
+        Me.txtDireccion.MaxLength = 145
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(324, 27)
         Me.txtDireccion.TabIndex = 4

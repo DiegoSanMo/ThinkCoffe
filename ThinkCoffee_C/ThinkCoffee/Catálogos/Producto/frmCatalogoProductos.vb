@@ -69,24 +69,30 @@ Public Class frmCatalogoProductos
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
-        btnGrabar.Enabled = False
-        btnCancelar.Enabled = False
-        btnSalir.Enabled = True
-        btnNuevo.Enabled = True
-        bloquearCajaProductos()
-        limpiarCajaProductos()
+        If presionado Then
+            btnGrabar.Enabled = False
+            btnCancelar.Enabled = False
+            btnSalir.Enabled = True
+            btnNuevo.Enabled = True
+            bloquearCajaProductos()
+            limpiarCajaProductos()
 
-        If dgProductos.RowCount > 0 Then
-            dgProductos.Rows.RemoveAt(dgProductos.RowCount - 1)
+            If dgProductos.RowCount > 0 Then
+                dgProductos.Rows.RemoveAt(dgProductos.RowCount - 1)
+            End If
+
+
+
+            txtIdProducto.Text = ""
+            txtIdReceta.Text = ""
+            txtIdCategoria.Text = ""
+            txtNombre.Text = ""
+            txtPrecio.Text = ""
+        Else
+
         End If
 
 
-
-        txtIdProducto.Text = ""
-        txtIdReceta.Text = ""
-        txtIdCategoria.Text = ""
-        txtNombre.Text = ""
-        txtPrecio.Text = ""
 
 
 
@@ -153,6 +159,7 @@ Public Class frmCatalogoProductos
             presionado = False
 
         Else
+
             If txtNombre.Text = "" Then
                 MessageBox.Show("NO SE HA INGRESADO NOMBRE DEL PRODUCTO", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
@@ -160,12 +167,12 @@ Public Class frmCatalogoProductos
                     MessageBox.Show("NO SE HA INGRESADO RECETA", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     btnBuscarR.Focus()
                 Else
-                    presionado = True
                     dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, txtIdCategoria.Text, txtIdReceta.Text, txtPrecio.Text)
 
 
                     limpiarCajaProductos()
                     bloquearCajaProductos()
+                    presionado = True
                 End If
             End If
 

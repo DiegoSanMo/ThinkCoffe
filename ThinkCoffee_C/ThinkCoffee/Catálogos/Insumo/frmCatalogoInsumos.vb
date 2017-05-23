@@ -122,23 +122,31 @@ Public Class frmCatalogoInsumos
             If banModi Then
 
                 If txtNombre.Text = "" Then
-                    dtpFecha.Enabled = False
-                    comando.CommandText = "Update tlb_insumo set nombre = '" & dgInsumo.Item(1, filaSel).Value & "', unidadM = '" & dgInsumo.Item(2, filaSel).Value & "', maximo = " & CDec(dgInsumo.Item(3, filaSel).Value) & ", minimo = " & CDec(dgInsumo.Item(4, filaSel).Value) & ", existencia = " & CDec(dgInsumo.Item(5, filaSel).Value) & ", costo = " & CDec(dgInsumo.Item(6, filaSel).Value) & ", fecha = '" & dgInsumo.Item(7, filaSel).Value & "' where idInsumo = " & Val(dgInsumo.Item(0, filaSel).Value) & ""
-                    comando.ExecuteNonQuery()
+                    If String.IsNullOrWhiteSpace(txtExist.Text) Or String.IsNullOrWhiteSpace(txtMax.Text) Or String.IsNullOrWhiteSpace(txtMin.Text) Then
+                        MessageBox.Show("AÚN NO HAY DATOS SIN INGRESAR", "ERROR, FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    Else
 
-                    btnCancelar.Enabled = False
-                    btnGrabar.Enabled = False
-                    btnNuevo.Enabled = True
-                    btnModificar.Enabled = True
-                    btnSalir.Enabled = True
-                    banModi = False
 
-                    txtIdInsumo.Text = ""
-                    txtNombre.Text = ""
-                    txtMin.Text = ""
-                    txtMax.Text = ""
-                    txtExist.Text = ""
-                    dgInsumo.Enabled = True
+                        dtpFecha.Enabled = False
+                        comando.CommandText = "Update tlb_insumo set nombre = '" & dgInsumo.Item(1, filaSel).Value & "', unidadM = '" & dgInsumo.Item(2, filaSel).Value & "', maximo = " & CDec(dgInsumo.Item(3, filaSel).Value) & ", minimo = " & CDec(dgInsumo.Item(4, filaSel).Value) & ", existencia = " & CDec(dgInsumo.Item(5, filaSel).Value) & ", costo = " & CDec(dgInsumo.Item(6, filaSel).Value) & ", fecha = '" & dgInsumo.Item(7, filaSel).Value & "' where idInsumo = " & Val(dgInsumo.Item(0, filaSel).Value) & ""
+                        comando.ExecuteNonQuery()
+
+                        btnCancelar.Enabled = False
+                        btnGrabar.Enabled = False
+                        btnNuevo.Enabled = True
+                        btnModificar.Enabled = True
+                        btnSalir.Enabled = True
+                        banModi = False
+
+                        txtIdInsumo.Text = ""
+                        txtNombre.Text = ""
+                        txtMin.Text = ""
+                        txtMax.Text = ""
+                        txtExist.Text = ""
+                        dgInsumo.Enabled = True
+                        presionado = False
+                    End If
+
                 Else
                     MessageBox.Show("ES NECESARIO PRECIONAR EL BOTÓN DE ACEPTAR PARA ACTUALIZAR LA INFORMACIÓN", "ERROR DE ACTUALIZACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     txtNombre.Focus()
@@ -146,27 +154,36 @@ Public Class frmCatalogoInsumos
 
 
             Else
-                dtpFecha.Enabled = False
-                Dim ultimo As Integer = dgInsumo.RowCount - 1
-                comando.CommandText = "Insert into tlb_insumo(idInsumo, nombre, unidadM, maximo, minimo, existencia, costo, fecha) values(" & Val(dgInsumo.Item(0, ultimo).Value) & ",'" & CStr(dgInsumo.Item(1, ultimo).Value) & "', '" & CStr(dgInsumo.Item(2, ultimo).Value) & "', " & CDec(dgInsumo.Item(3, ultimo).Value) & ", " & CDec(dgInsumo.Item(4, ultimo).Value) & ", " & CDec(dgInsumo.Item(5, ultimo).Value) & "," & CDec(dgInsumo.Item(6, ultimo).Value) & ",'" & dgInsumo.Item(7, ultimo).Value & "')"
-                comando.ExecuteNonQuery()
 
-                btnCancelar.Enabled = False
-                btnGrabar.Enabled = False
-                btnNuevo.Enabled = True
-                btnModificar.Enabled = True
-                btnSalir.Enabled = True
-                mensajeGrabar()
+                If String.IsNullOrWhiteSpace(txtExist.Text) Or String.IsNullOrWhiteSpace(txtMax.Text) Or String.IsNullOrWhiteSpace(txtMin.Text) Then
+                    MessageBox.Show("AÚN NO HAY DATOS SIN INGRESAR", "ERROR, FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Else
+                    dtpFecha.Enabled = False
+                    Dim ultimo As Integer = dgInsumo.RowCount - 1
+                    comando.CommandText = "Insert into tlb_insumo(idInsumo, nombre, unidadM, maximo, minimo, existencia, costo, fecha) values(" & Val(dgInsumo.Item(0, ultimo).Value) & ",'" & CStr(dgInsumo.Item(1, ultimo).Value) & "', '" & CStr(dgInsumo.Item(2, ultimo).Value) & "', " & CDec(dgInsumo.Item(3, ultimo).Value) & ", " & CDec(dgInsumo.Item(4, ultimo).Value) & ", " & CDec(dgInsumo.Item(5, ultimo).Value) & "," & CDec(dgInsumo.Item(6, ultimo).Value) & ",'" & dgInsumo.Item(7, ultimo).Value & "')"
+                    comando.ExecuteNonQuery()
 
-                txtIdInsumo.Text = ""
-                txtNombre.Text = ""
-                txtMin.Text = ""
-                txtMax.Text = ""
-                txtExist.Text = ""
-                dgInsumo.Enabled = True
+                    btnCancelar.Enabled = False
+                    btnGrabar.Enabled = False
+                    btnNuevo.Enabled = True
+                    btnModificar.Enabled = True
+                    btnSalir.Enabled = True
+                    mensajeGrabar()
+
+                    txtIdInsumo.Text = ""
+                    txtNombre.Text = ""
+                    txtMin.Text = ""
+                    txtMax.Text = ""
+                    txtExist.Text = ""
+                    dgInsumo.Enabled = True
+                    presionado = False
+                End If
+
+
+
 
             End If
-        Else
+                Else
             MessageBox.Show("PRESIONAR EL BOTÓN DE ACEPTAR PARA REGISTRAR INSUMO", "ERROR DE ALMACENAMIENTO", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
 
@@ -320,4 +337,6 @@ Public Class frmCatalogoInsumos
             End If
         End If
     End Sub
+
+
 End Class

@@ -28,14 +28,17 @@ Partial Class frmBusquedaRecetas
         Me.dgBusquedaRecetas = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ptbBarra = New System.Windows.Forms.PictureBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.dgBusquedaRecetas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label1.Location = New System.Drawing.Point(22, 30)
+        Me.Label1.Location = New System.Drawing.Point(28, 111)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(60, 20)
         Me.Label1.TabIndex = 59
@@ -44,18 +47,19 @@ Partial Class frmBusquedaRecetas
         'txtNombre
         '
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtNombre.Location = New System.Drawing.Point(88, 27)
+        Me.txtNombre.Location = New System.Drawing.Point(94, 108)
+        Me.txtNombre.MaxLength = 45
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(323, 27)
-        Me.txtNombre.TabIndex = 58
+        Me.txtNombre.TabIndex = 1
         '
         'btnAgregar
         '
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.btnAgregar.Location = New System.Drawing.Point(417, 28)
+        Me.btnAgregar.Location = New System.Drawing.Point(423, 109)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(117, 27)
-        Me.btnAgregar.TabIndex = 57
+        Me.btnAgregar.TabIndex = 2
         Me.btnAgregar.Text = "Agregar receta"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
@@ -64,7 +68,7 @@ Partial Class frmBusquedaRecetas
         Me.dgBusquedaRecetas.AllowUserToAddRows = False
         Me.dgBusquedaRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgBusquedaRecetas.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2})
-        Me.dgBusquedaRecetas.Location = New System.Drawing.Point(12, 73)
+        Me.dgBusquedaRecetas.Location = New System.Drawing.Point(12, 153)
         Me.dgBusquedaRecetas.Name = "dgBusquedaRecetas"
         Me.dgBusquedaRecetas.Size = New System.Drawing.Size(553, 205)
         Me.dgBusquedaRecetas.TabIndex = 56
@@ -82,18 +86,47 @@ Partial Class frmBusquedaRecetas
         Me.DataGridViewTextBoxColumn2.ReadOnly = True
         Me.DataGridViewTextBoxColumn2.Width = 400
         '
+        'ptbBarra
+        '
+        Me.ptbBarra.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ptbBarra.Image = Global.ThinkCoffee.My.Resources.Resources.BarraSuperior
+        Me.ptbBarra.Location = New System.Drawing.Point(0, 0)
+        Me.ptbBarra.Name = "ptbBarra"
+        Me.ptbBarra.Size = New System.Drawing.Size(579, 33)
+        Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbBarra.TabIndex = 66
+        Me.ptbBarra.TabStop = False
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.Label10.ForeColor = System.Drawing.Color.Black
+        Me.Label10.Location = New System.Drawing.Point(77, 47)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(427, 37)
+        Me.Label10.TabIndex = 65
+        Me.Label10.Text = "BUSQUEDA DE RECETAS"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frmBusquedaRecetas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(579, 307)
+        Me.ClientSize = New System.Drawing.Size(579, 370)
+        Me.Controls.Add(Me.ptbBarra)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.dgBusquedaRecetas)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmBusquedaRecetas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmBusquedaProductos"
         CType(Me.dgBusquedaRecetas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -105,4 +138,6 @@ Partial Class frmBusquedaRecetas
     Friend WithEvents dgBusquedaRecetas As DataGridView
     Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents ptbBarra As PictureBox
+    Friend WithEvents Label10 As Label
 End Class
