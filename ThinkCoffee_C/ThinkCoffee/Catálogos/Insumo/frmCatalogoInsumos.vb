@@ -138,6 +138,7 @@ Public Class frmCatalogoInsumos
                     txtMin.Text = ""
                     txtMax.Text = ""
                     txtExist.Text = ""
+                    dgInsumo.Enabled = True
                 Else
                     MessageBox.Show("ES NECESARIO PRECIONAR EL BOTÓN DE ACEPTAR PARA ACTUALIZAR LA INFORMACIÓN", "ERROR DE ACTUALIZACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     txtNombre.Focus()
@@ -162,6 +163,7 @@ Public Class frmCatalogoInsumos
                 txtMin.Text = ""
                 txtMax.Text = ""
                 txtExist.Text = ""
+                dgInsumo.Enabled = True
 
             End If
         Else
