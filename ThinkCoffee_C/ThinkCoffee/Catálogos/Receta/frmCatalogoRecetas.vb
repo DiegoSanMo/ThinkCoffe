@@ -23,6 +23,7 @@
 
             btnAgregar.Enabled = True
             txtCantidad.Focus()
+            txtCantidad.Enabled = True
         Else
             MessageBox.Show("NO SE HA SELECCIONADO INSUMO", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
@@ -47,11 +48,9 @@
         btnGrabar.Enabled = True
         btnCancelar.Enabled = True
         txtNombre.Enabled = True
-
         btnBuscar.Enabled = True
 
         txtNombre.Focus()
-        txtCantidad.Enabled = True
 
 
     End Sub
@@ -153,6 +152,10 @@
                 e.KeyChar = ChrW(0)
             End If
         End If
+        cmbUnidadM.Enabled = True
     End Sub
 
+    Private Sub cmbUnidadM_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUnidadM.SelectedIndexChanged
+
+    End Sub
 End Class
