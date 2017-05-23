@@ -27,13 +27,13 @@ Partial Class frmCompraDeInsumos
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.gbProveedores = New System.Windows.Forms.GroupBox()
+        Me.cboProveedor = New System.Windows.Forms.ComboBox()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtIdProveedor = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.cboProveedor = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.gbInsumos = New System.Windows.Forms.GroupBox()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
@@ -71,17 +71,20 @@ Partial Class frmCompraDeInsumos
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.ptbBarra = New System.Windows.Forms.PictureBox()
         Me.gbProveedores.SuspendLayout()
         Me.gbInsumos.SuspendLayout()
         CType(Me.dgInsumosC, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(150, 9)
+        Me.Label1.Location = New System.Drawing.Point(150, 89)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(97, 24)
         Me.Label1.TabIndex = 0
@@ -92,7 +95,7 @@ Partial Class frmCompraDeInsumos
         '
         Me.txtIdCompra.Enabled = False
         Me.txtIdCompra.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtIdCompra.Location = New System.Drawing.Point(254, 9)
+        Me.txtIdCompra.Location = New System.Drawing.Point(254, 89)
         Me.txtIdCompra.Name = "txtIdCompra"
         Me.txtIdCompra.Size = New System.Drawing.Size(100, 27)
         Me.txtIdCompra.TabIndex = 1
@@ -103,7 +106,7 @@ Partial Class frmCompraDeInsumos
         Me.dtpFecha.Enabled = False
         Me.dtpFecha.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(755, 13)
+        Me.dtpFecha.Location = New System.Drawing.Point(755, 93)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(98, 27)
         Me.dtpFecha.TabIndex = 2
@@ -112,7 +115,7 @@ Partial Class frmCompraDeInsumos
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(680, 14)
+        Me.Label2.Location = New System.Drawing.Point(680, 94)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(69, 24)
         Me.Label2.TabIndex = 3
@@ -128,12 +131,23 @@ Partial Class frmCompraDeInsumos
         Me.gbProveedores.Controls.Add(Me.txtIdProveedor)
         Me.gbProveedores.Controls.Add(Me.Label4)
         Me.gbProveedores.Controls.Add(Me.Label3)
-        Me.gbProveedores.Location = New System.Drawing.Point(141, 42)
+        Me.gbProveedores.Location = New System.Drawing.Point(141, 122)
         Me.gbProveedores.Name = "gbProveedores"
         Me.gbProveedores.Size = New System.Drawing.Size(726, 97)
         Me.gbProveedores.TabIndex = 4
         Me.gbProveedores.TabStop = False
         Me.gbProveedores.Text = "Proveedores:"
+        '
+        'cboProveedor
+        '
+        Me.cboProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboProveedor.Enabled = False
+        Me.cboProveedor.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.cboProveedor.FormattingEnabled = True
+        Me.cboProveedor.Location = New System.Drawing.Point(228, 21)
+        Me.cboProveedor.Name = "cboProveedor"
+        Me.cboProveedor.Size = New System.Drawing.Size(301, 28)
+        Me.cboProveedor.TabIndex = 2
         '
         'txtTelefono
         '
@@ -194,17 +208,6 @@ Partial Class frmCompraDeInsumos
         Me.Label4.Text = "IdProveedor:"
         Me.Label4.Visible = False
         '
-        'cboProveedor
-        '
-        Me.cboProveedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboProveedor.Enabled = False
-        Me.cboProveedor.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.cboProveedor.FormattingEnabled = True
-        Me.cboProveedor.Location = New System.Drawing.Point(228, 21)
-        Me.cboProveedor.Name = "cboProveedor"
-        Me.cboProveedor.Size = New System.Drawing.Size(301, 28)
-        Me.cboProveedor.TabIndex = 2
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -239,7 +242,7 @@ Partial Class frmCompraDeInsumos
         Me.gbInsumos.Controls.Add(Me.txtIdInsumo)
         Me.gbInsumos.Controls.Add(Me.Label8)
         Me.gbInsumos.Controls.Add(Me.Label7)
-        Me.gbInsumos.Location = New System.Drawing.Point(142, 145)
+        Me.gbInsumos.Location = New System.Drawing.Point(142, 225)
         Me.gbInsumos.Name = "gbInsumos"
         Me.gbInsumos.Size = New System.Drawing.Size(726, 144)
         Me.gbInsumos.TabIndex = 5
@@ -465,7 +468,7 @@ Partial Class frmCompraDeInsumos
         Me.dgInsumosC.AllowUserToAddRows = False
         Me.dgInsumosC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgInsumosC.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
-        Me.dgInsumosC.Location = New System.Drawing.Point(142, 297)
+        Me.dgInsumosC.Location = New System.Drawing.Point(142, 377)
         Me.dgInsumosC.Name = "dgInsumosC"
         Me.dgInsumosC.Size = New System.Drawing.Size(725, 150)
         Me.dgInsumosC.TabIndex = 6
@@ -505,7 +508,7 @@ Partial Class frmCompraDeInsumos
         '
         Me.txtSubtotal.Enabled = False
         Me.txtSubtotal.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtSubtotal.Location = New System.Drawing.Point(749, 457)
+        Me.txtSubtotal.Location = New System.Drawing.Point(749, 537)
         Me.txtSubtotal.Name = "txtSubtotal"
         Me.txtSubtotal.Size = New System.Drawing.Size(100, 27)
         Me.txtSubtotal.TabIndex = 8
@@ -514,7 +517,7 @@ Partial Class frmCompraDeInsumos
         '
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(661, 458)
+        Me.Label15.Location = New System.Drawing.Point(661, 538)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(82, 24)
         Me.Label15.TabIndex = 7
@@ -549,6 +552,7 @@ Partial Class frmCompraDeInsumos
         '
         'btnCancelar
         '
+        Me.btnCancelar.Enabled = False
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -580,17 +584,43 @@ Partial Class frmCompraDeInsumos
         Me.GroupBox1.Controls.Add(Me.btnNuevo)
         Me.GroupBox1.Controls.Add(Me.btnCancelar)
         Me.GroupBox1.Controls.Add(Me.btnGuardar)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 42)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 122)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(124, 395)
         Me.GroupBox1.TabIndex = 9
         Me.GroupBox1.TabStop = False
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.BackColor = System.Drawing.Color.Transparent
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.Label16.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label16.Location = New System.Drawing.Point(134, 46)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(664, 37)
+        Me.Label16.TabIndex = 26
+        Me.Label16.Text = "COMPRAS POR CONCEPTO DE INSUMO"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ptbBarra
+        '
+        Me.ptbBarra.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ptbBarra.Image = Global.ThinkCoffee.My.Resources.Resources.BarraSuperior
+        Me.ptbBarra.Location = New System.Drawing.Point(0, 0)
+        Me.ptbBarra.Name = "ptbBarra"
+        Me.ptbBarra.Size = New System.Drawing.Size(891, 33)
+        Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbBarra.TabIndex = 25
+        Me.ptbBarra.TabStop = False
+        '
         'frmCompraDeInsumos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(891, 489)
+        Me.ClientSize = New System.Drawing.Size(891, 581)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.ptbBarra)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.txtSubtotal)
         Me.Controls.Add(Me.Label15)
@@ -601,6 +631,7 @@ Partial Class frmCompraDeInsumos
         Me.Controls.Add(Me.dtpFecha)
         Me.Controls.Add(Me.txtIdCompra)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmCompraDeInsumos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Compra De Insumos"
@@ -610,6 +641,7 @@ Partial Class frmCompraDeInsumos
         Me.gbInsumos.PerformLayout()
         CType(Me.dgInsumosC, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -664,4 +696,6 @@ Partial Class frmCompraDeInsumos
     Friend WithEvents txtCantidad As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents ptbBarra As PictureBox
 End Class

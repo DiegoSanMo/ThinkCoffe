@@ -2,13 +2,24 @@
     Private Sub frmCompraDeInsumos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexionSql.Open()
 
-        comando.CommandText = "Select tlb_proveedor.nombre from tlb_proveedor"
-        lector = comando.ExecuteReader
-        While lector.Read
-            cboProveedor.Items.Add(lector(0))
-        End While
-        lector.Close()
-        dgInsumosC.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        comando.CommandText = "Select count(tlb_proveedor.idProveedor) from tlb_proveedor"
+        Dim n As Integer = comando.ExecuteScalar
+        If n > 0 Then
+            comando.CommandText = "Select tlb_proveedor.nombre from tlb_proveedor"
+            lector = comando.ExecuteReader
+            While lector.Read
+                cboProveedor.Items.Add(lector(0))
+            End While
+            lector.Close()
+            dgInsumosC.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        Else
+            MessageBox.Show("NO SE HAN REGISTRADO PROVEEDORES, FAVOR DE REGISTRAR PROVEEDORES PARA REALIZAR UN REGISTRO COMPLETO DE COMPRA", "ERROR, FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Me.Close()
+            conexionSql.Close()
+
+        End If
+
+
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
@@ -25,6 +36,8 @@
 
         btnNuevo.Enabled = False
         btnGuardar.Enabled = True
+        btnCancelar.Enabled = True
+        btnSalir.Enabled = False
 
 
     End Sub
@@ -70,7 +83,6 @@
         txtDireccion.Text = lector(1)
         txtTelefono.Text = lector(2)
         lector.Close()
-
     End Sub
 
 
@@ -85,7 +97,7 @@
         Dim suma As Decimal = 0
 
         If String.IsNullOrWhiteSpace(txtNombreInsumo.Text) Then
-            MsgBox("No se ha ingresado insumo")
+            MsgBox("NO SE HA INGRESADO INSUMO, FAVOR DE SELECCIONAR UNO")
             btnBuscarIn.Focus()
         Else
             For x = 0 To dgInsumosC.RowCount - 1
@@ -164,6 +176,63 @@
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Me.Close()
         conexionSql.Close()
+
+    End Sub
+
+    Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        txtCantidad.Text = ""
+        txtCosto.Text = ""
+        txtDireccion.Text = ""
+        txtExistencias.Text = ""
+        txtFechaInsumo.Text = ""
+        txtIdCompra.Text = ""
+        txtIdInsumo.Text = ""
+        txtIdProveedor.Text = ""
+        txtMaximo.Text = ""
+        txtMinimo.Text = ""
+        txtNombreInsumo.Text = ""
+        txtNuevoC.Text = ""
+        txtSubtotal.Text = ""
+        txtTelefono.Text = ""
+        txtUnidadM.Text = ""
+
+        txtCantidad.ReadOnly = True
+        txtCosto.Enabled = False
+        txtDireccion.Enabled = False
+        txtExistencias.Enabled = False
+        txtFechaInsumo.Enabled = False
+        txtIdCompra.Enabled = False
+        txtIdInsumo.Enabled = False
+        txtIdProveedor.Enabled = False
+        txtMaximo.Enabled = False
+        txtMinimo.Enabled = False
+        txtNombreInsumo.Enabled = False
+        txtNuevoC.ReadOnly = True
+        txtSubtotal.Enabled = False
+        txtTelefono.Enabled = False
+        txtUnidadM.Enabled = False
+        dgInsumosC.Rows.Clear()
+        dgInsumosC.Enabled = False
+
+        btnNuevo.Enabled = True
+        btnGuardar.Enabled = False
+        btnCancelar.Enabled = False
+        btnSalir.Enabled = True
+        btnAgregarI.Enabled = False
+        btnBuscarIn.Enabled = False
+        cboProveedor.Enabled = False
+
+
+    End Sub
+
+    Private Sub txtNuevoC_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNuevoC.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(CadenaNumeros, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+
 
     End Sub
 End Class

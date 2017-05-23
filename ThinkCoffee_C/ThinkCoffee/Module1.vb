@@ -4,6 +4,7 @@ Module Module1
     Public mover As Boolean
     Public CadenaValida As String = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
     Public CadenaNumeros As String = "0123456789-., "
+    Public soloNumeros As String = "0123456789"
     Public CadenaDirecciones As String = "0123456789.ABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
     Public nombreInsumo As String
 

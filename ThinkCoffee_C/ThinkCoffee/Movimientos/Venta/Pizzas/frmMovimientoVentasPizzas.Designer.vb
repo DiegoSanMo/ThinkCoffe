@@ -42,16 +42,21 @@ Partial Class frmMovimientoVentasPizzas
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnGrabar = New System.Windows.Forms.Button()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.ptbBarra = New System.Windows.Forms.PictureBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.gbMixta.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'gbMixta
         '
         Me.gbMixta.Controls.Add(Me.CheckedListBox1)
         Me.gbMixta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.gbMixta.Location = New System.Drawing.Point(136, 164)
+        Me.gbMixta.Location = New System.Drawing.Point(131, 228)
         Me.gbMixta.Name = "gbMixta"
         Me.gbMixta.Size = New System.Drawing.Size(690, 184)
         Me.gbMixta.TabIndex = 71
@@ -102,6 +107,8 @@ Partial Class frmMovimientoVentasPizzas
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.Label7)
+        Me.GroupBox2.Controls.Add(Me.txtTotal)
         Me.GroupBox2.Controls.Add(Me.txtIdVenta)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Label5)
@@ -114,7 +121,7 @@ Partial Class frmMovimientoVentasPizzas
         Me.GroupBox2.Controls.Add(Me.txtPrecio)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Controls.Add(Me.cboTamaño)
-        Me.GroupBox2.Location = New System.Drawing.Point(136, 12)
+        Me.GroupBox2.Location = New System.Drawing.Point(131, 76)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(684, 146)
         Me.GroupBox2.TabIndex = 82
@@ -215,7 +222,7 @@ Partial Class frmMovimientoVentasPizzas
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label6.Location = New System.Drawing.Point(417, 104)
+        Me.Label6.Location = New System.Drawing.Point(238, 103)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(56, 20)
         Me.Label6.TabIndex = 76
@@ -225,7 +232,7 @@ Partial Class frmMovimientoVentasPizzas
         '
         Me.txtPrecio.Enabled = False
         Me.txtPrecio.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtPrecio.Location = New System.Drawing.Point(492, 101)
+        Me.txtPrecio.Location = New System.Drawing.Point(313, 100)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(100, 27)
         Me.txtPrecio.TabIndex = 77
@@ -289,20 +296,68 @@ Partial Class frmMovimientoVentasPizzas
         Me.GroupBox3.Controls.Add(Me.btnSalir)
         Me.GroupBox3.Controls.Add(Me.btnGrabar)
         Me.GroupBox3.Controls.Add(Me.btnCancelar)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox3.Location = New System.Drawing.Point(7, 76)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(118, 336)
         Me.GroupBox3.TabIndex = 32
         Me.GroupBox3.TabStop = False
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.BackColor = System.Drawing.Color.Transparent
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold)
+        Me.Label16.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label16.Location = New System.Drawing.Point(294, 36)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(315, 37)
+        Me.Label16.TabIndex = 84
+        Me.Label16.Text = "VENTA DE PIZZAS"
+        Me.Label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ptbBarra
+        '
+        Me.ptbBarra.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ptbBarra.Image = Global.ThinkCoffee.My.Resources.Resources.BarraSuperior
+        Me.ptbBarra.Location = New System.Drawing.Point(0, 0)
+        Me.ptbBarra.Name = "ptbBarra"
+        Me.ptbBarra.Size = New System.Drawing.Size(838, 33)
+        Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbBarra.TabIndex = 83
+        Me.ptbBarra.TabStop = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label7.Location = New System.Drawing.Point(439, 103)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(111, 20)
+        Me.Label7.TabIndex = 82
+        Me.Label7.Text = "Total a pagar"
+        '
+        'txtTotal
+        '
+        Me.txtTotal.Enabled = False
+        Me.txtTotal.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtTotal.Location = New System.Drawing.Point(556, 100)
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.Size = New System.Drawing.Size(100, 27)
+        Me.txtTotal.TabIndex = 83
+        '
         'frmMovimientoVentasPizzas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(838, 366)
+        Me.ClientSize = New System.Drawing.Size(838, 428)
+        Me.Controls.Add(Me.Label16)
+        Me.Controls.Add(Me.ptbBarra)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.gbMixta)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmMovimientoVentasPizzas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Venta Pizzas"
@@ -310,7 +365,9 @@ Partial Class frmMovimientoVentasPizzas
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
+        CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents gbMixta As GroupBox
@@ -333,4 +390,8 @@ Partial Class frmMovimientoVentasPizzas
     Friend WithEvents Label4 As Label
     Friend WithEvents cboTipo As ComboBox
     Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents txtTotal As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents ptbBarra As PictureBox
 End Class
