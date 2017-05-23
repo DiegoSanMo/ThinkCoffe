@@ -151,6 +151,14 @@
 
             End If
         End If
+        cboProveedor.Enabled = False
+        btnBuscarIn.Enabled = False
+        btnAgregarI.Enabled = False
+        txtNuevoC.ReadOnly = False
+        txtCantidad.ReadOnly = False
+
+        btnNuevo.Enabled = True
+        btnGuardar.Enabled = False
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click

@@ -7,7 +7,7 @@ Module Module1
     Public CadenaDirecciones As String = "0123456789.ABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
     Public nombreInsumo As String
 
-    Public conexionSql As New SqlConnection("Data Source = 'PRO'; Initial Catalog = 'thinkCoffee'; Integrated security = true")
+    Public conexionSql As New SqlConnection("Data Source = 'DESKTOP-B3IP6AD\MANI'; Initial Catalog = 'thinkCoffee'; Integrated security = true")
     Public comando As SqlCommand = conexionSql.CreateCommand
     Public lector As SqlDataReader
 
@@ -75,6 +75,7 @@ Module Module1
         frmCatalogoInsumos.txtExist.Text = vbEmpty
 
     End Sub
+
     '-*****************************************ventas otros*-----------------------------------
     Public Sub calcularPorcion(idProducto As Integer, cantidadP As Integer)
         Dim cantidadProductos As Integer = cantidadP
