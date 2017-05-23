@@ -31,6 +31,8 @@ Public Class frmCatalogoInsumos
     End Sub
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        presionado = False
+
         dtpFecha.Enabled = False
         limpiarCajaInsumos()
 
@@ -290,5 +292,30 @@ Public Class frmCatalogoInsumos
         dtpFecha.Value = dgInsumo(7, filaSel).Value
     End Sub
 
+    Private Sub txtMax_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMax.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(CadenaNumeros, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
 
+    Private Sub txtMin_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMin.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(CadenaNumeros, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
+
+    Private Sub txtExist_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtExist.KeyPress
+        e.KeyChar = UCase(e.KeyChar)
+        If e.KeyChar > ChrW(26) Then
+            If InStr(CadenaNumeros, e.KeyChar) = 0 Then
+                e.KeyChar = ChrW(0)
+            End If
+        End If
+    End Sub
 End Class
