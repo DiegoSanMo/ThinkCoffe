@@ -133,6 +133,12 @@ Public Class frmCatalogoInsumos
                 btnModificar.Enabled = True
                 btnSalir.Enabled = True
                 banModi = False
+
+                txtIdInsumo.Text = ""
+                txtNombre.Text = ""
+                txtMin.Text = ""
+                txtMax.Text = ""
+                txtExist.Text = ""
             Else
                 MessageBox.Show("ES NECESARIO PRECIONAR EL BOTÓN DE ACEPTAR PARA ACTUALIZAR LA INFORMACIÓN", "ERROR DE ACTUALIZACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 txtNombre.Focus()
@@ -151,6 +157,12 @@ Public Class frmCatalogoInsumos
             btnModificar.Enabled = True
             btnSalir.Enabled = True
             mensajeGrabar()
+
+            txtIdInsumo.Text = ""
+            txtNombre.Text = ""
+            txtMin.Text = ""
+            txtMax.Text = ""
+            txtExist.Text = ""
 
         End If
     End Sub
@@ -200,8 +212,13 @@ Public Class frmCatalogoInsumos
             cboUnidadM.Enabled = False
             txtExist.Enabled = False
             btnAceptar.Enabled = False
-
             banModi = False
+
+            txtIdInsumo.Text = ""
+            txtNombre.Text = ""
+            txtMin.Text = ""
+            txtMax.Text = ""
+            txtExist.Text = ""
         Else
             dtpFecha.Enabled = False
             Dim ultimo As Integer = dgInsumo.RowCount - 1
@@ -220,6 +237,11 @@ Public Class frmCatalogoInsumos
             cboUnidadM.Enabled = False
             txtExist.Enabled = False
             btnAceptar.Enabled = False
+            txtIdInsumo.Text = ""
+            txtNombre.Text = ""
+            txtMin.Text = ""
+            txtMax.Text = ""
+            txtExist.Text = ""
 
         End If
 
@@ -240,6 +262,12 @@ Public Class frmCatalogoInsumos
                 activarCajasInsumo()
                 txtNombre.Focus()
                 banModi = True
+
+                txtIdInsumo.Text = ""
+                txtNombre.Text = ""
+                txtMin.Text = ""
+                txtMax.Text = ""
+                txtExist.Text = ""
             End If
         End If
 
@@ -258,7 +286,5 @@ Public Class frmCatalogoInsumos
         dtpFecha.Value = dgInsumo(7, filaSel).Value
     End Sub
 
-    Private Sub cboUnidadM_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboUnidadM.SelectedIndexChanged
 
-    End Sub
 End Class

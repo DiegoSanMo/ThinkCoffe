@@ -72,13 +72,13 @@ Public Class frmCatalogoProductos
         btnCancelar.Enabled = False
         btnSalir.Enabled = True
         btnNuevo.Enabled = True
-
         bloquearCajaProductos()
+        limpiarCajaProductos()
 
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
-        If txtNombre.Text = "" Then
+        If txtNombre.Text = "" Or txtIdCategoria.Text = "" Then
             Dim idProducto As Integer
             Dim idReceta As Integer
             Dim idCategoria As Integer
@@ -127,12 +127,17 @@ Public Class frmCatalogoProductos
     End Sub
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
+        If txtIdCategoria.Text = "" Then
+            MessageBox.Show("NO SE HA INGRESADO CATEGORIA", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            cboCategoria.Focus()
+        Else
+            dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, txtIdCategoria.Text, txtIdReceta.Text, txtPrecio.Text)
 
-        dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, txtIdCategoria.Text, txtIdReceta.Text, txtPrecio.Text)
 
+            limpiarCajaProductos()
+            bloquearCajaProductos()
+        End If
 
-        'limpiarCajaProductos()
-        bloquearCajaProductos()
 
     End Sub
 
