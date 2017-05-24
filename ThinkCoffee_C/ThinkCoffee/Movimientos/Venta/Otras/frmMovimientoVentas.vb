@@ -33,6 +33,7 @@
         btnGrabar.Enabled = True
         btnNuevo.Enabled = False
         btnSalir.Enabled = False
+        btnCancelar.Enabled = True
 
 
         comando.CommandText = "select count(tlb_venta.idVenta) from tlb_venta;"
@@ -84,46 +85,81 @@
     End Sub
 
     Private Sub btnGrabar_Click(sender As Object, e As EventArgs) Handles btnGrabar.Click
+        If dgVenta.RowCount = 0 Then
+            'limpieza de textBox
+            txtIdVenta.Text = ""
+            dtpFecha.Text = ""
+            txtCantidad.Text = ""
+            txtCategoria.Text = ""
+            txtIdProducto.Text = ""
+            txtNombreP.Text = ""
+            txtPrecio.Text = ""
+            txtTotal.Text = "0.00"
 
-        comando.CommandText = "Insert into tlb_venta(idVenta, tipo, fecha, total) values(" & CInt(txtIdVenta.Text) & ", '" & "OTROS" & "', '" & dtpFecha.Value.Date & "', " & CDec(txtTotal.Text) & ")"
-        comando.ExecuteNonQuery()
+            'bloqueo de botones
+            btnNuevo.Enabled = True
+            btnGrabar.Enabled = False
+            btnCancelar.Enabled = False
+            btnBuscar.Enabled = False
+            btnAceptar.Enabled = False
+            btnSalir.Enabled = True
 
-        For x = 0 To dgVenta.RowCount - 1
-            calcularPorcion(CInt(dgVenta(0, x).Value), CInt(dgVenta(2, x).Value))
-            comando.CommandText = "Insert into tlb_otro(idVenta, idProducto, cantidad, importe) values(" & CInt(txtIdVenta.Text) & ", " & CInt(dgVenta(0, x).Value) & ", '" & CInt(dgVenta(2, x).Value) & "', " & CDec(dgVenta(4, x).Value) & ")"
+            'bloqueo de cajas de texto
+            txtIdVenta.Enabled = False
+            dtpFecha.Enabled = False
+            txtCantidad.Enabled = False
+            txtCategoria.Enabled = False
+            txtIdProducto.Enabled = False
+            txtNombreP.Enabled = False
+            txtPrecio.Enabled = False
+            txtTotal.Enabled = False
+            btnCancelar.Enabled = False
+            btnSalir.Enabled = True
+            dgVenta.Rows.Clear()
+        Else
+            comando.CommandText = "Insert into tlb_venta(idVenta, tipo, fecha, total) values(" & CInt(txtIdVenta.Text) & ", '" & "OTROS" & "', '" & dtpFecha.Value.Date & "', " & CDec(txtTotal.Text) & ")"
             comando.ExecuteNonQuery()
-        Next
-        mensajeVenta()
+
+            For x = 0 To dgVenta.RowCount - 1
+                calcularPorcion(CInt(dgVenta(0, x).Value), CInt(dgVenta(2, x).Value))
+                comando.CommandText = "Insert into tlb_otro(idVenta, idProducto, cantidad, importe) values(" & CInt(txtIdVenta.Text) & ", " & CInt(dgVenta(0, x).Value) & ", '" & CInt(dgVenta(2, x).Value) & "', " & CDec(dgVenta(4, x).Value) & ")"
+                comando.ExecuteNonQuery()
+            Next
+            mensajeVenta()
 
 
-        'limpieza de textBox
-        txtIdVenta.Text = ""
-        dtpFecha.Text = ""
-        txtCantidad.Text = ""
-        txtCategoria.Text = ""
-        txtIdProducto.Text = ""
-        txtNombreP.Text = ""
-        txtPrecio.Text = ""
-        txtTotal.Text = "0.00"
+            'limpieza de textBox
+            txtIdVenta.Text = ""
+            dtpFecha.Text = ""
+            txtCantidad.Text = ""
+            txtCategoria.Text = ""
+            txtIdProducto.Text = ""
+            txtNombreP.Text = ""
+            txtPrecio.Text = ""
+            txtTotal.Text = "0.00"
 
-        'bloqueo de botones
-        btnNuevo.Enabled = True
-        btnGrabar.Enabled = False
-        btnCancelar.Enabled = False
-        btnBuscar.Enabled = False
-        btnAceptar.Enabled = False
-        btnSalir.Enabled = True
+            'bloqueo de botones
+            btnNuevo.Enabled = True
+            btnGrabar.Enabled = False
+            btnCancelar.Enabled = False
+            btnBuscar.Enabled = False
+            btnAceptar.Enabled = False
+            btnSalir.Enabled = True
 
-        'bloqueo de cajas de texto
-        txtIdVenta.Enabled = False
-        dtpFecha.Enabled = False
-        txtCantidad.Enabled = False
-        txtCategoria.Enabled = False
-        txtIdProducto.Enabled = False
-        txtNombreP.Enabled = False
-        txtPrecio.Enabled = False
-        txtTotal.Enabled = False
-        dgVenta.Rows.Clear()
+            'bloqueo de cajas de texto
+            txtIdVenta.Enabled = False
+            dtpFecha.Enabled = False
+            txtCantidad.Enabled = False
+            txtCategoria.Enabled = False
+            txtIdProducto.Enabled = False
+            txtNombreP.Enabled = False
+            txtPrecio.Enabled = False
+            txtTotal.Enabled = False
+            btnCancelar.Enabled = False
+            dgVenta.Rows.Clear()
+
+        End If
+
     End Sub
 
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
@@ -154,6 +190,8 @@
         txtNombreP.Enabled = False
         txtPrecio.Enabled = False
         txtTotal.Enabled = False
+        btnCancelar.Enabled = False
+        btnSalir.Enabled = True
         dgVenta.Rows.Clear()
     End Sub
 End Class
