@@ -359,7 +359,6 @@ Partial Class frmCatalogoRecetas
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(139, 27)
         Me.txtCantidad.TabIndex = 3
-        Me.txtCantidad.Text = "0"
         '
         'Label6
         '

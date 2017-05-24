@@ -4,6 +4,7 @@ Public Class frmCatalogoProductos
     Dim presionado As Boolean = False
     Dim idR As Integer
     Dim idC As Integer
+    Dim ubi As String
 
     Private Sub frmCatalogoProductos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexionSql.Open()
@@ -37,8 +38,8 @@ Public Class frmCatalogoProductos
         OpenFileDialog1.ShowDialog()
         Dim ruta As String
         ruta = OpenFileDialog1.FileName
-        MsgBox(ruta)
         ptbImagen.Image = Image.FromFile(ruta)
+        ubi = ruta
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
@@ -114,6 +115,9 @@ Public Class frmCatalogoProductos
                 'Si ustedes no tienen ese problema, solamente comenten la variable "precioFin", y
                 'en la sentencia de SQL reemplacen la variable "precioFin" por "precio".
                 imagen = OpenFileDialog1.FileName
+                If imagen = "Buscar imagenes" Then
+                    imagen = ubi
+                End If
                 Dim fila As Integer = dgProductos.RowCount - 1
 
                 comando.CommandText = "Insert Into tlb_producto(idProducto, idReceta, idCategoria, nombre, precio, imagen) values(" & CInt(dgProductos(0, fila).Value) & "," & idR & "," & idC & ",'" & dgProductos(1, fila).Value & "'," & CDec(dgProductos(4, fila).Value) & ",'" & imagen & "')"
@@ -167,6 +171,10 @@ Public Class frmCatalogoProductos
                         txtPrecio.Focus()
 
                     Else
+                        If String.IsNullOrWhiteSpace(ubi) Then
+
+                            ubi = "~\ThinkCoffee_C\imagenes\producto.png"
+                        End If
                         dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, cboCategoria.Text, txtNombreReceta.Text, txtPrecio.Text)
                         idR = CInt(txtIdReceta.Text)
                         idC = CInt(txtIdCategoria.Text)

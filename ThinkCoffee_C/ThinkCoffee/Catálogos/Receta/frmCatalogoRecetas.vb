@@ -61,17 +61,22 @@
             cmbUnidadM.Focus()
             txtCantidad.Focus()
         Else
-            dgReceta.Rows.Add(txtIdInsumo.Text, txtInsumo.Text, txtCantidad.Text, cmbUnidadM.Text)
-            txtExistencia.Text = ""
-            txtIdInsumo.Text = ""
-            txtInsumo.Text = ""
-            txtUnidadM.Text = ""
-            txtCantidad.Text = ""
-            cmbUnidadM.Text = ""
+            If Not IsNumeric(txtCantidad.Text) Then
+                MessageBox.Show("CANTIDAD NO VÁLIDA", "VERIFICAR DATOS INGRESADOS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                txtCantidad.Focus()
+            Else
+                dgReceta.Rows.Add(txtIdInsumo.Text, txtInsumo.Text, txtCantidad.Text, cmbUnidadM.Text)
+                txtExistencia.Text = ""
+                txtIdInsumo.Text = ""
+                txtInsumo.Text = ""
+                txtUnidadM.Text = ""
+                txtCantidad.Text = ""
+                cmbUnidadM.Text = ""
 
-            btnAgregar.Enabled = False
-            btnBuscar.Focus()
-            entra = True
+                btnAgregar.Enabled = False
+                btnBuscar.Focus()
+                entra = True
+            End If
         End If
 
     End Sub

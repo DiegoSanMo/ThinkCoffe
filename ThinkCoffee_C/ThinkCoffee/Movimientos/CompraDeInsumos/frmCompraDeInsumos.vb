@@ -1,5 +1,5 @@
 ﻿Public Class frmCompraDeInsumos
-    Dim entro As Integer
+    Dim entro As Boolean = False
     Private Sub frmCompraDeInsumos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexionSql.Open()
 
@@ -115,34 +115,30 @@
                 dgInsumosC(2, pos).Value = CDec(dgInsumosC(2, pos).Value) + CDec(txtCantidad.Text)
                 dgInsumosC(4, pos).Value = CDec(dgInsumosC(2, pos).Value) * CDec(dgInsumosC(3, pos).Value)
             Else
-                If String.IsNullOrWhiteSpace(txtCantidad.Text) Or String.IsNullOrWhiteSpace(txtNuevoC.Text) Then
-                    MessageBox.Show("HAY DATOS EN BLANCO", "ERROR, FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+
+                If Not IsNumeric(txtNuevoC.Text) Then
+                    MessageBox.Show("VERIFICAR EL PRECIO INGRESADO", "ERROR, TIPO DE DATO NO VÁLIDO", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     txtNuevoC.Focus()
                 Else
-
-                    If Not IsNumeric(txtNuevoC.Text) Then
-                        MessageBox.Show("VERIFICAR EL PRECIO INGRESADO", "ERROR, TIPO DE DATO NO VÁLIDO", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        txtNuevoC.Focus()
+                    If Not IsNumeric(txtCantidad.Text) Then
+                        MessageBox.Show("VERIFICAR LA CANTIDAD INGRESADA", "ERROR, TIPO DE DATO NO VÁLIDO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        txtCantidad.Focus()
                     Else
-                        If Not IsNumeric(txtCantidad.Text) Then
-                            MessageBox.Show("VERIFICAR LA CANTIDAD INGRESADA", "ERROR, TIPO DE DATO NO VÁLIDO", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                            txtCantidad.Focus()
-                        Else
-                            dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, CDec(txtNuevoC.Text), CDec(txtCantidad.Text * txtNuevoC.Text))
-                            dgInsumosC.CurrentCell = dgInsumosC.Rows(dgInsumosC.RowCount - 1).Cells(0)
+                        dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, CDec(txtNuevoC.Text), CDec(txtCantidad.Text * txtNuevoC.Text))
+                        dgInsumosC.CurrentCell = dgInsumosC.Rows(dgInsumosC.RowCount - 1).Cells(0)
 
-                            txtIdInsumo.Text = ""
-                            txtNombreInsumo.Text = ""
-                            txtExistencias.Text = ""
-                            txtMaximo.Text = ""
-                            txtMinimo.Text = ""
-                            txtUnidadM.Text = ""
-                            txtFechaInsumo.Text = ""
-                            txtCosto.Text = ""
-                            txtNuevoC.Text = ""
-                            txtCantidad.Text = ""
-                            entro = True
-                        End If
+                        txtIdInsumo.Text = ""
+                        txtNombreInsumo.Text = ""
+                        txtExistencias.Text = ""
+                        txtMaximo.Text = ""
+                        txtMinimo.Text = ""
+                        txtUnidadM.Text = ""
+                        txtFechaInsumo.Text = ""
+                        txtCosto.Text = ""
+                        txtNuevoC.Text = ""
+                        txtCantidad.Text = ""
+                        entro = True
                     End If
                 End If
             End If
