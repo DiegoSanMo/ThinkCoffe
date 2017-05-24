@@ -151,10 +151,10 @@ Partial Class frmCompraDeInsumos
         '
         'txtTelefono
         '
+        Me.txtTelefono.Enabled = False
         Me.txtTelefono.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtTelefono.Location = New System.Drawing.Point(582, 56)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.ReadOnly = True
         Me.txtTelefono.Size = New System.Drawing.Size(117, 27)
         Me.txtTelefono.TabIndex = 8
         '
@@ -170,10 +170,10 @@ Partial Class frmCompraDeInsumos
         '
         'txtDireccion
         '
+        Me.txtDireccion.Enabled = False
         Me.txtDireccion.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtDireccion.Location = New System.Drawing.Point(107, 57)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.ReadOnly = True
         Me.txtDireccion.Size = New System.Drawing.Size(310, 27)
         Me.txtDireccion.TabIndex = 6
         '
@@ -189,10 +189,10 @@ Partial Class frmCompraDeInsumos
         '
         'txtIdProveedor
         '
+        Me.txtIdProveedor.Enabled = False
         Me.txtIdProveedor.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtIdProveedor.Location = New System.Drawing.Point(582, 21)
         Me.txtIdProveedor.Name = "txtIdProveedor"
-        Me.txtIdProveedor.ReadOnly = True
         Me.txtIdProveedor.Size = New System.Drawing.Size(100, 27)
         Me.txtIdProveedor.TabIndex = 4
         Me.txtIdProveedor.Visible = False
@@ -251,10 +251,10 @@ Partial Class frmCompraDeInsumos
         '
         'txtCantidad
         '
+        Me.txtCantidad.Enabled = False
         Me.txtCantidad.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtCantidad.Location = New System.Drawing.Point(413, 103)
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.ReadOnly = True
         Me.txtCantidad.Size = New System.Drawing.Size(117, 27)
         Me.txtCantidad.TabIndex = 24
         '
@@ -291,10 +291,10 @@ Partial Class frmCompraDeInsumos
         '
         'txtNuevoC
         '
+        Me.txtNuevoC.Enabled = False
         Me.txtNuevoC.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtNuevoC.Location = New System.Drawing.Point(175, 99)
         Me.txtNuevoC.Name = "txtNuevoC"
-        Me.txtNuevoC.ReadOnly = True
         Me.txtNuevoC.Size = New System.Drawing.Size(117, 27)
         Me.txtNuevoC.TabIndex = 20
         '
@@ -310,19 +310,19 @@ Partial Class frmCompraDeInsumos
         '
         'txtNombreInsumo
         '
+        Me.txtNombreInsumo.Enabled = False
         Me.txtNombreInsumo.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtNombreInsumo.Location = New System.Drawing.Point(179, 19)
         Me.txtNombreInsumo.Name = "txtNombreInsumo"
-        Me.txtNombreInsumo.ReadOnly = True
         Me.txtNombreInsumo.Size = New System.Drawing.Size(351, 27)
         Me.txtNombreInsumo.TabIndex = 19
         '
         'txtFechaInsumo
         '
+        Me.txtFechaInsumo.Enabled = False
         Me.txtFechaInsumo.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtFechaInsumo.Location = New System.Drawing.Point(388, 55)
         Me.txtFechaInsumo.Name = "txtFechaInsumo"
-        Me.txtFechaInsumo.ReadOnly = True
         Me.txtFechaInsumo.Size = New System.Drawing.Size(100, 27)
         Me.txtFechaInsumo.TabIndex = 18
         '
@@ -338,10 +338,10 @@ Partial Class frmCompraDeInsumos
         '
         'txtCosto
         '
+        Me.txtCosto.Enabled = False
         Me.txtCosto.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtCosto.Location = New System.Drawing.Point(635, 56)
         Me.txtCosto.Name = "txtCosto"
-        Me.txtCosto.ReadOnly = True
         Me.txtCosto.Size = New System.Drawing.Size(72, 27)
         Me.txtCosto.TabIndex = 16
         '
@@ -357,10 +357,10 @@ Partial Class frmCompraDeInsumos
         '
         'txtExistencias
         '
+        Me.txtExistencias.Enabled = False
         Me.txtExistencias.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtExistencias.Location = New System.Drawing.Point(116, 56)
         Me.txtExistencias.Name = "txtExistencias"
-        Me.txtExistencias.ReadOnly = True
         Me.txtExistencias.Size = New System.Drawing.Size(92, 27)
         Me.txtExistencias.TabIndex = 14
         '

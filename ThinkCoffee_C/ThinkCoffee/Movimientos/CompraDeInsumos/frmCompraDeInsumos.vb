@@ -32,8 +32,8 @@
         cboProveedor.Enabled = True
         btnBuscarIn.Enabled = True
         btnAgregarI.Enabled = True
-        txtNuevoC.ReadOnly = False
-        txtCantidad.ReadOnly = False
+        txtNuevoC.Enabled = True
+        txtCantidad.Enabled = True
 
         btnNuevo.Enabled = False
         btnGuardar.Enabled = True
@@ -119,19 +119,23 @@
                     MessageBox.Show("HAY DATOS EN BLANCO", "ERROR, FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     txtNuevoC.Focus()
                 Else
-                    dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, CDec(txtNuevoC.Text), CDec(txtCantidad.Text * txtNuevoC.Text))
-                    dgInsumosC.CurrentCell = dgInsumosC.Rows(dgInsumosC.RowCount - 1).Cells(0)
+                    If IsNumeric(txtCantidad.Text) And IsNumeric(txtNuevoC.Text) Then
+                        dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, CDec(txtNuevoC.Text), CDec(txtCantidad.Text * txtNuevoC.Text))
+                        dgInsumosC.CurrentCell = dgInsumosC.Rows(dgInsumosC.RowCount - 1).Cells(0)
 
-                    txtIdInsumo.Text = ""
-                    txtNombreInsumo.Text = ""
-                    txtExistencias.Text = ""
-                    txtMaximo.Text = ""
-                    txtMinimo.Text = ""
-                    txtUnidadM.Text = ""
-                    txtFechaInsumo.Text = ""
-                    txtCosto.Text = ""
-                    txtNuevoC.Text = ""
-                    txtCantidad.Text = ""
+                        txtIdInsumo.Text = ""
+                        txtNombreInsumo.Text = ""
+                        txtExistencias.Text = ""
+                        txtMaximo.Text = ""
+                        txtMinimo.Text = ""
+                        txtUnidadM.Text = ""
+                        txtFechaInsumo.Text = ""
+                        txtCosto.Text = ""
+                        txtNuevoC.Text = ""
+                        txtCantidad.Text = ""
+                        entro = True
+                    End If
+
                 End If
             End If
         End If
@@ -162,19 +166,20 @@
                         comando.CommandText = "Update tlb_insumo set existencia = existencia + " & CDec(dgInsumosC(2, x).Value) & ", costo = " & CDec(dgInsumosC(3, x).Value) & " where idInsumo = " & Val(dgInsumosC(0, x).Value) & " "
                         comando.ExecuteNonQuery()
                     Next
+                    cboProveedor.Enabled = False
+                    btnBuscarIn.Enabled = False
+                    btnAgregarI.Enabled = False
+                    txtNuevoC.Enabled = False
+                    txtCantidad.Enabled = False
+                    btnCancelar.Enabled = False
+                    btnSalir.Enabled = True
+                    btnNuevo.Enabled = True
+                    btnGuardar.Enabled = False
+                    entro = False
 
                 End If
             End If
-            cboProveedor.Enabled = False
-            btnBuscarIn.Enabled = False
-            btnAgregarI.Enabled = False
-            txtNuevoC.ReadOnly = False
-            txtCantidad.ReadOnly = False
-            btnCancelar.Enabled = False
 
-            btnNuevo.Enabled = True
-            btnGuardar.Enabled = False
-            entro = False
         Else
             MessageBox.Show("PRESIONAR EL BOTÓN DE ACEPTAR PARA CONTINUAR CON LA ACCIÓN", "COMPLETAR EL REGISTRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
@@ -204,7 +209,7 @@
         txtTelefono.Text = ""
         txtUnidadM.Text = ""
 
-        txtCantidad.ReadOnly = True
+        txtCantidad.Enabled = True
         txtCosto.Enabled = False
         txtDireccion.Enabled = False
         txtExistencias.Enabled = False
@@ -215,7 +220,7 @@
         txtMaximo.Enabled = False
         txtMinimo.Enabled = False
         txtNombreInsumo.Enabled = False
-        txtNuevoC.ReadOnly = True
+        txtNuevoC.Enabled = True
         txtSubtotal.Enabled = False
         txtTelefono.Enabled = False
         txtUnidadM.Enabled = False
@@ -229,6 +234,8 @@
         btnAgregarI.Enabled = False
         btnBuscarIn.Enabled = False
         cboProveedor.Enabled = False
+
+        entro = False
 
 
     End Sub
