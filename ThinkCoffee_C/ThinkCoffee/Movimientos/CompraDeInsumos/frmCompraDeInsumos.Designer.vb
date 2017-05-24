@@ -245,7 +245,7 @@ Partial Class frmCompraDeInsumos
         Me.gbInsumos.Location = New System.Drawing.Point(142, 225)
         Me.gbInsumos.Name = "gbInsumos"
         Me.gbInsumos.Size = New System.Drawing.Size(726, 144)
-        Me.gbInsumos.TabIndex = 5
+        Me.gbInsumos.TabIndex = 21
         Me.gbInsumos.TabStop = False
         Me.gbInsumos.Text = "Insumos:"
         '
@@ -256,7 +256,7 @@ Partial Class frmCompraDeInsumos
         Me.txtCantidad.Location = New System.Drawing.Point(413, 103)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(117, 27)
-        Me.txtCantidad.TabIndex = 24
+        Me.txtCantidad.TabIndex = 21
         '
         'Label19
         '

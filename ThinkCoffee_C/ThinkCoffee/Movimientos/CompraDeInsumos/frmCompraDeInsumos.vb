@@ -119,23 +119,31 @@
                     MessageBox.Show("HAY DATOS EN BLANCO", "ERROR, FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     txtNuevoC.Focus()
                 Else
-                    If IsNumeric(txtCantidad.Text) And IsNumeric(txtNuevoC.Text) Then
-                        dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, CDec(txtNuevoC.Text), CDec(txtCantidad.Text * txtNuevoC.Text))
-                        dgInsumosC.CurrentCell = dgInsumosC.Rows(dgInsumosC.RowCount - 1).Cells(0)
 
-                        txtIdInsumo.Text = ""
-                        txtNombreInsumo.Text = ""
-                        txtExistencias.Text = ""
-                        txtMaximo.Text = ""
-                        txtMinimo.Text = ""
-                        txtUnidadM.Text = ""
-                        txtFechaInsumo.Text = ""
-                        txtCosto.Text = ""
-                        txtNuevoC.Text = ""
-                        txtCantidad.Text = ""
-                        entro = True
+                    If Not IsNumeric(txtNuevoC.Text) Then
+                        MessageBox.Show("VERIFICAR LA CANTIDAD INGRESADA", "ERROR, TIPO DE DATO NO VÁLIDO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        txtNuevoC.Focus()
+                    Else
+                        If Not IsNumeric(txtCantidad.Text) Then
+                            MessageBox.Show("VERIFICAR LA CANTIDAD INGRESADA", "ERROR, TIPO DE DATO NO VÁLIDO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                            txtCantidad.Focus()
+                        Else
+                            dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, CDec(txtNuevoC.Text), CDec(txtCantidad.Text * txtNuevoC.Text))
+                            dgInsumosC.CurrentCell = dgInsumosC.Rows(dgInsumosC.RowCount - 1).Cells(0)
+
+                            txtIdInsumo.Text = ""
+                            txtNombreInsumo.Text = ""
+                            txtExistencias.Text = ""
+                            txtMaximo.Text = ""
+                            txtMinimo.Text = ""
+                            txtUnidadM.Text = ""
+                            txtFechaInsumo.Text = ""
+                            txtCosto.Text = ""
+                            txtNuevoC.Text = ""
+                            txtCantidad.Text = ""
+                            entro = True
+                        End If
                     End If
-
                 End If
             End If
         End If
@@ -176,6 +184,17 @@
                     btnNuevo.Enabled = True
                     btnGuardar.Enabled = False
                     entro = False
+                    dgInsumosC.Rows.Clear()
+                    txtIdInsumo.Text = ""
+                    txtNombreInsumo.Text = ""
+                    txtExistencias.Text = ""
+                    txtMaximo.Text = ""
+                    txtMinimo.Text = ""
+                    txtUnidadM.Text = ""
+                    txtFechaInsumo.Text = ""
+                    txtCosto.Text = ""
+                    txtNuevoC.Text = ""
+                    txtCantidad.Text = ""
 
                 End If
             End If

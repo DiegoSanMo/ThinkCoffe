@@ -162,13 +162,20 @@ Public Class frmCatalogoProductos
                     MessageBox.Show("NO SE HA INGRESADO RECETA", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     btnBuscarR.Focus()
                 Else
-                    dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, cboCategoria.Text, txtNombreReceta.Text, txtPrecio.Text)
-                    idR = CInt(txtIdReceta.Text)
-                    idC = CInt(txtIdCategoria.Text)
+                    If Not IsNumeric(txtPrecio.Text) Then
+                        MessageBox.Show("PRECIO NO VALIDO", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        txtPrecio.Focus()
 
-                    limpiarCajaProductos()
-                    bloquearCajaProductos()
-                    presionado = True
+                    Else
+                        dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, cboCategoria.Text, txtNombreReceta.Text, txtPrecio.Text)
+                        idR = CInt(txtIdReceta.Text)
+                        idC = CInt(txtIdCategoria.Text)
+
+                        limpiarCajaProductos()
+                        bloquearCajaProductos()
+                        presionado = True
+                    End If
+
                 End If
             End If
 
@@ -213,27 +220,7 @@ Public Class frmCatalogoProductos
     End Sub
 
     Private Sub txtPrecio_TextChanged(sender As Object, e As EventArgs) Handles txtPrecio.TextChanged
-        'If (txtPrecio.Text <> String.Empty) Then
 
-        '    ' Convertimos a Decimal el valor del control TextBox. Si
-        '    ' el valor no se puede convertir a Decimal, se mostrará
-        '    ' un 0 en lugar de producirse un error.
-        '    '
-        '    Dim importe As Decimal
-        '    Decimal.TryParse(txtPrecio.Text, importe)
-
-        '    ' Formateamos a entero, sin decimales, el valor decimal obtenido.
-        '    '
-        '    txtPrecio.Text = String.Format("{0:C0}", importe)
-
-        '    ' Establecemos el punto de inserción al final del valor del control TextBox.
-        '    '
-        '    txtPrecio.SelectionStart = txtPrecio.TextLength
-
-        'End If
-        'Dim value As Decimal = (txtPrecio.Text)
-
-        'txtPrecio.Text = String.Format("{0:N0}", 2, 5)
 
     End Sub
 
