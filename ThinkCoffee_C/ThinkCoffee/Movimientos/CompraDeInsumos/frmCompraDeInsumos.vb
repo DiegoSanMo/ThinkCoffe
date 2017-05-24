@@ -1,4 +1,5 @@
 ﻿Public Class frmCompraDeInsumos
+    Dim entro As Integer
     Private Sub frmCompraDeInsumos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexionSql.Open()
 
@@ -97,7 +98,7 @@
         Dim suma As Decimal = 0
 
         If String.IsNullOrWhiteSpace(txtNombreInsumo.Text) Then
-            MsgBox("NO SE HA INGRESADO INSUMO, FAVOR DE SELECCIONAR UNO")
+            MessageBox.Show("NO SE HA INGRESADO INSUMO, FAVOR DE SELECCIONAR UNO", "ERROR, FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
             btnBuscarIn.Focus()
         Else
             For x = 0 To dgInsumosC.RowCount - 1
@@ -115,7 +116,7 @@
                 dgInsumosC(4, pos).Value = CDec(dgInsumosC(2, pos).Value) * CDec(dgInsumosC(3, pos).Value)
             Else
                 If String.IsNullOrWhiteSpace(txtCantidad.Text) Or String.IsNullOrWhiteSpace(txtNuevoC.Text) Then
-                    MsgBox("Hay datos en blanco")
+                    MessageBox.Show("HAY DATOS EN BLANCO", "ERROR, FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     txtNuevoC.Focus()
                 Else
                     dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, CDec(txtNuevoC.Text), CDec(txtCantidad.Text * txtNuevoC.Text))
@@ -143,34 +144,41 @@
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        If String.IsNullOrWhiteSpace(txtIdProveedor.Text) Then
-            MsgBox("No se ha ingresado proveedor")
-            cboProveedor.Focus()
-        Else
-            If dgInsumosC.RowCount = 0 Then
-                MsgBox("No se han ingresado insumos")
-                btnAgregarI.Focus()
+        If entro Then
+            If String.IsNullOrWhiteSpace(txtIdProveedor.Text) Then
+                MsgBox("No se ha ingresado proveedor")
+                cboProveedor.Focus()
             Else
-                comando.CommandText = "Insert into tlb_compra(idCompra, idProveedor, fecha, total) values(" & Val(txtIdCompra.Text) & ", " & Val(txtIdProveedor.Text) & ", '" & dtpFecha.Value.Date & "', " & CDec(txtSubtotal.Text) & ")"
-                comando.ExecuteNonQuery()
-                For x = 0 To dgInsumosC.RowCount - 1
-                    comando.CommandText = "Insert into tlb_detCompra(idCompra, idInsumo, cantidad, costo) values(" & Val(txtIdCompra.Text) & "," & Val(dgInsumosC(0, x).Value) & ", " & CDec(dgInsumosC(2, x).Value) & ", " & CDec(dgInsumosC(3, x).Value) & ")"
+                If dgInsumosC.RowCount = 0 Then
+                    MsgBox("No se han ingresado insumos")
+                    btnAgregarI.Focus()
+                Else
+                    comando.CommandText = "Insert into tlb_compra(idCompra, idProveedor, fecha, total) values(" & Val(txtIdCompra.Text) & ", " & Val(txtIdProveedor.Text) & ", '" & dtpFecha.Value.Date & "', " & CDec(txtSubtotal.Text) & ")"
                     comando.ExecuteNonQuery()
+                    For x = 0 To dgInsumosC.RowCount - 1
+                        comando.CommandText = "Insert into tlb_detCompra(idCompra, idInsumo, cantidad, costo) values(" & Val(txtIdCompra.Text) & "," & Val(dgInsumosC(0, x).Value) & ", " & CDec(dgInsumosC(2, x).Value) & ", " & CDec(dgInsumosC(3, x).Value) & ")"
+                        comando.ExecuteNonQuery()
 
-                    comando.CommandText = "Update tlb_insumo set existencia = existencia + " & CDec(dgInsumosC(2, x).Value) & ", costo = " & CDec(dgInsumosC(3, x).Value) & " where idInsumo = " & Val(dgInsumosC(0, x).Value) & " "
-                    comando.ExecuteNonQuery()
-                Next
+                        comando.CommandText = "Update tlb_insumo set existencia = existencia + " & CDec(dgInsumosC(2, x).Value) & ", costo = " & CDec(dgInsumosC(3, x).Value) & " where idInsumo = " & Val(dgInsumosC(0, x).Value) & " "
+                        comando.ExecuteNonQuery()
+                    Next
 
+                End If
             End If
-        End If
-        cboProveedor.Enabled = False
-        btnBuscarIn.Enabled = False
-        btnAgregarI.Enabled = False
-        txtNuevoC.ReadOnly = False
-        txtCantidad.ReadOnly = False
+            cboProveedor.Enabled = False
+            btnBuscarIn.Enabled = False
+            btnAgregarI.Enabled = False
+            txtNuevoC.ReadOnly = False
+            txtCantidad.ReadOnly = False
+            btnCancelar.Enabled = False
 
-        btnNuevo.Enabled = True
-        btnGuardar.Enabled = False
+            btnNuevo.Enabled = True
+            btnGuardar.Enabled = False
+            entro = False
+        Else
+            MessageBox.Show("PRESIONAR EL BOTÓN DE ACEPTAR PARA CONTINUAR CON LA ACCIÓN", "COMPLETAR EL REGISTRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
