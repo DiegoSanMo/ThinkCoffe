@@ -195,47 +195,50 @@ Module Module1
 
 
 
-                    ElseIf unidadReceta = "CDAS" Then
-                        If unidad = "LTS" Then
+                        'ElseIf unidadReceta = "CDAS" Then
+                        '    Dim totalI As Decimal
+                        '    If unidad = "LTS" Then
 
 
-                            cantidadInsumo = insumos(t, 1) * 66.67
-                            cantidadInsumo = cantidadInsumo * cantidadProductos
-                            insumoRestante = unidadBase - cantidadInsumo
+                        '        cantidadInsumo = todosInsumos(t, 1) * 66.667
+                        '        totalI = cantidadProductos * insumos(t, 1)
+                        '        cantidadInsumo = cantidadInsumo - totalI
+                        '        cantidadInsumo = cantidadInsumo / 66.667
+                        '        insumoRestante = cantidadInsumo
 
 
-                        ElseIf unidad = "KG" Then
-                            MsgBox("Son kilos")
+                        '    ElseIf unidad = "KG" Then
+                        '        MsgBox("Son kilos")
 
-                            cantidadInsumo = insumos(t, 1) * 0.0283495
-                            cantidadInsumo = cantidadInsumo * cantidadProductos
-                            insumoRestante = unidadBase - cantidadInsumo
-
-
-                        ElseIf unidad = "GR" Then
-                            MsgBox("Son gramos")
-
-                            cantidadInsumo = insumos(t, 1) * 28.3495
-                            cantidadInsumo = cantidadInsumo * cantidadProductos
-                            insumoRestante = unidadBase - cantidadInsumo
+                        '        cantidadInsumo = insumos(t, 1) * 0.0283495
+                        '        cantidadInsumo = cantidadInsumo * cantidadProductos
+                        '        insumoRestante = unidadBase - cantidadInsumo
 
 
-                        ElseIf unidad = "MLT" Then
-                            MsgBox("Son mililitros")
-                            cantidadInsumo = insumos(t, 1) * 28.4131
-                            cantidadInsumo = cantidadInsumo * cantidadProductos
-                            insumoRestante = unidadBase - cantidadInsumo
+                        '    ElseIf unidad = "GR" Then
+                        '        MsgBox("Son gramos")
+
+                        '        cantidadInsumo = insumos(t, 1) * 28.3495
+                        '        cantidadInsumo = cantidadInsumo * cantidadProductos
+                        '        insumoRestante = unidadBase - cantidadInsumo
 
 
-                        ElseIf unidad = "PZA" Then
-                            MsgBox("son piezas")
-                            cantidadInsumo = insumos(t, 1) * cantidadProductos
-                            insumoRestante = unidadBase - cantidadInsumo
+                        '    ElseIf unidad = "MLT" Then
+                        '        MsgBox("Son mililitros")
+                        '        cantidadInsumo = insumos(t, 1) * 28.4131
+                        '        cantidadInsumo = cantidadInsumo * cantidadProductos
+                        '        insumoRestante = unidadBase - cantidadInsumo
 
-                        End If
-                        'actualizar las existencias del insumo
-                        comando.CommandText = "Update tlb_insumo set existencia = " & insumoRestante & " where idInsumo = " & todosInsumos(x, 0) & ""
-                        comando.ExecuteNonQuery()
+
+                        '    ElseIf unidad = "PZA" Then
+                        '        MsgBox("son piezas")
+                        '        cantidadInsumo = insumos(t, 1) * cantidadProductos
+                        '        insumoRestante = unidadBase - cantidadInsumo
+
+                        '    End If
+                        '    'actualizar las existencias del insumo
+                        '    comando.CommandText = "Update tlb_insumo set existencia = " & insumoRestante & " where idInsumo = " & todosInsumos(x, 0) & ""
+                        '    comando.ExecuteNonQuery()
 
 
                     End If
