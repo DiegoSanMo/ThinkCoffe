@@ -57,58 +57,66 @@ Public Class frmCatalogoInsumos
         If cboUnidadM.Text = "" Then
             MessageBox.Show("FALTA DE INFORMACIÓN", "ERROR, FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-
-            If IsNumeric(txtExist.Text) Or IsNumeric(txtMax.Text) Or IsNumeric(txtMax.Text) Then
-                If banModi Then
-                    presionado = True
-                    MsgBox(filaSel)
-                    dgInsumo.Item(1, filaSel).Value = txtNombre.Text
-                    dgInsumo.Item(2, filaSel).Value = cboUnidadM.Text
-                    dgInsumo.Item(3, filaSel).Value = txtMax.Text
-                    dgInsumo.Item(4, filaSel).Value = txtMin.Text
-                    dgInsumo.Item(5, filaSel).Value = txtExist.Text
-                    dgInsumo.Item(6, filaSel).Value = "0"
-                    dgInsumo.Item(7, filaSel).Value = dtpFecha.Value.Date
-
-
-                    btnGrabar.Enabled = True
-                    btnCancelar.Enabled = True
-
-                    limpiarCajaInsumos()
-                    bloquearCajasInsumo()
-
+            If Not IsNumeric(txtExist.Text) Then
+                MessageBox.Show("VERIFICAR DATOS INGRESADOS EN EXISTENCIAS", "DATOS NO VALIDOS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                txtExist.Focus()
+            Else
+                If Not IsNumeric(txtMax.Text) Then
+                    MessageBox.Show("VERIFICAR DATOS INGRESADOS EN MÁXIMOS", "DATOS NO VALIDOS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    txtMax.Focus()
                 Else
-                    Dim entra As Boolean = False
-                    Dim p As Integer = 0
-
-                    For x = 0 To dgInsumo.RowCount - 1
-                        If dgInsumo(1, x).Value = txtNombre.Text Then
-                            entra = True
-                            p = x
-                            Exit For
-                        End If
-                    Next
-
-                    If entra Then
-                        MessageBox.Show("INSUMO YA REGISTRADO", "ERROR INSUMO YA REGISTRADO", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                        txtNombre.Focus()
+                    If Not IsNumeric(txtMin.Text) Then
+                        MessageBox.Show("VERIFICAR DATOS INGRESADOS EN MÍNIMOS", "DATOS NO VALIDOS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        txtMin.Focus()
                     Else
-                        dgInsumo.Rows.Add(txtIdInsumo.Text, txtNombre.Text, cboUnidadM.Text, txtMax.Text, txtMin.Text, txtExist.Text, "0", dtpFecha.Value.Date)
+                        If banModi Then
+                            presionado = True
+                            MsgBox(filaSel)
+                            dgInsumo.Item(1, filaSel).Value = txtNombre.Text
+                            dgInsumo.Item(2, filaSel).Value = cboUnidadM.Text
+                            dgInsumo.Item(3, filaSel).Value = txtMax.Text
+                            dgInsumo.Item(4, filaSel).Value = txtMin.Text
+                            dgInsumo.Item(5, filaSel).Value = txtExist.Text
+                            dgInsumo.Item(6, filaSel).Value = "0"
+                            dgInsumo.Item(7, filaSel).Value = dtpFecha.Value.Date
 
-                        btnGrabar.Enabled = True
-                        btnCancelar.Enabled = True
 
-                        limpiarCajaInsumos()
-                        bloquearCajasInsumo()
-                        presionado = True
+                            btnGrabar.Enabled = True
+                            btnCancelar.Enabled = True
+
+                            limpiarCajaInsumos()
+                            bloquearCajasInsumo()
+
+                        Else
+                            Dim entra As Boolean = False
+                            Dim p As Integer = 0
+
+                            For x = 0 To dgInsumo.RowCount - 1
+                                If dgInsumo(1, x).Value = txtNombre.Text Then
+                                    entra = True
+                                    p = x
+                                    Exit For
+                                End If
+                            Next
+
+                            If entra Then
+                                MessageBox.Show("INSUMO YA REGISTRADO", "ERROR INSUMO YA REGISTRADO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                txtNombre.Focus()
+                            Else
+                                dgInsumo.Rows.Add(txtIdInsumo.Text, txtNombre.Text, cboUnidadM.Text, txtMax.Text, txtMin.Text, txtExist.Text, "0", dtpFecha.Value.Date)
+
+                                btnGrabar.Enabled = True
+                                btnCancelar.Enabled = True
+
+                                limpiarCajaInsumos()
+                                bloquearCajasInsumo()
+                                presionado = True
+                            End If
+                        End If
                     End If
                 End If
             End If
-
-
-
         End If
-
     End Sub
 
     Private Sub txtNombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtNombre.KeyPress

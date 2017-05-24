@@ -121,7 +121,7 @@
                 Else
 
                     If Not IsNumeric(txtNuevoC.Text) Then
-                        MessageBox.Show("VERIFICAR LA CANTIDAD INGRESADA", "ERROR, TIPO DE DATO NO VÁLIDO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        MessageBox.Show("VERIFICAR EL PRECIO INGRESADO", "ERROR, TIPO DE DATO NO VÁLIDO", MessageBoxButtons.OK, MessageBoxIcon.Error)
                         txtNuevoC.Focus()
                     Else
                         If Not IsNumeric(txtCantidad.Text) Then
@@ -252,6 +252,8 @@
         btnSalir.Enabled = True
         btnAgregarI.Enabled = False
         btnBuscarIn.Enabled = False
+        txtCantidad.Enabled = False
+        txtNuevoC.Enabled = False
         cboProveedor.Enabled = False
 
         entro = False
