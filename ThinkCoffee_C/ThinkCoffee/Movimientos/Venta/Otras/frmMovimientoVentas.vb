@@ -116,6 +116,7 @@
             btnCancelar.Enabled = False
             btnSalir.Enabled = True
             dgVenta.Rows.Clear()
+            MessageBox.Show("NO SE HA REGISTRADO NINGUNA VENTA", "REGISTRO CANCELADO", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
             comando.CommandText = "Insert into tlb_venta(idVenta, tipo, fecha, total) values(" & CInt(txtIdVenta.Text) & ", '" & "OTROS" & "', '" & dtpFecha.Value.Date & "', " & CDec(txtTotal.Text) & ")"
             comando.ExecuteNonQuery()
