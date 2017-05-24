@@ -9,10 +9,6 @@
 
     End Sub
 
-    Private Sub btnSalir_Click(sender As Object, e As EventArgs)
-        Me.Close()
-
-    End Sub
     Private Sub cboTamaño_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboTamaño.SelectedIndexChanged
         If cboTamaño.Text = "REBANADA" Then
             limpiarLista()
