@@ -83,7 +83,6 @@ Module Module1
         Dim id, idReceta As Integer
         id = idProducto
 
-        MsgBox(cantidadProductos)
         comando.CommandText = "select tlb_producto.idReceta from tlb_producto where tlb_producto.idProducto = " & id & ""
         lector = comando.ExecuteReader
         lector.Read()
@@ -142,7 +141,6 @@ Module Module1
                     unidad = todosInsumos(x, 1)
                     Dim unidadReceta As String
                     unidadReceta = insumos(t, 2)
-                    MsgBox(unidadReceta)
                     'Variable que nos guarda saber la existencia del insumo que se busca
                     Dim unidadBase As Decimal = todosInsumos(x, 2)
 
@@ -160,7 +158,6 @@ Module Module1
 
 
                         ElseIf unidad = "KG" Then
-                            MsgBox("Son kilos")
 
                             cantidadInsumo = insumos(t, 1) * 0.0283495
                             cantidadInsumo = cantidadInsumo * cantidadProductos
@@ -168,7 +165,6 @@ Module Module1
 
 
                         ElseIf unidad = "GR" Then
-                            MsgBox("Son gramos")
 
                             cantidadInsumo = insumos(t, 1) * 28.3495
                             cantidadInsumo = cantidadInsumo * cantidadProductos
@@ -176,14 +172,12 @@ Module Module1
 
 
                         ElseIf unidad = "MLT" Then
-                            MsgBox("Son mililitros")
                             cantidadInsumo = insumos(t, 1) * 28.4131
                             cantidadInsumo = cantidadInsumo * cantidadProductos
                             insumoRestante = unidadBase - cantidadInsumo
 
 
                         ElseIf unidad = "PZA" Then
-                            MsgBox("son piezas")
                             cantidadInsumo = insumos(t, 1) * cantidadProductos
                             insumoRestante = unidadBase - cantidadInsumo
 
@@ -195,47 +189,50 @@ Module Module1
 
 
 
-                    ElseIf unidadReceta = "CDAS" Then
-                        If unidad = "LTS" Then
+                        'ElseIf unidadReceta = "CDAS" Then
+                        '    Dim totalI As Decimal
+                        '    If unidad = "LTS" Then
 
 
-                            cantidadInsumo = insumos(t, 1) * 66.67
-                            cantidadInsumo = cantidadInsumo * cantidadProductos
-                            insumoRestante = unidadBase - cantidadInsumo
+                        '        cantidadInsumo = todosInsumos(t, 1) * 66.667
+                        '        totalI = cantidadProductos * insumos(t, 1)
+                        '        cantidadInsumo = cantidadInsumo - totalI
+                        '        cantidadInsumo = cantidadInsumo / 66.667
+                        '        insumoRestante = cantidadInsumo
 
 
-                        ElseIf unidad = "KG" Then
-                            MsgBox("Son kilos")
+                        '    ElseIf unidad = "KG" Then
+                        '        MsgBox("Son kilos")
 
-                            cantidadInsumo = insumos(t, 1) * 0.0283495
-                            cantidadInsumo = cantidadInsumo * cantidadProductos
-                            insumoRestante = unidadBase - cantidadInsumo
-
-
-                        ElseIf unidad = "GR" Then
-                            MsgBox("Son gramos")
-
-                            cantidadInsumo = insumos(t, 1) * 28.3495
-                            cantidadInsumo = cantidadInsumo * cantidadProductos
-                            insumoRestante = unidadBase - cantidadInsumo
+                        '        cantidadInsumo = insumos(t, 1) * 0.0283495
+                        '        cantidadInsumo = cantidadInsumo * cantidadProductos
+                        '        insumoRestante = unidadBase - cantidadInsumo
 
 
-                        ElseIf unidad = "MLT" Then
-                            MsgBox("Son mililitros")
-                            cantidadInsumo = insumos(t, 1) * 28.4131
-                            cantidadInsumo = cantidadInsumo * cantidadProductos
-                            insumoRestante = unidadBase - cantidadInsumo
+                        '    ElseIf unidad = "GR" Then
+                        '        MsgBox("Son gramos")
+
+                        '        cantidadInsumo = insumos(t, 1) * 28.3495
+                        '        cantidadInsumo = cantidadInsumo * cantidadProductos
+                        '        insumoRestante = unidadBase - cantidadInsumo
 
 
-                        ElseIf unidad = "PZA" Then
-                            MsgBox("son piezas")
-                            cantidadInsumo = insumos(t, 1) * cantidadProductos
-                            insumoRestante = unidadBase - cantidadInsumo
+                        '    ElseIf unidad = "MLT" Then
+                        '        MsgBox("Son mililitros")
+                        '        cantidadInsumo = insumos(t, 1) * 28.4131
+                        '        cantidadInsumo = cantidadInsumo * cantidadProductos
+                        '        insumoRestante = unidadBase - cantidadInsumo
 
-                        End If
-                        'actualizar las existencias del insumo
-                        comando.CommandText = "Update tlb_insumo set existencia = " & insumoRestante & " where idInsumo = " & todosInsumos(x, 0) & ""
-                        comando.ExecuteNonQuery()
+
+                        '    ElseIf unidad = "PZA" Then
+                        '        MsgBox("son piezas")
+                        '        cantidadInsumo = insumos(t, 1) * cantidadProductos
+                        '        insumoRestante = unidadBase - cantidadInsumo
+
+                        '    End If
+                        '    'actualizar las existencias del insumo
+                        '    comando.CommandText = "Update tlb_insumo set existencia = " & insumoRestante & " where idInsumo = " & todosInsumos(x, 0) & ""
+                        '    comando.ExecuteNonQuery()
 
 
                     End If
@@ -322,7 +319,6 @@ Module Module1
         For i = 0 To 20
             'MsgBox(frmMovimientoVentasPizzas.CheckedListBox1.Items(i))
             If frmMovimientoVentasPizzas.CheckedListBox1.Items(i) = seleccionado Then
-                MsgBox("iguales")
                 frmMovimientoVentasPizzas.CheckedListBox1.SetItemChecked(i, False)
                 Exit For
             End If

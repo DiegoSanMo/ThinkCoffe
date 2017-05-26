@@ -132,7 +132,6 @@ Partial Class frmConsultaCompra
         '
         'dtpFechaFinal
         '
-        Me.dtpFechaFinal.Enabled = False
         Me.dtpFechaFinal.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.dtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFechaFinal.Location = New System.Drawing.Point(330, 81)
@@ -144,7 +143,6 @@ Partial Class frmConsultaCompra
         '
         'dtpFechaInicial
         '
-        Me.dtpFechaInicial.Enabled = False
         Me.dtpFechaInicial.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.dtpFechaInicial.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFechaInicial.Location = New System.Drawing.Point(162, 81)
@@ -260,6 +258,7 @@ Partial Class frmConsultaCompra
         Me.Controls.Add(Me.GroupBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "frmConsultaCompra"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Consulta de Compra de Insumos"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

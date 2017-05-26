@@ -100,6 +100,7 @@ Partial Class frmConsultaProducto
         '
         'dgvConsultaProductos
         '
+        Me.dgvConsultaProductos.AllowUserToAddRows = False
         Me.dgvConsultaProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvConsultaProductos.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.clmIdProducto, Me.clmNombre, Me.clmCategoria, Me.clmPrecio})
         Me.dgvConsultaProductos.Location = New System.Drawing.Point(16, 209)

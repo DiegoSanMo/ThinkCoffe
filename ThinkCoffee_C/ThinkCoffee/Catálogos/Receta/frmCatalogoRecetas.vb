@@ -23,6 +23,7 @@
 
             btnAgregar.Enabled = True
             txtCantidad.Focus()
+            txtCantidad.Enabled = True
         Else
             MessageBox.Show("NO SE HA SELECCIONADO INSUMO", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
@@ -47,31 +48,35 @@
         btnGrabar.Enabled = True
         btnCancelar.Enabled = True
         txtNombre.Enabled = True
-
         btnBuscar.Enabled = True
 
         txtNombre.Focus()
-        txtCantidad.Enabled = True
 
 
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-        If cmbUnidadM.Text = "" Then
+        If cmbUnidadM.Text = "" Or String.IsNullOrWhiteSpace(txtCantidad.Text) Then
             MessageBox.Show("NO SE HA INGRESADO UNIDAD DE MEDIDA", "FALTA DE INFORMACIÒN", MessageBoxButtons.OK, MessageBoxIcon.Error)
             cmbUnidadM.Focus()
+            txtCantidad.Focus()
         Else
-            dgReceta.Rows.Add(txtIdInsumo.Text, txtInsumo.Text, txtCantidad.Text, cmbUnidadM.Text)
-            txtExistencia.Text = ""
-            txtIdInsumo.Text = ""
-            txtInsumo.Text = ""
-            txtUnidadM.Text = ""
-            txtCantidad.Text = ""
-            cmbUnidadM.Text = ""
+            If Not IsNumeric(txtCantidad.Text) Then
+                MessageBox.Show("CANTIDAD NO VÁLIDA", "VERIFICAR DATOS INGRESADOS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                txtCantidad.Focus()
+            Else
+                dgReceta.Rows.Add(txtIdInsumo.Text, txtInsumo.Text, txtCantidad.Text, cmbUnidadM.Text)
+                txtExistencia.Text = ""
+                txtIdInsumo.Text = ""
+                txtInsumo.Text = ""
+                txtUnidadM.Text = ""
+                txtCantidad.Text = ""
+                cmbUnidadM.Text = ""
 
-            btnAgregar.Enabled = False
-            btnBuscar.Focus()
-            entra = True
+                btnAgregar.Enabled = False
+                btnBuscar.Focus()
+                entra = True
+            End If
         End If
 
     End Sub
@@ -153,6 +158,10 @@
                 e.KeyChar = ChrW(0)
             End If
         End If
+        cmbUnidadM.Enabled = True
     End Sub
 
+    Private Sub cmbUnidadM_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbUnidadM.SelectedIndexChanged
+
+    End Sub
 End Class

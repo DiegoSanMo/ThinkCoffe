@@ -61,6 +61,7 @@ Partial Class frmCatalogoCategoria
         Me.txtNombre.Enabled = False
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtNombre.Location = New System.Drawing.Point(114, 44)
+        Me.txtNombre.MaxLength = 90
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(273, 27)
         Me.txtNombre.TabIndex = 25

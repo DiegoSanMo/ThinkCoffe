@@ -76,6 +76,7 @@ Partial Class frmCatalogoInsumos
         Me.txtNombre.Enabled = False
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtNombre.Location = New System.Drawing.Point(166, 73)
+        Me.txtNombre.MaxLength = 190
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(412, 27)
         Me.txtNombre.TabIndex = 1
@@ -148,6 +149,7 @@ Partial Class frmCatalogoInsumos
         Me.txtExist.Enabled = False
         Me.txtExist.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtExist.Location = New System.Drawing.Point(790, 116)
+        Me.txtExist.MaxLength = 6
         Me.txtExist.Name = "txtExist"
         Me.txtExist.Size = New System.Drawing.Size(100, 27)
         Me.txtExist.TabIndex = 5
@@ -329,6 +331,7 @@ Partial Class frmCatalogoInsumos
         Me.txtMax.Enabled = False
         Me.txtMax.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtMax.Location = New System.Drawing.Point(399, 116)
+        Me.txtMax.MaxLength = 6
         Me.txtMax.Name = "txtMax"
         Me.txtMax.Size = New System.Drawing.Size(69, 27)
         Me.txtMax.TabIndex = 3
@@ -338,6 +341,7 @@ Partial Class frmCatalogoInsumos
         Me.txtMin.Enabled = False
         Me.txtMin.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.txtMin.Location = New System.Drawing.Point(586, 116)
+        Me.txtMin.MaxLength = 6
         Me.txtMin.Name = "txtMin"
         Me.txtMin.Size = New System.Drawing.Size(73, 27)
         Me.txtMin.TabIndex = 4

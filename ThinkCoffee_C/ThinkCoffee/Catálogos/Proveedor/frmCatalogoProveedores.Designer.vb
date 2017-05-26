@@ -44,7 +44,7 @@ Partial Class frmCatalogoProveedores
         Me.mskTelefono = New System.Windows.Forms.MaskedTextBox()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.btnModificar = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnCan = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         CType(Me.dgProveedores, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ptbBarra, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,6 +79,7 @@ Partial Class frmCatalogoProveedores
         Me.txtNombre.Enabled = False
         Me.txtNombre.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.Location = New System.Drawing.Point(110, 15)
+        Me.txtNombre.MaxLength = 145
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(324, 27)
         Me.txtNombre.TabIndex = 2
@@ -99,6 +100,7 @@ Partial Class frmCatalogoProveedores
         Me.txtDireccion.Enabled = False
         Me.txtDireccion.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDireccion.Location = New System.Drawing.Point(110, 55)
+        Me.txtDireccion.MaxLength = 145
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(324, 27)
         Me.txtDireccion.TabIndex = 4
@@ -301,20 +303,20 @@ Partial Class frmCatalogoProveedores
         Me.btnModificar.UseVisualStyleBackColor = True
         Me.btnModificar.Visible = False
         '
-        'Button1
+        'btnCan
         '
-        Me.Button1.Enabled = False
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.Black
-        Me.Button1.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(15, 115)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(101, 39)
-        Me.Button1.TabIndex = 63
-        Me.Button1.Text = "Cancelar"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnCan.Enabled = False
+        Me.btnCan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCan.ForeColor = System.Drawing.Color.Black
+        Me.btnCan.Image = Global.ThinkCoffee.My.Resources.Resources.Cancel_30
+        Me.btnCan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCan.Location = New System.Drawing.Point(15, 115)
+        Me.btnCan.Name = "btnCan"
+        Me.btnCan.Size = New System.Drawing.Size(101, 39)
+        Me.btnCan.TabIndex = 63
+        Me.btnCan.Text = "Cancelar"
+        Me.btnCan.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCan.UseVisualStyleBackColor = True
         '
         'GroupBox2
         '
@@ -322,7 +324,7 @@ Partial Class frmCatalogoProveedores
         Me.GroupBox2.Controls.Add(Me.btnNuevo)
         Me.GroupBox2.Controls.Add(Me.btnModificar)
         Me.GroupBox2.Controls.Add(Me.btnGrabar)
-        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.btnCan)
         Me.GroupBox2.Controls.Add(Me.btnSalir)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 94)
         Me.GroupBox2.Name = "GroupBox2"
@@ -381,6 +383,6 @@ Partial Class frmCatalogoProveedores
     Friend WithEvents btnAceptar As Button
     Friend WithEvents mskTelefono As MaskedTextBox
     Friend WithEvents btnModificar As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnCan As Button
     Friend WithEvents GroupBox2 As GroupBox
 End Class

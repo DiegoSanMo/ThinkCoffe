@@ -1,4 +1,5 @@
 ﻿Public Class frmCompraDeInsumos
+    Dim entro As Boolean = False
     Private Sub frmCompraDeInsumos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conexionSql.Open()
 
@@ -31,8 +32,8 @@
         cboProveedor.Enabled = True
         btnBuscarIn.Enabled = True
         btnAgregarI.Enabled = True
-        txtNuevoC.ReadOnly = False
-        txtCantidad.ReadOnly = False
+        txtNuevoC.Enabled = True
+        txtCantidad.Enabled = True
 
         btnNuevo.Enabled = False
         btnGuardar.Enabled = True
@@ -97,7 +98,7 @@
         Dim suma As Decimal = 0
 
         If String.IsNullOrWhiteSpace(txtNombreInsumo.Text) Then
-            MsgBox("NO SE HA INGRESADO INSUMO, FAVOR DE SELECCIONAR UNO")
+            MessageBox.Show("NO SE HA INGRESADO INSUMO, FAVOR DE SELECCIONAR UNO", "ERROR, FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Error)
             btnBuscarIn.Focus()
         Else
             For x = 0 To dgInsumosC.RowCount - 1
@@ -114,23 +115,31 @@
                 dgInsumosC(2, pos).Value = CDec(dgInsumosC(2, pos).Value) + CDec(txtCantidad.Text)
                 dgInsumosC(4, pos).Value = CDec(dgInsumosC(2, pos).Value) * CDec(dgInsumosC(3, pos).Value)
             Else
-                If String.IsNullOrWhiteSpace(txtCantidad.Text) Or String.IsNullOrWhiteSpace(txtNuevoC.Text) Then
-                    MsgBox("Hay datos en blanco")
+
+
+                If Not IsNumeric(txtNuevoC.Text) Then
+                    MessageBox.Show("VERIFICAR EL PRECIO INGRESADO", "ERROR, TIPO DE DATO NO VÁLIDO", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     txtNuevoC.Focus()
                 Else
-                    dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, CDec(txtNuevoC.Text), CDec(txtCantidad.Text * txtNuevoC.Text))
-                    dgInsumosC.CurrentCell = dgInsumosC.Rows(dgInsumosC.RowCount - 1).Cells(0)
+                    If Not IsNumeric(txtCantidad.Text) Then
+                        MessageBox.Show("VERIFICAR LA CANTIDAD INGRESADA", "ERROR, TIPO DE DATO NO VÁLIDO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        txtCantidad.Focus()
+                    Else
+                        dgInsumosC.Rows.Add(txtIdInsumo.Text, txtNombreInsumo.Text, txtCantidad.Text, CDec(txtNuevoC.Text), CDec(txtCantidad.Text * txtNuevoC.Text))
+                        dgInsumosC.CurrentCell = dgInsumosC.Rows(dgInsumosC.RowCount - 1).Cells(0)
 
-                    txtIdInsumo.Text = ""
-                    txtNombreInsumo.Text = ""
-                    txtExistencias.Text = ""
-                    txtMaximo.Text = ""
-                    txtMinimo.Text = ""
-                    txtUnidadM.Text = ""
-                    txtFechaInsumo.Text = ""
-                    txtCosto.Text = ""
-                    txtNuevoC.Text = ""
-                    txtCantidad.Text = ""
+                        txtIdInsumo.Text = ""
+                        txtNombreInsumo.Text = ""
+                        txtExistencias.Text = ""
+                        txtMaximo.Text = ""
+                        txtMinimo.Text = ""
+                        txtUnidadM.Text = ""
+                        txtFechaInsumo.Text = ""
+                        txtCosto.Text = ""
+                        txtNuevoC.Text = ""
+                        txtCantidad.Text = ""
+                        entro = True
+                    End If
                 End If
             End If
         End If
@@ -143,34 +152,53 @@
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        If String.IsNullOrWhiteSpace(txtIdProveedor.Text) Then
-            MsgBox("No se ha ingresado proveedor")
-            cboProveedor.Focus()
-        Else
-            If dgInsumosC.RowCount = 0 Then
-                MsgBox("No se han ingresado insumos")
-                btnAgregarI.Focus()
+        If entro Then
+            If String.IsNullOrWhiteSpace(txtIdProveedor.Text) Then
+                MsgBox("No se ha ingresado proveedor")
+                cboProveedor.Focus()
             Else
-                comando.CommandText = "Insert into tlb_compra(idCompra, idProveedor, fecha, total) values(" & Val(txtIdCompra.Text) & ", " & Val(txtIdProveedor.Text) & ", '" & dtpFecha.Value.Date & "', " & CDec(txtSubtotal.Text) & ")"
-                comando.ExecuteNonQuery()
-                For x = 0 To dgInsumosC.RowCount - 1
-                    comando.CommandText = "Insert into tlb_detCompra(idCompra, idInsumo, cantidad, costo) values(" & Val(txtIdCompra.Text) & "," & Val(dgInsumosC(0, x).Value) & ", " & CDec(dgInsumosC(2, x).Value) & ", " & CDec(dgInsumosC(3, x).Value) & ")"
+                If dgInsumosC.RowCount = 0 Then
+                    MsgBox("No se han ingresado insumos")
+                    btnAgregarI.Focus()
+                Else
+                    comando.CommandText = "Insert into tlb_compra(idCompra, idProveedor, fecha, total) values(" & Val(txtIdCompra.Text) & ", " & Val(txtIdProveedor.Text) & ", '" & dtpFecha.Value.Date & "', " & CDec(txtSubtotal.Text) & ")"
                     comando.ExecuteNonQuery()
+                    For x = 0 To dgInsumosC.RowCount - 1
+                        comando.CommandText = "Insert into tlb_detCompra(idCompra, idInsumo, cantidad, costo) values(" & Val(txtIdCompra.Text) & "," & Val(dgInsumosC(0, x).Value) & ", " & CDec(dgInsumosC(2, x).Value) & ", " & CDec(dgInsumosC(3, x).Value) & ")"
+                        comando.ExecuteNonQuery()
 
-                    comando.CommandText = "Update tlb_insumo set existencia = existencia + " & CDec(dgInsumosC(2, x).Value) & ", costo = " & CDec(dgInsumosC(3, x).Value) & " where idInsumo = " & Val(dgInsumosC(0, x).Value) & " "
-                    comando.ExecuteNonQuery()
-                Next
+                        comando.CommandText = "Update tlb_insumo set existencia = existencia + " & CDec(dgInsumosC(2, x).Value) & ", costo = " & CDec(dgInsumosC(3, x).Value) & " where idInsumo = " & Val(dgInsumosC(0, x).Value) & " "
+                        comando.ExecuteNonQuery()
+                    Next
+                    cboProveedor.Enabled = False
+                    btnBuscarIn.Enabled = False
+                    btnAgregarI.Enabled = False
+                    txtNuevoC.Enabled = False
+                    txtCantidad.Enabled = False
+                    btnCancelar.Enabled = False
+                    btnSalir.Enabled = True
+                    btnNuevo.Enabled = True
+                    btnGuardar.Enabled = False
+                    entro = False
+                    dgInsumosC.Rows.Clear()
+                    txtIdInsumo.Text = ""
+                    txtNombreInsumo.Text = ""
+                    txtExistencias.Text = ""
+                    txtMaximo.Text = ""
+                    txtMinimo.Text = ""
+                    txtUnidadM.Text = ""
+                    txtFechaInsumo.Text = ""
+                    txtCosto.Text = ""
+                    txtNuevoC.Text = ""
+                    txtCantidad.Text = ""
 
+                End If
             End If
-        End If
-        cboProveedor.Enabled = False
-        btnBuscarIn.Enabled = False
-        btnAgregarI.Enabled = False
-        txtNuevoC.ReadOnly = False
-        txtCantidad.ReadOnly = False
 
-        btnNuevo.Enabled = True
-        btnGuardar.Enabled = False
+        Else
+            MessageBox.Show("PRESIONAR EL BOTÓN DE ACEPTAR PARA CONTINUAR CON LA ACCIÓN", "COMPLETAR EL REGISTRO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
@@ -196,7 +224,7 @@
         txtTelefono.Text = ""
         txtUnidadM.Text = ""
 
-        txtCantidad.ReadOnly = True
+        txtCantidad.Enabled = True
         txtCosto.Enabled = False
         txtDireccion.Enabled = False
         txtExistencias.Enabled = False
@@ -207,7 +235,7 @@
         txtMaximo.Enabled = False
         txtMinimo.Enabled = False
         txtNombreInsumo.Enabled = False
-        txtNuevoC.ReadOnly = True
+        txtNuevoC.Enabled = True
         txtSubtotal.Enabled = False
         txtTelefono.Enabled = False
         txtUnidadM.Enabled = False
@@ -220,7 +248,11 @@
         btnSalir.Enabled = True
         btnAgregarI.Enabled = False
         btnBuscarIn.Enabled = False
+        txtCantidad.Enabled = False
+        txtNuevoC.Enabled = False
         cboProveedor.Enabled = False
+
+        entro = False
 
 
     End Sub
