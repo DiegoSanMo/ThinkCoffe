@@ -26,7 +26,19 @@
     End Sub
 
     Private Sub PromocionesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PromocionesToolStripMenuItem.Click
-        frmCatalogoRecetas.ShowDialog()
+        conexionSql.Open()
+
+        comando.CommandText = "Select count(tlb_insumo.idInsumo) from tlb_insumo"
+        Dim cantInsumo As Integer = comando.ExecuteScalar
+        If cantInsumo > 0 Then
+            conexionSql.Close()
+            frmCatalogoRecetas.ShowDialog()
+        Else
+            MessageBox.Show("NO SE HAN REGISTRADO INSUMOS, FAVOR DE REGISTRAR INSUOS", "FALTA DE INSUMOS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            banInsumo = True
+            Instrucciones.ShowDialog()
+            conexionSql.Close()
+        End If
     End Sub
 
     Private Sub ProductosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem1.Click
@@ -53,6 +65,7 @@
             'Dim cantInsumo As Integer = comando.ExecuteScalar
         Else
             MessageBox.Show("NO SE HAN REGISTRADO CATEGORIAS, FAVOR DE REGISTRAR CATEGORÌAS", "FALTA DE CATEGORIAS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            banCategoria = True
             Instrucciones.ShowDialog()
             conexionSql.Close()
         End If
@@ -112,7 +125,12 @@
     End Sub
 
     Private Sub RecetasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecetasToolStripMenuItem.Click
-        frmConsultaReceta.ShowDialog()
+
+        frmCatalogoRecetas.ShowDialog()
+        'comando.CommandText = "Select count(tlb_insumo.idInsumo) from tlb_insumo"
+        'Dim cantInsumo As Integer = comando.ExecuteScalar
+
+        'frmConsultaReceta.ShowDialog()
     End Sub
 
     Private Sub PizzaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PizzaToolStripMenuItem.Click

@@ -134,7 +134,7 @@ Public Class frmCatalogoProductos
                 limpiarCajaProductos()
                 txtNombreReceta.Text = ""
             Else
-                MessageBox.Show("PRECIONAR EL BOTÓN DE ACEPTAR PARA GUARDAR PRODUCTO", "ERROR DE ALMACENAMIENTO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("PRESIONAR EL BOTÓN DE ACEPTAR PARA GUARDAR PRODUCTO", "ERROR DE ALMACENAMIENTO", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
         Else
             MessageBox.Show("PRESIONAR EL BOTÓN DE ACEPTAR PARA REGISTRAR PRODUCTO", "ERROR DE ALMACENAMIENTO", MessageBoxButtons.OK, MessageBoxIcon.Error)

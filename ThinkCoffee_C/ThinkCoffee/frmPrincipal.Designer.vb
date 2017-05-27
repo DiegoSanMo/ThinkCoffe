@@ -51,7 +51,7 @@ Partial Class frmPrincipal
         '
         'CatálogosToolStripMenuItem
         '
-        Me.CatálogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CategoriasToolStripMenuItem, Me.IngredientesToolStripMenuItem, Me.ProductosToolStripMenuItem1, Me.ProveedoresToolStripMenuItem1, Me.PromocionesToolStripMenuItem})
+        Me.CatálogosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CategoriasToolStripMenuItem, Me.IngredientesToolStripMenuItem, Me.PromocionesToolStripMenuItem, Me.ProductosToolStripMenuItem1, Me.ProveedoresToolStripMenuItem1})
         Me.CatálogosToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CatálogosToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.CatálogosToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Dossier_50

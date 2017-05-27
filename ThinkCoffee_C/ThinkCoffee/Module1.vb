@@ -7,8 +7,11 @@ Module Module1
     Public soloNumeros As String = "0123456789"
     Public CadenaDirecciones As String = "0123456789.ABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
     Public nombreInsumo As String
+    Public banCategoria As Boolean = False
+    Public banInsumo As Boolean = False
+    Public banReceta As Boolean = False
 
-    Public conexionSql As New SqlConnection("Data Source = 'PRO'; Initial Catalog = 'thinkCoffee'; Integrated security = true")
+    Public conexionSql As New SqlConnection("Data Source = 'DESKTOP-B3IP6AD\MANI'; Initial Catalog = 'thinkCoffee'; Integrated security = true")
     Public comando As SqlCommand = conexionSql.CreateCommand
     Public lector As SqlDataReader
 
