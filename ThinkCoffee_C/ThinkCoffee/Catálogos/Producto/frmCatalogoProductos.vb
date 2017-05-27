@@ -32,6 +32,8 @@ Public Class frmCatalogoProductos
             End While
             lector.Close()
         End If
+
+
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click

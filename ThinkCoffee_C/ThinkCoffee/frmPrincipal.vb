@@ -30,7 +30,35 @@
     End Sub
 
     Private Sub ProductosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem1.Click
-        frmCatalogoProductos.ShowDialog()
+        conexionSql.Open()
+
+        comando.CommandText = "Select count(tlb_categoria.idCategoria) from tlb_categoria"
+        Dim cantCategoria As Integer = comando.ExecuteScalar
+
+        If cantCategoria > 0 Then
+            comando.CommandText = "Select count(tlb_insumo.idInsumo) from tlb_insumo"
+            Dim cantInsumo As Integer = comando.ExecuteScalar
+
+            If cantInsumo > 0 Then
+                conexionSql.Close()
+                frmCatalogoProductos.ShowDialog()
+            Else
+                MessageBox.Show("NO SE HAN REGISTRADO INSUMOS, FAVOR DE REGISTRAR INSUOS", "FALTA DE INSUMOS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Instrucciones.ShowDialog()
+                conexionSql.Close()
+            End If
+
+
+            'comando.CommandText = "Select count(tlb_insumo.idInsumo) from tlb_insumo"
+            'Dim cantInsumo As Integer = comando.ExecuteScalar
+        Else
+            MessageBox.Show("NO SE HAN REGISTRADO CATEGORIAS, FAVOR DE REGISTRAR CATEGORÌAS", "FALTA DE CATEGORIAS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Instrucciones.ShowDialog()
+            conexionSql.Close()
+        End If
+
+
+
     End Sub
 
     Private Sub CategoriasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CategoriasToolStripMenuItem.Click
