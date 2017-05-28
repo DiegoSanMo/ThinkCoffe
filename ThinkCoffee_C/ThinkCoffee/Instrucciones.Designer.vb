@@ -40,7 +40,7 @@ Partial Class Instrucciones
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(206, 406)
+        Me.btnAceptar.Location = New System.Drawing.Point(233, 406)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(227, 34)
         Me.btnAceptar.TabIndex = 2
@@ -49,9 +49,11 @@ Partial Class Instrucciones
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(34, 48)
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox1.Image = Global.ThinkCoffee.My.Resources.Resources.insumos
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 48)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(602, 352)
+        Me.PictureBox1.Size = New System.Drawing.Size(664, 352)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False

@@ -7,11 +7,8 @@ Module Module1
     Public soloNumeros As String = "0123456789"
     Public CadenaDirecciones As String = "0123456789.ABCDEFGHIJKLMNÑOPQRSTUVWXYZ "
     Public nombreInsumo As String
-    Public banCategoria As Boolean = False
-    Public banInsumo As Boolean = False
-    Public banReceta As Boolean = False
 
-    Public conexionSql As New SqlConnection("Data Source = 'DESKTOP-B3IP6AD\MANI'; Initial Catalog = 'thinkCoffee'; Integrated security = true")
+    Public conexionSql As New SqlConnection("Data Source = 'PRO'; Initial Catalog = 'thinkCoffee'; Integrated security = true")
     Public comando As SqlCommand = conexionSql.CreateCommand
     Public lector As SqlDataReader
 
@@ -336,4 +333,39 @@ Module Module1
     Public Sub mensajeVenta()
         MessageBox.Show("VENTA REGISTRADA CON EXITO", "REGISTRO COMPLETO", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
+
+
+
+
+
+
+    '----------------------------------------------------Vefiricar si existen insumos*----------------------------------------------------------
+    Public Function contarInsumos()
+        comando.CommandText = "Select count(tlb_insumo.idInsumo) from tlb_insumo"
+        Dim n As Integer = comando.ExecuteScalar
+
+        Return n
+    End Function
+
+
+
+    '**********************************************************MOSTRAR LOS GIF PARA REGISTRO DE CATÀLOGOS**************************************************
+    Public Sub mostrarGif(opcion As Integer)
+        Dim categoria As Integer = 1
+        Dim insumo As Integer = 2
+        Dim receta As Integer = 3
+
+        If opcion = categoria Then
+            Instrucciones.PictureBox1.Image = ThinkCoffee.My.Resources.Resources.categoria
+            Instrucciones.ShowDialog()
+        ElseIf opcion = insumo Then
+            MsgBox("hola")
+            Instrucciones.PictureBox1.Image = ThinkCoffee.My.Resources.Resources.insumos
+            Instrucciones.ShowDialog()
+        ElseIf opcion = receta Then
+            Instrucciones.PictureBox1.Image = ThinkCoffee.My.Resources.Resources.recetas
+            Instrucciones.ShowDialog()
+        End If
+    End Sub
+
 End Module

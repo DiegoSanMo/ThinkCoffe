@@ -25,9 +25,9 @@ Partial Class frmPrincipal
         Me.CatálogosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CategoriasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IngredientesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PromocionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProveedoresToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PromocionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PiizaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OtrosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -78,6 +78,14 @@ Partial Class frmPrincipal
         Me.IngredientesToolStripMenuItem.Size = New System.Drawing.Size(209, 56)
         Me.IngredientesToolStripMenuItem.Text = "Insumos"
         '
+        'PromocionesToolStripMenuItem
+        '
+        Me.PromocionesToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Book_48
+        Me.PromocionesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.PromocionesToolStripMenuItem.Name = "PromocionesToolStripMenuItem"
+        Me.PromocionesToolStripMenuItem.Size = New System.Drawing.Size(209, 56)
+        Me.PromocionesToolStripMenuItem.Text = "Recetas"
+        '
         'ProductosToolStripMenuItem1
         '
         Me.ProductosToolStripMenuItem1.Image = Global.ThinkCoffee.My.Resources.Resources.Coffee_to_Go_50
@@ -93,14 +101,6 @@ Partial Class frmPrincipal
         Me.ProveedoresToolStripMenuItem1.Name = "ProveedoresToolStripMenuItem1"
         Me.ProveedoresToolStripMenuItem1.Size = New System.Drawing.Size(209, 56)
         Me.ProveedoresToolStripMenuItem1.Text = "Proveedores"
-        '
-        'PromocionesToolStripMenuItem
-        '
-        Me.PromocionesToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Book_48
-        Me.PromocionesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.PromocionesToolStripMenuItem.Name = "PromocionesToolStripMenuItem"
-        Me.PromocionesToolStripMenuItem.Size = New System.Drawing.Size(209, 56)
-        Me.PromocionesToolStripMenuItem.Text = "Recetas"
         '
         'VentaToolStripMenuItem
         '
