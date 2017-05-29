@@ -16,6 +16,13 @@
             txtPrecio.Text = lector(2)
             txtIdProducto.Text = lector(3)
             Dim ruta As String = lector(4)
+            If ruta = "ThinkCoffee.My.Resources.Resources.producto" Then
+                ptbImagen.Image = ThinkCoffee.My.Resources.Resources.producto
+            Else
+                ptbImagen.Image = Image.FromFile(ruta)
+            End If
+
+
 
             lector.Close()
         Else
@@ -70,6 +77,12 @@
                 dgVenta(4, pos).Value = dgVenta(2, pos).Value * dgVenta(3, pos).Value
             Else
                 dgVenta.Rows.Add(txtIdProducto.Text, txtNombreP.Text, txtCantidad.Text, txtPrecio.Text, txtCantidad.Text * txtPrecio.Text)
+                txtCantidad.Text = ""
+                txtCategoria.Text = ""
+                txtIdProducto.Text = ""
+                txtNombreP.Text = ""
+                txtPrecio.Text = ""
+                ptbImagen.Image = Nothing
             End If
 
 
@@ -96,6 +109,7 @@
             txtNombreP.Text = ""
             txtPrecio.Text = ""
             txtTotal.Text = "0.00"
+            ptbImagen.Image = Nothing
 
             'bloqueo de botones
             btnNuevo.Enabled = True
@@ -139,6 +153,7 @@
             txtNombreP.Text = ""
             txtPrecio.Text = ""
             txtTotal.Text = "0.00"
+            ptbImagen.Image = Nothing
 
             'bloqueo de botones
             btnNuevo.Enabled = True
@@ -175,6 +190,8 @@
         txtNombreP.Text = ""
         txtPrecio.Text = ""
         txtTotal.Text = "0.00"
+        ptbImagen.Image = Nothing
+
 
         'bloqueo de botones
         btnNuevo.Enabled = True

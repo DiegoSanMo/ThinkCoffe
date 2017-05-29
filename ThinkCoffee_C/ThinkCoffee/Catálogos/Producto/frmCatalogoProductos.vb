@@ -174,7 +174,7 @@ Public Class frmCatalogoProductos
                     Else
                         If String.IsNullOrWhiteSpace(ubi) Then
 
-                            ubi = "~\ThinkCoffee_C\imagenes\producto.png"
+                            ubi = ("ThinkCoffee.My.Resources.Resources.producto")
                         End If
                         dgProductos.Rows.Add(txtIdProducto.Text, txtNombre.Text, cboCategoria.Text, txtNombreReceta.Text, txtPrecio.Text)
                         idR = CInt(txtIdReceta.Text)
