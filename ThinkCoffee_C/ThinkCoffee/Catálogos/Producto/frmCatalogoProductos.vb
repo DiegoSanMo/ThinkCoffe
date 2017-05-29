@@ -107,7 +107,6 @@ Public Class frmCatalogoProductos
         If presionado Then
             If txtNombre.Text = "" Or txtIdCategoria.Text = "" Then
 
-                Dim precioFin As String
                 Dim imagen As String
 
 

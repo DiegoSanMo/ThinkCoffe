@@ -23,6 +23,8 @@ Partial Class frmCatalogoProductos
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtNombreReceta = New System.Windows.Forms.TextBox()
         Me.btnBuscarR = New System.Windows.Forms.Button()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
@@ -55,8 +57,6 @@ Partial Class frmCatalogoProductos
         Me.btnModificar = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ptbBarra = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtNombreReceta = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.ptbImagen, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgProductos, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,6 +91,28 @@ Partial Class frmCatalogoProductos
         Me.GroupBox1.Size = New System.Drawing.Size(681, 247)
         Me.GroupBox1.TabIndex = 63
         Me.GroupBox1.TabStop = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label3.Location = New System.Drawing.Point(6, 106)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(60, 20)
+        Me.Label3.TabIndex = 63
+        Me.Label3.Text = "Receta"
+        '
+        'txtNombreReceta
+        '
+        Me.txtNombreReceta.Enabled = False
+        Me.txtNombreReceta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtNombreReceta.Location = New System.Drawing.Point(102, 103)
+        Me.txtNombreReceta.MaxLength = 145
+        Me.txtNombreReceta.Name = "txtNombreReceta"
+        Me.txtNombreReceta.Size = New System.Drawing.Size(381, 27)
+        Me.txtNombreReceta.TabIndex = 62
         '
         'btnBuscarR
         '
@@ -199,6 +221,7 @@ Partial Class frmCatalogoProductos
         'ptbImagen
         '
         Me.ptbImagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.ptbImagen.Image = Global.ThinkCoffee.My.Resources.Resources.producto
         Me.ptbImagen.Location = New System.Drawing.Point(498, 18)
         Me.ptbImagen.Name = "ptbImagen"
         Me.ptbImagen.Size = New System.Drawing.Size(164, 178)
@@ -446,28 +469,6 @@ Partial Class frmCatalogoProductos
         Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.ptbBarra.TabIndex = 64
         Me.ptbBarra.TabStop = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label3.Location = New System.Drawing.Point(6, 106)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(60, 20)
-        Me.Label3.TabIndex = 63
-        Me.Label3.Text = "Receta"
-        '
-        'txtNombreReceta
-        '
-        Me.txtNombreReceta.Enabled = False
-        Me.txtNombreReceta.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtNombreReceta.Location = New System.Drawing.Point(102, 103)
-        Me.txtNombreReceta.MaxLength = 145
-        Me.txtNombreReceta.Name = "txtNombreReceta"
-        Me.txtNombreReceta.Size = New System.Drawing.Size(381, 27)
-        Me.txtNombreReceta.TabIndex = 62
         '
         'frmCatalogoProductos
         '

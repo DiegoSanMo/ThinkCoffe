@@ -118,149 +118,164 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="fondo formulario 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo formulario 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tea-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tea-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="thinkCoffe1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thinkCoffe1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo del principal 2W" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo del principal 2W.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="categoria" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\categoria.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Ruler-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ruler-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo formulario 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo formulario 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Vegetarian Food-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Vegetarian Food-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="barraFinal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\barraFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo formulario 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo formulario 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="barraMenuB" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\barraMenuB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pizza-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pizza-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Minimize Window-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Minimize Window-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Tree Structure-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tree Structure-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Food And Wine-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Food And Wine-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo del principal 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo del principal 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Checked-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Checked-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Close Window-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Close Window-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Alarm Clock-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Alarm Clock-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cancel-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cancel-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Shopping Cart-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Shopping Cart-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Create New-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Create New-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo del principal 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo del principal 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="thinkCoffeMiniLuz1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thinkCoffeMiniLuz1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Deliver Food-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Deliver Food-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Search-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="thinkCoffeMiniLuz" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thinkCoffeMiniLuz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Sort By Modified Date-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sort By Modified Date-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="barraFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\barraFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Banknotes-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Banknotes-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="thinkCoffe" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thinkCoffe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Book-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Book-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Manager-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Manager-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Search Property-45" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search Property-45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Dossier-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dossier-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Exit-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Exit-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="thinkCoffeMini" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thinkCoffeMini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Discount-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Discount-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Conference-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Conference-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Minimize Window-26" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Minimize Window-26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cash Register-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cash Register-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Search Property-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search Property-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Paid-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Paid-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Banknotes-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banknotes-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Create New-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Create New-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Search-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sort By Modified Date-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sort By Modified Date-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Minimize Window-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minimize Window-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Coffee to Go-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Coffee to Go-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Checked-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Checked-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Conference-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Conference-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add List-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add List-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tree Structure-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tree Structure-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cash Register-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cash Register-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Search Property-45" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search Property-45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Exit Sign Filled-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Exit Sign Filled-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Paid-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Paid-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo formulario 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo formulario 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Vegetarian Food-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Vegetarian Food-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo formulario 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo formulario 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="barraPrincipal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barraPrincipal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Search Property-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search Property-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thinkCoffeMini" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thinkCoffeMini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thinkCoffeMiniLuz1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thinkCoffeMiniLuz1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo formulario 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo formulario 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="recetas2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\recetas1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Paid-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Paid-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Close Window-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close Window-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thinkCoffe1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thinkCoffe1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barraFinal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barraFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Edit User Male-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Edit User Male-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ruler-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ruler-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="categoria" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\categoria.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Banknotes-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Banknotes-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo del principal 4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo del principal 4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shopping Cart-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shopping Cart-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thinkCoffeMiniLuz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thinkCoffeMiniLuz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Exit-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Exit-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo del principal 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo del principal 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Close Window-26" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Close Window-26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Deliver Food-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Deliver Food-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo del principal 2W" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo del principal 2W.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BarraSuperior" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BarraSuperior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dossier-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dossier-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Book-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Book-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cancel-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cancel-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Search-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="recetas1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\recetas.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fondo 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barraFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barraFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Burn CD-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Burn CD-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Food And Wine-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Food And Wine-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo formulario 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo formulario 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="recetas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\recetas.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -268,49 +283,37 @@
   <data name="fondo formularios" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo formularios.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search Property-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search Property-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Manager-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Manager-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search-10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search-10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Alarm Clock-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Alarm Clock-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Paid-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Paid-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="insumos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\insumos1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Banknotes-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Banknotes-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Exit Sign Filled-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Exit Sign Filled-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fondo formulario 3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo formulario 3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Close Window-26" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Close Window-26.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Edit User Male-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Edit User Male-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Burn CD-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Burn CD-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Coffee to Go-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Coffee to Go-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Add List-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add List-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Pizza-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pizza-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Coffee to Go-80" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Coffee to Go-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BarraSuperior" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BarraSuperior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="insumos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\insumos1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="recetas2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\recetas1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Tea-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tea-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="barraMenuB" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\barraMenuB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thinkCoffe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thinkCoffe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Search-10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search-10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Discount-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Discount-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="producto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\producto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
