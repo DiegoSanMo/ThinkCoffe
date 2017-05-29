@@ -88,7 +88,17 @@
 
 
     Private Sub OtrosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OtrosToolStripMenuItem.Click
-        frmMovimientoVentas.ShowDialog()
+        conexionSql.Open()
+        comando.CommandText = "Select count(tlb_producto.idProducto) from tlb_producto"
+        Dim n As Integer = comando.ExecuteScalar
+        If n > 0 Then
+            conexionSql.Close()
+            frmMovimientoVentas.ShowDialog()
+        Else
+            conexionSql.Close()
+            MessageBox.Show("NO SE HAN REGISTRADO PRODUCTOS PARA REALIZAR VENTA", "FALTA DE PRODUCTOR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End If
+
     End Sub
 
     Private Sub PiizaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PiizaToolStripMenuItem.Click

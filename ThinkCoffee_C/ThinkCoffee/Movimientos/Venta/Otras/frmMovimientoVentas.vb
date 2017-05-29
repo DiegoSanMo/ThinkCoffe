@@ -16,6 +16,7 @@
             txtPrecio.Text = lector(2)
             txtIdProducto.Text = lector(3)
             Dim ruta As String = lector(4)
+
             lector.Close()
         Else
             MessageBox.Show("NO SE HA INGRESADO PRODUCTO", "FALTA DE INFORMACIÓN", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)

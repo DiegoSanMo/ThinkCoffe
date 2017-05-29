@@ -35,8 +35,8 @@ Partial Class frmPrincipal
         Me.HolaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsumosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RecetasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OtrosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -174,14 +174,6 @@ Partial Class frmPrincipal
         Me.InsumosToolStripMenuItem.Size = New System.Drawing.Size(191, 56)
         Me.InsumosToolStripMenuItem.Text = "Insumos"
         '
-        'ProductosToolStripMenuItem
-        '
-        Me.ProductosToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Coffee_to_Go_50
-        Me.ProductosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(191, 56)
-        Me.ProductosToolStripMenuItem.Text = "Productos"
-        '
         'RecetasToolStripMenuItem
         '
         Me.RecetasToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Book_48
@@ -189,6 +181,14 @@ Partial Class frmPrincipal
         Me.RecetasToolStripMenuItem.Name = "RecetasToolStripMenuItem"
         Me.RecetasToolStripMenuItem.Size = New System.Drawing.Size(191, 56)
         Me.RecetasToolStripMenuItem.Text = "Recetas"
+        '
+        'ProductosToolStripMenuItem
+        '
+        Me.ProductosToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Coffee_to_Go_50
+        Me.ProductosToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(191, 56)
+        Me.ProductosToolStripMenuItem.Text = "Productos"
         '
         'ComprasToolStripMenuItem
         '
