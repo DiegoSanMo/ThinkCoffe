@@ -282,7 +282,24 @@ Public Class frmCatalogoInsumos
 
             End If
         Else
-            MessageBox.Show("PRESIONAR EL BOTÓN DE ACEPTAR PARA REGISTRAR INSUMO", "ERROR DE ALMACENAMIENTO", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            dgInsumo.Enabled = True
+            btnCancelar.Enabled = False
+            btnGrabar.Enabled = False
+            btnNuevo.Enabled = True
+            btnSalir.Enabled = True
+            btnModificar.Enabled = True
+            txtNombre.Text = ""
+            txtNombre.Enabled = False
+            txtMin.Enabled = False
+            txtMax.Enabled = False
+            cboUnidadM.Enabled = False
+            txtExist.Enabled = False
+            btnAceptar.Enabled = False
+            txtIdInsumo.Text = ""
+            txtNombre.Text = ""
+            txtMin.Text = ""
+            txtMax.Text = ""
+            txtExist.Text = ""
         End If
 
 
@@ -312,15 +329,19 @@ Public Class frmCatalogoInsumos
     End Sub
 
     Private Sub dgInsumo_SelectionChanged(sender As Object, e As EventArgs) Handles dgInsumo.SelectionChanged
-        filaSel = dgInsumo.Item(0, dgInsumo.CurrentRow.Index).Value - 1
 
-        txtIdInsumo.Text = dgInsumo(0, filaSel).Value
-        txtNombre.Text = dgInsumo(1, filaSel).Value
-        cboUnidadM.Text = dgInsumo(2, filaSel).Value
-        txtMax.Text = dgInsumo(3, filaSel).Value
-        txtMin.Text = dgInsumo(4, filaSel).Value
-        txtExist.Text = dgInsumo(5, filaSel).Value
-        dtpFecha.Value = dgInsumo(7, filaSel).Value
+        If dgInsumo.RowCount > 0 Then
+            filaSel = dgInsumo.Item(0, dgInsumo.CurrentRow.Index).Value - 1
+
+            txtIdInsumo.Text = dgInsumo(0, filaSel).Value
+            txtNombre.Text = dgInsumo(1, filaSel).Value
+            cboUnidadM.Text = dgInsumo(2, filaSel).Value
+            txtMax.Text = dgInsumo(3, filaSel).Value
+            txtMin.Text = dgInsumo(4, filaSel).Value
+            txtExist.Text = dgInsumo(5, filaSel).Value
+            dtpFecha.Value = dgInsumo(7, filaSel).Value
+        End If
+
     End Sub
 
     Private Sub txtMax_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtMax.KeyPress

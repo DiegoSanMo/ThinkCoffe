@@ -158,7 +158,7 @@ Partial Class frmPrincipal
         '
         'ConsultaToolStripMenuItem
         '
-        Me.ConsultaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InsumosToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.RecetasToolStripMenuItem, Me.ComprasToolStripMenuItem, Me.VentasToolStripMenuItem})
+        Me.ConsultaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InsumosToolStripMenuItem, Me.RecetasToolStripMenuItem, Me.ProductosToolStripMenuItem, Me.ComprasToolStripMenuItem, Me.VentasToolStripMenuItem})
         Me.ConsultaToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ConsultaToolStripMenuItem.Image = Global.ThinkCoffee.My.Resources.Resources.Search_Property_50
         Me.ConsultaToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None

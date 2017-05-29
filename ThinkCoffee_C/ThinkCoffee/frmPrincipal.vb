@@ -144,14 +144,12 @@
     End Sub
 
     Private Sub ProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem.Click
+
         frmConsultaProducto.ShowDialog()
+
     End Sub
 
     Private Sub RecetasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RecetasToolStripMenuItem.Click
-
-        'comando.CommandText = "Select count(tlb_insumo.idInsumo) from tlb_insumo"
-        'Dim cantInsumo As Integer = comando.ExecuteScalar
-
         frmConsultaReceta.ShowDialog()
     End Sub
 
