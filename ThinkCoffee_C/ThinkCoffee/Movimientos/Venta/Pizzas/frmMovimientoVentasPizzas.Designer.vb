@@ -27,6 +27,8 @@ Partial Class frmMovimientoVentasPizzas
         Me.Label3 = New System.Windows.Forms.Label()
         Me.cboTamaño = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.txtIdVenta = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -44,8 +46,6 @@ Partial Class frmMovimientoVentasPizzas
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.ptbBarra = New System.Windows.Forms.PictureBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.gbMixta.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -127,6 +127,27 @@ Partial Class frmMovimientoVentasPizzas
         Me.GroupBox2.TabIndex = 82
         Me.GroupBox2.TabStop = False
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
+        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label7.Location = New System.Drawing.Point(439, 103)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(111, 20)
+        Me.Label7.TabIndex = 82
+        Me.Label7.Text = "Total a pagar"
+        '
+        'txtTotal
+        '
+        Me.txtTotal.Enabled = False
+        Me.txtTotal.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
+        Me.txtTotal.Location = New System.Drawing.Point(556, 100)
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.Size = New System.Drawing.Size(100, 27)
+        Me.txtTotal.TabIndex = 83
+        '
         'txtIdVenta
         '
         Me.txtIdVenta.Enabled = False
@@ -187,6 +208,7 @@ Partial Class frmMovimientoVentasPizzas
         'cboTipo
         '
         Me.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboTipo.Enabled = False
         Me.cboTipo.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
         Me.cboTipo.FormattingEnabled = True
         Me.cboTipo.Items.AddRange(New Object() {"NORMAL", "MIXTA"})
@@ -325,27 +347,6 @@ Partial Class frmMovimientoVentasPizzas
         Me.ptbBarra.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.ptbBarra.TabIndex = 83
         Me.ptbBarra.TabStop = False
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Label7.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label7.Location = New System.Drawing.Point(439, 103)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(111, 20)
-        Me.Label7.TabIndex = 82
-        Me.Label7.Text = "Total a pagar"
-        '
-        'txtTotal
-        '
-        Me.txtTotal.Enabled = False
-        Me.txtTotal.Font = New System.Drawing.Font("Segoe UI Emoji", 11.25!)
-        Me.txtTotal.Location = New System.Drawing.Point(556, 100)
-        Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.Size = New System.Drawing.Size(100, 27)
-        Me.txtTotal.TabIndex = 83
         '
         'frmMovimientoVentasPizzas
         '

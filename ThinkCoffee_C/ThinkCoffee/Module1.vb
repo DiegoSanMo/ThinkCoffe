@@ -347,23 +347,28 @@ Module Module1
         Return n
     End Function
 
+    Public Function contarRecetas()
+        comando.CommandText = "Select count(tlb_receta.idReceta) from tlb_receta"
+        Dim n As Integer = comando.ExecuteScalar
+        Return n
+    End Function
 
 
     '**********************************************************MOSTRAR LOS GIF PARA REGISTRO DE CATÀLOGOS**************************************************
     Public Sub mostrarGif(opcion As Integer)
-        Dim categoria As Integer = 1
-        Dim insumo As Integer = 2
-        Dim receta As Integer = 3
 
-        If opcion = categoria Then
+
+        If opcion = 1 Then
+            Instrucciones.lblTitulo.Text = "PASOS PARA REGISTRAR CATEGORÍAS"
             Instrucciones.PictureBox1.Image = ThinkCoffee.My.Resources.Resources.categoria
             Instrucciones.ShowDialog()
-        ElseIf opcion = insumo Then
-            MsgBox("hola")
+        ElseIf opcion = 2 Then
+            Instrucciones.lblTitulo.Text = "PASOS PARA REGISTRAR INSUMOS"
             Instrucciones.PictureBox1.Image = ThinkCoffee.My.Resources.Resources.insumos
             Instrucciones.ShowDialog()
-        ElseIf opcion = receta Then
-            Instrucciones.PictureBox1.Image = ThinkCoffee.My.Resources.Resources.recetas
+        ElseIf opcion = 3 Then
+            Instrucciones.lblTitulo.Text = "PASOS PARA REGISTRAR RECETAS"
+            Instrucciones.PictureBox1.Image = ThinkCoffee.My.Resources.Resources.recetas2
             Instrucciones.ShowDialog()
         End If
     End Sub

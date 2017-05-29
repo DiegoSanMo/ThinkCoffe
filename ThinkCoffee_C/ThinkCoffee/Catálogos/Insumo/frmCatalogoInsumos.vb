@@ -32,8 +32,6 @@ Public Class frmCatalogoInsumos
 
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         presionado = False
-
-        dtpFecha.Enabled = False
         limpiarCajaInsumos()
 
         btnNuevo.Enabled = False

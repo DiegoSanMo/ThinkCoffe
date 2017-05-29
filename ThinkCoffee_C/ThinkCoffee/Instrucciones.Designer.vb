@@ -22,21 +22,21 @@ Partial Class Instrucciones
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblTitulo = New System.Windows.Forms.Label()
         Me.btnAceptar = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
+        'lblTitulo
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(172, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(308, 25)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Pasos para registrar insumo"
+        Me.lblTitulo.AutoSize = True
+        Me.lblTitulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitulo.Location = New System.Drawing.Point(172, 9)
+        Me.lblTitulo.Name = "lblTitulo"
+        Me.lblTitulo.Size = New System.Drawing.Size(308, 25)
+        Me.lblTitulo.TabIndex = 1
+        Me.lblTitulo.Text = "Pasos para registrar insumo"
         '
         'btnAceptar
         '
@@ -50,7 +50,7 @@ Partial Class Instrucciones
         'PictureBox1
         '
         Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Image = Global.ThinkCoffee.My.Resources.Resources.insumos
+        Me.PictureBox1.Image = Global.ThinkCoffee.My.Resources.Resources.recetas2
         Me.PictureBox1.Location = New System.Drawing.Point(12, 48)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(664, 352)
@@ -65,7 +65,7 @@ Partial Class Instrucciones
         Me.ClientSize = New System.Drawing.Size(688, 452)
         Me.ControlBox = False
         Me.Controls.Add(Me.btnAceptar)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.lblTitulo)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Instrucciones"
@@ -78,6 +78,6 @@ Partial Class Instrucciones
     End Sub
 
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lblTitulo As Label
     Friend WithEvents btnAceptar As Button
 End Class

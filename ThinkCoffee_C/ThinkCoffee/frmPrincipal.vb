@@ -48,17 +48,21 @@
         If cantCategoria > 0 Then
 
             If contarInsumos() > 0 Then
-                conexionSql.Close()
-                frmCatalogoProductos.ShowDialog()
+
+                If contarRecetas() > 0 Then
+                    conexionSql.Close()
+                    frmCatalogoProductos.ShowDialog()
+                Else
+                    MessageBox.Show("NO SE HAN REGISTRADO RECETAS, FAVOR DE REGISTRAR RECETA", "FALTA DE RECETAS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    conexionSql.Close()
+                    mostrarGif(3)
+                End If
+
             Else
-                MessageBox.Show("NO SE HAN REGISTRADO INSUMOS, FAVOR DE REGISTRAR INSUMOS", "FALTA DE INSUMOS", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    MessageBox.Show("NO SE HAN REGISTRADO INSUMOS, FAVOR DE REGISTRAR INSUMOS", "FALTA DE INSUMOS", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 conexionSql.Close()
                 mostrarGif(2)
             End If
-
-
-            'comando.CommandText = "Select count(tlb_insumo.idInsumo) from tlb_insumo"
-            'Dim cantInsumo As Integer = comando.ExecuteScalar
         Else
             MessageBox.Show("NO SE HAN REGISTRADO CATEGORIAS, FAVOR DE REGISTRAR CATEGORÌAS", "FALTA DE CATEGORIAS", MessageBoxButtons.OK, MessageBoxIcon.Error)
             conexionSql.Close()

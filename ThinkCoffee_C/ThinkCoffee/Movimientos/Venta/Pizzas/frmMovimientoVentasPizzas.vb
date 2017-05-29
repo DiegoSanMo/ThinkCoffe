@@ -54,6 +54,7 @@
         btnSalir.Enabled = False
         btnCancelar.Enabled = True
         btnGrabar.Enabled = True
+        cboTipo.Enabled = True
 
         comando.CommandText = "select count(tlb_venta.idVenta) from tlb_venta;"
         Dim n As Integer = comando.ExecuteScalar + 1
